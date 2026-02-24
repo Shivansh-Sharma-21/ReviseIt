@@ -140,6 +140,15 @@ const MindmapContent = ({ chapter, onBack, onInitiate }) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    // Lock body scroll when mindmap is active
+    useEffect(() => {
+        const originalStyle = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.body.style.overflow = originalStyle;
+        };
+    }, []);
+
     const initialElements = useMemo(() => {
         const nodes = [];
         const edges = [];
