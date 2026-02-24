@@ -80,18 +80,18 @@ const Home = ({ onSelectPhysics, onSelectChemistry, onSelectMaths }) => {
                 />
                 <SubjectCard
                     title="CHEMISTRY"
-                    status="Available"
+                    status="Disabled"
                     color="from-emerald-600 to-emerald-400"
                     icon="🧪"
-                    disabled={false}
+                    disabled={true}
                     onClick={onSelectChemistry}
                 />
                 <SubjectCard
                     title="MATHS"
-                    status="Available"
+                    status="Disabled"
                     color="from-amber-600 to-amber-400"
                     icon="∑"
-                    disabled={false}
+                    disabled={true}
                     onClick={onSelectMaths}
                 />
             </div>
