@@ -26,7 +26,7 @@ const RootNode = ({ sourcePosition, data }) => (
 );
 
 const TopicNode = ({ targetPosition, sourcePosition, data }) => (
-    <div className="px-8 py-5 md:px-10 md:py-7 rounded-[2rem] bg-white/95 dark:bg-slate-900/95 backdrop-blur-3xl border-[3px] border-indigo-500/40 dark:border-indigo-400/20 shadow-[0_20px_60px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] min-w-[240px] md:min-w-[300px] text-center group hover:border-indigo-600 dark:hover:border-indigo-400 transition-all duration-500 hover:scale-[1.05] hover:shadow-indigo-500/20">
+    <div className="px-8 py-5 md:px-10 md:py-7 rounded-[2rem] bg-white/95 dark:bg-slate-900/95 backdrop-blur-3xl border-[3px] border-slate-400/50 dark:border-indigo-400/20 shadow-[0_40px_80px_rgba(15,23,42,0.12)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] min-w-[240px] md:min-w-[300px] text-center group hover:border-indigo-600 dark:hover:border-indigo-400 transition-all duration-500 hover:scale-[1.05] hover:shadow-indigo-500/20">
         <Handle type="target" position={targetPosition} className="!bg-indigo-600 !w-4 !h-4 !border-2 !border-white" />
         <div className="font-extrabold text-slate-950 dark:text-white text-lg md:text-2xl tracking-tight leading-tight">{data.label}</div>
         <Handle type="source" position={sourcePosition} className="!bg-indigo-600 !w-4 !h-4 !border-2 !border-white" />
@@ -34,9 +34,9 @@ const TopicNode = ({ targetPosition, sourcePosition, data }) => (
 );
 
 const SubtopicNode = ({ targetPosition, data }) => (
-    <div className="px-6 py-4 md:px-8 md:py-6 rounded-2xl bg-indigo-50/60 dark:bg-slate-800/60 backdrop-blur-2xl border-2 border-slate-200 dark:border-slate-700 shadow-xl min-w-[180px] md:min-w-[220px] text-center group hover:bg-white dark:hover:bg-slate-700 transition-all duration-500 hover:scale-[1.08] hover:border-indigo-500 hover:shadow-indigo-500/10">
+    <div className="px-6 py-4 md:px-8 md:py-6 rounded-2xl bg-white/90 dark:bg-slate-800/60 backdrop-blur-2xl border-2 border-slate-400/40 dark:border-slate-700 shadow-[0_25px_50px_rgba(15,23,42,0.08)] min-w-[180px] md:min-w-[220px] text-center group hover:bg-white dark:hover:bg-slate-700 transition-all duration-500 hover:scale-[1.08] hover:border-indigo-500 hover:shadow-indigo-500/10">
         <Handle type="target" position={targetPosition} className="!bg-slate-500 dark:!bg-slate-400 !w-3 !h-3 !border-2 !border-white dark:!border-slate-800" />
-        <div className="text-xl md:text-3xl font-bold text-slate-800 dark:text-slate-100 tracking-tight leading-relaxed group-hover:text-indigo-600 dark:group-hover:text-indigo-400">{data.label}</div>
+        <div className="text-xl md:text-3xl font-bold text-slate-950 dark:text-slate-100 tracking-tight leading-relaxed group-hover:text-indigo-600 dark:group-hover:text-indigo-400">{data.label}</div>
     </div>
 );
 
@@ -199,12 +199,12 @@ const MindmapContent = ({ chapter, onBack, onInitiate }) => {
     }, [initialElements, setNodes, setEdges]);
 
     return (
-        <div className="relative w-full h-[calc(100vh-64px)] flex flex-col bg-slate-100 dark:bg-[#020617] overflow-hidden transition-colors duration-500">
-            {/* Optimized Canvas Background */}
+        <div className="relative w-full h-[calc(100vh-64px)] flex flex-col bg-indigo-100/80 dark:bg-[#020617] overflow-hidden transition-colors duration-500">
+            {/* Optimized Canvas Background - Now a clear uniform indigo wash for Light Mode */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.12)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.12)_0%,transparent_50%)] dark:bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.1)_0%,transparent_50%)]" />
-                <div className="absolute w-[80vw] h-[80vw] bg-indigo-500/10 dark:bg-indigo-500/8 rounded-full blur-[120px] -top-[40vw] -left-[40vw] animate-subtle-blob will-change-transform" />
-                <div className="absolute w-[80vw] h-[80vw] bg-violet-500/10 dark:bg-violet-500/8 rounded-full blur-[120px] -bottom-[40vw] -right-[40vw] animate-subtle-blob animation-delay-4000 will-change-transform" />
+                <div className="hidden dark:block absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.1)_0%,transparent_50%)]" />
+                <div className="hidden dark:block absolute w-[80vw] h-[80vw] bg-indigo-500/8 rounded-full blur-[100px] -top-[40vw] -left-[40vw] animate-subtle-blob will-change-transform" />
+                <div className="hidden dark:block absolute w-[80vw] h-[80vw] bg-violet-500/8 rounded-full blur-[100px] -bottom-[40vw] -right-[40vw] animate-subtle-blob animation-delay-4000 will-change-transform" />
             </div>
 
             <div className="flex-grow w-full h-full relative z-10">
@@ -225,8 +225,8 @@ const MindmapContent = ({ chapter, onBack, onInitiate }) => {
                 </ReactFlow>
             </div>
 
-            {/* UI Overlays - Moved after Flow for correct stacking */}
-            <div className="absolute top-6 left-6 z-30 flex items-center gap-4">
+            {/* UI Overlays - Switched to Absolute to anchor within the Mindmap container */}
+            <div className="absolute top-6 left-6 z-50 flex items-center gap-4">
                 <button
                     onClick={onBack}
                     className="flex items-center gap-2 bg-white dark:bg-slate-900 px-4 py-2.5 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all font-black text-xs uppercase tracking-widest"
@@ -236,7 +236,7 @@ const MindmapContent = ({ chapter, onBack, onInitiate }) => {
                 </button>
             </div>
 
-            <div className="absolute top-6 right-6 z-30 hidden md:block">
+            <div className="absolute top-6 right-6 z-50 hidden md:block">
                 <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl p-4 rounded-3xl border border-slate-200/60 dark:border-slate-800/60 shadow-2xl space-y-3 max-w-sm">
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-2xl bg-indigo-600 flex items-center justify-center text-white">
@@ -250,7 +250,7 @@ const MindmapContent = ({ chapter, onBack, onInitiate }) => {
                 </div>
             </div>
 
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 w-[90%] md:w-auto">
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 w-[92%] md:w-auto">
                 <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl px-6 py-4 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col md:flex-row items-center gap-4 md:gap-12">
                     <div className="flex items-center gap-6">
                         <div className="flex items-center gap-2">
