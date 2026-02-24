@@ -55,15 +55,17 @@ const getLayoutedElements = (nodes, edges, isSmallScreen) => {
     // Swapped per user request: SmallScreen -> LR (Horizontal), Desktop -> TB (Vertical)
     const direction = isSmallScreen ? 'LR' : 'TB';
 
+    const nodeWidth = isSmallScreen ? 350 : 600;
+    const nodeHeight = isSmallScreen ? 140 : 300;
+
     dagreGraph.setGraph({
         rankdir: direction,
-        nodesep: 200, // Increased for massive nodes
-        ranksep: 450, // Increased for massive nodes
+        nodesep: isSmallScreen ? 40 : 200,
+        ranksep: isSmallScreen ? 150 : 450,
     });
 
     nodes.forEach((node) => {
-        // Massive dimensions for Dagre to match the massive text nodes
-        dagreGraph.setNode(node.id, { width: 600, height: 300 });
+        dagreGraph.setNode(node.id, { width: nodeWidth, height: nodeHeight });
     });
 
     edges.forEach((edge) => {
@@ -79,8 +81,8 @@ const getLayoutedElements = (nodes, edges, isSmallScreen) => {
             targetPosition: isSmallScreen ? Position.Left : Position.Top,
             sourcePosition: isSmallScreen ? Position.Right : Position.Bottom,
             position: {
-                x: nodeWithPosition.x - 300,
-                y: nodeWithPosition.y - 150,
+                x: nodeWithPosition.x - (nodeWidth / 2),
+                y: nodeWithPosition.y - (nodeHeight / 2),
             },
         };
     });
@@ -104,9 +106,12 @@ const ViewportController = ({ nodes, isSmallScreen, chapterTitle }) => {
         if (rootNode) {
             lastLayoutKey.current = currentKey;
 
-            const zoom = isSmallScreen ? 0.8 : 0.65;
-            const centerX = rootNode.position.x + 300;
-            const centerY = rootNode.position.y + 150;
+            const nodeWidth = isSmallScreen ? 350 : 600;
+            const nodeHeight = isSmallScreen ? 140 : 300;
+
+            const zoom = isSmallScreen ? 0.95 : 0.7;
+            const centerX = rootNode.position.x + (nodeWidth / 2);
+            const centerY = rootNode.position.y + (nodeHeight / 2);
 
             // Use animation frame + timeout to ensure ReactFlow is ready to move the viewport
             requestAnimationFrame(() => {

@@ -80,7 +80,7 @@ const Home = ({ onSelectPhysics, onSelectChemistry, onSelectMaths }) => {
                 />
                 <SubjectCard
                     title="CHEMISTRY"
-                    status="Disabled"
+                    status="Coming Soon"
                     color="from-emerald-600 to-emerald-400"
                     icon="🧪"
                     disabled={true}
@@ -88,7 +88,7 @@ const Home = ({ onSelectPhysics, onSelectChemistry, onSelectMaths }) => {
                 />
                 <SubjectCard
                     title="MATHS"
-                    status="Disabled"
+                    status="Coming Soon"
                     color="from-amber-600 to-amber-400"
                     icon="∑"
                     disabled={true}
