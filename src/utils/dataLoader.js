@@ -31,13 +31,21 @@ export const getAvailableChapters = async (subject) => {
             const flashcardPath = `../data/${sub}/flashcards/${fileName}.js`;
             const questionPath = `../data/${sub}/questions/${fileName}.js`;
 
-            let flashcards = [];
+            let structuredFlashcards = [];
             let questions = [];
 
             if (allFlashcardFiles[flashcardPath]) {
                 const fcModule = await allFlashcardFiles[flashcardPath]();
-                flashcards = fcModule.flashcards || [];
+                structuredFlashcards = fcModule.flashcards || [];
             }
+
+            // Create flattened flashcards for the traditional FlashcardsView
+            const flattenedFlashcards = structuredFlashcards.reduce((acc, current) => {
+                if (current.cards && Array.isArray(current.cards)) {
+                    return [...acc, ...current.cards];
+                }
+                return acc;
+            }, []);
 
             if (allQuestionFiles[questionPath]) {
                 const qModule = await allQuestionFiles[questionPath]();
@@ -49,7 +57,8 @@ export const getAvailableChapters = async (subject) => {
                 subject: sub,
                 title: mindmap.title || fileName.toUpperCase(),
                 flow: mindmap.flow || [],
-                flashcards,
+                flashcards: flattenedFlashcards,
+                structuredFlashcards: structuredFlashcards,
                 questions,
                 path: path
             });

@@ -3,7 +3,6 @@ import Header from './components/Header'
 import Home from './components/Home'
 import TopicSelection from './components/TopicSelection'
 import Mindmap from './components/Mindmap'
-import FlashcardsView from './components/FlashcardsView'
 import QuizView from './components/QuizView'
 import RevisionQuizView from './components/RevisionQuizView'
 import SessionAnalysisView from './components/SessionAnalysisView'
@@ -51,10 +50,6 @@ function App() {
     setSelectedTopic(null)
   }
 
-  const startRevision = () => {
-    setView('flashcards')
-  }
-
   const startInitialQuiz = () => {
     setView('quiz')
   }
@@ -76,7 +71,7 @@ function App() {
   return (
     <div className="app-bg text-main">
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <main className={['mindmap', 'flashcards', 'quiz', 'revision-quiz', 'analysis'].includes(view) ? "" : "container mx-auto px-4 py-8"}>
+      <main className={['mindmap', 'quiz', 'revision-quiz', 'analysis'].includes(view) ? "" : "container mx-auto px-4 py-8"}>
         {view === 'home' && (
           <Home
             onSelectPhysics={() => navigateToTopics('Physics')}
@@ -96,20 +91,13 @@ function App() {
         <Mindmap
           chapter={selectedTopic}
           onBack={navigateBackToTopics}
-          onInitiate={startRevision}
-        />
-      )}
-      {view === 'flashcards' && selectedTopic && (
-        <FlashcardsView
-          chapter={selectedTopic}
-          onBack={() => setView('mindmap')}
-          onComplete={startInitialQuiz}
+          onInitiate={startInitialQuiz}
         />
       )}
       {view === 'quiz' && selectedTopic && (
         <QuizView
           chapter={selectedTopic}
-          onBack={() => setView('flashcards')}
+          onBack={() => setView('mindmap')}
           onComplete={startRevisionQuiz}
         />
       )}

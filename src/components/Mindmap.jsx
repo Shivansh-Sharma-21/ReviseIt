@@ -12,7 +12,7 @@ import {
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import dagre from 'dagre';
-import { ArrowLeft, Maximize2 } from 'lucide-react';
+import { ArrowLeft, Maximize2, X, BookOpen, HelpCircle, Image as ImageIcon } from 'lucide-react';
 
 // --- Custom Node Components - PREMIUM ENHANCED ---
 
@@ -90,6 +90,119 @@ const getLayoutedElements = (nodes, edges, isSmallScreen) => {
     return { nodes: layoutedNodes, edges };
 };
 
+// --- Flashcard Modal Component ---
+const FlashcardModal = ({ data, onClose }) => {
+    if (!data) return null;
+
+    return (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+            <div
+                className="absolute inset-0 bg-slate-950/85 animate-backdrop-fade"
+                onClick={onClose}
+            />
+            <div className="relative bg-white dark:bg-slate-900 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[2.5rem] shadow-2xl border border-slate-200 dark:border-slate-800 animate-modal-entry scrollbar-hide">
+                {/* Header */}
+                <div className="sticky top-0 z-10 bg-white dark:bg-slate-900 px-6 py-5 md:px-8 md:py-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-3 md:gap-4 min-w-0">
+                        <div className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 rounded-xl md:rounded-2xl bg-indigo-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
+                            <BookOpen className="w-5 h-5 md:w-6 md:h-6" />
+                        </div>
+                        <div className="min-w-0">
+                            <h4 className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-300 mb-0.5 truncate">Quick Revision</h4>
+                            <h2 className="text-lg md:text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight leading-tight truncate">{data.subtopic}</h2>
+                        </div>
+                    </div>
+                    <button
+                        onClick={onClose}
+                        className="w-10 h-10 flex-shrink-0 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:bg-red-500 hover:text-white transition-all shadow-inner"
+                    >
+                        <X size={20} />
+                    </button>
+                </div>
+
+                <div className="p-8 space-y-8">
+                    {/* Content Section */}
+                    {data.content && (
+                        <section className="space-y-4">
+                            <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-300">
+                                <BookOpen size={18} strokeWidth={3} />
+                                <h3 className="text-xs font-black uppercase tracking-widest">Core Concept</h3>
+                            </div>
+                            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-100 leading-relaxed font-medium">
+                                {data.content}
+                            </p>
+                        </section>
+                    )}
+
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Important Questions */}
+                        {data.importantQuestions && data.importantQuestions.length > 0 && (
+                            <section className="space-y-4 p-6 rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                                <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-300">
+                                    <HelpCircle size={18} strokeWidth={3} />
+                                    <h3 className="text-xs font-black uppercase tracking-widest">Key Questions</h3>
+                                </div>
+                                <ul className="space-y-3">
+                                    {data.importantQuestions.map((q, idx) => (
+                                        <li key={idx} className="flex gap-3 text-sm font-bold text-slate-600 dark:text-slate-200">
+                                            <span className="text-emerald-500 dark:text-emerald-400 font-black">Q.</span>
+                                            {q}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </section>
+                        )}
+
+                        {/* Diagram */}
+                        {data.diagram && (
+                            <section className="space-y-4">
+                                <div className="flex items-center gap-2 text-amber-600 dark:text-amber-300">
+                                    <ImageIcon size={18} strokeWidth={3} />
+                                    <h3 className="text-xs font-black uppercase tracking-widest">Visual Aid</h3>
+                                </div>
+                                <div className="rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-xl group aspect-video">
+                                    <img
+                                        src={data.diagram}
+                                        alt={data.subtopic}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    />
+                                </div>
+                            </section>
+                        )}
+                    </div>
+
+                    {/* Concept Cards Subset */}
+                    {data.cards && data.cards.length > 0 && (
+                        <section className="space-y-4">
+                            <div className="flex items-center gap-2 text-violet-600 dark:text-violet-300">
+                                <BookOpen size={18} strokeWidth={3} />
+                                <h3 className="text-xs font-black uppercase tracking-widest">Fast Recall Cards</h3>
+                            </div>
+                            <div className="grid sm:grid-cols-2 gap-4">
+                                {data.cards.map((card, idx) => (
+                                    <div key={idx} className="p-5 rounded-2xl bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800 group hover:border-indigo-400 transition-colors">
+                                        <div className="text-[10px] font-black text-indigo-600 dark:text-indigo-300 mb-2 uppercase tracking-[0.15em]">Flash Question</div>
+                                        <div className="text-slate-900 dark:text-white font-bold mb-3">{card.question}</div>
+                                        <div className="text-sm text-slate-600 dark:text-slate-200 font-medium p-3 rounded-xl bg-white/50 dark:bg-slate-950">
+                                            {card.answer}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {!data.content && !data.cards && (
+                        <div className="text-center py-12">
+                            <p className="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest italic text-sm">Flashcard content for this subtopic is being prepared.</p>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+};
+
 // --- Viewport Controller ---
 const ViewportController = ({ nodes, isSmallScreen, chapterTitle }) => {
     const { setCenter } = useReactFlow();
@@ -133,6 +246,8 @@ const MindmapContent = ({ chapter, onBack, onInitiate }) => {
     const [isSmallScreen, setIsSmallScreen] = useState(
         typeof window !== 'undefined' ? window.innerWidth < 1024 : false
     );
+
+    const [selectedSubtopic, setSelectedSubtopic] = useState(null);
 
     useEffect(() => {
         const handleResize = () => setIsSmallScreen(window.innerWidth < 1024);
@@ -217,6 +332,19 @@ const MindmapContent = ({ chapter, onBack, onInitiate }) => {
                     minZoom={0.05}
                     maxZoom={3}
                     onlyRenderVisibleElements={true}
+                    onNodeClick={(_, node) => {
+                        if (node.type === 'subtopic') {
+                            const flashcardData = (chapter.structuredFlashcards || []).find(f =>
+                                f.subtopic?.trim().toLowerCase() === node.data.label?.trim().toLowerCase()
+                            );
+                            if (flashcardData) {
+                                setSelectedSubtopic(flashcardData);
+                            } else {
+                                // Default/Placeholder if none found
+                                setSelectedSubtopic({ subtopic: node.data.label });
+                            }
+                        }
+                    }}
                 >
                     <Controls
                         className="!bg-white dark:!bg-slate-900 !border-slate-200 dark:!border-slate-800 !shadow-2xl !rounded-2xl !overflow-hidden !m-6"
@@ -224,6 +352,14 @@ const MindmapContent = ({ chapter, onBack, onInitiate }) => {
                     <ViewportController nodes={nodes} isSmallScreen={isSmallScreen} chapterTitle={chapter?.title || 'default'} />
                 </ReactFlow>
             </div>
+
+            {/* Flashcard Popup */}
+            {selectedSubtopic && (
+                <FlashcardModal
+                    data={selectedSubtopic}
+                    onClose={() => setSelectedSubtopic(null)}
+                />
+            )}
 
             {/* UI Overlays - Switched to Absolute to anchor within the Mindmap container */}
             <div className="absolute top-6 left-6 z-50 flex items-center gap-4">
@@ -267,7 +403,7 @@ const MindmapContent = ({ chapter, onBack, onInitiate }) => {
                         onClick={onInitiate}
                         className="w-full md:w-auto px-8 py-3 rounded-2xl bg-indigo-600 dark:bg-indigo-500 text-white text-[10px] font-black uppercase tracking-[0.2em] shadow-lg hover:scale-105 transition-all"
                     >
-                        Let's Revise it
+                        START MASTERY CHECK
                     </button>
                 </div>
             </div>
@@ -308,6 +444,29 @@ const MindmapContent = ({ chapter, onBack, onInitiate }) => {
                 }
                 .react-flow__edge-path {
                     stroke-linecap: round;
+                }
+                .scrollbar-hide::-webkit-scrollbar {
+                    display: none;
+                }
+                .scrollbar-hide {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                }
+                @keyframes modal-entry {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @keyframes backdrop-fade {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                .animate-modal-entry {
+                    animation: modal-entry 0.15s ease-out forwards;
+                    will-change: opacity;
+                }
+                .animate-backdrop-fade {
+                    animation: backdrop-fade 0.1s ease-out forwards;
+                    will-change: opacity;
                 }
             `}} />
         </div>
