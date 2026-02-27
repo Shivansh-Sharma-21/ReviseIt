@@ -1,30 +1,34 @@
 export const mindmap = {
-    id: 'nlm',
-    title: "Newton's Laws of Motion",
+    id: 'nlm_friction',
+    title: "Newton's Laws of Motion & Friction",
     flow: [
         {
-            topic: "Introduction to Force",
-            subtopics: ["Definition of Force", "Types of Forces (Contact vs Non-contact)", "Vector Nature of Force"]
+            topic: "Foundations of Motion",
+            subtopics: ["INERTIA", "Momentum"]
         },
         {
-            topic: "First Law of Motion",
-            subtopics: ["Inertia", "Frames of Reference (Inertial vs Non-inertial)"]
+            topic: "Newton's Laws",
+            subtopics: ["Newton 1st Law (Law of inertia)", "Newton Second Law", "Newton Third law"]
         },
         {
-            topic: "Second Law of Motion",
-            subtopics: ["Momentum (p = mv)", "F = dp/dt", "F = ma for constant mass", "Impulse"]
+            topic: "Fundamental Forces",
+            subtopics: ["GRAVITATIONAL FORCE", "NORMAL FORCE", "TENSION FORCE"]
         },
         {
-            topic: "Third Law of Motion",
-            subtopics: ["Action-Reaction Pairs", "Properties of Action-Reaction"]
+            topic: "Equilibrium & Pulley Systems",
+            subtopics: ["EQUILIBRIUM", "Lami theorem", "PULLEY SYSTEM / ATWOOD MACHINE"]
         },
         {
-            topic: "Applications of NLM",
-            subtopics: ["Free Body Diagrams (FBD)", "Equilibrium of Particles", "Motion of Connected Bodies", "Pulley Systems"]
+            topic: "Springs",
+            subtopics: ["IDEAL SPRING", "Hook's Law", "EQUIVALENT SPRING CONSTANT"]
+        },
+        {
+            topic: "Frames & Advanced Motion",
+            subtopics: ["INERTIAL FRAME / NON INERTIAL FRAME", "Pseudo force", "CONSTRAINT MOTION", "WEDGE CONSTRAINT"]
         },
         {
             topic: "Friction",
-            subtopics: ["Static vs Kinetic Friction", "Laws of Friction", "Angle of Friction & Angle of Repose"]
+            subtopics: ["FRICTION", "Static Friction", "Kinetic Friction", "Angle of Repose/Angle of Sliding", "Angle of Friction"]
         }
     ]
 };
