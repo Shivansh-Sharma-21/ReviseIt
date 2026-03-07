@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getAvailableChapters } from '../utils/dataLoader';
+import Latex from './Latex';
 
 const TopicSelection = ({ subject, onBack, onSelectTopic }) => {
     const [chapters, setChapters] = useState([]);
@@ -58,7 +59,7 @@ const TopicSelection = ({ subject, onBack, onSelectTopic }) => {
                                         </div>
                                         <div>
                                             <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                                                {chapter.title}
+                                                <Latex>{chapter.title}</Latex>
                                             </h3>
                                             <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">
                                                 Mindmaps, Flashcards & Adaptive Questions Ready

@@ -13,13 +13,14 @@ import {
 import '@xyflow/react/dist/style.css';
 import dagre from 'dagre';
 import { ArrowLeft, Maximize2, X, BookOpen, HelpCircle, Image as ImageIcon } from 'lucide-react';
+import Latex from './Latex';
 
 // --- Custom Node Components - PREMIUM ENHANCED ---
 
 const RootNode = ({ sourcePosition, data }) => (
     <div className="px-10 py-7 md:px-14 md:py-10 rounded-[3rem] bg-gradient-to-br from-indigo-600 via-indigo-800 to-violet-950 text-white shadow-[0_40px_100px_rgba(79,70,229,0.5)] border-[6px] border-white/40 min-w-[300px] md:min-w-[400px] text-center relative overflow-hidden group transition-all duration-700 hover:scale-[1.03] hover:shadow-[0_50px_120px_rgba(79,70,229,0.6)]">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1500ms]" />
-        <div className="font-black text-2xl md:text-5xl tracking-[ -0.05em] leading-[0.9] uppercase drop-shadow-2xl mb-2">{data.label}</div>
+        <div className="font-black text-2xl md:text-5xl tracking-[ -0.05em] leading-[0.9] uppercase drop-shadow-2xl mb-2"><Latex>{data.label}</Latex></div>
         <div className="text-[10px] md:text-sm opacity-90 mt-4 font-black tracking-[0.6em] uppercase text-indigo-300 drop-shadow-md">Core Curriculum</div>
         <Handle type="source" position={sourcePosition} className="!bg-white !w-6 !h-6 !border-[6px] !border-indigo-600 shadow-2xl transition-transform group-hover:scale-125" />
     </div>
@@ -28,7 +29,7 @@ const RootNode = ({ sourcePosition, data }) => (
 const TopicNode = ({ targetPosition, sourcePosition, data }) => (
     <div className="px-8 py-5 md:px-10 md:py-7 rounded-[2rem] bg-white/95 dark:bg-slate-900/95 backdrop-blur-3xl border-[3px] border-slate-400/50 dark:border-indigo-400/20 shadow-[0_40px_80px_rgba(15,23,42,0.12)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] min-w-[240px] md:min-w-[300px] text-center group hover:border-indigo-600 dark:hover:border-indigo-400 transition-all duration-500 hover:scale-[1.05] hover:shadow-indigo-500/20">
         <Handle type="target" position={targetPosition} className="!bg-indigo-600 !w-4 !h-4 !border-2 !border-white" />
-        <div className="font-extrabold text-slate-950 dark:text-white text-lg md:text-2xl tracking-tight leading-tight">{data.label}</div>
+        <div className="font-extrabold text-slate-950 dark:text-white text-lg md:text-2xl tracking-tight leading-tight"><Latex>{data.label}</Latex></div>
         <Handle type="source" position={sourcePosition} className="!bg-indigo-600 !w-4 !h-4 !border-2 !border-white" />
     </div>
 );
@@ -36,7 +37,7 @@ const TopicNode = ({ targetPosition, sourcePosition, data }) => (
 const SubtopicNode = ({ targetPosition, data }) => (
     <div className="px-6 py-4 md:px-8 md:py-6 rounded-2xl bg-white/90 dark:bg-slate-800/60 backdrop-blur-2xl border-2 border-slate-400/40 dark:border-slate-700 shadow-[0_25px_50px_rgba(15,23,42,0.08)] min-w-[180px] md:min-w-[220px] text-center group hover:bg-white dark:hover:bg-slate-700 transition-all duration-500 hover:scale-[1.08] hover:border-indigo-500 hover:shadow-indigo-500/10">
         <Handle type="target" position={targetPosition} className="!bg-slate-500 dark:!bg-slate-400 !w-3 !h-3 !border-2 !border-white dark:!border-slate-800" />
-        <div className="text-xl md:text-3xl font-bold text-slate-950 dark:text-slate-100 tracking-tight leading-relaxed group-hover:text-indigo-600 dark:group-hover:text-indigo-400">{data.label}</div>
+        <div className="text-xl md:text-3xl font-bold text-slate-950 dark:text-slate-100 tracking-tight leading-relaxed group-hover:text-indigo-600 dark:group-hover:text-indigo-400"><Latex>{data.label}</Latex></div>
     </div>
 );
 
@@ -129,7 +130,7 @@ const FlashcardModal = ({ data, onClose }) => {
                                 <h3 className="text-xs font-black uppercase tracking-widest">Core Concept</h3>
                             </div>
                             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-100 leading-relaxed font-medium">
-                                {data.content}
+                                <Latex>{data.content}</Latex>
                             </p>
                         </section>
                     )}
@@ -146,7 +147,7 @@ const FlashcardModal = ({ data, onClose }) => {
                                     {data.importantQuestions.map((q, idx) => (
                                         <li key={idx} className="flex gap-3 text-sm font-bold text-slate-600 dark:text-slate-200">
                                             <span className="text-emerald-500 dark:text-emerald-400 font-black">Q.</span>
-                                            {q}
+                                            <Latex>{q}</Latex>
                                         </li>
                                     ))}
                                 </ul>
@@ -182,9 +183,9 @@ const FlashcardModal = ({ data, onClose }) => {
                                 {data.cards.map((card, idx) => (
                                     <div key={idx} className="p-5 rounded-2xl bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800 group hover:border-indigo-400 transition-colors">
                                         <div className="text-[10px] font-black text-indigo-600 dark:text-indigo-300 mb-2 uppercase tracking-[0.15em]">Flash Question</div>
-                                        <div className="text-slate-900 dark:text-white font-bold mb-3">{card.question}</div>
+                                        <div className="text-slate-900 dark:text-white font-bold mb-3"><Latex>{card.question}</Latex></div>
                                         <div className="text-sm text-slate-600 dark:text-slate-200 font-medium p-3 rounded-xl bg-white/50 dark:bg-slate-950">
-                                            {card.answer}
+                                            <Latex>{card.answer}</Latex>
                                         </div>
                                     </div>
                                 ))}

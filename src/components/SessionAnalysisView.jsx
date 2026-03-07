@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, ArrowRight, ArrowDown, Target, AlertCircle, Home, RotateCcw, TrendingDown, CheckCircle2 } from 'lucide-react';
+import Latex from './Latex';
 
 const SessionAnalysisView = ({ score, total, chosenConfidence, onHome, onRetry }) => {
     const percentage = (score / total) * 100;
@@ -98,7 +99,7 @@ const SessionAnalysisView = ({ score, total, chosenConfidence, onHome, onRetry }
 
                     <div className="mt-8 text-center px-4">
                         <p className="text-slate-600 dark:text-slate-300 font-bold leading-relaxed max-w-lg mx-auto">
-                            {analysis.message}
+                            <Latex>{analysis.message}</Latex>
                         </p>
                     </div>
                 </div>
