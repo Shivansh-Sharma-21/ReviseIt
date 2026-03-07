@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, ArrowRight, Target, AlertCircle, Home, RotateCcw, TrendingDown, CheckCircle2 } from 'lucide-react';
+import { Trophy, ArrowRight, ArrowDown, Target, AlertCircle, Home, RotateCcw, TrendingDown, CheckCircle2 } from 'lucide-react';
 
 const SessionAnalysisView = ({ score, total, chosenConfidence, onHome, onRetry }) => {
     const percentage = (score / total) * 100;
@@ -78,9 +78,10 @@ const SessionAnalysisView = ({ score, total, chosenConfidence, onHome, onRetry }
                             <motion.div
                                 animate={{ x: [0, 5, 0] }}
                                 transition={{ repeat: Infinity, duration: 2 }}
-                                className="text-slate-300 dark:text-slate-700"
+                                className="text-slate-300 dark:text-slate-700 flex items-center justify-center"
                             >
-                                <ArrowRight size={48} strokeWidth={3} />
+                                <ArrowRight size={48} strokeWidth={3} className="hidden md:block" />
+                                <ArrowDown size={48} strokeWidth={3} className="block md:hidden" />
                             </motion.div>
                         )}
 

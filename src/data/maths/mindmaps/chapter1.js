@@ -1,6 +1,6 @@
 export const mindmap = {
-    id: 'sets-relations',
-    title: "Sets and Relations",
+    id: 'sequence-series',
+    title: "Sequence and Series",
     flow: [
         {
             topic: "Sets",

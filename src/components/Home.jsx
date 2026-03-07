@@ -72,10 +72,10 @@ const Home = ({ onSelectPhysics, onSelectChemistry, onSelectMaths }) => {
             <div className="grid md:grid-cols-3 gap-8">
                 <SubjectCard
                     title="PHYSICS"
-                    status="Available"
+                    status="Coming Soon"
                     color="from-indigo-600 to-indigo-400"
                     icon="⚛"
-                    disabled={false}
+                    disabled={true}
                     onClick={onSelectPhysics}
                 />
                 <SubjectCard
@@ -88,10 +88,10 @@ const Home = ({ onSelectPhysics, onSelectChemistry, onSelectMaths }) => {
                 />
                 <SubjectCard
                     title="MATHS"
-                    status="Coming Soon"
+                    status="Available"
                     color="from-amber-600 to-amber-400"
                     icon="∑"
-                    disabled={true}
+                    disabled={false}
                     onClick={onSelectMaths}
                 />
             </div>

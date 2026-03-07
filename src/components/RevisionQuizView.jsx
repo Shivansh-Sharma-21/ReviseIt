@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, Trophy, RefreshCw, Info } from 'lucide-react';
+import Latex from 'react-latex-next';
+import 'katex/dist/katex.min.css';
 
 const RevisionQuizView = ({ chapter, confidence, onBack, onComplete }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -157,7 +159,7 @@ const RevisionQuizView = ({ chapter, confidence, onBack, onComplete }) => {
                         </div>
 
                         <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white leading-tight mb-12">
-                            {currentQuestion.text}
+                            <Latex>{currentQuestion.text}</Latex>
                         </h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -187,7 +189,7 @@ const RevisionQuizView = ({ chapter, confidence, onBack, onComplete }) => {
                                         onClick={() => handleOptionSelect(option)}
                                         className={`p-6 rounded-2xl border-2 text-left font-bold transition-all flex items-center justify-between ${buttonStyle}`}
                                     >
-                                        <span className="text-base md:text-lg">{option}</span>
+                                        <span className="text-base md:text-lg"><Latex>{option}</Latex></span>
                                         {showResultFlag && isCorrect && <CheckCircle2 size={24} className="shrink-0" />}
                                         {showResultFlag && isSelected && !isCorrect && <XCircle size={24} className="shrink-0" />}
                                     </button>
@@ -221,7 +223,7 @@ const RevisionQuizView = ({ chapter, confidence, onBack, onComplete }) => {
                                         </div>
                                     </div>
                                     <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-bold leading-relaxed">
-                                        {currentQuestion.shortExplanation}
+                                        <Latex>{currentQuestion.shortExplanation}</Latex>
                                     </p>
                                 </div>
 

@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, Trophy, RefreshCw } from 'lucide-react';
+import Latex from 'react-latex-next';
+import 'katex/dist/katex.min.css';
 
 const QuizView = ({ chapter, onBack, onComplete }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -167,7 +169,7 @@ const QuizView = ({ chapter, onBack, onComplete }) => {
                     >
                         <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] border-2 border-slate-200 dark:border-slate-800 shadow-xl mb-8">
                             <h2 className="text-xl md:text-3xl font-black text-slate-900 dark:text-white leading-tight mb-12">
-                                {currentQuestion.text}
+                                <Latex>{currentQuestion.text}</Latex>
                             </h2>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -197,7 +199,7 @@ const QuizView = ({ chapter, onBack, onComplete }) => {
                                             onClick={() => handleOptionSelect(option)}
                                             className={`group relative p-6 rounded-2xl border-2 text-left font-bold transition-all flex items-center justify-between ${buttonStyle}`}
                                         >
-                                            <span className="text-base md:text-lg">{option}</span>
+                                            <span className="text-base md:text-lg"><Latex>{option}</Latex></span>
                                             {showResultFlag && isCorrect && <CheckCircle2 size={24} className="text-emerald-500 shrink-0" />}
                                             {showResultFlag && isSelected && !isCorrect && <XCircle size={24} className="text-rose-500 shrink-0" />}
                                         </button>
