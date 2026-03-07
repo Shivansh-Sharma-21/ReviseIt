@@ -1,8 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, Trophy, RefreshCw } from 'lucide-react';
-import Latex from 'react-latex-next';
-import 'katex/dist/katex.min.css';
+import Latex from './Latex';
 
 const QuizView = ({ chapter, onBack, onComplete }) => {
     const [currentIndex, setCurrentIndex] = useState(0);

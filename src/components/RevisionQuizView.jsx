@@ -1,8 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, CheckCircle2, XCircle, ChevronRight, Trophy, RefreshCw, Info } from 'lucide-react';
-import Latex from 'react-latex-next';
-import 'katex/dist/katex.min.css';
+import Latex from './Latex';
 
 const RevisionQuizView = ({ chapter, confidence, onBack, onComplete }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
