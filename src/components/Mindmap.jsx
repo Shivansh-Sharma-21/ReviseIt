@@ -127,11 +127,21 @@ const FlashcardModal = ({ data, onClose }) => {
                         <section className="space-y-4">
                             <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-300">
                                 <BookOpen size={18} strokeWidth={3} />
-                                <h3 className="text-xs font-black uppercase tracking-widest">Core Concept</h3>
+                                <h3 className="text-xs font-black uppercase tracking-widest">Core Concept & Formulas</h3>
                             </div>
-                            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-100 leading-relaxed font-medium">
-                                <Latex>{data.content}</Latex>
-                            </p>
+                            <ul className="space-y-3">
+                                {data.content.split(';').filter(p => p.trim()).map((pointer, idx) => (
+                                    <li 
+                                        key={idx} 
+                                        className="flex gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50 group hover:border-indigo-500/30 transition-all"
+                                    >
+                                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0 group-hover:scale-125 transition-transform" />
+                                        <p className="text-lg text-slate-700 dark:text-slate-100 leading-relaxed font-semibold">
+                                            <Latex>{pointer.trim()}</Latex>
+                                        </p>
+                                    </li>
+                                ))}
+                            </ul>
                         </section>
                     )}
 
