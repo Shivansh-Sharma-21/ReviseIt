@@ -3,7 +3,7 @@ export const questions = [
         id: 1,
         text: "If a+b+c=0 and a, b, c ∈ R, then the roots of the equation 4ax² + 3bx + 2c = 0 are",
         options: ["Equal", "Imaginary", "Real", "Both (a) and (b)"],
-        correctAnswer: "(c)",
+        correctAnswer: "Real",
         shortExplanation: "Based on the nature of roots for the given quadratic equation under the condition a+b+c=0.",
         tag: "F"
     },
@@ -11,7 +11,7 @@ export const questions = [
         id: 2,
         text: "The roots of the given equation 2(a² + b²)x² + 2(a + b)x + 1 = 0 are [Where a ≠ b]",
         options: ["Rational", "Irrational", "Real", "Imaginary"],
-        correctAnswer: "(d)",
+        correctAnswer: "Imaginary",
         shortExplanation: "Determined by calculating the discriminant (D) for the given coefficients.",
         tag: "F"
     },
@@ -19,7 +19,7 @@ export const questions = [
         id: 3,
         text: "If a, b, c ∈ Q then roots of the equation (b + c - 2a)x² + (c + a - 2b)x + (a + b - 2c) = 0 are",
         options: ["Rational", "Non-real", "Irrational", "Equal"],
-        correctAnswer: "(a)",
+        correctAnswer: "Rational",
         shortExplanation: "Since the sum of coefficients is zero, one root is 1, which is rational.",
         tag: "F"
     },
@@ -27,7 +27,7 @@ export const questions = [
         id: 4,
         text: "The value of k for which the quadratic equation, kx² + 1 = kx + 3x - 11x² has real and equal roots are",
         options: ["-11, -3", "5, 7", "5, -7", "-7, 25"],
-        correctAnswer: "(d)",
+        correctAnswer: "-7, 25",
         shortExplanation: "Set the discriminant D = 0 after rearranging the equation into standard form.",
         tag: "F"
     },
@@ -35,7 +35,7 @@ export const questions = [
         id: 5,
         text: "If x² - 3x + 2 be a factor of x⁴ - px² + q, then (p, q) =",
         options: ["(3, 4)", "(4, 5)", "(4, 3)", "(5, 4)"],
-        correctAnswer: "(d)",
+        correctAnswer: "(5, 4)",
         shortExplanation: "The roots of the factor (x=1, x=2) must satisfy the polynomial equation.",
         tag: "F"
     },
@@ -43,7 +43,7 @@ export const questions = [
         id: 6,
         text: "The roots of the equation (b - c)x² + (c - a)x + (a - b) = 0 are",
         options: ["(c-a)/(b-c), 1", "(a-b)/(b-c), 1", "(b-c)/(a-b), 1", "None of these"],
-        correctAnswer: "(b)",
+        correctAnswer: "(a-b)/(b-c), 1",
         shortExplanation: "Sum of coefficients is zero, so one root is 1; the other is (a-b)/(b-c).",
         tag: "F"
     },
@@ -51,7 +51,7 @@ export const questions = [
         id: 7,
         text: "If a, b, c are integers and b² = 4(ac + 5d²), d ∈ N, then roots of the equation ax² + bx + c = 0 are",
         options: ["Irrational", "Rational & different", "Complex conjugate", "Rational & equal"],
-        correctAnswer: "(a)",
+        correctAnswer: "Irrational",
         shortExplanation: "Roots are irrational because the discriminant is not a perfect square due to the 5d² term.",
         tag: "F"
     },
@@ -59,7 +59,7 @@ export const questions = [
         id: 8,
         text: "Consider the equation x² + 2x - n = 0 where n ∈ N and n ∈ [5, 100]. Total number of different values of 'n' so that the given equation has integral roots, is",
         options: ["4", "6", "8", "3"],
-        correctAnswer: "(c)",
+        correctAnswer: "8",
         shortExplanation: "Find values of n such that the discriminant 4 + 4n is a perfect square.",
         tag: "F"
     },
@@ -67,7 +67,7 @@ export const questions = [
         id: 9,
         text: "If a, b ∈ R, a ≠ 0 and the quadratic equation ax² - bx + 1 = 0 has imaginary roots, then a + b + 1 is:",
         options: ["Positive", "Negative", "Zero", "Depends on the sign of b"],
-        correctAnswer: "(a)",
+        correctAnswer: "Positive",
         shortExplanation: "For imaginary roots, the parabola does not cross the x-axis; check f(-1).",
         tag: "F"
     },
@@ -75,7 +75,7 @@ export const questions = [
         id: 10,
         text: "If a and b are the non-zero distinct roots of x² + ax + b = 0, then the least value of x² + ax + b is",
         options: ["3/2", "9/4", "-9/4", "1"],
-        correctAnswer: "(c)",
+        correctAnswer: "-9/4",
         shortExplanation: "The minimum value of a quadratic ax² + bx + c is -D/4a.",
         tag: "F"
     },
@@ -83,7 +83,7 @@ export const questions = [
         id: 11,
         text: "If both roots of the quadratic equation (2 - x)(x + 1) = p are distinct & positive, then p must lie in the interval",
         options: ["(2, ∞)", "(2, 9/4)", "(-∞, -2)", "(-∞, ∞)"],
-        correctAnswer: "(b)",
+        correctAnswer: "(2, 9/4)",
         shortExplanation: "Apply conditions for location of roots: D > 0, sum > 0, and product > 0.",
         tag: "F"
     },
@@ -91,7 +91,7 @@ export const questions = [
         id: 12,
         text: "If f(1 - p) is root of quadratic equation x² + px + (1 - p) = 0, then its roots are",
         options: ["0, 1", "-1, 1", "0, -1", "-1, 2"],
-        correctAnswer: "(c)",
+        correctAnswer: "0, -1",
         shortExplanation: "Substitute the root into the equation to find p, then solve for both roots.",
         tag: "F"
     },
@@ -99,7 +99,7 @@ export const questions = [
         id: 13,
         text: "If a + b + c = 0 then the equation 3ax² + 2bx + c = 0 has",
         options: ["Imaginary roots", "Real and equal roots", "Real and different roots", "Rational roots"],
-        correctAnswer: "(c)",
+        correctAnswer: "Real and different roots",
         shortExplanation: "Based on the properties of the coefficients and the discriminant.",
         tag: "F"
     },
@@ -107,7 +107,7 @@ export const questions = [
         id: 14,
         text: "If a, b, c are in A.P then the roots of the equation ax² + 2bx + c = 0 are (a ≠ b ≠ c)",
         options: ["Real and distinct", "Real and equal", "Real", "Imaginary"],
-        correctAnswer: "(a)",
+        correctAnswer: "Real and distinct",
         shortExplanation: "Using 2b = a + c, the discriminant D = 4b² - 4ac = (a+c)² - 4ac = (a-c)² > 0.",
         tag: "F"
     },
@@ -115,7 +115,7 @@ export const questions = [
         id: 15,
         text: "If the roots of the equation bx² + cx + a = 0 be imaginary then for all real values of x, the expression 3b²x² + 6bcx + 2c² is",
         options: ["Greater than 4ab", "Less than 4ab", "Greater than -4ab", "Less than -4ab"],
-        correctAnswer: "(c)",
+        correctAnswer: "Greater than -4ab",
         shortExplanation: "Analyze the quadratic expression using the condition c² - 4ab < 0.",
         tag: "F"
     },
@@ -123,7 +123,7 @@ export const questions = [
         id: 16,
         text: "If one root of 5x² + 13x + k = 0 is reciprocal of the other, then k =",
         options: ["0", "5", "1/6", "6"],
-        correctAnswer: "(b)",
+        correctAnswer: "5",
         shortExplanation: "Product of roots = 1, so c/a = 1, which implies k/5 = 1.",
         tag: "F"
     },
@@ -131,7 +131,7 @@ export const questions = [
         id: 17,
         text: "If α and β are the roots of the equation 4x² + 3x + 7 = 0 then 1/α + 1/β =",
         options: ["-3/7", "3/7", "-3/5", "3/5"],
-        correctAnswer: "(a)",
+        correctAnswer: "-3/7",
         shortExplanation: "(α + β) / αβ = (-3/4) / (7/4) = -3/7.",
         tag: "F"
     },
@@ -139,7 +139,7 @@ export const questions = [
         id: 18,
         text: "If α, β be the roots of the equation x² - 2x + 3 = 0, then the equation whose roots are 1/α² and 1/β² is",
         options: ["x² + 2x + 1 = 0", "9x² + 2x + 1 = 0", "9x² - 2x + 1 = 0", "9x² + 2x - 1 = 0"],
-        correctAnswer: "(b)",
+        correctAnswer: "9x² + 2x + 1 = 0",
         shortExplanation: "Calculate new sum (1/α² + 1/β²) and product (1/α²β²) and form the equation.",
         tag: "F"
     },
@@ -147,7 +147,7 @@ export const questions = [
         id: 19,
         text: "If the product of roots of the equation mx² + 6x + (2m - 1) = 0 is -1, then the value of m will be",
         options: ["1", "-1", "1/3", "-1/3"],
-        correctAnswer: "(c)",
+        correctAnswer: "1/3",
         shortExplanation: "Product of roots = (2m - 1)/m = -1. Solving gives m = 1/3.",
         tag: "F"
     },
@@ -155,7 +155,7 @@ export const questions = [
         id: 20,
         text: "If α, β, γ are the roots of the equation x³ + x + 1 = 0 then the value of α³β³γ³ is",
         options: ["0", "-3", "3", "-1"],
-        correctAnswer: "(d)",
+        correctAnswer: "-1",
         shortExplanation: "The product of roots for x³ + 0x² + x + 1 = 0 is -1.",
         tag: "F"
     },
@@ -163,7 +163,7 @@ export const questions = [
         id: 21,
         text: "If α, β are the roots of quadratic equation x² + px + q = 0 and γ, δ are the roots of x² + px - r = 0, then (α - γ)(α - δ) is equal to:",
         options: ["q + r", "q - r", "-(q + r)", "-(p + q + r)"],
-        correctAnswer: "(c)",
+        correctAnswer: "-(q + r)",
         shortExplanation: "(α - γ)(α - δ) is the value of the second quadratic at x=α.",
         tag: "F"
     },
@@ -171,7 +171,7 @@ export const questions = [
         id: 22,
         text: "If α, β are roots of the equation ax² + bx + c = 0, then the value of α³ + β³ is",
         options: ["(3abc + b³)/a", "(a³ + b³)/3abc", "(3abc - b³)/a³", "-(3abc + b³)/a³"],
-        correctAnswer: "(c)",
+        correctAnswer: "(3abc - b³)/a³",
         shortExplanation: "Using identity: α³ + β³ = (α + β)³ - 3αβ(α + β).",
         tag: "F"
     },
@@ -179,7 +179,7 @@ export const questions = [
         id: 23,
         text: "If α + β = -2 and α³ + β³ = -56 then the quadratic equation whose roots are α, β is",
         options: ["x² + 2x - 16 = 0", "x² + 2x - 15 = 0", "x² + 2x - 12 = 0", "x² + 2x - 8 = 0"],
-        correctAnswer: "(d)",
+        correctAnswer: "x² + 2x - 8 = 0",
         shortExplanation: "Find αβ using the sum and sum of cubes formulas, then form the equation.",
         tag: "F"
     },
@@ -187,7 +187,7 @@ export const questions = [
         id: 24,
         text: "tan 22° and tan 23° are roots of x² + ax + b = 0 then",
         options: ["a + b + 1 = 0", "a - b + 1 = 0", "b - a + 1 = 0", "a + b = 1"],
-        correctAnswer: "(b)",
+        correctAnswer: "a - b + 1 = 0",
         shortExplanation: "tan(22+23) = tan(45) = 1. Use sum and product of roots in the tan(A+B) formula.",
         tag: "F"
     },
@@ -195,7 +195,7 @@ export const questions = [
         id: 25,
         text: "Let α, β be the roots of the equation (x - a)(x - b) = c, c ≠ 0 then the roots of the equation (x - α)(x - β) + c = 0 are",
         options: ["a, c", "b, c", "a, b", "a + b, b + c"],
-        correctAnswer: "(c)",
+        correctAnswer: "a, b",
         shortExplanation: "Based on the property of roots switching in shifted quadratic equations.",
         tag: "F"
     },
@@ -203,7 +203,7 @@ export const questions = [
         id: 26,
         text: "Let α, β are the roots of the equation x² - 15x + 1 = 0 then the value of (1/α - 15)⁻² + (1/β - 15)⁻² is",
         options: ["225", "900", "223", "0"],
-        correctAnswer: "(c)",
+        correctAnswer: "223",
         shortExplanation: "Since α is a root, α² - 15α + 1 = 0 => 1/α - 15 = -α. Expression becomes α² + β².",
         tag: "F"
     },
@@ -211,7 +211,7 @@ export const questions = [
         id: 27,
         text: "If one root of x² + px + 12 = 0 is 4 while the equation x² + px + q = 0 has equal roots then q =",
         options: ["-7", "4", "42", "49/4"],
-        correctAnswer: "(d)",
+        correctAnswer: "49/4",
         shortExplanation: "Find p using the first root (4), then set D = 0 for the second equation.",
         tag: "F"
     },
@@ -219,7 +219,7 @@ export const questions = [
         id: 28,
         text: "If one root of the equation ax² + bx + c = 0 is the square of the other, then",
         options: ["b² + ac² + a²c = 3abc", "b³ + ac² + a²c = 3abc", "b² + ac² + a²c + 3abc = 0", "b³ + ac² + a²c + 3abc = 0"],
-        correctAnswer: "(b)",
+        correctAnswer: "b³ + ac² + a²c = 3abc",
         shortExplanation: "Using roots α and α² and the relationship between coefficients.",
         tag: "F"
     },
@@ -227,7 +227,7 @@ export const questions = [
         id: 29,
         text: "The number of real solution of the equation (9/10)ˣ = -3 + x - x² is",
         options: ["2", "0", "1", "3"],
-        correctAnswer: "(b)",
+        correctAnswer: "0",
         shortExplanation: "The LHS is always positive, while the RHS (a downward parabola) has a negative maximum.",
         tag: "F"
     },
@@ -235,7 +235,7 @@ export const questions = [
         id: 30,
         text: "If the roots of x² - bx + c = 0 are two consecutive integers then b² - 4c =",
         options: ["0", "1", "2", "3"],
-        correctAnswer: "(b)",
+        correctAnswer: "1",
         shortExplanation: "The difference of roots |α - β| = 1, and (α - β)² = D/a².",
         tag: "F"
     },
@@ -243,7 +243,7 @@ export const questions = [
         id: 31,
         text: "If the roots of the quadratic equation x² + px + q are tan α and tan β respectively then the value of p / (q - 1) is",
         options: ["tan(α - β)", "cot(α - β)", "tan(α + β)", "cot(α + β)"],
-        correctAnswer: "(c)",
+        correctAnswer: "tan(α + β)",
         shortExplanation: "Use tan(α + β) = (tan α + tan β) / (1 - tan α tan β).",
         tag: "F"
     },
@@ -251,7 +251,7 @@ export const questions = [
         id: 32,
         text: "If the equation x² + px + q = 0 and x² + qx + p = 0 have a common root (where p ≠ q) then p + q + 1 =",
         options: ["0", "1", "2", "-1"],
-        correctAnswer: "(a)",
+        correctAnswer: "0",
         shortExplanation: "Subtract equations to find the common root, then substitute it back.",
         tag: "F"
     },
@@ -259,7 +259,7 @@ export const questions = [
         id: 33,
         text: "If a, b, p, q are non-zero real numbers, then the equations 2a²x² - 2abx + b² = 0 and p²x² + 2pqx + q² = 0 have:",
         options: ["No common root", "One common root", "Two common roots", "None of these"],
-        correctAnswer: "(a)",
+        correctAnswer: "No common root",
         shortExplanation: "Analyze the discriminants; the second has real roots, the first has imaginary roots.",
         tag: "F"
     },
@@ -267,7 +267,7 @@ export const questions = [
         id: 34,
         text: "The equations x² + 3x + 5 = 0 and ax² + bx + c = 0 have a common root. If a, b, c ∈ N then the least possible value of a + b + c is",
         options: ["3", "6", "9", "12"],
-        correctAnswer: "(c)",
+        correctAnswer: "9",
         shortExplanation: "The first equation has imaginary roots, so both roots must be common (a:b:c = 1:3:5).",
         tag: "F"
     },
@@ -275,7 +275,7 @@ export const questions = [
         id: 35,
         text: "The set of all real numbers x for which x² - |x + 2| + x > 0 is",
         options: ["(-∞, -2) U (2, ∞)", "(-∞, -√2) U (√2, ∞)", "(-∞, -1) U (1, ∞)", "(√2, ∞)"],
-        correctAnswer: "(b)",
+        correctAnswer: "(-∞, -√2) U (√2, ∞)",
         shortExplanation: "Solve the inequality by considering two cases for the absolute value.",
         tag: "F"
     },
@@ -283,7 +283,7 @@ export const questions = [
         id: 36,
         text: "Number of values of 'p' for which the equation (p² - 3p + 2)x² - (p² - 5p + 4)x + p - p² = 0 possess more than two roots, is:",
         options: ["0", "1", "2", "None of these"],
-        correctAnswer: "(b)",
+        correctAnswer: "1",
         shortExplanation: "An equation has more than 2 roots only if it is an identity (all coefficients = 0).",
         tag: "F"
     },
@@ -299,7 +299,7 @@ export const questions = [
         id: 38,
         text: "If the inequality (m - 2)x² + 8x + m + 4 > 0 is satisfied for all x ∈ R, then the least integral 'm' is:",
         options: ["4", "5", "6", "None of these"],
-        correctAnswer: "(b)",
+        correctAnswer: "5",
         shortExplanation: "Conditions for ax² + bx + c > 0 for all x: a > 0 and D < 0.",
         tag: "F"
     },
@@ -307,7 +307,7 @@ export const questions = [
         id: 39,
         text: "The set of all solutions of the inequality (1/2)^(x² - 2x) < 1/4 contains the set",
         options: ["(-∞, 0)", "(-∞, 1)", "(1, ∞)", "(3, ∞)"],
-        correctAnswer: "(d)",
+        correctAnswer: "(3, ∞)",
         shortExplanation: "Simplify to x² - 2x > 2 (since base < 1) and solve for x.",
         tag: "F"
     },
@@ -315,7 +315,7 @@ export const questions = [
         id: 40,
         text: "If two roots of the equation x³ - px² + qx - r = 0 are equal in magnitude but opposite in sign, then:",
         options: ["pr = q", "qr = p", "pq = r", "None of these"],
-        correctAnswer: "(c)",
+        correctAnswer: "pq = r",
         shortExplanation: "Let roots be α, -α, β. Sum of roots = β = p. Product relations lead to pq = r.",
         tag: "F"
     },
@@ -323,7 +323,7 @@ export const questions = [
         id: 41,
         text: "If α, β & γ are the roots of the equation x³ - x - 1 = 0 then, (1+α)/(1-α) + (1+β)/(1-β) + (1+γ)/(1-γ) has the value equal to:",
         options: ["Zero", "-1", "-7", "1"],
-        correctAnswer: "(c)",
+        correctAnswer: "-7",
         shortExplanation: "Transform the equation by substituting y = (1+x)/(1-x) and find the sum of roots.",
         tag: "F"
     },
@@ -331,7 +331,7 @@ export const questions = [
         id: 42,
         text: "The real values of 'a' for which the quadratic equation 2x² - (a³ + 8a - 1)x + a² - 4a = 0 possesses roots of opposite sign is given by:",
         options: ["a > 5", "0 < a < 4", "a > 0", "a > 7"],
-        correctAnswer: "(b)",
+        correctAnswer: "0 < a < 4",
         shortExplanation: "For roots of opposite sign, the product of roots c/a < 0.",
         tag: "F"
     },
@@ -339,7 +339,7 @@ export const questions = [
         id: 43,
         text: "If α, β are the roots of the quadratic equation x² - 2p(x - 4) - 15 = 0, then the set of values of 'p' for which one root is less than 1 and the other root is greater than 2 is:",
         options: ["(7/3, ∞)", "(-∞, 7/3)", "x ∈ R", "None of these"],
-        correctAnswer: "(b)",
+        correctAnswer: "(-∞, 7/3)",
         shortExplanation: "Apply conditions: f(1) < 0 and f(2) < 0.",
         tag: "F"
     },
@@ -355,7 +355,7 @@ export const questions = [
         id: 45,
         text: "The set of values of p for which 6 lies between the roots of the equation x² + 2(p - 3)x + 9 = 0 is",
         options: ["(3/4, ∞)", "(-∞, -3/4)", "(-3/4, 3/4)", "[-3/4, 3/4]"],
-        correctAnswer: "(b)",
+        correctAnswer: "(-∞, -3/4)",
         shortExplanation: "Apply the condition for a number lying between roots: af(k) < 0.",
         tag: "F"
     },
@@ -363,7 +363,7 @@ export const questions = [
         id: 46,
         text: "If the roots of equation x² + bx + ac = 0 are α, β and roots of the equation x² + ax + bc = 0 are α, γ then the value of α, β, γ respectively are",
         options: ["a, b, c", "b, c, a", "c, a, b", "None of these"],
-        correctAnswer: "(c)",
+        correctAnswer: "c, a, b",
         shortExplanation: "Solve using the common root α and the product of roots for both equations.",
         tag: "F"
     },
@@ -371,7 +371,7 @@ export const questions = [
         id: 47,
         text: "If px² + qx + r = 0 has no real roots and p, q, r are real such that p + r > 0, then",
         options: ["p - q + r < 0", "p - q + r > 0", "p + r = q", "All of these"],
-        correctAnswer: "(b)",
+        correctAnswer: "p - q + r > 0",
         shortExplanation: "If no real roots and f(1) > 0, then the entire parabola is above the x-axis, so f(-1) > 0.",
         tag: "F"
     },
@@ -379,7 +379,7 @@ export const questions = [
         id: 48,
         text: "If a, b, c are in HP, then the expression a(b - c)x² + b(c - a)x + c(a - b)",
         options: ["has real and distinct factors", "is a perfect square", "has no real factor", "None of these"],
-        correctAnswer: "(b)",
+        correctAnswer: "is a perfect square",
         shortExplanation: "Using the HP condition and the fact that x=1 is a root.",
         tag: "F"
     },
@@ -387,7 +387,7 @@ export const questions = [
         id: 49,
         text: "If the equation ax² + bx + c = 0 and cx² + bx + a = 0, a ≠ c have a negative common root, then the value of a - b + c is",
         options: ["0", "2", "1", "None of these"],
-        correctAnswer: "(a)",
+        correctAnswer: "0",
         shortExplanation: "Find the common root by subtraction and apply the negative condition.",
         tag: "F"
     },
@@ -395,7 +395,7 @@ export const questions = [
         id: 50,
         text: "Let a, b, c be three real numbers such that 2a + 3b + 6c = 0. Then, the quadratic equation ax² + bx + c = 0 has",
         options: ["Imaginary roots", "At least one root in (0, 1)", "At least one root in (-1, 0)", "Both roots in (1, 2)"],
-        correctAnswer: "(b)",
+        correctAnswer: "At least one root in (0, 1)",
         shortExplanation: "Apply Rolle's Theorem to the integral of the quadratic function.",
         tag: "F"
     },
@@ -408,7 +408,7 @@ export const questions = [
             "(acx)² - (b² - 2ac)(a² + c²)x + (b² - 2ac)² = 0",
             "None of these"
         ],
-        correctAnswer: "C",
+        correctAnswer: "(acx)² - (b² - 2ac)(a² + c²)x + (b² - 2ac)² = 0",
         shortExplanation: "Calculate the sum and product of the new roots using α + β = -b/a and αβ = c/a, then substitute into the quadratic formula x² - (sum)x + product = 0.",
         tag: "C"
     },
@@ -421,7 +421,7 @@ export const questions = [
             "a + b",
             "a - b"
         ],
-        correctAnswer: "A",
+        correctAnswer: "(√a - √b)²",
         shortExplanation: "Simplify to a quadratic equation in x and set the discriminant D = 0 to find the value of p.",
         tag: "C"
     },
@@ -434,7 +434,7 @@ export const questions = [
             "a²l²x² - ablmx - (b² - 4ac)nl - m²ac = 0",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "a²l²x² - ablmx + (b² - 4ac)nl + m²ac = 0",
         shortExplanation: "Use the properties of symmetric functions of roots to find the sum and product of the new roots.",
         tag: "C"
     },
@@ -447,7 +447,7 @@ export const questions = [
             "1, (a - b - c)/(a + b - c)",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "1, (a - b + c)/(a + b - c)",
         shortExplanation: "Since the sum of the coefficients is zero [(a+b-c) - 2a + (a-b+c) = 0], one root must be 1. The other root is c/a.",
         tag: "C"
     },
@@ -460,7 +460,7 @@ export const questions = [
             "2(p² - 2q - p'² - 2q' - pp')",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "2(p² - 2q + p'² - 2q' - pp')",
         shortExplanation: "Expand the squares and use the relations between roots and coefficients for both equations.",
         tag: "C"
     },
@@ -473,7 +473,7 @@ export const questions = [
             "(p + a)(aq + bp)",
             "None of these"
         ],
-        correctAnswer: "B",
+        correctAnswer: "(p - a)(aq - bp)",
         shortExplanation: "Use the common root α and the product of roots (αβ = b, α/β = q) to eliminate α and β.",
         tag: "C"
     },
@@ -486,7 +486,7 @@ export const questions = [
             "2b² - ac",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "b² - 4ac",
         shortExplanation: "Consider the difference of roots |α - β|. Here, |k/(k+1) - (k+1)/(k+2)| = 1/((k+1)(k+2)). Relate this to √D/a.",
         tag: "C"
     },
@@ -499,7 +499,7 @@ export const questions = [
             "3",
             "4"
         ],
-        correctAnswer: "D",
+        correctAnswer: "4",
         shortExplanation: "Let |x| = y. Then y² - 3y + 2 = 0 gives y = 1, 2. Thus |x| = 1 or |x| = 2, resulting in x = ±1, ±2.",
         tag: "C"
     },
@@ -512,7 +512,7 @@ export const questions = [
             "2/9 (q - 2p)(2q - p)",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "2/9 (p - q)(2q - p)",
         shortExplanation: "Use α + β = p, αβ = r and α/2 + 2β = q, (α/2)(2β) = r. Solve the system for r.",
         tag: "C"
     },
@@ -525,7 +525,7 @@ export const questions = [
             "3",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "1",
         shortExplanation: "A quadratic has more than two roots only if it is an identity (all coefficients are zero). Setting a² - 1 = 0, a - 1 = 0, and a² - 4a + 3 = 0 gives a = 1.",
         tag: "C"
     },
@@ -538,7 +538,7 @@ export const questions = [
             "(b² - 2ac)/a²",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "(b² - 2ac)/a²c²",
         shortExplanation: "Since aα² + bα + c = 0, we have α(aα + b) = -c, so (aα + b) = -c/α. The expression becomes (α/c)² + (β/c)².",
         tag: "C"
     },
@@ -551,7 +551,7 @@ export const questions = [
             "-4, 2",
             "None of these"
         ],
-        correctAnswer: "B",
+        correctAnswer: "-1, -3",
         shortExplanation: "Convert the log equation to x² + 4x + 12 = 3², which simplifies to x² + 4x + 3 = 0. Roots are -1 and -3.",
         tag: "C"
     },
@@ -564,7 +564,7 @@ export const questions = [
             "p² + q²",
             "None of these"
         ],
-        correctAnswer: "B",
+        correctAnswer: "q² - p²",
         shortExplanation: "Use the fact that (α - γ)(β - γ) = f(γ) where f(x) = x² + px + 1. Combine with the corresponding expression for δ.",
         tag: "C"
     },
@@ -577,7 +577,7 @@ export const questions = [
             "3",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "1",
         shortExplanation: "This is a standard result for roots α and α². Substituting the condition into the coefficients relationship yields the identity.",
         tag: "C"
     },
@@ -590,7 +590,7 @@ export const questions = [
             "b² = ac(n + 1)²",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "nb² = ac(n + 1)²",
         shortExplanation: "Let roots be α and nα. Sum = (n+1)α = -b/a, Product = nα² = c/a. Eliminate α to get the condition.",
         tag: "C"
     },
@@ -616,7 +616,7 @@ export const questions = [
             "2ⁿ⁺¹ sin(nπ/3)",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "2ⁿ⁺¹ cos(nπ/3)",
         shortExplanation: "Roots are 1 ± i√3, which in polar form are 2(cos π/3 ± i sin π/3). Apply De Moivre's Theorem.",
         tag: "C"
     },
@@ -629,7 +629,7 @@ export const questions = [
             "2",
             "4"
         ],
-        correctAnswer: "A",
+        correctAnswer: "0",
         shortExplanation: "Since x² and 5|x| are always non-negative, x² + 5|x| + 4 is always ≥ 4. Thus, no real roots exist.",
         tag: "C"
     },
@@ -642,7 +642,7 @@ export const questions = [
             "3",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "1",
         shortExplanation: "Difference of roots |α - β| = 1. Since (α - β)² = D/a², we have 1² = (b² - 4c)/1.",
         tag: "C"
     },
@@ -655,7 +655,7 @@ export const questions = [
             "ax² - bx + c = 0",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "cx² + bx + a = 0",
         shortExplanation: "Replace x with 1/x in the original equation to find the equation with reciprocal roots.",
         tag: "C"
     },
@@ -668,7 +668,7 @@ export const questions = [
             "2",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "0",
         shortExplanation: "The graph of eˣ is always above the graph of y = x. Minimum value of eˣ - x is 1 (at x=0).",
         tag: "C"
     },
@@ -681,7 +681,7 @@ export const questions = [
             "0",
             "None of these"
         ],
-        correctAnswer: "B",
+        correctAnswer: "-1",
         shortExplanation: "Subtracting equations gives (a-b)x + (b-a) = 0, so common root x=1. Substitute x=1 into either equation.",
         tag: "C"
     },
@@ -694,7 +694,7 @@ export const questions = [
             "p² - q",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "(p² - q)(p² - 3q)",
         shortExplanation: "α⁴ + α²β² + β⁴ = (α² + β²)² - α²β² = ((α + β)² - 2αβ)² - (αβ)².",
         tag: "C"
     },
@@ -707,7 +707,7 @@ export const questions = [
             "0",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "1",
         shortExplanation: "The minimum value of a quadratic ax² + bx + c (a > 0) is -D/4a or f(-b/2a). Here f(4) = 16 - 32 + 17 = 1.",
         tag: "C"
     },
@@ -720,7 +720,7 @@ export const questions = [
             "2",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "0",
         shortExplanation: "Product of roots = c/a = (2k - 6)/(k - 2) = 3. Solving for k gives 2k - 6 = 3k - 6, so k = 0.",
         tag: "C"
     },
@@ -733,7 +733,7 @@ export const questions = [
             "37/12",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "25/12",
         shortExplanation: "α/β + β/α = (α² + β²)/αβ = ((α + β)² - 2αβ)/αβ = (49 - 24)/12 = 25/12.",
         tag: "C"
     },
@@ -746,7 +746,7 @@ export const questions = [
             "Two solutions",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "No solution",
         shortExplanation: "Square both sides twice and check for extraneous solutions. The resulting x value will not satisfy the original radical constraints.",
         tag: "C"
     },
@@ -759,7 +759,7 @@ export const questions = [
             "x² - p(q + 1)x + (q + 1)² = 0",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "qx² - p(q + 1)x + (q + 1)² = 0",
         shortExplanation: "Sum of roots: (α + β) + (α + β)/αβ = p + p/q. Product of roots: (α + 1/β)(β + 1/α) = αβ + 1 + 1 + 1/αβ = q + 2 + 1/q.",
         tag: "C"
     },
@@ -772,7 +772,7 @@ export const questions = [
             "0",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "1",
         shortExplanation: "Convert all logs to base 2: log₂x + (1/2)log₂x + (1/4)log₂x = 7/4. This gives (7/4)log₂x = 7/4, so x = 2.",
         tag: "C"
     },
@@ -785,7 +785,7 @@ export const questions = [
             "p² - 2q",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "p² - 4q",
         shortExplanation: "(α - β)² = (α + β)² - 4αβ = p² - 4q.",
         tag: "C"
     },
@@ -798,7 +798,7 @@ export const questions = [
             "Imaginary",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "Real and equal",
         shortExplanation: "Discriminant D = (-6)² - 4(1)(9) = 36 - 36 = 0. Roots are real and equal.",
         tag: "C"
     },
@@ -811,7 +811,7 @@ export const questions = [
             "α, α",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "α, β",
         shortExplanation: "Roots are ω and ω². ω³ = 1. So ω¹⁹ = ω and (ω²)⁷ = ω¹⁴ = ω².",
         tag: "C"
     },
@@ -824,7 +824,7 @@ export const questions = [
             "6",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "5",
         shortExplanation: "Sum of roots = -b/a = -(-5)/1 = 5.",
         tag: "C"
     },
@@ -837,7 +837,7 @@ export const questions = [
             "(2, ∞)",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "(-2, 2)",
         shortExplanation: "For non-real roots, D < 0. k² - 4 < 0 => k² < 4 => -2 < k < 2.",
         tag: "C"
     },
@@ -850,7 +850,7 @@ export const questions = [
             "x² - 4x - 1 = 0",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "x² - 4x + 1 = 0",
         shortExplanation: "Sum = 4, Product = (2+√3)(2-√3) = 4 - 3 = 1. Equation: x² - 4x + 1 = 0.",
         tag: "C"
     },
@@ -863,7 +863,7 @@ export const questions = [
             "1/4",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "5/4",
         shortExplanation: "α + β = 3/2, αβ = 1/2. α² + β² = (3/2)² - 2(1/2) = 9/4 - 1 = 5/4.",
         tag: "C"
     },
@@ -876,7 +876,7 @@ export const questions = [
             "3",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "0",
         shortExplanation: "A sum of squares of real numbers is zero only if each term is zero. This requires x=1, x=2, and x=3 simultaneously, which is impossible.",
         tag: "C"
     },
@@ -889,7 +889,7 @@ export const questions = [
             "0",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "±4",
         shortExplanation: "Set D = 0: k² - 4(4) = 0 => k² = 16 => k = ±4.",
         tag: "C"
     },
@@ -902,7 +902,7 @@ export const questions = [
             "1/3",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "-2/3",
         shortExplanation: "Sum = -2/k, Product = 3k/k = 3. -2/k = 3 => k = -2/3.",
         tag: "C"
     },
@@ -915,7 +915,7 @@ export const questions = [
             "1, ω²",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "ω, ω²",
         shortExplanation: "These are the non-real cube roots of unity.",
         tag: "C"
     },
@@ -928,7 +928,7 @@ export const questions = [
             "-b/2c",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "-2c/b",
         shortExplanation: "HM = 2αβ/(α+β) = 2(c/a)/(-b/a) = -2c/b.",
         tag: "C"
     },
@@ -941,7 +941,7 @@ export const questions = [
             "-12",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "12",
         shortExplanation: "Product of roots = c/a = 12/1 = 12.",
         tag: "C"
     },
@@ -954,7 +954,7 @@ export const questions = [
             "p³ - pq",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "p³ - 3pq",
         shortExplanation: "α³ + β³ = (α + β)³ - 3αβ(α + β) = p³ - 3pq.",
         tag: "C"
     },
@@ -967,7 +967,7 @@ export const questions = [
             "4",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "-8",
         shortExplanation: "D = b² - 4ac = 2² - 4(3)(1) = 4 - 12 = -8.",
         tag: "C"
     },
@@ -980,7 +980,7 @@ export const questions = [
             "5",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "6",
         shortExplanation: "Substitute x=2: (2)² - 5(2) + k = 0 => 4 - 10 + k = 0 => k = 6.",
         tag: "C"
     },
@@ -993,7 +993,7 @@ export const questions = [
             "A unique solution in (-∞, 1)",
             "A unique solution in (-∞, ∞)"
         ],
-        correctAnswer: "D",
+        correctAnswer: "A unique solution in (-∞, ∞)",
         shortExplanation: "Analyze the equation by breaking x into its integer and fractional parts and checking intervals.",
         tag: "C"
     },
@@ -1006,7 +1006,7 @@ export const questions = [
             "10",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "25",
         shortExplanation: "Express α⁴ + β⁴ in terms of (α+β) and (αβ), then solve the resulting quadratic in 'a'.",
         tag: "C"
     },
@@ -1019,7 +1019,7 @@ export const questions = [
             "19",
             "None of these"
         ],
-        correctAnswer: "C",
+        correctAnswer: "19",
         shortExplanation: "Solve both equations individually to find the number of real roots for each, then calculate the expression.",
         tag: "C"
     },
@@ -1032,7 +1032,7 @@ export const questions = [
             "0",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "2",
         shortExplanation: "Divide by e²ˣ and substitute t = eˣ + 1/eˣ to convert it into a quadratic in t.",
         tag: "C"
     },
@@ -1045,7 +1045,7 @@ export const questions = [
             "2",
             "None of these"
         ],
-        correctAnswer: "A",
+        correctAnswer: "4",
         shortExplanation: "Use the derivative f'(x) to find local maxima and minima, then check the signs of the function at these points to determine the number of intercepts.",
         tag: "C"
     },
