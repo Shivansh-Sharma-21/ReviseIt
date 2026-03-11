@@ -1,26 +1,39 @@
 export const mindmap = {
-    id: 'atomic-structure',
-    title: "Atomic Structure",
+    id: 'periodic_classification',
+    title: "Periodic Classification of Elements",
     flow: [
         {
-            topic: "Discovery of Subatomic Particles",
-            subtopics: ["Cathode Ray Experiment (Electron)", "Anode Ray Experiment (Proton)", "Neutron Discovery"]
+            topic: "Historical Development",
+            subtopics: [
+                "Mendeleev's Periodic Law"
+            ]
         },
         {
-            topic: "Atomic Models",
-            subtopics: ["Thomson's Model", "Rutherford's Scattering Experiment", "Bohr's Model of Hydrogen Atom"]
+            topic: "Modern Periodic Table Foundations",
+            subtopics: [
+                "Moseley's Experiment & Modern Periodic Law",
+                "Long Form of Modern Periodic Table"
+            ]
         },
         {
-            topic: "Quantum Mechanical Model",
-            subtopics: ["Dual Nature of Matter (de Broglie)", "Heisenberg Uncertainty Principle", "Schrödinger Wave Equation (Qualitative)"]
+            topic: "Structural Classification",
+            subtopics: [
+                "Blockwise Classification (s, p, d, f)"
+            ]
         },
         {
-            topic: "Quantum Numbers",
-            subtopics: ["Principal (n)", "Azimuthal (l)", "Magnetic (ml)", "Spin (ms)"]
+            topic: "Nuclear & Shielding Effects",
+            subtopics: [
+                "Effective Nuclear Charge & Screening Effect"
+            ]
         },
         {
-            topic: "Electronic Configuration",
-            subtopics: ["Aufbau Principle", "Pauli Exclusion Principle", "Hund's Rule of Maximum Multiplicity"]
+            topic: "Periodic Trends",
+            subtopics: [
+                "Atomic and Ionic Radius",
+                "Ionisation Energy (IE)",
+                "Electron Affinity (EA) & Electronegativity"
+            ]
         }
     ]
 };
