@@ -77,7 +77,7 @@ const Landing = ({ onGetStarted }) => {
                     className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-3"
                 >
                     {[
-                        { icon: <Target className="w-8 h-8" />, title: "Pattern Recognition", desc: "Identify traps across all three PCM subjects." },
+                        { icon: <Target className="w-8 h-8" />, title: "Pattern Recognition", desc: "Identify traps across all three JEE subjects." },
                         { icon: <Brain className="w-8 h-8" />, title: "Adaptive Flow", desc: "Difficulty adjusts in real-time to your confidence." },
                         { icon: <Zap className="w-8 h-8" />, title: "Zero Friction", desc: "No signup, no distractions. Just pure revision." }
                     ].map((feature, idx) => (
@@ -164,11 +164,11 @@ const Landing = ({ onGetStarted }) => {
             </section>
 
             {/* The 4-Step Philosophy Sections */}
-            <section className="py-32 space-y-80 md:space-y-96">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <section className="py-40 md:py-56">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-40 md:space-y-64">
                     <div className="text-center mb-32 md:mb-48">
                         <h2 className="text-indigo-600 dark:text-indigo-400 font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4">Inside the System</h2>
-                        <h3 className="text-4xl sm:text-6xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter">The PCM Revise Flow</h3>
+                        <h3 className="text-4xl sm:text-6xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter">The JEE Revise Flow</h3>
                     </div>
 
                     {/* Step 01: Visualize + Flashcards */}
@@ -210,68 +210,74 @@ const Landing = ({ onGetStarted }) => {
                             transition={{ duration: 0.8 }}
                             className="relative group"
                         >
-                            <div className="relative glass rounded-[2.5rem] md:rounded-[3rem] p-4 sm:p-10 border-slate-200 dark:border-white/10 aspect-[4/3] sm:aspect-video flex items-center justify-center overflow-hidden shadow-[0_50px_100px_-20px_rgba(79,70,229,0.2)]">
-                                <div className="absolute inset-0 bg-dot-pattern opacity-[0.15]" />
-                                
-                                {/* Mindmap Mock UI */}
-                                <div className="relative w-full h-full flex flex-col items-center justify-center scale-75 xs:scale-90 sm:scale-100">
-                                    {/* Root Node */}
-                                    <div className="px-10 py-5 rounded-[2rem] bg-gradient-to-br from-indigo-600 to-indigo-900 text-white shadow-2xl border-4 border-white/20 z-20 mb-16 transform transition-transform group-hover:scale-105 duration-500">
-                                        <div className="font-black text-[10px] uppercase tracking-[0.3em] mb-1 opacity-60">Physics</div>
-                                        <div className="font-bold text-xl leading-tight uppercase">Rotational Dynamics</div>
+                            {/* Exact replica of Mindmap.jsx canvas */}
+                            <div className="relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(79,70,229,0.2)] aspect-[3/4] sm:aspect-[4/3] bg-indigo-100/80 dark:bg-[#020617] border border-slate-200 dark:border-white/10">
+                                {/* Dark mode radial bg from Mindmap.jsx */}
+                                <div className="hidden dark:block absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.1)_0%,transparent_50%)]" />
+
+                                <div className="relative w-full h-full flex flex-col items-center justify-center scale-[0.55] xs:scale-[0.65] sm:scale-75 md:scale-[0.85]">
+                                    {/* RootNode - exact match from Mindmap.jsx */}
+                                    <div className="px-10 py-7 rounded-[3rem] bg-gradient-to-br from-indigo-600 via-indigo-800 to-violet-950 text-white shadow-[0_40px_100px_rgba(79,70,229,0.5)] border-[6px] border-white/40 min-w-[250px] text-center relative overflow-hidden z-20 mb-14 transition-transform duration-700 group-hover:scale-[1.03]">
+                                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1500ms]" />
+                                        <div className="font-black text-xs tracking-[0.6em] uppercase text-indigo-300 mb-2">Core Curriculum</div>
+                                        <div className="font-black text-2xl tracking-[-0.05em] leading-[0.9] uppercase drop-shadow-2xl">Rotational Dynamics</div>
                                     </div>
 
-                                    <div className="flex gap-16 sm:gap-32 relative">
-                                        {/* Topic Nodes */}
-                                        <div className="px-8 py-4 rounded-2xl bg-white dark:bg-slate-900 border-2 border-indigo-400 dark:border-indigo-400/50 shadow-xl z-20 transition-all duration-500 group-hover:-translate-y-2">
-                                            <div className="font-bold text-sm dark:text-white leading-tight uppercase italic">Moment of Inertia</div>
-                                        </div>
-                                        <div className="px-8 py-4 rounded-2xl bg-white dark:bg-slate-900 border-2 border-indigo-400 dark:border-indigo-400/50 shadow-xl z-20 transition-all duration-500 group-hover:-translate-y-2 delay-75">
-                                            <div className="font-bold text-sm dark:text-white leading-tight uppercase italic">Torque & Acc.</div>
-                                        </div>
+                                    {/* Animated edges */}
+                                    <svg className="absolute top-[48%] left-0 w-full h-[100px] pointer-events-none -translate-y-full z-10" preserveAspectRatio="none">
+                                        <line x1="50%" y1="0" x2="28%" y2="100%" stroke="#4f46e5" strokeWidth="5" opacity="0.8" />
+                                        <line x1="50%" y1="0" x2="72%" y2="100%" stroke="#4f46e5" strokeWidth="5" opacity="0.8" />
+                                    </svg>
 
-                                        {/* Curved Connection Lines */}
-                                        <svg className="absolute top-[-60px] left-0 w-full h-[60px] pointer-events-none opacity-40">
-                                            <path d="M 50% 0 L 50% 20 Q 50% 60, 20% 60" stroke="#6366f1" strokeWidth="4" fill="none" strokeDasharray="8 8" />
-                                            <path d="M 50% 0 L 50% 20 Q 50% 60, 80% 60" stroke="#6366f1" strokeWidth="4" fill="none" strokeDasharray="8 8" />
-                                        </svg>
+                                    <div className="flex gap-10 sm:gap-20 relative z-20">
+                                        {/* TopicNode - exact match from Mindmap.jsx */}
+                                        <div className="px-8 py-5 rounded-[2rem] bg-white/95 dark:bg-slate-900/95 backdrop-blur-3xl border-[3px] border-slate-400/50 dark:border-indigo-400/20 shadow-[0_40px_80px_rgba(15,23,42,0.12)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] text-center transition-all duration-500 group-hover:border-indigo-600 dark:group-hover:border-indigo-400 group-hover:scale-[1.05]">
+                                            <div className="font-extrabold text-slate-950 dark:text-white text-base tracking-tight leading-tight">Moment of Inertia</div>
+                                        </div>
+                                        <div className="px-8 py-5 rounded-[2rem] bg-white/95 dark:bg-slate-900/95 backdrop-blur-3xl border-[3px] border-slate-400/50 dark:border-indigo-400/20 shadow-[0_40px_80px_rgba(15,23,42,0.12)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] text-center transition-all duration-500 group-hover:border-indigo-600 dark:group-hover:border-indigo-400 group-hover:scale-[1.05]">
+                                            <div className="font-extrabold text-slate-950 dark:text-white text-base tracking-tight leading-tight">Torque & Acc.</div>
+                                        </div>
                                     </div>
-
-                                    {/* Flashcard Overlay */}
-                                    <motion.div 
-                                        animate={{ 
-                                            y: [5, -5, 5],
-                                            opacity: [0.95, 1, 0.95]
-                                        }}
-                                        transition={{ 
-                                            duration: 4, 
-                                            repeat: Infinity, 
-                                            ease: "easeInOut" 
-                                        }}
-                                        className="absolute bottom-4 right-4 md:bottom-12 md:right-12 w-48 xs:w-56 md:w-72 bg-white dark:bg-slate-900 rounded-3xl p-4 md:p-6 border-2 border-indigo-500 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] z-30"
-                                    >
-                                        <div className="flex items-center justify-between mb-3">
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-6 h-6 md:w-8 md:h-8 rounded-lg md:rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-lg">
-                                                    <BookOpen className="w-3 h-3 md:w-4 md:h-4" />
-                                                </div>
-                                                <div className="flex flex-col">
-                                                    <span className="text-[6px] md:text-[8px] font-black uppercase tracking-[0.2em] text-slate-400">Quick Recall</span>
-                                                    <span className="text-[10px] md:text-xs font-black dark:text-white tracking-tight">MOI Basics</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p className="text-[10px] md:text-sm font-bold text-slate-900 dark:text-white mb-2 leading-tight">
-                                            Parallel Axis Theorem axis requirements?
-                                        </p>
-                                        <div className="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800/50 text-[8px] md:text-xs text-indigo-700 dark:text-indigo-300 italic font-bold leading-tight">
-                                            "One axis must pass through the Center of Mass."
-                                        </div>
-                                    </motion.div>
                                 </div>
+
+                                {/* FlashcardModal overlay - exact match from Mindmap.jsx */}
+                                <motion.div 
+                                    animate={{ y: [5, -5, 5], opacity: [0.95, 1, 0.95] }}
+                                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                    className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-52 xs:w-60 md:w-72 bg-white dark:bg-slate-900 rounded-[2.5rem] shadow-2xl border border-slate-200 dark:border-slate-800 z-30 overflow-hidden"
+                                >
+                                    {/* Modal Header - exact match */}
+                                    <div className="px-4 py-3 md:px-5 md:py-4 border-b border-slate-200 dark:border-slate-800 flex items-center gap-2.5">
+                                        <div className="w-8 h-8 rounded-xl bg-indigo-600 flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
+                                            <BookOpen className="w-4 h-4" />
+                                        </div>
+                                        <div>
+                                            <h4 className="text-[7px] md:text-[8px] font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-300">Quick Revision</h4>
+                                            <h2 className="text-[10px] md:text-sm font-black text-slate-900 dark:text-white uppercase tracking-tight leading-tight">MOI Basics</h2>
+                                        </div>
+                                    </div>
+                                    {/* Modal Content */}
+                                    <div className="p-4 md:p-5 space-y-3">
+                                        {/* Core Concept */}
+                                        <div className="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-300">
+                                            <BookOpen className="w-3 h-3" strokeWidth={3} />
+                                            <span className="text-[7px] md:text-[8px] font-black uppercase tracking-widest">Core Concept & Formulas</span>
+                                        </div>
+                                        <div className="flex gap-2 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700/50">
+                                            <div className="mt-1 w-1 h-1 rounded-full bg-indigo-500 flex-shrink-0" />
+                                            <p className="text-[9px] md:text-xs text-slate-700 dark:text-slate-100 font-semibold leading-relaxed">Parallel Axis Theorem: one axis must pass through the Center of Mass.</p>
+                                        </div>
+                                        {/* Flash Card */}
+                                        <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800">
+                                            <div className="text-[7px] font-black text-indigo-600 dark:text-indigo-300 mb-1 uppercase tracking-[0.15em]">Flash Question</div>
+                                            <div className="text-[9px] md:text-xs text-slate-900 dark:text-white font-bold mb-1.5">What are the axis requirements?</div>
+                                            <div className="text-[8px] md:text-[10px] text-slate-600 dark:text-slate-200 font-medium p-2 rounded-lg bg-white/50 dark:bg-slate-950">"One axis through CoM, other parallel."</div>
+                                        </div>
+                                    </div>
+                                </motion.div>
                             </div>
                         </motion.div>
-                    </div><br></br>
+                    </div>
 
                     {/* Step 02: Expose */}
                     <div className="grid lg:grid-cols-2 gap-24 md:gap-32 items-center lg:flex-row-reverse">
@@ -305,27 +311,76 @@ const Landing = ({ onGetStarted }) => {
                             transition={{ duration: 0.8 }}
                             className="lg:order-1"
                         >
-                            <div className="relative glass rounded-[2.5rem] md:rounded-[3rem] p-6 lg:p-16 border-slate-200 dark:border-white/10 aspect-video flex items-center justify-center overflow-hidden shadow-[0_50px_100px_-20px_rgba(6,182,212,0.15)]">
-                                <div className="w-full max-w-sm p-6 sm:p-8 md:p-10 bg-white dark:bg-slate-900 rounded-[2.5rem] border-2 border-cyan-500/30 shadow-2xl scale-75 xs:scale-90 sm:scale-100 md:scale-110">
-                                    <div className="flex items-center gap-3 mb-8">
-                                        <div className="h-2 w-16 bg-cyan-500 rounded-full" />
-                                        <span className="text-[10px] font-black text-cyan-600 uppercase tracking-widest">Foundation Check</span>
+                            {/* Exact replica of QuizView.jsx */}
+                            <div className="relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(6,182,212,0.15)] bg-white dark:bg-slate-950 border border-slate-200 dark:border-white/10 p-5 sm:p-8 md:p-10">
+                                {/* Header - from QuizView.jsx */}
+                                <div className="flex justify-between items-center mb-4 sm:mb-6">
+                                    <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 text-[8px] sm:text-[10px] font-black tracking-[0.2em] uppercase">
+                                        <ArrowRight className="w-3 h-3 rotate-180" /> Back
                                     </div>
-                                    <p className="text-base md:text-lg font-black dark:text-white mb-8 leading-tight italic">"Does net torque = 0 always imply full equilibrium?"</p>
-                                    <div className="space-y-4">
-                                        <div 
-                                            className="p-4 rounded-2xl bg-cyan-500/10 border-2 border-cyan-500/60 text-cyan-600 dark:text-cyan-400 text-xs font-black uppercase text-center tracking-widest shadow-lg shadow-cyan-500/10"
-                                        >
-                                            No, need Net Force = 0
+                                    <div className="flex flex-col items-end">
+                                        <span className="text-[7px] sm:text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-0.5">Foundational Quiz</span>
+                                        <span className="text-[9px] sm:text-xs font-black text-indigo-600 dark:text-indigo-400">Question 3 of 5</span>
+                                    </div>
+                                </div>
+
+                                {/* Progress bar - from QuizView.jsx */}
+                                <div className="w-full h-1 sm:h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full mb-5 sm:mb-8 overflow-hidden">
+                                    <motion.div
+                                        className="h-full bg-indigo-500"
+                                        initial={{ width: 0 }}
+                                        whileInView={{ width: '60%' }}
+                                        transition={{ duration: 1 }}
+                                    />
+                                </div>
+
+                                {/* Question Card - from QuizView.jsx */}
+                                <div className="bg-white dark:bg-slate-900 p-5 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] border-2 border-slate-200 dark:border-slate-800 shadow-xl mb-4 sm:mb-6">
+                                    {/* F Tag pill - from RevisionQuizView.jsx */}
+                                    <div className="flex items-center gap-2 mb-4 sm:mb-6">
+                                        <div className="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-emerald-100 text-emerald-600 text-[7px] sm:text-[9px] font-black uppercase tracking-widest">FOUNDATIONAL</div>
+                                    </div>
+
+                                    <h2 className="text-sm sm:text-xl font-black text-slate-900 dark:text-white leading-tight mb-5 sm:mb-8">
+                                        "Does net torque = 0 always imply full equilibrium?"
+                                    </h2>
+
+                                    {/* 2x2 Option Grid - from QuizView.jsx */}
+                                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                                        {/* Correct answer - emerald state */}
+                                        <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-emerald-500 border-2 border-emerald-500 text-white shadow-lg shadow-emerald-500/30 text-[9px] sm:text-sm font-bold flex items-center justify-between">
+                                            <span>No, need Net Force = 0</span>
                                         </div>
-                                        <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-white/5 text-slate-400 text-xs uppercase text-center tracking-widest">
-                                            Yes, rotational eq.
+                                        {/* Wrong selected - rose state */}
+                                        <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-rose-500 border-2 border-rose-500 text-white shadow-lg shadow-rose-500/30 text-[9px] sm:text-sm font-bold flex items-center justify-between">
+                                            <span>Yes, rotational eq.</span>
                                         </div>
+                                        {/* Dimmed options */}
+                                        <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl opacity-40 bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-800 text-slate-400 text-[9px] sm:text-sm font-bold">
+                                            Depends on frame
+                                        </div>
+                                        <div className="p-3 sm:p-4 rounded-xl sm:rounded-2xl opacity-40 bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-800 text-slate-400 text-[9px] sm:text-sm font-bold">
+                                            Only for rigid bodies
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Result bar - from RevisionQuizView.jsx solution node */}
+                                <div className="bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-[1.5rem] sm:rounded-[2rem] border-2 border-slate-200 dark:border-slate-800 shadow-lg flex items-center gap-3 sm:gap-5">
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                                        <Target className="w-4 h-4 sm:w-5 sm:h-5" />
+                                    </div>
+                                    <div className="flex-grow min-w-0">
+                                        <div className="font-black text-[7px] sm:text-[10px] uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-0.5">Concept Node</div>
+                                        <p className="text-[8px] sm:text-xs text-slate-600 dark:text-slate-400 font-bold leading-relaxed truncate">Equilibrium requires both ΣF = 0 and Στ = 0.</p>
+                                    </div>
+                                    <div className="bg-indigo-600 text-white px-3 sm:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl text-[7px] sm:text-[10px] font-black uppercase tracking-widest flex-shrink-0 shadow-lg shadow-indigo-600/30">
+                                        Next
                                     </div>
                                 </div>
                             </div>
                         </motion.div>
-                    </div><br></br>
+                    </div>
 
                     {/* Step 03: Calibrate */}
                     <div className="grid lg:grid-cols-2 gap-24 md:gap-32 items-center">
@@ -358,57 +413,51 @@ const Landing = ({ onGetStarted }) => {
                             transition={{ duration: 0.8 }}
                             className="relative"
                         >
-                            <div className="glass rounded-[2.5rem] md:rounded-[3rem] p-6 sm:p-12 border-slate-200 dark:border-white/10 flex flex-col items-center justify-center shadow-[0_50px_100px_-20px_rgba(16,185,129,0.15)] min-h-[350px] sm:min-h-[450px]">
-                                <div className="w-full max-w-sm space-y-8 sm:space-y-12">
-                                    {/* Confidence Slider Mockup */}
-                                    <div className="space-y-6">
-                                        <div className="flex justify-between items-center">
-                                            <div className="flex flex-col">
-                                                <span className="text-[10px] font-black uppercase text-emerald-500 tracking-[0.3em] mb-1">Confidence Scale</span>
-                                                <div className="text-2xl sm:text-4xl font-black dark:text-white italic tracking-tighter text-indigo-400">Level 4/5</div>
-                                            </div>
-                                            <div className="flex gap-2 sm:gap-3">
-                                                {[1, 2, 3, 4, 5].map(b => (
-                                                    <motion.div 
-                                                        key={b} 
-                                                        initial={{ opacity: 0.5 }}
-                                                        whileInView={{ opacity: 1 }}
-                                                        transition={{ delay: b * 0.1 }}
-                                                        className={`w-8 h-10 sm:w-12 sm:h-14 rounded-xl sm:rounded-2xl shadow-xl border-b-4 ${b <= 4 ? 'bg-emerald-500 border-emerald-700' : 'bg-slate-200 dark:bg-slate-800 border-slate-300 dark:border-slate-950 opacity-40'}`} 
-                                                    />
-                                                ))}
-                                            </div>
-                                        </div>
+                            {/* Exact replica of QuizView.jsx result screen */}
+                            <div className="rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(16,185,129,0.15)] bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 p-6 sm:p-10">
+                                {/* Trophy header - from QuizView.jsx */}
+                                <div className="text-center mb-6 sm:mb-8">
+                                    <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-indigo-500/10 flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                                        <Target className="w-7 h-7 sm:w-10 sm:h-10 text-indigo-600 dark:text-indigo-400" />
                                     </div>
+                                    <h2 className="text-xl sm:text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-1 sm:mb-2">Foundation Built!</h2>
+                                    <p className="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest text-[7px] sm:text-[10px]">How confident are you with this unit?</p>
+                                </div>
 
-                                    {/* Ratio Result Mockup */}
-                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-                                        {[
-                                            { label: 'Found.', val: '20%', active: false },
-                                            { label: 'Core', val: '50%', active: true },
-                                            { label: 'Stretch', val: '30%', active: false }
-                                        ].map((item, i) => (
-                                            <div 
-                                                key={i} 
-                                                className={`p-5 sm:p-6 rounded-3xl flex flex-col items-center justify-center transition-all duration-500 shadow-2xl ${item.active ? 'bg-white dark:bg-slate-900 border-2 border-emerald-500 scale-105 sm:scale-110 z-10 ring-4 ring-emerald-500/10' : 'bg-slate-50 dark:bg-slate-800/20 border border-slate-200 dark:border-white/5 opacity-60'}`}
-                                            >
-                                                <span className={`text-[10px] font-black uppercase tracking-widest mb-2 ${item.active ? 'text-emerald-600' : 'text-slate-400'}`}>{item.label}</span>
-                                                <span className={`text-xl sm:text-2xl font-black ${item.active ? 'dark:text-white' : 'text-slate-300 dark:text-slate-600'}`}>{item.val}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    {/* Logic Prompt Mockup */}
-                                    <div className="hidden sm:block pt-6 border-t border-slate-200 dark:border-white/5">
-                                        <div className="flex items-center gap-3 text-slate-400 text-[10px] font-bold uppercase tracking-widest italic">
-                                            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                                            Optimal Pool Generated
+                                {/* 5-column confidence grid - exact match from QuizView.jsx */}
+                                <div className="grid grid-cols-5 gap-2 sm:gap-3 mb-3 sm:mb-4">
+                                    {[1, 2, 3, 4, 5].map((level) => (
+                                        <div
+                                            key={level}
+                                            className={`aspect-square rounded-xl sm:rounded-2xl flex flex-col items-center justify-center gap-1 border-2 transition-all duration-300 ${level === 4
+                                                ? 'bg-indigo-600 border-indigo-600 text-white shadow-xl shadow-indigo-600/30 -translate-y-2'
+                                                : 'bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-800 text-slate-400'
+                                            }`}
+                                        >
+                                            <span className="text-base sm:text-2xl font-black">{level}</span>
+                                            <span className={`text-[6px] sm:text-[8px] font-black uppercase tracking-tighter ${level === 4 ? 'opacity-100' : 'opacity-0'}`}>Level</span>
                                         </div>
+                                    ))}
+                                </div>
+
+                                {/* Scale labels - from QuizView.jsx */}
+                                <div className="flex justify-between px-1 sm:px-2 text-[7px] sm:text-[9px] font-black text-slate-400 uppercase tracking-widest mb-6 sm:mb-8">
+                                    <span>Basic Grip</span>
+                                    <span>Absolute Mastery</span>
+                                </div>
+
+                                {/* Action buttons - from QuizView.jsx */}
+                                <div className="flex gap-3 sm:gap-4">
+                                    <div className="flex-1 flex items-center justify-center gap-1.5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-[8px] sm:text-xs font-black uppercase tracking-widest">
+                                        Retake
+                                    </div>
+                                    <div className="flex-1 flex items-center justify-center gap-1.5 bg-indigo-600 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl text-[8px] sm:text-xs font-black uppercase tracking-widest shadow-lg shadow-indigo-600/20">
+                                        Complete Review
                                     </div>
                                 </div>
                             </div>
                         </motion.div>
-                    </div><br></br>
+                    </div>
 
                     {/* Step 04: Master */}
                     <div className="grid lg:grid-cols-2 gap-24 md:gap-32 items-center lg:flex-row-reverse">
@@ -442,33 +491,94 @@ const Landing = ({ onGetStarted }) => {
                             transition={{ duration: 0.8 }}
                             className="lg:order-1"
                         >
-                            <div className="relative glass rounded-[3rem] p-6 md:p-16 border-slate-200 dark:border-white/10 aspect-video flex items-center justify-center overflow-hidden shadow-2xl">
-                                <div className="w-full max-w-sm p-10 bg-white dark:bg-slate-900 rounded-[3rem] border-2 border-slate-100 dark:border-white/10 shadow-3xl scale-90 sm:scale-100 md:scale-110">
-                                    <div className="flex justify-between items-center mb-10">
-                                        <div className="text-[10px] font-black dark:text-slate-500 tracking-[0.3em] uppercase">Diagnostic Report</div>
-                                        <div className="px-4 py-1.5 rounded-full bg-indigo-600 text-white text-[9px] font-black italic tracking-widest shadow-lg shadow-indigo-600/20">PASSED</div>
+                            {/* Exact replica of SessionAnalysisView.jsx */}
+                            <div className="relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 shadow-2xl p-5 sm:p-8 md:p-10">
+                                {/* Decorative background - from SessionAnalysisView.jsx */}
+                                <div className="absolute top-0 right-0 w-48 h-48 bg-indigo-500/5 blur-3xl rounded-full -mr-24 -mt-24" />
+
+                                {/* Header - from SessionAnalysisView.jsx */}
+                                <div className="text-center mb-6 sm:mb-8">
+                                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl sm:rounded-3xl bg-indigo-500/10 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                                        <Activity className="w-6 h-6 sm:w-8 sm:h-8 text-indigo-600 dark:text-indigo-400" />
                                     </div>
-                                    <div className="space-y-8">
-                                        <div className="space-y-3">
-                                            <div className="flex justify-between text-xs font-black dark:text-white px-1">
-                                                <span>CONCEPT ACCURACY</span>
-                                                <span className="text-indigo-500">87%</span>
+                                    <h2 className="text-xl sm:text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-1">Session Analysis</h2>
+                                    <p className="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-[0.3em] text-[7px] sm:text-[10px]">Competency Mapping Result</p>
+                                </div>
+
+                                {/* Confidence vs Reality - from SessionAnalysisView.jsx */}
+                                <div className="bg-slate-50 dark:bg-slate-800/50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 mb-4 sm:mb-6 border border-slate-100 dark:border-slate-800">
+                                    <div className="flex items-center justify-center gap-6 sm:gap-12">
+                                        <div className="text-center">
+                                            <p className="text-[7px] sm:text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2 sm:mb-3">You Chose</p>
+                                            <div className="relative inline-block">
+                                                <span className="text-4xl sm:text-5xl font-black text-slate-300 dark:text-slate-700">4</span>
+                                                <div className="absolute inset-0 flex items-center justify-center">
+                                                    <div className="w-full h-1 bg-rose-500 rounded-full rotate-45 opacity-60" />
+                                                </div>
                                             </div>
-                                            <div className="h-3 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden border border-slate-200 dark:border-white/5">
-                                                <motion.div 
-                                                    initial={{ width: 0 }}
-                                                    whileInView={{ width: '87%' }}
-                                                    transition={{ duration: 1.5, delay: 0.5 }}
-                                                    className="h-full bg-indigo-600 rounded-full shadow-[0_0_20px_rgba(79,70,229,0.5)]" 
-                                                />
-                                            </div>
+                                            <p className="text-[7px] sm:text-[10px] font-black text-slate-400 uppercase mt-1">Level</p>
                                         </div>
-                                        <div className="pt-8 border-t-2 border-slate-100 dark:border-white/5">
-                                            <p className="text-[10px] font-black dark:text-slate-400 uppercase tracking-[0.2em] mb-3">AI Diagnostic Summary:</p>
-                                            <p className="text-sm font-bold dark:text-white leading-relaxed italic border-l-4 border-indigo-600 pl-4 py-1">
-                                                "Exceptional grasp of variable mass systems, but slight hesitation in multi-axis rotation."
-                                            </p>
+
+                                        <motion.div
+                                            animate={{ x: [0, 5, 0] }}
+                                            transition={{ repeat: Infinity, duration: 2 }}
+                                            className="text-slate-300 dark:text-slate-700"
+                                        >
+                                            <ArrowRight className="w-8 h-8 sm:w-10 sm:h-10" strokeWidth={3} />
+                                        </motion.div>
+
+                                        <div className="text-center">
+                                            <p className="text-[7px] sm:text-[10px] font-black text-indigo-500 uppercase tracking-widest mb-2 sm:mb-3">Actual Index</p>
+                                            <span className="text-4xl sm:text-5xl font-black text-indigo-600">2</span>
+                                            <p className="text-[7px] sm:text-[10px] font-black text-indigo-500 uppercase mt-1">Level</p>
                                         </div>
+                                    </div>
+
+                                    <div className="mt-4 sm:mt-6 text-center">
+                                        <p className="text-[9px] sm:text-sm text-slate-600 dark:text-slate-300 font-bold leading-relaxed max-w-sm mx-auto">
+                                            Significant gaps detected. Your actual competency fits 2 levels below your assessment.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Stats grid - from SessionAnalysisView.jsx */}
+                                <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-6">
+                                    <div className="bg-white dark:bg-slate-800 p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 border-slate-100 dark:border-slate-800 flex items-center gap-2 sm:gap-3">
+                                        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0">
+                                            <Target className="w-4 h-4 sm:w-5 sm:h-5" />
+                                        </div>
+                                        <div>
+                                            <p className="text-[6px] sm:text-[10px] font-black text-slate-400 uppercase tracking-widest">Scored</p>
+                                            <p className="text-sm sm:text-xl font-black text-slate-900 dark:text-white">7 <span className="text-[9px] sm:text-sm text-slate-400">/ 15</span></p>
+                                        </div>
+                                    </div>
+                                    <div className="bg-white dark:bg-slate-800 p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 border-slate-100 dark:border-slate-800 flex items-center gap-2 sm:gap-3">
+                                        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center flex-shrink-0">
+                                            <Zap className="w-4 h-4 sm:w-5 sm:h-5" />
+                                        </div>
+                                        <div>
+                                            <p className="text-[6px] sm:text-[10px] font-black text-slate-400 uppercase tracking-widest">Gaps</p>
+                                            <p className="text-sm sm:text-xl font-black text-slate-900 dark:text-white">8</p>
+                                        </div>
+                                    </div>
+                                    <div className="bg-white dark:bg-slate-800 p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 border-slate-100 dark:border-slate-800 flex items-center gap-2 sm:gap-3">
+                                        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-slate-50 text-rose-500 flex items-center justify-center flex-shrink-0">
+                                            <Brain className="w-4 h-4 sm:w-5 sm:h-5" />
+                                        </div>
+                                        <div>
+                                            <p className="text-[6px] sm:text-[10px] font-black text-slate-400 uppercase tracking-widest">Verdict</p>
+                                            <p className="text-[9px] sm:text-sm font-black uppercase tracking-tight text-rose-500">RE-CALIBRATE</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Action buttons - from SessionAnalysisView.jsx */}
+                                <div className="flex gap-3 sm:gap-4">
+                                    <div className="flex-1 flex items-center justify-center gap-1.5 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white px-4 py-3 sm:py-4 rounded-xl sm:rounded-[1.5rem] text-[7px] sm:text-xs font-black uppercase tracking-[0.2em]">
+                                        Re-Calibrate
+                                    </div>
+                                    <div className="flex-1 flex items-center justify-center gap-1.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-4 py-3 sm:py-4 rounded-xl sm:rounded-[1.5rem] text-[7px] sm:text-xs font-black uppercase tracking-[0.2em] shadow-xl">
+                                        Return Home
                                     </div>
                                 </div>
                             </div>
@@ -515,7 +625,7 @@ const Landing = ({ onGetStarted }) => {
                             },
                             {
                                 title: "Anti-Distraction UI",
-                                desc: "No leaderboards, no streaks, no fluff. Just PCM concepts visualized clearly to help you focus on what matters.",
+                                desc: "No leaderboards, no streaks, no fluff. Just JEE concepts visualized clearly to help you focus on what matters.",
                                 icon: MonitorOff,
                                 color: "cyan",
                                 align: "right"
@@ -576,7 +686,7 @@ const Landing = ({ onGetStarted }) => {
                             },
                             {
                                 title: "Anti-Distraction UI",
-                                desc: "No leaderboards, no streaks, no fluff. Just PCM concepts visualized clearly.",
+                                desc: "No leaderboards, no streaks, no fluff. Just JEE concepts visualized clearly.",
                                 icon: MonitorOff,
                                 color: "cyan"
                             },
@@ -671,7 +781,7 @@ const Landing = ({ onGetStarted }) => {
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-400">The Gap.</span>
                         </h3>
                         <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl mb-10 md:mb-14 max-w-2xl mx-auto font-medium leading-relaxed">
-                            Stop guessing. Start mastering. Join the elite aspirants using high-fidelity revision to conquer PCM once and for all.
+                            Stop guessing. Start mastering. Join the elite aspirants using high-fidelity revision to conquer JEE once and for all.
                         </p>
                         <motion.button
                             whileHover={{ scale: 1.05, y: -4 }}
@@ -694,7 +804,7 @@ const Landing = ({ onGetStarted }) => {
                             © {new Date().getFullYear()} Revise-It System. All rights reserved.
                         </div>
                         <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm font-bold">
-                            Made with <Heart className="w-4 h-4 text-rose-500 fill-rose-500" /> for PCM Aspirants.
+                            Made with <Heart className="w-4 h-4 text-rose-500 fill-rose-500" /> for JEE Aspirants.
                         </div>
                     </div>
                 </div>
