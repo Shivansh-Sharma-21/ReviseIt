@@ -615,21 +615,57 @@ const Landing = ({ onGetStarted }) => {
                 </div>
             </section>
             {/* Final CTA Section - Refined Adaptive Expansion */}
-            <section className="py-32 md:py-48 relative overflow-hidden flex items-center justify-center bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-white/5">
-                {/* Adaptive Background Layering */}
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent opacity-30" />
+            <section className="py-32 md:py-48 relative overflow-hidden flex items-center justify-center border-t border-slate-200 dark:border-white/5">
+                {/* Fixed Background Layering */}
+                <div className="absolute inset-0 bg-slate-50 dark:bg-slate-950 -z-20" />
                 
-                {/* Subdued Pulsing Aura Effects - Optimized for both modes */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/10 dark:bg-indigo-600/20 blur-[120px] rounded-full animate-pulse-slow -z-10" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-cyan-400/5 dark:bg-cyan-500/10 blur-[80px] rounded-full -z-10" />
+                <div className="absolute inset-0 -z-10">
+                    {/* Linear Moving Grid - Smooth and Constant (No Pulse) */}
+                    <motion.div 
+                        animate={{ 
+                            backgroundPosition: ['0px 0px', '40px 40px'],
+                        }}
+                        transition={{ 
+                            duration: 20, 
+                            repeat: Infinity, 
+                            ease: "linear" 
+                        }}
+                        className="absolute inset-0 opacity-30 dark:opacity-10"
+                        style={{
+                            backgroundImage: `linear-gradient(to right, #6366f1 1px, transparent 1px), linear-gradient(to bottom, #6366f1 1px, transparent_1px)`,
+                            backgroundSize: '40px 40px',
+                            maskImage: 'radial-gradient(circle at center, black, transparent 80%)',
+                        }}
+                    />
+                    
+                    {/* Slow Drift Orbs - Constant motion, no blinking */}
+                    {[...Array(3)].map((_, i) => (
+                        <motion.div
+                            key={i}
+                            animate={{
+                                x: [0, 50, -50, 0],
+                                y: [0, -40, 40, 0],
+                            }}
+                            transition={{
+                                duration: 20 + i * 5,
+                                repeat: Infinity,
+                                ease: "linear"
+                            }}
+                            className="absolute w-96 h-96 rounded-full bg-indigo-500/10 dark:bg-indigo-600/20 blur-[100px]"
+                            style={{
+                                top: `${10 + (i * 30)}%`,
+                                left: `${5 + (i * 30)}%`,
+                            }}
+                        />
+                    ))}
+                </div>
+
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent opacity-50" />
                 
-                <div className="mx-auto max-w-5xl px-6 text-center relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, ease: "easeOut" }}
-                    >
+                {/* Static Aura - No Pulse */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/10 dark:bg-indigo-600/20 blur-[150px] rounded-full -z-10" />
+                               <div className="mx-auto max-w-5xl px-6 text-center relative z-10">
+                    <div className="flex flex-col items-center">
                         <h3 className="text-4xl sm:text-6xl md:text-7xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 italic uppercase leading-none">
                             Bridge <br className="hidden sm:block" />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-400">The Gap.</span>
@@ -638,16 +674,15 @@ const Landing = ({ onGetStarted }) => {
                             Stop guessing. Start mastering. Join the elite aspirants using high-fidelity revision to conquer PCM once and for all.
                         </p>
                         <motion.button
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ delay: 0.5 }}
+                            whileHover={{ scale: 1.05, y: -4 }}
+                            whileTap={{ scale: 0.95 }}
                             onClick={onGetStarted}
-                            className="bg-indigo-600 hover:bg-indigo-500 text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl text-lg md:text-xl font-black shadow-xl shadow-indigo-600/20 transition-all hover:-translate-y-1 active:scale-95 group flex items-center gap-3 mx-auto"
+                            className="bg-indigo-600 hover:bg-indigo-500 text-white px-10 md:px-14 py-4 md:py-6 rounded-2xl text-lg md:text-xl font-black shadow-2xl shadow-indigo-600/20 transition-all group flex items-center gap-4 mx-auto border-2 border-indigo-400/20"
                         >
                             Start Your Session
-                            <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                         </motion.button>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
 
