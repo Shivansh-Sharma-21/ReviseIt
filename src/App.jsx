@@ -6,11 +6,12 @@ import Mindmap from './components/Mindmap'
 import QuizView from './components/QuizView'
 import RevisionQuizView from './components/RevisionQuizView'
 import SessionAnalysisView from './components/SessionAnalysisView'
+import Landing from './components/Landing'
 import './App.css'
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark')
-  const [view, setView] = useState('home') // 'home', 'topics', 'mindmap', 'flashcards', 'quiz', 'revision-quiz', 'analysis'
+  const [view, setView] = useState('landing') // 'landing', 'home', 'topics', 'mindmap', 'flashcards', 'quiz', 'revision-quiz', 'analysis'
   const [selectedTopic, setSelectedTopic] = useState(null)
   const [currentSubject, setCurrentSubject] = useState(null)
   const [userConfidence, setUserConfidence] = useState(3)
@@ -71,7 +72,8 @@ function App() {
   return (
     <div className="app-bg text-main">
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <main className={['mindmap', 'quiz', 'revision-quiz', 'analysis'].includes(view) ? "" : "container mx-auto px-4 py-8"}>
+      <main className={['landing', 'mindmap', 'quiz', 'revision-quiz', 'analysis'].includes(view) ? "" : "container mx-auto px-4 py-8"}>
+        {view === 'landing' && <Landing onGetStarted={() => setView('home')} />}
         {view === 'home' && (
           <Home
             onSelectPhysics={() => navigateToTopics('Physics')}
