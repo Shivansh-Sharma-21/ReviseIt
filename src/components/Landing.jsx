@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Target, Brain, BookOpen } from 'lucide-react';
+import { ArrowRight, Zap, Target, Brain, BookOpen, MousePointer2, MonitorOff, Activity, Sparkles, ChevronRight, Mail, Twitter, Github, Linkedin, Heart } from 'lucide-react';
 
 const Landing = ({ onGetStarted }) => {
     return (
@@ -477,25 +477,114 @@ const Landing = ({ onGetStarted }) => {
                 </div>
             </section>
 
-            {/* Key Pillars Section - New */}
-            <section className="py-16 md:py-24 bg-slate-50 dark:bg-slate-950/20">
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            {/* Key Pillars Section - Dual Layout (Mobile List / Desktop Zig-Zag) */}
+            <section className="py-24 md:py-48 relative overflow-hidden bg-slate-50 dark:bg-slate-950/20">
+                {/* Section Header */}
+                <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-16 md:mb-32 text-center">
+                    <h2 className="text-indigo-600 dark:text-indigo-400 font-bold tracking-[0.2em] uppercase text-[10px] sm:text-sm mb-4">Core Principles</h2>
+                    <h3 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tighter text-balance">The Revise-It Foundation</h3>
+                </div>
+
+                <div className="mx-auto max-w-5xl px-6 lg:px-8 relative">
+                    {/* SVG Zig-Zag Path - Desktop Only */}
+                    <svg 
+                        className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-[400px] pointer-events-none stroke-indigo-500/20 dark:stroke-white/10 fill-none hidden sm:block"
+                        viewBox="0 0 200 800"
+                        preserveAspectRatio="none"
+                    >
+                        <motion.path
+                            d="M 100 0 C 100 100, 20 150, 20 250 C 20 350, 180 400, 180 500 C 180 600, 100 650, 100 800"
+                            strokeWidth="4"
+                            strokeDasharray="12 12"
+                            initial={{ pathLength: 0 }}
+                            whileInView={{ pathLength: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 2, ease: "easeInOut" }}
+                        />
+                    </svg>
+
+                    {/* Desktop Content (Zig-Zag) */}
+                    <div className="hidden sm:block space-y-48 relative">
                         {[
                             {
                                 title: "Zero Decision Fatigue",
                                 desc: "No more wasting time deciding what to revise next. Our system pre-plans your flow based on your session goals.",
-                                accent: "bg-indigo-500"
+                                icon: MousePointer2,
+                                color: "indigo",
+                                align: "left"
                             },
                             {
                                 title: "Anti-Distraction UI",
                                 desc: "No leaderboards, no streaks, no fluff. Just PCM concepts visualized clearly to help you focus on what matters.",
-                                accent: "bg-cyan-500"
+                                icon: MonitorOff,
+                                color: "cyan",
+                                align: "right"
                             },
                             {
                                 title: "Adaptive Intelligence",
                                 desc: "Questions tagged by Foundation, Core, and Stretch tags. The mix changes instantly based on your checkpoint performance.",
-                                accent: "bg-emerald-500"
+                                icon: Activity,
+                                color: "emerald",
+                                align: "left"
+                            }
+                        ].map((pillar, idx) => {
+                            const Icon = pillar.icon;
+                            return (
+                                <div key={idx} className={`flex sm:flex-row items-center justify-center gap-8 ${pillar.align === 'right' ? 'sm:flex-row-reverse' : ''}`}>
+                                    {/* Milestone Card */}
+                                    <motion.div
+                                        initial={{ opacity: 0, x: pillar.align === 'left' ? -50 : 50 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.8 }}
+                                        className="w-1/2 group"
+                                    >
+                                        <div className="relative glass p-10 rounded-[3rem] border-slate-200 dark:border-white/5 transition-all duration-500 group-hover:scale-[1.02] shadow-xl group-hover:shadow-2xl">
+                                            <div className={`w-14 h-14 rounded-2xl bg-${pillar.color}-500/10 flex items-center justify-center border border-${pillar.color}-500/20 mb-6`}>
+                                                <Icon className={`w-7 h-7 text-${pillar.color}-500`} />
+                                            </div>
+                                            <h4 className="text-2xl font-black dark:text-white mb-4 uppercase tracking-tight">{pillar.title}</h4>
+                                            <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">{pillar.desc}</p>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Path Node Indicator */}
+                                    <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 flex items-center justify-center">
+                                        <motion.div 
+                                            initial={{ scale: 0 }}
+                                            whileInView={{ scale: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ type: "spring", stiffness: 200, delay: 0.3 }}
+                                            className={`w-6 h-6 rounded-full bg-${pillar.color}-500 ring-4 ring-${pillar.color}-500/20 z-10 shadow-lg`}
+                                        />
+                                    </div>
+
+                                    <div className="w-1/2" />
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    {/* Mobile Content (Premium Card Stack) */}
+                    <div className="sm:hidden flex flex-col gap-10">
+                        {[
+                            {
+                                title: "Zero Decision Fatigue",
+                                desc: "Our system pre-plans your flow based on your session goals.",
+                                icon: MousePointer2,
+                                color: "indigo"
+                            },
+                            {
+                                title: "Anti-Distraction UI",
+                                desc: "No leaderboards, no streaks, no fluff. Just PCM concepts visualized clearly.",
+                                icon: MonitorOff,
+                                color: "cyan"
+                            },
+                            {
+                                title: "Adaptive Intelligence",
+                                desc: "Question mix changes instantly based on your checkpoint performance.",
+                                icon: Activity,
+                                color: "emerald"
                             }
                         ].map((pillar, idx) => (
                             <motion.div
@@ -503,18 +592,28 @@ const Landing = ({ onGetStarted }) => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="relative pl-8 border-l-2 border-slate-200 dark:border-white/5"
+                                transition={{ delay: idx * 0.1 }}
+                                className="relative overflow-hidden glass p-8 rounded-[2.5rem] border-slate-200 dark:border-white/10"
                             >
-                                <div className={`absolute left-[-5px] top-0 w-[8px] h-[8px] rounded-full ${pillar.accent} shadow-lg shadow-current/50`} />
-                                <h4 className="text-lg md:text-xl font-black dark:text-white mb-4 uppercase tracking-tight">{pillar.title}</h4>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{pillar.desc}</p>
+                                <div className={`absolute top-0 right-0 w-32 h-32 bg-${pillar.color}-500/5 -mr-16 -mt-16 blur-3xl rounded-full`} />
+                                
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className={`w-12 h-12 rounded-2xl bg-${pillar.color}-500/10 flex items-center justify-center border border-${pillar.color}-500/20`}>
+                                        <pillar.icon className={`w-6 h-6 text-${pillar.color}-500`} />
+                                    </div>
+                                    <div className={`text-[10px] font-black uppercase text-${pillar.color}-500 tracking-[0.2em]`}>
+                                        Pillar 0{idx + 1}
+                                    </div>
+                                </div>
+                                <h4 className="text-xl font-black dark:text-white mb-3 uppercase tracking-tight">{pillar.title}</h4>
+                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-medium">
+                                    {pillar.desc}
+                                </p>
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
-
             {/* Final CTA Section */}
             <section className="py-16 md:py-32 relative overflow-hidden">
                 <div className="absolute inset-0 bg-indigo-600 dark:bg-indigo-900/20 -z-10" />
@@ -544,9 +643,70 @@ const Landing = ({ onGetStarted }) => {
                 </div>
             </section>
 
+            {/* Premium Footer */}
+            <footer className="bg-slate-950 pt-24 pb-12 border-t border-white/5">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
+                        {/* Brand Column */}
+                        <div className="md:col-span-2">
+                            <div className="flex items-center gap-3 mb-8">
+                                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center text-white shadow-xl rotate-3">
+                                    <Brain className="w-7 h-7" />
+                                </div>
+                                <span className="text-3xl font-black tracking-tighter dark:text-white italic uppercase">Revise-It</span>
+                            </div>
+                            <p className="text-slate-400 text-lg leading-relaxed max-w-md mb-10 font-medium">
+                                The ultimate high-fidelity revision engine for PCM aspirants. Visualizing complexity, simplifying success.
+                            </p>
+                            <div className="flex gap-6">
+                                {[Twitter, Github, Linkedin, Mail].map((Icon, i) => (
+                                    <a key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white transition-all border border-white/5">
+                                        <Icon className="w-5 h-5" />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Quick Links */}
+                        <div>
+                            <h4 className="text-white font-black uppercase tracking-widest text-[10px] mb-8">Platform</h4>
+                            <ul className="space-y-4">
+                                {['Mindmaps', 'Flashcards', 'Adaptive Quiz', 'Beta Access'].map((link) => (
+                                    <li key={link}>
+                                        <a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors font-bold text-sm">{link}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        {/* Legal */}
+                        <div>
+                            <h4 className="text-white font-black uppercase tracking-widest text-[10px] mb-8">Resources</h4>
+                            <ul className="space-y-4">
+                                {['Physics', 'Chemistry', 'Mathematics', 'Study Guide'].map((link) => (
+                                    <li key={link}>
+                                        <a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors font-bold text-sm">{link}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Bottom Footer Bar */}
+                    <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                        <div className="text-slate-500 text-sm font-bold tracking-tight">
+                            © {new Date().getFullYear()} Revise-It System. All rights reserved.
+                        </div>
+                        <div className="flex items-center gap-2 text-slate-500 text-sm font-bold">
+                            Made with <Heart className="w-4 h-4 text-rose-500 fill-rose-500" /> for PCM Aspirants.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
             {/* Bottom Decorative Element */}
             <div className="absolute inset-x-0 bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
-                <div 
+                <div
                     className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-cyan-400 to-indigo-500 opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
                     style={{
                         clipPath: 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'
