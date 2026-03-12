@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Zap, Target, Brain, BookOpen, MousePointer2, MonitorOff, Activity, Sparkles, ChevronRight, Mail, Twitter, Github, Linkedin, Heart } from 'lucide-react';
+import { ArrowRight, Zap, Target, Brain, BookOpen, MousePointer2, MonitorOff, Activity, Heart } from 'lucide-react';
 
 const Landing = ({ onGetStarted }) => {
     return (
@@ -614,90 +614,51 @@ const Landing = ({ onGetStarted }) => {
                     </div>
                 </div>
             </section>
-            {/* Final CTA Section */}
-            <section className="py-16 md:py-32 relative overflow-hidden">
-                <div className="absolute inset-0 bg-indigo-600 dark:bg-indigo-900/20 -z-10" />
-                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-400 to-transparent opacity-20" />
+            {/* Final CTA Section - Refined Adaptive Expansion */}
+            <section className="py-32 md:py-48 relative overflow-hidden flex items-center justify-center bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-white/5">
+                {/* Adaptive Background Layering */}
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent opacity-30" />
                 
-                <div className="mx-auto max-w-4xl px-6 text-center">
+                {/* Subdued Pulsing Aura Effects - Optimized for both modes */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/10 dark:bg-indigo-600/20 blur-[120px] rounded-full animate-pulse-slow -z-10" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-cyan-400/5 dark:bg-cyan-500/10 blur-[80px] rounded-full -z-10" />
+                
+                <div className="mx-auto max-w-5xl px-6 text-center relative z-10">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 1, ease: "easeOut" }}
                     >
-                        <h3 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tighter mb-6 md:mb-8 italic uppercase">
-                            Ready to Bridge <br className="hidden sm:block" />the Gap?
+                        <h3 className="text-4xl sm:text-6xl md:text-7xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 italic uppercase leading-none">
+                            Bridge <br className="hidden sm:block" />
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-400">The Gap.</span>
                         </h3>
-                        <p className="text-indigo-100/70 text-base md:text-lg mb-8 md:mb-12 max-w-xl mx-auto font-medium">
-                            Join thousands of aspirants who have stopped guessing and started mastering the core of PCM.
+                        <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl mb-10 md:mb-14 max-w-2xl mx-auto font-medium leading-relaxed">
+                            Stop guessing. Start mastering. Join the elite aspirants using high-fidelity revision to conquer PCM once and for all.
                         </p>
-                        <button
+                        <motion.button
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ delay: 0.5 }}
                             onClick={onGetStarted}
-                            className="bg-white text-indigo-600 hover:bg-slate-50 px-8 md:px-12 py-4 md:py-5 rounded-2xl text-lg md:text-xl font-black shadow-2xl shadow-black/20 transition-all hover:-translate-y-1 active:scale-95 group flex items-center gap-3 mx-auto"
+                            className="bg-indigo-600 hover:bg-indigo-500 text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl text-lg md:text-xl font-black shadow-xl shadow-indigo-600/20 transition-all hover:-translate-y-1 active:scale-95 group flex items-center gap-3 mx-auto"
                         >
-                            Begin Your First Session
+                            Start Your Session
                             <ArrowRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        </motion.button>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Premium Footer */}
-            <footer className="bg-slate-950 pt-24 pb-12 border-t border-white/5">
+            {/* Minimal Footer */}
+            <footer className="py-12 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-white/5">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
-                        {/* Brand Column */}
-                        <div className="md:col-span-2">
-                            <div className="flex items-center gap-3 mb-8">
-                                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center text-white shadow-xl rotate-3">
-                                    <Brain className="w-7 h-7" />
-                                </div>
-                                <span className="text-3xl font-black tracking-tighter dark:text-white italic uppercase">Revise-It</span>
-                            </div>
-                            <p className="text-slate-400 text-lg leading-relaxed max-w-md mb-10 font-medium">
-                                The ultimate high-fidelity revision engine for PCM aspirants. Visualizing complexity, simplifying success.
-                            </p>
-                            <div className="flex gap-6">
-                                {[Twitter, Github, Linkedin, Mail].map((Icon, i) => (
-                                    <a key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 hover:bg-white/10 hover:text-white transition-all border border-white/5">
-                                        <Icon className="w-5 h-5" />
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Quick Links */}
-                        <div>
-                            <h4 className="text-white font-black uppercase tracking-widest text-[10px] mb-8">Platform</h4>
-                            <ul className="space-y-4">
-                                {['Mindmaps', 'Flashcards', 'Adaptive Quiz', 'Beta Access'].map((link) => (
-                                    <li key={link}>
-                                        <a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors font-bold text-sm">{link}</a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Legal */}
-                        <div>
-                            <h4 className="text-white font-black uppercase tracking-widest text-[10px] mb-8">Resources</h4>
-                            <ul className="space-y-4">
-                                {['Physics', 'Chemistry', 'Mathematics', 'Study Guide'].map((link) => (
-                                    <li key={link}>
-                                        <a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors font-bold text-sm">{link}</a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Bottom Footer Bar */}
-                    <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-                        <div className="text-slate-500 text-sm font-bold tracking-tight">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div className="text-slate-600 dark:text-slate-400 text-sm font-bold tracking-tight">
                             © {new Date().getFullYear()} Revise-It System. All rights reserved.
                         </div>
-                        <div className="flex items-center gap-2 text-slate-500 text-sm font-bold">
+                        <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400 text-sm font-bold">
                             Made with <Heart className="w-4 h-4 text-rose-500 fill-rose-500" /> for PCM Aspirants.
                         </div>
                     </div>
