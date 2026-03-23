@@ -1,7 +1,7 @@
 
 import re
 
-file_path = r'd:\Code Playground\ReviseIt\src\data\chemistry\questions\chapter1.js'
+file_path = r'd:\Code playground\ReviseIt\src\data\chemistry\questions\chapter2.js'
 
 with open(file_path, 'r', encoding='utf-8') as f:
     content = f.read()
