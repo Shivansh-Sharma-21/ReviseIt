@@ -179,7 +179,7 @@ const Landing = ({ onGetStarted }) => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-indigo-500 font-black text-7xl md:text-8xl opacity-10 block mb-6">01</span>
+                            <span className="text-indigo-500 font-black text-7xl md:text-8xl block mb-6">01</span>
                             <h3 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-8 text-balance">
                                 Visualize & Recall <br />
                                 <span className="text-indigo-600 dark:text-indigo-400 text-2xl sm:text-4xl">Mindmaps + Instant Flashcards</span>
@@ -288,7 +288,7 @@ const Landing = ({ onGetStarted }) => {
                             transition={{ duration: 0.8 }}
                             className="lg:order-2"
                         >
-                            <span className="text-cyan-500 font-black text-7xl md:text-8xl opacity-10 block mb-6">02</span>
+                            <span className="text-cyan-500 font-black text-7xl md:text-8xl block mb-6">02</span>
                             <h3 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-8">
                                 Expose <br />
                                 <span className="text-cyan-600 dark:text-cyan-400">Conceptual Traps</span>
@@ -390,7 +390,7 @@ const Landing = ({ onGetStarted }) => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
                         >
-                            <span className="text-emerald-500 font-black text-7xl md:text-8xl opacity-10 block mb-6">03</span>
+                            <span className="text-emerald-500 font-black text-7xl md:text-8xl block mb-6">03</span>
                             <h3 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-8">
                                 Calibrate <br />
                                 <span className="text-emerald-600 dark:text-emerald-400">The Adapation Engine</span>
@@ -468,7 +468,7 @@ const Landing = ({ onGetStarted }) => {
                             transition={{ duration: 0.8 }}
                             className="lg:order-2"
                         >
-                            <span className="text-slate-500 font-black text-7xl md:text-8xl opacity-10 block mb-6">04</span>
+                            <span className="text-slate-500 font-black text-7xl md:text-8xl block mb-6">04</span>
                             <h3 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-8">
                                 Master <br />
                                 <span className="text-slate-600 dark:text-slate-400">The Revision Cycle</span>
@@ -588,7 +588,7 @@ const Landing = ({ onGetStarted }) => {
             </section>
 
             {/* Key Pillars Section - Dual Layout (Mobile List / Desktop Zig-Zag) */}
-            <section className="py-24 md:py-48 relative overflow-hidden bg-slate-50 dark:bg-slate-950/20">
+            <section className="py-24 md:py-48 relative overflow-hidden dark:bg-slate-950/20">
                 {/* Section Header */}
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-16 md:mb-32 text-center">
                     <h2 className="text-indigo-600 dark:text-indigo-400 font-bold tracking-[0.2em] uppercase text-[10px] sm:text-sm mb-4">Core Principles</h2>
