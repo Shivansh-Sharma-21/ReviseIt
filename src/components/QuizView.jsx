@@ -167,9 +167,23 @@ const QuizView = ({ chapter, onBack, onComplete }) => {
                         className="flex-grow flex flex-col"
                     >
                         <div className="bg-white dark:bg-slate-900 p-8 md:p-12 rounded-[2.5rem] border-2 border-slate-200 dark:border-slate-800 shadow-xl mb-8">
-                            <h2 className="text-xl md:text-3xl font-black text-slate-900 dark:text-white leading-tight mb-12">
+                            <h2 className="text-xl md:text-3xl font-black text-slate-900 dark:text-white leading-tight mb-8">
                                 <Latex>{currentQuestion.text}</Latex>
                             </h2>
+
+                            {currentQuestion.diagram && (
+                                <motion.div 
+                                    initial={{ scale: 0.9, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    className="mb-10 w-full flex justify-center"
+                                >
+                                    <img 
+                                        src={currentQuestion.diagram} 
+                                        alt="Question Diagram" 
+                                        className="max-h-[300px] w-auto rounded-2xl border-2 border-slate-100 dark:border-slate-800 shadow-sm"
+                                    />
+                                </motion.div>
+                            )}
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {currentQuestion.options.map((option, idx) => {
