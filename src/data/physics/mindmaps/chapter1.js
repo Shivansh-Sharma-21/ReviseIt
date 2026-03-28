@@ -1,34 +1,33 @@
 export const mindmap = {
-    id: 'nlm_friction',
-    title: "Newton's Laws of Motion & Friction",
+    id: 'motion_in_a_straight_line',
+    title: "Motion in a Straight Line",
     flow: [
         {
-            topic: "Foundations of Motion",
-            subtopics: ["INERTIA", "Momentum"]
+            topic: "Fundamentals of Motion",
+            subtopics: [
+                "Basic Kinematics Parameters",
+                "Speed and Velocity"
+            ]
         },
         {
-            topic: "Newton's Laws",
-            subtopics: ["Newton 1st Law (Law of inertia)", "Newton Second Law", "Newton Third law"]
+            topic: "Dynamics of Change",
+            subtopics: [
+                "Acceleration and Jerk"
+            ]
         },
         {
-            topic: "Fundamental Forces",
-            subtopics: ["GRAVITATIONAL FORCE", "NORMAL FORCE", "TENSION FORCE"]
+            topic: "Kinematic Equations",
+            subtopics: [
+                "Equations of Motion (Constant Acceleration)",
+                "Motion Under Gravity"
+            ]
         },
         {
-            topic: "Equilibrium & Pulley Systems",
-            subtopics: ["EQUILIBRIUM", "Lami theorem", "PULLEY SYSTEM / ATWOOD MACHINE"]
-        },
-        {
-            topic: "Springs",
-            subtopics: ["IDEAL SPRING", "Hook's Law", "EQUIVALENT SPRING CONSTANT"]
-        },
-        {
-            topic: "Frames & Advanced Motion",
-            subtopics: ["INERTIAL FRAME / NON INERTIAL FRAME", "Pseudo force", "CONSTRAINT MOTION", "WEDGE CONSTRAINT"]
-        },
-        {
-            topic: "Friction",
-            subtopics: ["FRICTION", "Static Friction", "Kinetic Friction", "Angle of Repose/Angle of Sliding", "Angle of Friction"]
+            topic: "Visual and Relative Analysis",
+            subtopics: [
+                "Graphical Analysis of Motion",
+                "Relative Motion in 1D"
+            ]
         }
     ]
 };
