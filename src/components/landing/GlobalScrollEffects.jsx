@@ -14,8 +14,7 @@ const GlobalScrollEffects = () => {
     const glowY = useTransform(scrollYProgress, [0, 1], ['-20%', '120%']);
     
     return (
-        <div className="absolute inset-0 pointer-events-none -z-50 overflow-hidden">
-            <div className="sticky top-0 h-screen w-full perspective-[2000px]">
+        <div className="fixed inset-0 pointer-events-none -z-50 overflow-hidden perspective-[2000px] transform-gpu">
             {/* The Shiftin Glow */}
             <motion.div
                 className="absolute left-1/2 w-[1000px] h-[500px] rounded-full blur-[150px] opacity-20 dark:opacity-30 transform-gpu"
@@ -54,7 +53,6 @@ const GlobalScrollEffects = () => {
                     }}
                 />
             ))}
-            </div>
         </div>
     );
 };

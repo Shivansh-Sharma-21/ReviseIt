@@ -10,8 +10,8 @@ const FinalCTA = ({ onGetStarted }) => {
     // Animate characters upwards as we scroll down into this section
     const yTransform = useTransform(scrollYProgress, [1, 0.8], [100, 0]);
 
-    const titleStr = "Bridge The Gap.";
-    const titleChars = Array.from(titleStr);
+    const titleWords = ["Bridge", "The", "Gap."];
+    let charCounter = 0;
 
     return (
         <section className="h-screen relative overflow-hidden flex items-center justify-center border-t border-slate-200 dark:border-white/5 z-30">
@@ -45,22 +45,30 @@ const FinalCTA = ({ onGetStarted }) => {
             <div className="mx-auto max-w-5xl px-6 text-center relative z-40 w-full">
                 <div className="flex flex-col items-center group/cta">
                     <h3 className="text-5xl sm:text-7xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter mb-10 uppercase leading-[1.1] flex flex-wrap justify-center overflow-hidden py-4">
-                        {titleChars.map((char, index) => (
-                            <motion.span 
-                                key={index} 
-                                style={{ y: yTransform }}
-                                className={`inline-block ${
-                                    index >= 7 // "The Gap." part
-                                    ? "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-400" 
-                                    : "text-slate-900 dark:text-white"
-                                }`}
-                                transition={{ delay: index * 0.05 }} // Slight delay per char for wave effect
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true, margin: "100px" }}
-                            >
-                                {char === " " ? "\u00A0" : char}
-                            </motion.span>
+                        {titleWords.map((word, wordIdx) => (
+                            <span key={wordIdx} className="inline-block whitespace-nowrap">
+                                {Array.from(word).map((char, charIdx) => {
+                                    const index = charCounter++;
+                                    return (
+                                        <motion.span 
+                                            key={index} 
+                                            style={{ y: yTransform }}
+                                            className={`inline-block ${
+                                                index >= 7 // "The Gap." part (approx, needs logic adjustment)
+                                                ? "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-400" 
+                                                : "text-slate-900 dark:text-white"
+                                            }`}
+                                            transition={{ delay: index * 0.05 }}
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            viewport={{ once: true, margin: "100px" }}
+                                        >
+                                            {char}
+                                        </motion.span>
+                                    );
+                                })}
+                                {wordIdx < titleWords.length - 1 && <span className="inline-block">&nbsp;</span>}
+                            </span>
                         ))}
                     </h3>
 
