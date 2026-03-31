@@ -14,11 +14,13 @@ const GlobalScrollEffects = () => {
     const glowY = useTransform(scrollYProgress, [0, 1], ['-20%', '120%']);
     
     return (
-        <div className="fixed inset-0 pointer-events-none -z-50 overflow-hidden perspective-[2000px]">
+        <div className="absolute inset-0 pointer-events-none -z-50 overflow-hidden">
+            <div className="sticky top-0 h-screen w-full perspective-[2000px]">
             {/* The Shiftin Glow */}
             <motion.div
-                className="absolute left-1/2 -translate-x-1/2 w-[1000px] h-[500px] rounded-full blur-[150px] opacity-20 dark:opacity-30"
+                className="absolute left-1/2 w-[1000px] h-[500px] rounded-full blur-[150px] opacity-20 dark:opacity-30 transform-gpu"
                 style={{
+                    x: '-50%',
                     y: glowY,
                     background: "linear-gradient(90deg, #6366f1, #06b6d4, #10b981)",
                 }}
@@ -26,7 +28,7 @@ const GlobalScrollEffects = () => {
 
             {/* The 3D Grid Floor */}
             <motion.div
-                className="absolute inset-x-[-50%] bottom-[-50%] h-[150vh] origin-bottom opacity-10 dark:opacity-20"
+                className="absolute inset-x-[-50%] bottom-[-50%] h-[150vh] origin-bottom opacity-10 dark:opacity-20 transform-gpu"
                 style={{
                     scale,
                     rotateX,
@@ -44,7 +46,7 @@ const GlobalScrollEffects = () => {
             {[...Array(15)].map((_, i) => (
                 <motion.div
                     key={i}
-                    className="absolute w-1 h-1 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)] opacity-20"
+                    className="absolute w-1 h-1 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)] opacity-20 transform-gpu"
                     style={{
                         top: `${Math.random() * 100}%`,
                         left: `${Math.random() * 100}%`,
@@ -52,6 +54,7 @@ const GlobalScrollEffects = () => {
                     }}
                 />
             ))}
+            </div>
         </div>
     );
 };

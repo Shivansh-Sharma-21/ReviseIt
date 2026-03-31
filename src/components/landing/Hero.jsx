@@ -41,7 +41,7 @@ const Hero = ({ onGetStarted }) => {
                             repeat: Infinity,
                             ease: "linear"
                         }}
-                        className="absolute w-96 h-96 rounded-full bg-indigo-500/10 dark:bg-indigo-600/20 blur-[100px]"
+                        className="absolute w-96 h-96 rounded-full bg-indigo-500/10 dark:bg-indigo-600/20 blur-[100px] transform-gpu"
                         style={{
                             top: `${10 + (i * 30)}%`,
                             left: `${5 + (i * 30)}%`,

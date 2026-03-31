@@ -23,7 +23,7 @@ const RevisionGap = () => {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 1 }}
-                        className="relative z-10 lg:pr-12"
+                        className="relative z-10 lg:pr-12 transform-gpu"
                     >
                         <h2 className="text-indigo-600 dark:text-indigo-400 font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4 inline-flex items-center gap-2">
                             <span className="w-8 h-px bg-indigo-500"></span> Chapter I — The Problem
@@ -63,7 +63,7 @@ const RevisionGap = () => {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 1 }}
-                        className="relative mt-8 lg:mt-0"
+                        className="relative mt-8 lg:mt-0 transform-gpu"
                     >
                         <div className="relative glass rounded-3xl p-6 md:p-10 border-slate-200 dark:border-white/10 aspect-square flex flex-col justify-center overflow-hidden shadow-2xl bg-white dark:bg-slate-950/80 backdrop-blur-3xl">
                             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent pointer-events-none" />

@@ -35,7 +35,7 @@ const KeyPillars = () => {
                 {/* Horizontal Glowing Connector Line */}
                 <div className="hidden lg:block absolute top-1/2 left-12 right-12 h-0.5 bg-gradient-to-r from-indigo-500/20 via-cyan-500/50 to-emerald-500/20 z-0 -translate-y-1/2">
                     <motion.div 
-                        className="w-1/3 h-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent blur-sm"
+                        className="w-1/3 h-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent blur-sm transform-gpu"
                         animate={{ x: ['-100%', '300%'] }}
                         transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                     />
@@ -51,7 +51,7 @@ const KeyPillars = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.8, delay: idx * 0.2, type: "spring", bounce: 0.4 }}
-                                className="relative group perspective-1000"
+                                className="relative group perspective-1000 transform-gpu"
                             >
                                 {/* Gradient Border on Hover */}
                                 <div className="absolute -inset-0.5 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-[3.2rem] opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />

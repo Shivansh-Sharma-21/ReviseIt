@@ -176,7 +176,7 @@ const FourStepsFlow = () => {
                     {/* Sticky Timeline Bar Container */}
                     <div className="hidden md:block absolute top-0 bottom-0 left-8 w-1 bg-slate-200 dark:bg-slate-800 rounded-full">
                         <motion.div 
-                            className="absolute top-0 left-0 w-full bg-gradient-to-b from-indigo-500 via-cyan-500 to-emerald-500 rounded-full origin-top"
+                            className="absolute top-0 left-0 w-full bg-gradient-to-b from-indigo-500 via-cyan-500 to-emerald-500 rounded-full origin-top transform-gpu"
                             initial={{ scaleY: 0 }}
                             whileInView={{ scaleY: 1 }}
                             viewport={{ once: true }}
@@ -189,7 +189,7 @@ const FourStepsFlow = () => {
                         {steps.map((step, idx) => (
                             <motion.div 
                                 key={idx} 
-                                className="relative flex flex-col lg:flex-row gap-16 lg:gap-24 items-center min-h-[50vh]"
+                                className="relative flex flex-col lg:flex-row gap-16 lg:gap-24 items-center min-h-[50vh] transform-gpu"
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
@@ -225,7 +225,7 @@ const FourStepsFlow = () => {
 
                                 {/* Mockup with 3D Tilt Reveal */}
                                 <motion.div
-                                    className="lg:w-1/2 w-full perspective-1000 relative"
+                                    className="lg:w-1/2 w-full perspective-1000 relative transform-gpu"
                                     initial={{ opacity: 0, rotateY: 30, scale: 0.9 }}
                                     whileInView={{ opacity: 1, rotateY: 0, scale: 1 }}
                                     viewport={{ once: true, margin: "-100px" }}

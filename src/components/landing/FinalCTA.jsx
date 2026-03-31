@@ -19,17 +19,18 @@ const FinalCTA = ({ onGetStarted }) => {
             <div className="absolute inset-0 bg-slate-50 dark:bg-slate-950 -z-20" />
             
             <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-                {/* Linear Moving Grid - Smooth and Constant */}
+                {/* Linear Moving Grid - Hardware Accelerated Transform */}
                 <motion.div 
                     animate={{ 
-                        backgroundPosition: ['0px 0px', '40px 40px'],
+                        x: [0, 40],
+                        y: [0, 40],
                     }}
                     transition={{ 
-                        duration: 10, 
+                        duration: 1.5, 
                         repeat: Infinity, 
                         ease: "linear" 
                     }}
-                    className="absolute inset-0 opacity-40 dark:opacity-20 transition-all duration-1000 group-hover:opacity-80"
+                    className="absolute -top-10 -left-10 w-[calc(100%+80px)] h-[calc(100%+80px)] opacity-40 dark:opacity-20 transition-all duration-1000 group-hover:opacity-80 transform-gpu"
                     style={{
                         backgroundImage: `linear-gradient(to right, #6366f1 1px, transparent 1px), linear-gradient(to bottom, #6366f1 1px, transparent 1px)`,
                         backgroundSize: '40px 40px',
