@@ -1,5 +1,4 @@
 import React from 'react';
-import ScrollProgress from './landing/ScrollProgress';
 import GlobalScrollEffects from './landing/GlobalScrollEffects';
 import Hero from './landing/Hero';
 import RevisionGap from './landing/RevisionGap';
@@ -11,7 +10,6 @@ import Footer from './landing/Footer';
 const Landing = ({ onGetStarted }) => {
     return (
         <div className="relative isolate dark:bg-slate-950 min-h-screen">
-            <ScrollProgress />
             <GlobalScrollEffects />
 
             {/* Top Decorative Graphic (Behind Header and Hero) */}

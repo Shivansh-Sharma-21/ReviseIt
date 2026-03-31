@@ -10,7 +10,7 @@ const FinalCTA = ({ onGetStarted }) => {
     // Animate characters upwards as we scroll down into this section
     const yTransform = useTransform(scrollYProgress, [1, 0.8], [100, 0]);
 
-    const titleWords = ["Bridge", "The", "Gap."];
+    const titleWords = ["Bridge", "The", "Gap"];
     let charCounter = 0;
 
     return (
@@ -54,7 +54,7 @@ const FinalCTA = ({ onGetStarted }) => {
                                             key={index} 
                                             style={{ y: yTransform }}
                                             className={`inline-block ${
-                                                index >= 7 // "The Gap." part (approx, needs logic adjustment)
+                                                index >= 6 // "The Gap." part
                                                 ? "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-400" 
                                                 : "text-slate-900 dark:text-white"
                                             }`}

@@ -5,7 +5,7 @@ const ScrollProgress = () => {
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
   return (
     <motion.div
-      className="sticky top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-indigo-600 via-violet-500 to-cyan-500 origin-left z-[200] transform-gpu"
+      className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-indigo-600 via-violet-500 to-cyan-500 origin-left z-[999] transform-gpu"
       style={{ scaleX }}
     />
   );

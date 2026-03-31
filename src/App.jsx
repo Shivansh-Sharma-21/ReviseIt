@@ -9,6 +9,7 @@ import RevisionQuizView from './components/RevisionQuizView'
 import SessionAnalysisView from './components/SessionAnalysisView'
 import Landing from './components/Landing'
 import Loader from './components/Loader'
+import ScrollProgress from './components/landing/ScrollProgress'
 import './App.css'
 
 function App() {
@@ -81,6 +82,7 @@ function App() {
 
   return (
     <div className="app-bg text-main">
+      {view === 'landing' && <ScrollProgress />}
       <AnimatePresence mode="wait">
         {isLoading && (
           <Loader 
