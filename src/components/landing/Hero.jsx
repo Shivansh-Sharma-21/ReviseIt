@@ -1,0 +1,121 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowDown } from 'lucide-react';
+
+const Hero = ({ onGetStarted }) => {
+    const parentVariants = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+            },
+        },
+    };
+
+    const childVariants = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } },
+    };
+
+    const textToAnimate = "Precision Revision for".split("");
+
+    return (
+        <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+            {/* Background Orbs */}
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                {[...Array(3)].map((_, i) => (
+                    <motion.div
+                        key={i}
+                        animate={{
+                            x: [0, 50, -50, 0],
+                            y: [0, -40, 40, 0],
+                        }}
+                        transition={{
+                            duration: 20 + i * 5,
+                            repeat: Infinity,
+                            ease: "linear"
+                        }}
+                        className="absolute w-96 h-96 rounded-full bg-indigo-500/10 dark:bg-indigo-600/20 blur-[100px]"
+                        style={{
+                            top: `${10 + (i * 30)}%`,
+                            left: `${5 + (i * 30)}%`,
+                        }}
+                    />
+                ))}
+            </div>
+
+            <div className="z-10 text-center max-w-4xl px-4 flex flex-col items-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="mb-8"
+                >
+                    <div className="inline-block relative rounded-full px-4 py-1.5 text-sm leading-6 text-slate-600 dark:text-slate-400 ring-1 ring-slate-900/10 dark:ring-white/10 hover:ring-slate-900/20 dark:hover:ring-white/20 transition-all cursor-default">
+                        Announcing Revise-it v1.0.{' '}
+                        <span className="font-semibold text-indigo-600 dark:text-indigo-400">
+                            Built for JEE Aspirants
+                        </span>
+                    </div>
+                </motion.div>
+
+                <motion.h1
+                    variants={parentVariants}
+                    initial="hidden"
+                    animate="show"
+                    className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-slate-900 dark:text-white mb-6"
+                >
+                    {textToAnimate.map((char, index) => (
+                        <motion.span key={index} variants={childVariants} className="inline-block">
+                            {char === " " ? "\u00A0" : char}
+                        </motion.span>
+                    ))}
+                    {' '}
+                    <motion.span
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 2, duration: 0.8, type: "spring" }}
+                        className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300"
+                    >
+                        IIT-JEE
+                    </motion.span>
+                </motion.h1>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 2.2, duration: 0.6 }}
+                    className="text-lg md:text-xl leading-relaxed md:leading-8 text-slate-600 dark:text-slate-400 font-medium max-w-2xl mx-auto mb-12 text-balance"
+                >
+                    Eliminate decision fatigue and expose false confidence across <span className="text-indigo-600 dark:text-indigo-400 font-bold">Physics, Chemistry, and Maths</span>. Our adaptive system ensures you master the basics before tackling the complex.
+                </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2.8, duration: 0.8 }}
+                    className="flex flex-col items-center space-y-4"
+                >
+                    <button
+                        onClick={onGetStarted}
+                        className="group relative inline-flex items-center gap-2 rounded-2xl bg-indigo-600 px-6 py-3 text-base md:px-8 md:py-4 md:text-lg font-bold text-white shadow-xl shadow-indigo-500/20 transition-all hover:bg-indigo-500 hover:-translate-y-1 active:scale-95"
+                    >
+                        Begin Your First Session
+                    </button>
+                    
+                    <motion.div 
+                        animate={{ y: [0, 10, 0] }} 
+                        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                        className="mt-8 text-slate-400 flex flex-col items-center hidden sm:flex"
+                    >
+                        <span className="text-[10px] uppercase tracking-widest font-black mb-2 opacity-60">Scroll to begin</span>
+                        <ArrowDown className="w-4 h-4 opacity-60" />
+                    </motion.div>
+                </motion.div>
+            </div>
+        </section>
+    );
+};
+
+export default Hero;
