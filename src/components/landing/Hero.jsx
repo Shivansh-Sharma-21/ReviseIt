@@ -1,24 +1,29 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
 const Hero = ({ onGetStarted }) => {
+    const { scrollYProgress } = useScroll();
+    const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+    const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
+    const heroY = useTransform(scrollYProgress, [0, 0.2], [0, 100]);
+
+    const words = "Precision Revision for".split(" ");
+
     const parentVariants = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.1,
+                staggerChildren: 0.05,
             },
         },
     };
 
     const childVariants = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } },
+        hidden: { opacity: 0, y: 15 },
+        show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 120, damping: 12 } },
     };
-
-    const textToAnimate = "Precision Revision for".split("");
 
     return (
         <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -45,14 +50,17 @@ const Hero = ({ onGetStarted }) => {
                 ))}
             </div>
 
-            <div className="z-10 text-center max-w-4xl px-4 flex flex-col items-center">
+            <motion.div 
+                className="z-10 text-center max-w-5xl px-4 flex flex-col items-center"
+                style={{ opacity: heroOpacity, scale: heroScale, y: heroY }}
+            >
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     className="mb-8"
                 >
-                    <div className="inline-block relative rounded-full px-4 py-1.5 text-sm leading-6 text-slate-600 dark:text-slate-400 ring-1 ring-slate-900/10 dark:ring-white/10 hover:ring-slate-900/20 dark:hover:ring-white/20 transition-all cursor-default">
+                    <div className="inline-block relative rounded-full px-4 py-1.5 text-[10px] sm:text-sm leading-6 text-slate-600 dark:text-slate-400 ring-1 ring-slate-900/10 dark:ring-white/10 hover:ring-slate-900/20 dark:hover:ring-white/20 transition-all cursor-default font-bold uppercase tracking-widest bg-white/5 backdrop-blur-sm">
                         Announcing Revise-it v1.0.{' '}
                         <span className="font-semibold text-indigo-600 dark:text-indigo-400">
                             Built for JEE Aspirants
@@ -64,22 +72,28 @@ const Hero = ({ onGetStarted }) => {
                     variants={parentVariants}
                     initial="hidden"
                     animate="show"
-                    className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-slate-900 dark:text-white mb-6"
+                    className="text-4xl sm:text-7xl lg:text-8xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1] flex flex-wrap justify-center gap-x-[0.25em]"
                 >
-                    {textToAnimate.map((char, index) => (
-                        <motion.span key={index} variants={childVariants} className="inline-block">
-                            {char === " " ? "\u00A0" : char}
-                        </motion.span>
+                    {words.map((word, wIdx) => (
+                        <span key={wIdx} className="inline-block whitespace-nowrap">
+                            {word.split("").map((char, cIdx) => (
+                                <motion.span key={cIdx} variants={childVariants} className="inline-block">
+                                    {char}
+                                </motion.span>
+                            ))}
+                        </span>
                     ))}
                     {' '}
-                    <motion.span
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 2, duration: 0.8, type: "spring" }}
-                        className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300"
-                    >
-                        IIT-JEE
-                    </motion.span>
+                    <div className="w-full sm:w-auto">
+                        <motion.span
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: 1.5, duration: 0.8, type: "spring" }}
+                            className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300"
+                        >
+                            IIT-JEE
+                        </motion.span>
+                    </div>
                 </motion.h1>
 
                 <motion.p
@@ -113,7 +127,7 @@ const Hero = ({ onGetStarted }) => {
                         <ArrowDown className="w-4 h-4 opacity-60" />
                     </motion.div>
                 </motion.div>
-            </div>
+            </motion.div>
         </section>
     );
 };

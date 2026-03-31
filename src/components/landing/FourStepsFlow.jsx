@@ -201,7 +201,7 @@ const FourStepsFlow = () => {
                                 </div>
 
                                 {/* Content Layer over Number */}
-                                <div className="lg:w-1/2 relative z-10 order-2 lg:order-1 flex flex-col justify-center">
+                                <div className="lg:w-1/2 relative z-10 flex flex-col justify-center">
                                     <h3 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-6">
                                         {step.title} <br />
                                         <span className={`text-${step.color}-600 dark:text-${step.color}-400 text-2xl sm:text-4xl`}>
@@ -225,7 +225,7 @@ const FourStepsFlow = () => {
 
                                 {/* Mockup with 3D Tilt Reveal */}
                                 <motion.div
-                                    className="lg:w-1/2 w-full order-1 lg:order-2 perspective-1000 relative"
+                                    className="lg:w-1/2 w-full perspective-1000 relative"
                                     initial={{ opacity: 0, rotateY: 30, scale: 0.9 }}
                                     whileInView={{ opacity: 1, rotateY: 0, scale: 1 }}
                                     viewport={{ once: true, margin: "-100px" }}

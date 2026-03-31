@@ -14,11 +14,11 @@ const FinalCTA = ({ onGetStarted }) => {
     const titleChars = Array.from(titleStr);
 
     return (
-        <section className="h-screen relative overflow-hidden flex items-center justify-center border-t border-slate-200 dark:border-white/5">
+        <section className="h-screen relative overflow-hidden flex items-center justify-center border-t border-slate-200 dark:border-white/5 z-30">
             {/* Fixed Background Layering */}
             <div className="absolute inset-0 bg-slate-50 dark:bg-slate-950 -z-20" />
             
-            <div className="absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
                 {/* Linear Moving Grid - Smooth and Constant */}
                 <motion.div 
                     animate={{ 
@@ -41,7 +41,7 @@ const FinalCTA = ({ onGetStarted }) => {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/10 dark:bg-indigo-600/30 blur-[150px] rounded-full z-0" />
             </div>
 
-            <div className="mx-auto max-w-5xl px-6 text-center relative z-10 w-full">
+            <div className="mx-auto max-w-5xl px-6 text-center relative z-40 w-full">
                 <div className="flex flex-col items-center group/cta">
                     <h3 className="text-5xl sm:text-7xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter mb-10 uppercase leading-[1.1] flex flex-wrap justify-center overflow-hidden py-4">
                         {titleChars.map((char, index) => (
@@ -73,15 +73,7 @@ const FinalCTA = ({ onGetStarted }) => {
                         Stop guessing. Start mastering. Join the elite aspirants using high-fidelity revision to conquer JEE once and for all.
                     </motion.p>
 
-                    <div className="relative">
-                        {/* CSS-only radial sunburst effect on hover */}
-                        <div className="absolute inset-0 scale-150 rounded-full opacity-0 group-hover/cta:opacity-100 transition-opacity duration-700 pointer-events-none -z-10"
-                             style={{
-                                 background: "repeating-conic-gradient(from 0deg, transparent 0deg, transparent 5deg, rgba(99, 102, 241, 0.1) 5deg, rgba(99, 102, 241, 0.1) 10deg)",
-                                 animation: "spin 30s linear infinite"
-                             }}
-                        />
-
+                    <div className="relative z-50">
                         <motion.button
                             initial={{ scale: 0.9, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
@@ -90,7 +82,7 @@ const FinalCTA = ({ onGetStarted }) => {
                             whileHover={{ scale: 1.05, y: -4 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={onGetStarted}
-                            className="bg-indigo-600 hover:bg-indigo-500 text-white px-12 md:px-16 py-5 md:py-6 rounded-2xl text-xl md:text-2xl font-black shadow-[0_20px_50px_-10px_rgba(99,102,241,0.5)] transition-all flex items-center gap-4 mx-auto border border-indigo-400/30 z-20"
+                            className="bg-indigo-600 hover:bg-indigo-500 text-white px-12 md:px-16 py-5 md:py-6 rounded-2xl text-xl md:text-2xl font-black shadow-[0_20px_50px_-10px_rgba(99,102,241,0.5)] transition-all flex items-center gap-4 mx-auto border border-indigo-400/30 cursor-pointer pointer-events-auto"
                         >
                             Start Your Session
                             <ArrowRight className="w-6 h-6 md:w-8 md:h-8 group-hover/cta:translate-x-2 transition-transform" />
