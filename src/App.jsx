@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { AnimatePresence } from 'framer-motion'
 import Header from './components/Header'
 import Home from './components/Home'
 import TopicSelection from './components/TopicSelection'
@@ -7,6 +8,7 @@ import QuizView from './components/QuizView'
 import RevisionQuizView from './components/RevisionQuizView'
 import SessionAnalysisView from './components/SessionAnalysisView'
 import Landing from './components/Landing'
+import Loader from './components/Loader'
 import './App.css'
 
 function App() {
@@ -16,6 +18,14 @@ function App() {
   const [currentSubject, setCurrentSubject] = useState(null)
   const [userConfidence, setUserConfidence] = useState(3)
   const [sessionScore, setSessionScore] = useState({ score: 0, total: 15 })
+  const [isLoading, setIsLoading] = useState(true)
+  const [loadingDuration, setLoadingDuration] = useState(3000)
+
+  useEffect(() => {
+    // Initial landing page entrance sequence (1.5s)
+    const splashTimer = setTimeout(() => setIsLoading(false), 1500)
+    return () => clearTimeout(splashTimer)
+  }, [])
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -36,9 +46,9 @@ function App() {
   }
 
   const navigateToHome = () => {
-    setView('home')
     setCurrentSubject(null)
     setSelectedTopic(null)
+    setView('home')
   }
 
   const handleTopicSelect = (topic) => {
@@ -47,8 +57,8 @@ function App() {
   }
 
   const navigateBackToTopics = () => {
-    setView('topics')
     setSelectedTopic(null)
+    setView('topics')
   }
 
   const startInitialQuiz = () => {
@@ -71,9 +81,19 @@ function App() {
 
   return (
     <div className="app-bg text-main">
+      <AnimatePresence mode="wait">
+        {isLoading && (
+          <Loader 
+            key="global-loader" 
+            duration={loadingDuration} 
+            onComplete={() => {}} 
+          />
+        )}
+      </AnimatePresence>
+
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main className={['landing', 'mindmap', 'quiz', 'revision-quiz', 'analysis'].includes(view) ? "" : "container mx-auto px-4 py-8"}>
-        {view === 'landing' && <Landing onGetStarted={() => setView('home')} />}
+        {view === 'landing' && <Landing onGetStarted={navigateToHome} />}
         {view === 'home' && (
           <Home
             onSelectPhysics={() => navigateToTopics('Physics')}
