@@ -18,7 +18,7 @@ const Hero = ({ onGetStarted }) => {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: isMobile ? 0.01 : 0.05,
+                staggerChildren: isMobile ? 0.001 : 0.05,
             },
         },
     };
@@ -100,18 +100,18 @@ const Hero = ({ onGetStarted }) => {
                 </motion.h1>
 
                 <motion.p
-                    initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
+                    initial={{ opacity: 1, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: isMobile ? 0.3 : 2.2, duration: 0.4 }}
+                    transition={{ delay: isMobile ? 0.1 : 2.2, duration: isMobile ? 0.05 : 0.4 }}
                     className="text-lg md:text-xl leading-relaxed md:leading-8 text-slate-600 dark:text-slate-400 font-medium max-w-2xl mx-auto mb-12 text-balance"
                 >
                     Eliminate decision fatigue and expose false confidence across <span className="text-indigo-600 dark:text-indigo-400 font-bold">Physics, Chemistry, and Maths</span>. Our adaptive system ensures you master the basics before tackling the complex.
                 </motion.p>
 
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: isMobile ? 0.4 : 2.8, duration: 0.4 }}
+                    initial={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: isMobile ? 0.15 : 2.8, duration: isMobile ? 0.1 : 0.4 }}
                     className="flex flex-col items-center space-y-4"
                 >
                     <button

@@ -22,10 +22,10 @@ const RevisionGap = () => {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <motion.div
                         style={{ y: yLeft }}
-                        initial={{ opacity: 0 }}
+                        initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true, margin: isMobile ? "200px" : "-100px" }}
-                        transition={{ duration: isMobile ? 0.2 : 1 }}
+                        transition={{ duration: isMobile ? 0.05 : 1 }}
                         className="relative z-10 lg:pr-12 transform-gpu"
                     >
                         <h2 className="text-indigo-600 dark:text-indigo-400 font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4 inline-flex items-center gap-2">
@@ -51,7 +51,7 @@ const RevisionGap = () => {
                                     initial={{ opacity: 0, x: -20, borderLeftColor: 'transparent' }}
                                     whileInView={{ opacity: 1, x: 0, borderLeftColor: '#0ea5e9' }}
                                     viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: 0.2 + (i * 0.1) }}
+                                    transition={{ duration: isMobile ? 0.1 : 0.5, delay: isMobile ? 0 : 0.2 + (i * 0.1) }}
                                     className="flex items-center gap-4 text-slate-700 dark:text-slate-300 font-medium text-base md:text-lg border-l-4 pl-4 bg-slate-50 dark:bg-slate-800/30 py-3 rounded-r-xl"
                                 >
                                     {item}
@@ -62,10 +62,10 @@ const RevisionGap = () => {
 
                     <motion.div
                         style={{ y: yRight }}
-                        initial={{ opacity: 0 }}
+                        initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true, margin: isMobile ? "200px" : "-100px" }}
-                        transition={{ duration: isMobile ? 0.2 : 1 }}
+                        transition={{ duration: isMobile ? 0 : 1 }}
                         className="relative mt-8 lg:mt-0 transform-gpu"
                     >
                         <div className="relative glass rounded-3xl p-6 md:p-10 border-slate-200 dark:border-white/10 aspect-square flex flex-col justify-center overflow-hidden shadow-2xl bg-white dark:bg-slate-950/80 backdrop-blur-3xl">

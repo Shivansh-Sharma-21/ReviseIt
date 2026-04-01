@@ -60,8 +60,8 @@ const FinalCTA = ({ onGetStarted }) => {
                                                 ? "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-400" 
                                                 : "text-slate-900 dark:text-white"
                                             }`}
-                                            transition={{ delay: isMobile ? index * 0.005 : index * 0.05 }}
-                                            initial={{ opacity: 0 }}
+                                            transition={{ delay: isMobile ? index * 0.001 : index * 0.05 }}
+                                            initial={isMobile ? { opacity: 1 } : { opacity: 0 }}
                                             whileInView={{ opacity: 1 }}
                                             viewport={{ once: true, margin: isMobile ? "200px" : "100px" }}
                                         >
@@ -75,10 +75,10 @@ const FinalCTA = ({ onGetStarted }) => {
                     </h3>
 
                     <motion.p 
-                        initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
+                        initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: isMobile ? "200px" : "0px" }}
-                        transition={{ duration: isMobile ? 0.2 : 0.8, delay: isMobile ? 0.1 : 0.5 }}
+                        transition={{ duration: isMobile ? 0.05 : 0.8, delay: isMobile ? 0 : 0.5 }}
                         className="text-slate-600 dark:text-slate-400 text-lg md:text-2xl mb-14 max-w-3xl mx-auto font-medium leading-relaxed"
                     >
                         Stop guessing. Start mastering. Join the elite aspirants using high-fidelity revision to conquer JEE once and for all.
@@ -86,10 +86,10 @@ const FinalCTA = ({ onGetStarted }) => {
 
                     <div className="relative z-50">
                         <motion.button
-                            initial={{ scale: 0.9, opacity: 0 }}
+                            initial={isMobile ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
                             viewport={{ once: true, margin: isMobile ? "200px" : "0px" }}
-                            transition={{ type: "spring", bounce: 0.4, delay: isMobile ? 0.15 : 0.7 }}
+                            transition={{ type: "spring", bounce: 0.4, delay: isMobile ? 0 : 0.7 }}
                             whileHover={{ scale: 1.05, y: -4 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={onGetStarted}
