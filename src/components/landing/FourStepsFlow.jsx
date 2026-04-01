@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Brain, BookOpen, Zap, ArrowRight, Activity } from 'lucide-react';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 const FourStepsFlow = () => {
+    const isMobile = useIsMobile();
     const steps = [
         {
             num: "01",
@@ -190,10 +192,10 @@ const FourStepsFlow = () => {
                             <motion.div 
                                 key={idx} 
                                 className="relative flex flex-col lg:flex-row gap-16 lg:gap-24 items-center min-h-[50vh] transform-gpu"
-                                initial={{ opacity: 0, y: 50 }}
+                                initial={{ opacity: 0, y: isMobile ? 15 : 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-100px" }}
-                                transition={{ duration: 0.8 }}
+                                viewport={{ once: true, margin: isMobile ? "200px" : "-100px" }}
+                                transition={{ duration: isMobile ? 0.2 : 0.8 }}
                             >
                                 {/* Timeline Dot */}
                                 <div className="hidden md:flex absolute -left-[76px] top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white dark:bg-slate-950 border-4 border-slate-300 dark:border-slate-700 items-center justify-center z-10">
@@ -226,10 +228,10 @@ const FourStepsFlow = () => {
                                 {/* Mockup with 3D Tilt Reveal */}
                                 <motion.div
                                     className="lg:w-1/2 w-full perspective-1000 relative transform-gpu"
-                                    initial={{ opacity: 0, rotateY: 30, scale: 0.9 }}
+                                    initial={{ opacity: 0, rotateY: isMobile ? 0 : 30, scale: isMobile ? 1 : 0.9 }}
                                     whileInView={{ opacity: 1, rotateY: 0, scale: 1 }}
-                                    viewport={{ once: true, margin: "-100px" }}
-                                    transition={{ duration: 1, type: "spring", bounce: 0.3 }}
+                                    viewport={{ once: true, margin: isMobile ? "200px" : "-100px" }}
+                                    transition={{ duration: isMobile ? 0.3 : 1, type: "spring", bounce: 0.3 }}
                                 >
                                      {/* Giant faded step number behind the mockup */}
                                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] lg:text-[20vw] font-black leading-none text-slate-900/5 dark:text-white/5 select-none pointer-events-none -z-10">

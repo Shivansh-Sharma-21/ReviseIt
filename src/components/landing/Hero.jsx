@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 const Hero = ({ onGetStarted }) => {
     const { scrollYProgress } = useScroll();
+    const isMobile = useIsMobile();
+    
     const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
     const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
     const heroY = useTransform(scrollYProgress, [0, 0.2], [0, 100]);
@@ -15,7 +18,7 @@ const Hero = ({ onGetStarted }) => {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.05,
+                staggerChildren: isMobile ? 0.01 : 0.05,
             },
         },
     };
@@ -28,11 +31,11 @@ const Hero = ({ onGetStarted }) => {
     return (
         <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
             {/* Background Orbs */}
-            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div className={`absolute inset-0 z-0 overflow-hidden pointer-events-none ${isMobile ? 'opacity-50' : ''}`}>
                 {[...Array(3)].map((_, i) => (
                     <motion.div
                         key={i}
-                        animate={{
+                        animate={isMobile ? {} : {
                             x: [0, 50, -50, 0],
                             y: [0, -40, 40, 0],
                         }}
@@ -88,7 +91,7 @@ const Hero = ({ onGetStarted }) => {
                         <motion.span
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 1.5, duration: 0.8, type: "spring" }}
+                            transition={{ delay: isMobile ? 0.2 : 1.5, duration: 0.5, type: "spring" }}
                             className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300"
                         >
                             IIT-JEE
@@ -97,9 +100,9 @@ const Hero = ({ onGetStarted }) => {
                 </motion.h1>
 
                 <motion.p
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 2.2, duration: 0.6 }}
+                    transition={{ delay: isMobile ? 0.3 : 2.2, duration: 0.4 }}
                     className="text-lg md:text-xl leading-relaxed md:leading-8 text-slate-600 dark:text-slate-400 font-medium max-w-2xl mx-auto mb-12 text-balance"
                 >
                     Eliminate decision fatigue and expose false confidence across <span className="text-indigo-600 dark:text-indigo-400 font-bold">Physics, Chemistry, and Maths</span>. Our adaptive system ensures you master the basics before tackling the complex.
@@ -108,7 +111,7 @@ const Hero = ({ onGetStarted }) => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 2.8, duration: 0.8 }}
+                    transition={{ delay: isMobile ? 0.4 : 2.8, duration: 0.4 }}
                     className="flex flex-col items-center space-y-4"
                 >
                     <button

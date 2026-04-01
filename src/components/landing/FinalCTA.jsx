@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 const FinalCTA = ({ onGetStarted }) => {
+    const isMobile = useIsMobile();
     const { scrollYProgress } = useScroll({
         offset: ["end end", "start start"]
     });
@@ -26,7 +28,7 @@ const FinalCTA = ({ onGetStarted }) => {
                         y: [0, 40],
                     }}
                     transition={{ 
-                        duration: 1.5, 
+                        duration: isMobile ? 0.75 : 1.5, 
                         repeat: Infinity, 
                         ease: "linear" 
                     }}
@@ -58,10 +60,10 @@ const FinalCTA = ({ onGetStarted }) => {
                                                 ? "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-400" 
                                                 : "text-slate-900 dark:text-white"
                                             }`}
-                                            transition={{ delay: index * 0.05 }}
+                                            transition={{ delay: isMobile ? index * 0.005 : index * 0.05 }}
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: 1 }}
-                                            viewport={{ once: true, margin: "100px" }}
+                                            viewport={{ once: true, margin: isMobile ? "200px" : "100px" }}
                                         >
                                             {char}
                                         </motion.span>
@@ -73,10 +75,10 @@ const FinalCTA = ({ onGetStarted }) => {
                     </h3>
 
                     <motion.p 
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: isMobile ? 10 : 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.5 }}
+                        viewport={{ once: true, margin: isMobile ? "200px" : "0px" }}
+                        transition={{ duration: isMobile ? 0.2 : 0.8, delay: isMobile ? 0.1 : 0.5 }}
                         className="text-slate-600 dark:text-slate-400 text-lg md:text-2xl mb-14 max-w-3xl mx-auto font-medium leading-relaxed"
                     >
                         Stop guessing. Start mastering. Join the elite aspirants using high-fidelity revision to conquer JEE once and for all.
@@ -86,8 +88,8 @@ const FinalCTA = ({ onGetStarted }) => {
                         <motion.button
                             initial={{ scale: 0.9, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ type: "spring", bounce: 0.4, delay: 0.7 }}
+                            viewport={{ once: true, margin: isMobile ? "200px" : "0px" }}
+                            transition={{ type: "spring", bounce: 0.4, delay: isMobile ? 0.15 : 0.7 }}
                             whileHover={{ scale: 1.05, y: -4 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={onGetStarted}

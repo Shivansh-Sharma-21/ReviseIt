@@ -1,15 +1,18 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 const RevisionGap = () => {
     const sectionRef = useRef(null);
+    const isMobile = useIsMobile();
+    
     const { scrollYProgress } = useScroll({
         target: sectionRef,
         offset: ["start end", "end start"]
     });
 
-    const yLeft = useTransform(scrollYProgress, [0, 1], [-100, 100]);
-    const yRight = useTransform(scrollYProgress, [0, 1], [150, -150]);
+    const yLeft = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [-100, 100]);
+    const yRight = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [150, -150]);
 
     return (
         <section ref={sectionRef} className="py-24 md:py-48 min-h-screen bg-slate-100/50 dark:bg-slate-900/40 border-y border-slate-200 dark:border-white/5 relative overflow-hidden flex items-center">
@@ -21,8 +24,8 @@ const RevisionGap = () => {
                         style={{ y: yLeft }}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 1 }}
+                        viewport={{ once: true, margin: isMobile ? "200px" : "-100px" }}
+                        transition={{ duration: isMobile ? 0.2 : 1 }}
                         className="relative z-10 lg:pr-12 transform-gpu"
                     >
                         <h2 className="text-indigo-600 dark:text-indigo-400 font-bold tracking-[0.2em] uppercase text-xs sm:text-sm mb-4 inline-flex items-center gap-2">
@@ -61,8 +64,8 @@ const RevisionGap = () => {
                         style={{ y: yRight }}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 1 }}
+                        viewport={{ once: true, margin: isMobile ? "200px" : "-100px" }}
+                        transition={{ duration: isMobile ? 0.2 : 1 }}
                         className="relative mt-8 lg:mt-0 transform-gpu"
                     >
                         <div className="relative glass rounded-3xl p-6 md:p-10 border-slate-200 dark:border-white/10 aspect-square flex flex-col justify-center overflow-hidden shadow-2xl bg-white dark:bg-slate-950/80 backdrop-blur-3xl">

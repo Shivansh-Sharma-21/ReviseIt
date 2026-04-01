@@ -1,8 +1,28 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useIsMobile } from '../../hooks/useIsMobile';
+
+const DustParticle = ({ scrollYProgress }) => {
+    // Hooks must be at top-level, so we call it here for each individual particle
+    const yTransform = useTransform(scrollYProgress, [0, 1], [0, -(Math.random() * 1000 + 500)]);
+    const top = `${Math.random() * 100}%`;
+    const left = `${Math.random() * 100}%`;
+    
+    return (
+        <motion.div
+            className="absolute w-1 h-1 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)] opacity-20 transform-gpu"
+            style={{
+                top,
+                left,
+                y: yTransform
+            }}
+        />
+    );
+};
 
 const GlobalScrollEffects = () => {
     const { scrollYProgress } = useScroll();
+    const isMobile = useIsMobile();
     
     // Scale the entire background grid dramatically as we scroll
     const scale = useTransform(scrollYProgress, [0, 1], [1, 3]);
@@ -27,8 +47,8 @@ const GlobalScrollEffects = () => {
 
             {/* The 3D Grid Floor */}
             <motion.div
-                className="absolute inset-x-[-50%] bottom-[-50%] h-[150vh] origin-bottom opacity-10 dark:opacity-20 transform-gpu"
-                style={{
+                className={`absolute inset-x-[-50%] bottom-[-50%] h-[150vh] origin-bottom opacity-10 dark:opacity-20 transform-gpu ${isMobile ? 'scale-75 translate-y-[20%]' : ''}`}
+                style={isMobile ? {} : {
                     scale,
                     rotateX,
                     y,
@@ -39,19 +59,21 @@ const GlobalScrollEffects = () => {
                     backgroundSize: '100px 100px',
                     maskImage: 'radial-gradient(circle at top center, transparent 10%, black 80%)',
                 }}
+                {...(isMobile ? {
+                    style: {
+                        backgroundImage: `
+                            linear-gradient(to right, #6366f1 2px, transparent 2px),
+                            linear-gradient(to top, #6366f1 2px, transparent 2px)
+                        `,
+                        backgroundSize: '50px 50px',
+                        maskImage: 'radial-gradient(circle at top center, transparent 10%, black 80%)',
+                    }
+                } : {})}
             />
             
             {/* Floating Dust Particles */}
-            {[...Array(15)].map((_, i) => (
-                <motion.div
-                    key={i}
-                    className="absolute w-1 h-1 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)] opacity-20 transform-gpu"
-                    style={{
-                        top: `${Math.random() * 100}%`,
-                        left: `${Math.random() * 100}%`,
-                        y: useTransform(scrollYProgress, [0, 1], [0, -(Math.random() * 1000 + 500)])
-                    }}
-                />
+            {!isMobile && [...Array(15)].map((_, i) => (
+                <DustParticle key={i} scrollYProgress={scrollYProgress} />
             ))}
         </div>
     );

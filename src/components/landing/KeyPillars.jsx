@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MousePointer2, MonitorOff, Activity } from 'lucide-react';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 const KeyPillars = () => {
+    const isMobile = useIsMobile();
     const pillars = [
         {
             title: "Zero Decision Fatigue",
@@ -47,10 +49,10 @@ const KeyPillars = () => {
                         return (
                             <motion.div
                                 key={idx}
-                                initial={{ opacity: 0, y: 100 }}
+                                initial={{ opacity: 0, y: isMobile ? 15 : 100 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.8, delay: idx * 0.2, type: "spring", bounce: 0.4 }}
+                                viewport={{ once: true, margin: isMobile ? "200px" : "-50px" }}
+                                transition={{ duration: isMobile ? 0.2 : 0.8, delay: isMobile ? idx * 0.05 : idx * 0.2, type: "spring", bounce: isMobile ? 0.1 : 0.4 }}
                                 className="relative group perspective-1000 transform-gpu"
                             >
                                 {/* Gradient Border on Hover */}
