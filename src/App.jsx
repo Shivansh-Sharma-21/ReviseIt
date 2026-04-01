@@ -19,14 +19,8 @@ function App() {
   const [currentSubject, setCurrentSubject] = useState(null)
   const [userConfidence, setUserConfidence] = useState(3)
   const [sessionScore, setSessionScore] = useState({ score: 0, total: 15 })
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const [loadingDuration, setLoadingDuration] = useState(3000)
-
-  useEffect(() => {
-    // Initial landing page entrance sequence (1.5s)
-    const splashTimer = setTimeout(() => setIsLoading(false), 1500)
-    return () => clearTimeout(splashTimer)
-  }, [])
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -47,9 +41,16 @@ function App() {
   }
 
   const navigateToHome = () => {
-    setCurrentSubject(null)
-    setSelectedTopic(null)
-    setView('home')
+    // Trigger loader transition when entering the app
+    setIsLoading(true);
+    
+    // Smooth transition to app after loader has time to show its animations
+    setTimeout(() => {
+      setCurrentSubject(null)
+      setSelectedTopic(null)
+      setView('home')
+      setIsLoading(false);
+    }, 2000);
   }
 
   const handleTopicSelect = (topic) => {

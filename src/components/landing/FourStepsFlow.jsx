@@ -19,9 +19,9 @@ const FourStepsFlow = () => {
                 { icon: BookOpen, text: "Instant Semantic Recall" }
             ],
             mockup: (
-                 <div className="relative rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(79,70,229,0.2)] aspect-[4/3] bg-indigo-100/80 dark:bg-[#020617] border border-slate-200 dark:border-white/10 w-full h-[400px]">
+                 <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(79,70,229,0.2)] bg-indigo-100/80 dark:bg-[#020617] border border-slate-200 dark:border-white/10 w-full aspect-square sm:h-[400px]">
                     <div className="hidden dark:block absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.1)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.1)_0%,transparent_50%)]" />
-                    <div className="relative w-full h-full flex flex-col items-center justify-center scale-75">
+                    <div className={`relative w-full h-full flex flex-col items-center justify-center ${isMobile ? 'scale-[0.6] sm:scale-75' : 'scale-75'}`}>
                         <div className="px-10 py-7 rounded-[3rem] bg-gradient-to-br from-indigo-600 via-indigo-800 to-violet-950 text-white shadow-[0_40px_100px_rgba(79,70,229,0.5)] border-[6px] border-white/40 min-w-[250px] text-center relative overflow-hidden z-20 mb-14">
                             <div className="font-black text-xs tracking-[0.6em] uppercase text-indigo-300 mb-2">Core Curriculum</div>
                             <div className="font-black text-2xl tracking-[-0.05em] leading-[0.9] uppercase drop-shadow-2xl">Rotational Dynamics</div>
@@ -54,32 +54,34 @@ const FourStepsFlow = () => {
                 { icon: Target, text: "Anti-Rote Filter Engaged" }
             ],
             mockup: (
-                 <div className="relative rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(6,182,212,0.15)] bg-white dark:bg-slate-950 border border-slate-200 dark:border-white/10 p-8 w-full h-[400px] flex flex-col justify-between">
-                    <div>
-                         <div className="flex justify-between items-center mb-6">
-                            <div className="flex items-center gap-1.5 text-slate-500 text-[10px] font-black tracking-[0.2em] uppercase">
-                                <ArrowRight className="w-3 h-3 rotate-180" /> Back
+                 <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(6,182,212,0.15)] bg-white dark:bg-slate-950 border border-slate-200 dark:border-white/10 p-4 sm:p-8 w-full aspect-square sm:h-[400px] flex flex-col justify-between">
+                    <div className={`flex flex-col justify-between h-full ${isMobile ? 'scale-[0.8] origin-top' : ''}`}>
+                        <div>
+                             <div className="flex justify-between items-center mb-6">
+                                <div className="flex items-center gap-1.5 text-slate-500 text-[10px] font-black tracking-[0.2em] uppercase">
+                                    <ArrowRight className="w-3 h-3 rotate-180" /> Back
+                                </div>
+                                <div className="flex flex-col items-end">
+                                    <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Foundational Quiz</span>
+                                    <span className="text-xs font-black text-cyan-600 dark:text-cyan-400">Question 3 of 5</span>
+                                </div>
                             </div>
-                            <div className="flex flex-col items-end">
-                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Foundational Quiz</span>
-                                <span className="text-xs font-black text-cyan-600 dark:text-cyan-400">Question 3 of 5</span>
+                            <div className="w-full h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full mb-8 overflow-hidden">
+                                <div className="h-full bg-cyan-500 w-[60%]" />
                             </div>
                         </div>
-                        <div className="w-full h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full mb-8 overflow-hidden">
-                            <div className="h-full bg-cyan-500 w-[60%]" />
-                        </div>
-                    </div>
 
-                    <div className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border-2 border-slate-200 dark:border-slate-800 shadow-xl">
-                        <h2 className="text-xl font-black text-slate-900 dark:text-white leading-tight mb-8">
-                            "Does net torque = 0 always imply full equilibrium?"
-                        </h2>
-                        <div className="grid grid-cols-2 gap-3">
-                            <div className="p-4 rounded-2xl bg-emerald-500 border-2 border-emerald-500 text-white shadow-lg text-sm font-bold flex items-center justify-between">
-                                <span>No, need Net Force = 0</span>
-                            </div>
-                             <div className="p-4 rounded-2xl bg-rose-500 border-2 border-rose-500 text-white shadow-lg text-sm font-bold flex items-center justify-between">
-                                <span>Yes, rotational eq.</span>
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border-2 border-slate-200 dark:border-slate-800 shadow-xl">
+                            <h2 className="text-xl font-black text-slate-900 dark:text-white leading-tight mb-8">
+                                "Does net torque = 0 always imply full equilibrium?"
+                            </h2>
+                            <div className="grid grid-cols-2 gap-3">
+                                <div className="p-4 rounded-2xl bg-emerald-500 border-2 border-emerald-500 text-white shadow-lg text-sm font-bold flex items-center justify-between">
+                                    <span>No, need Net Force = 0</span>
+                                </div>
+                                 <div className="p-4 rounded-2xl bg-rose-500 border-2 border-rose-500 text-white shadow-lg text-sm font-bold flex items-center justify-between">
+                                    <span>Yes, rotational eq.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -98,31 +100,33 @@ const FourStepsFlow = () => {
                 { icon: Zap, text: "Real-time Difficulty Calibration" }
             ],
             mockup: (
-               <div className="rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(16,185,129,0.15)] bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 p-10 w-full h-[400px] flex flex-col justify-center">
-                    <div className="text-center mb-8">
-                        <div className="w-20 h-20 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-6">
-                            <Target className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
-                        </div>
-                        <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-2">Foundation Built!</h2>
-                        <p className="text-slate-500 font-bold uppercase tracking-widest text-[10px]">How confident are you with this unit?</p>
-                    </div>
-                    <div className="grid grid-cols-5 gap-3 mb-4">
-                        {[1, 2, 3, 4, 5].map((level) => (
-                            <div
-                                key={level}
-                                className={`aspect-square rounded-2xl flex flex-col items-center justify-center gap-1 border-2 ${level === 4
-                                    ? 'bg-emerald-600 border-emerald-600 text-white shadow-xl -translate-y-2'
-                                    : 'bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-800 text-slate-400'
-                                }`}
-                            >
-                                <span className="text-2xl font-black">{level}</span>
-                                <span className={`text-[8px] font-black uppercase tracking-tighter ${level === 4 ? 'opacity-100' : 'opacity-0'}`}>Level</span>
+               <div className="rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(16,185,129,0.15)] bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 p-6 sm:p-10 w-full aspect-square sm:h-[400px] flex flex-col justify-center">
+                    <div className={isMobile ? 'scale-[0.8]' : ''}>
+                        <div className="text-center mb-8">
+                            <div className="w-20 h-20 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-6">
+                                <Target className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
                             </div>
-                        ))}
-                    </div>
-                    <div className="flex justify-between px-2 text-[9px] font-black text-slate-400 uppercase tracking-widest">
-                        <span>Basic Grip</span>
-                        <span>Absolute Mastery</span>
+                            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-2">Foundation Built!</h2>
+                            <p className="text-slate-500 font-bold uppercase tracking-widest text-[10px]">How confident are you with this unit?</p>
+                        </div>
+                        <div className="grid grid-cols-5 gap-3 mb-4">
+                            {[1, 2, 3, 4, 5].map((level) => (
+                                <div
+                                    key={level}
+                                    className={`aspect-square rounded-2xl flex flex-col items-center justify-center gap-1 border-2 ${level === 4
+                                        ? 'bg-emerald-600 border-emerald-600 text-white shadow-xl -translate-y-2'
+                                        : 'bg-slate-50 dark:bg-slate-800/50 border-slate-200 dark:border-slate-800 text-slate-400'
+                                    }`}
+                                >
+                                    <span className="text-2xl font-black">{level}</span>
+                                    <span className={`text-[8px] font-black uppercase tracking-tighter ${level === 4 ? 'opacity-100' : 'opacity-0'}`}>Level</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="flex justify-between px-2 text-[9px] font-black text-slate-400 uppercase tracking-widest">
+                            <span>Basic Grip</span>
+                            <span>Absolute Mastery</span>
+                        </div>
                     </div>
                 </div>
             )
@@ -139,26 +143,27 @@ const FourStepsFlow = () => {
                 { icon: ArrowRight, text: "Session Diagnostic Complete" }
             ],
              mockup: (
-                 <div className="relative rounded-[3rem] overflow-hidden bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 shadow-2xl p-10 w-full h-[400px]">
-                    <div className="absolute top-0 right-0 w-48 h-48 bg-indigo-500/5 blur-3xl rounded-full -mr-24 -mt-24" />
-                    <div className="text-center mb-8 relative z-10">
-                        <div className="w-16 h-16 rounded-3xl bg-indigo-500/10 flex items-center justify-center mx-auto mb-4">
-                            <Activity className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+                 <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-10 w-full aspect-square sm:h-[400px]">
+                    <div className={isMobile ? 'scale-[0.8] origin-top' : ''}>
+                        <div className="text-center mb-8 relative z-10">
+                            <div className="w-16 h-16 rounded-3xl bg-indigo-500/10 flex items-center justify-center mx-auto mb-4">
+                                <Activity className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+                            </div>
+                            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-1">Session Analysis</h2>
                         </div>
-                        <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-1">Session Analysis</h2>
-                    </div>
-                    <div className="grid grid-cols-3 gap-3">
-                        <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center">
-                             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Scored</p>
-                             <p className="text-2xl font-black text-slate-900 dark:text-white">7 <span className="text-sm text-slate-400">/ 15</span></p>
-                        </div>
-                        <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center">
-                             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Gaps</p>
-                             <p className="text-2xl font-black text-slate-900 dark:text-white">8</p>
-                        </div>
-                         <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center">
-                             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Verdict</p>
-                             <p className="text-sm font-black uppercase tracking-tight text-rose-500">RE-CALIBRATE</p>
+                        <div className="grid grid-cols-3 gap-3">
+                            <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center">
+                                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Scored</p>
+                                 <p className="text-2xl font-black text-slate-900 dark:text-white">7 <span className="text-sm text-slate-400">/ 15</span></p>
+                            </div>
+                            <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center">
+                                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Gaps</p>
+                                 <p className="text-2xl font-black text-slate-900 dark:text-white">8</p>
+                            </div>
+                             <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center">
+                                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Verdict</p>
+                                 <p className="text-sm font-black uppercase tracking-tight text-rose-500">RE-CALIBRATE</p>
+                            </div>
                         </div>
                     </div>
                 </div>
