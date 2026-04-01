@@ -10,9 +10,14 @@ import SessionAnalysisView from './components/SessionAnalysisView'
 import Landing from './components/Landing'
 import Loader from './components/Loader'
 import ScrollProgress from './components/landing/ScrollProgress'
+import AuthModal from './components/AuthModal'
+import { useAuth } from './context/AuthContext'
+import { Toaster } from 'react-hot-toast'
 import './App.css'
 
 function App() {
+  const { currentUser } = useAuth()
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false)
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark')
   const [view, setView] = useState('landing') // 'landing', 'home', 'topics', 'mindmap', 'flashcards', 'quiz', 'revision-quiz', 'analysis'
   const [selectedTopic, setSelectedTopic] = useState(null)
@@ -41,6 +46,11 @@ function App() {
   }
 
   const navigateToHome = () => {
+    if (!currentUser) {
+      setIsAuthModalOpen(true);
+      return;
+    }
+
     // Trigger loader transition when entering the app
     setIsLoading(true);
     
@@ -83,6 +93,24 @@ function App() {
 
   return (
     <div className="app-bg text-main">
+      <Toaster position="top-center" toastOptions={{
+        style: {
+          background: theme === 'dark' ? '#1e293b' : '#ffffff',
+          color: theme === 'dark' ? '#f8fafc' : '#0f172a',
+          border: '1px solid ' + (theme === 'dark' ? '#334155' : '#e2e8f0'),
+        }
+      }} />
+      <AuthModal 
+        isOpen={isAuthModalOpen} 
+        onClose={() => setIsAuthModalOpen(false)} 
+        onSuccess={() => {
+          if (view === 'landing') {
+            // Because state updates might be batched, handle carefully or just let them stay on landing with an updated header, 
+            // but navigating to home gives a better UX.
+            // Note: navigateToHome will run in the next render when currentUser is set
+          }
+        }} 
+      />
       {view === 'landing' && <ScrollProgress />}
       <AnimatePresence mode="wait">
         {isLoading && (
@@ -94,7 +122,7 @@ function App() {
         )}
       </AnimatePresence>
 
-      <Header theme={theme} toggleTheme={toggleTheme} />
+      <Header theme={theme} toggleTheme={toggleTheme} onLoginClick={() => setIsAuthModalOpen(true)} />
       <main className={['landing', 'mindmap', 'quiz', 'revision-quiz', 'analysis'].includes(view) ? "" : "container mx-auto px-4 py-8"}>
         {view === 'landing' && <Landing onGetStarted={navigateToHome} />}
         {view === 'home' && (
