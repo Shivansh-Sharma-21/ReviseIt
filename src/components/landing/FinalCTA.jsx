@@ -10,7 +10,7 @@ const FinalCTA = ({ onGetStarted }) => {
     });
     
     // Animate characters upwards as we scroll down into this section
-    const yTransform = useTransform(scrollYProgress, [1, 0.8], [100, 0]);
+    const yTransform = useTransform(scrollYProgress, [1, 0.8], isMobile ? [0, 0] : [100, 0]);
 
     const titleWords = ["Bridge", "The", "Gap"];
     let charCounter = 0;

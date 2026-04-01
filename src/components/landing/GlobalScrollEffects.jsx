@@ -25,13 +25,13 @@ const GlobalScrollEffects = () => {
     const isMobile = useIsMobile();
     
     // Scale the entire background grid dramatically as we scroll
-    const scale = useTransform(scrollYProgress, [0, 1], [1, 3]);
+    const scale = useTransform(scrollYProgress, [0, 1], isMobile ? [1, 1] : [1, 3]);
     // Rotate slightly to give a 3D floating feel
-    const rotateX = useTransform(scrollYProgress, [0, 1], [60, 40]);
-    const y = useTransform(scrollYProgress, [0, 1], ['0%', '20%']);
+    const rotateX = useTransform(scrollYProgress, [0, 1], isMobile ? [60, 60] : [60, 40]);
+    const y = useTransform(scrollYProgress, [0, 1], isMobile ? ['0%', '0%'] : ['0%', '20%']);
     
     // Animate a massive background glow that shifts color and moves
-    const glowY = useTransform(scrollYProgress, [0, 1], ['-20%', '120%']);
+    const glowY = useTransform(scrollYProgress, [0, 1], isMobile ? ['50%', '50%'] : ['-20%', '120%']);
     
     return (
         <div className="fixed inset-0 pointer-events-none -z-50 overflow-hidden perspective-[2000px] transform-gpu">

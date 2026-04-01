@@ -72,31 +72,35 @@ const Hero = ({ onGetStarted }) => {
                 </motion.div>
 
                 <motion.h1
-                    variants={parentVariants}
-                    initial="hidden"
-                    animate="show"
+                    initial={isMobile ? { opacity: 1, y: 0 } : "hidden"}
+                    animate={isMobile ? { opacity: 1, y: 0 } : "show"}
+                    variants={!isMobile ? parentVariants : {}}
                     className="text-4xl sm:text-7xl lg:text-8xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1] flex flex-wrap justify-center gap-x-[0.25em]"
                 >
                     {words.map((word, wIdx) => (
-                        <span key={wIdx} className="inline-block whitespace-nowrap">
-                            {word.split("").map((char, cIdx) => (
-                                <motion.span key={cIdx} variants={childVariants} className="inline-block">
-                                    {char}
-                                </motion.span>
-                            ))}
-                        </span>
+                        isMobile ? (
+                            <span key={wIdx} className="inline-block whitespace-nowrap">
+                                {word}
+                            </span>
+                        ) : (
+                            <span key={wIdx} className="inline-block whitespace-nowrap">
+                                {word.split("").map((char, cIdx) => (
+                                    <motion.span key={cIdx} variants={childVariants} className="inline-block">
+                                        {char}
+                                    </motion.span>
+                                ))}
+                            </span>
+                        )
                     ))}
                     {' '}
-                    <div className="w-full sm:w-auto">
-                        <motion.span
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: isMobile ? 0.2 : 1.5, duration: 0.5, type: "spring" }}
-                            className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300"
-                        >
-                            IIT-JEE
-                        </motion.span>
-                    </div>
+                    <motion.span
+                        initial={isMobile ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                        animate={isMobile ? { opacity: 1, scale: 1 } : { opacity: 1, scale: 1 }}
+                        transition={isMobile ? { duration: 0 } : { delay: 1.5, duration: 0.5, type: "spring" }}
+                        className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300"
+                    >
+                        IIT-JEE
+                    </motion.span>
                 </motion.h1>
 
                 <motion.p
