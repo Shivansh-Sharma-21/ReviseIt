@@ -11,6 +11,10 @@ import Landing from './components/Landing'
 import Loader from './components/Loader'
 import ScrollProgress from './components/landing/ScrollProgress'
 import AuthModal from './components/AuthModal'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import AboutUs from './components/AboutUs'
+import ContactUs from './components/ContactUs'
+import Footer from './components/Footer'
 import { useAuth } from './context/AuthContext'
 import { Toaster } from 'react-hot-toast'
 import './App.css'
@@ -35,6 +39,11 @@ function App() {
     }
     localStorage.setItem('theme', theme)
   }, [theme])
+
+  // Scroll to top when view changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [view]);
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
@@ -122,8 +131,8 @@ function App() {
         )}
       </AnimatePresence>
 
-      <Header theme={theme} toggleTheme={toggleTheme} onLoginClick={() => setIsAuthModalOpen(true)} />
-      <main className={['landing', 'mindmap', 'quiz', 'revision-quiz', 'analysis'].includes(view) ? "" : "container mx-auto px-4 py-8"}>
+      <Header theme={theme} toggleTheme={toggleTheme} onLoginClick={() => setIsAuthModalOpen(true)} onLogoClick={() => setView('landing')} />
+      <main className={['landing', 'mindmap', 'quiz', 'revision-quiz', 'analysis', 'privacy', 'about', 'contact'].includes(view) ? "" : "container mx-auto px-4 py-8"}>
         {view === 'landing' && <Landing onGetStarted={navigateToHome} />}
         {view === 'home' && (
           <Home
@@ -139,6 +148,9 @@ function App() {
             onSelectTopic={handleTopicSelect}
           />
         )}
+        {view === 'privacy' && <PrivacyPolicy />}
+        {view === 'about' && <AboutUs />}
+        {view === 'contact' && <ContactUs />}
       </main>
       {view === 'mindmap' && selectedTopic && (
         <Mindmap
@@ -170,6 +182,9 @@ function App() {
           onHome={navigateToHome}
           onRetry={restartFromQuiz}
         />
+      )}
+      {['landing', 'home', 'privacy', 'about', 'contact'].includes(view) && (
+        <Footer setView={setView} />
       )}
     </div>
   )

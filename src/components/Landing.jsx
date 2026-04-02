@@ -5,7 +5,6 @@ import RevisionGap from './landing/RevisionGap';
 import FourStepsFlow from './landing/FourStepsFlow';
 import KeyPillars from './landing/KeyPillars';
 import FinalCTA from './landing/FinalCTA';
-import Footer from './landing/Footer';
 
 const Landing = ({ onGetStarted }) => {
     return (
@@ -27,7 +26,6 @@ const Landing = ({ onGetStarted }) => {
             <FourStepsFlow />
             <KeyPillars />
             <FinalCTA onGetStarted={onGetStarted} />
-            <Footer />
         </div>
     );
 };
