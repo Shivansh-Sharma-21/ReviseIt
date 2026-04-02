@@ -16,11 +16,13 @@ const Footer = ({ setView }) => {
                             className="flex items-center gap-2 cursor-pointer group" 
                             onClick={() => setView('landing')}
                         >
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
-                                <span className="text-white font-bold text-xl italic">R</span>
-                            </div>
-                            <span className="text-2xl font-black text-slate-900 dark:text-white dark:from-indigo-400 dark:to-cyan-300 tracking-tight">
-                                Revise-it
+                            <img 
+                                src="/logo.png" 
+                                alt="Revise-it Logo" 
+                                className="w-10 h-10 rounded-xl shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform object-cover"
+                            />
+                            <span className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300 tracking-tight">
+                                ReviseIt
                             </span>
                         </div>
                         <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed font-medium">

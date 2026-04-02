@@ -91,8 +91,12 @@ const AuthModal = ({ isOpen, onClose, onSuccess }) => {
 
               <div className="p-8 relative z-10">
                 <div className="text-center mb-8">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-indigo-600 via-indigo-500 to-cyan-400 flex items-center justify-center shadow-xl shadow-indigo-500/40">
-                    <Lock className="w-8 h-8 text-white" />
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl shadow-xl shadow-indigo-500/30 overflow-hidden group">
+                    <img 
+                      src="/logo.png" 
+                      alt="Revise-it Logo" 
+                      className="w-full h-full object-cover transform transition-transform group-hover:scale-110"
+                    />
                   </div>
                   <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-3 tracking-tight">
                     {isLogin ? 'Welcome Back' : 'Create Account'}

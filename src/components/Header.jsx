@@ -39,12 +39,14 @@ const Header = ({ theme, toggleTheme, onLoginClick, onLogoClick }) => {
         <header className="sticky top-0 z-50 header-glass">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 <div className="flex items-center gap-2 cursor-pointer group" onClick={onLogoClick}>
-                    {/* Simple Premium Logo using Indigo/Cyan Gradient */}
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
-                        <span className="text-white font-bold text-xl italic">R</span>
-                    </div>
+                    {/* New AI Generated Logo */}
+                    <img 
+                        src="/logo.png" 
+                        alt="Revise-it Logo" 
+                        className="w-10 h-10 rounded-xl shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform object-cover"
+                    />
                     <h1 className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300 tracking-tight">
-                        Revise-it
+                        ReviseIt
                     </h1>
                 </div>
 
