@@ -21,7 +21,7 @@ const QuizView = ({ chapter, onBack, onComplete }) => {
         const foundational = chapter.questions.filter(q => q.tag === 'F');
         return [...foundational]
             .sort(() => Math.random() - 0.5)
-            .slice(0, Math.min(foundational.length, 10));
+            .slice(0, Math.min(foundational.length, 5));
     }, [chapter.questions]);
 
     const [currentIndex, setCurrentIndex] = useState(0);
