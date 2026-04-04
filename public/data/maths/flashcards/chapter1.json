@@ -1,0 +1,192 @@
+[
+  {
+    "subtopic": "Arithmetic Progression (A.P)",
+    "content": "n-th term: $T_n = a + (n-1)d$; Sum of n terms: $S_n = \\frac{n}{2}[2a + (n-1)d]$ or $S_n = \\frac{n}{2}(a + l)$; Common difference: $d = S_n - 2S_{n-1} + S_{n-2}$; If a, b, c are in A.P: $2b = a + c$.",
+    "importantQuestions": [
+      "How many terms of the sequence $20 + 19\\frac{1}{3} + 18\\frac{2}{3} + \\dots$ must be taken so their sum is 300? (Ans: n = 25, 36)",
+      "JEE Mains 2023: If $a_1, a_{10}$ and $b_1, b_{10}$ are in A.P with $a_1=2, a_{10}=3$ and $a_1b_1=1=a_{10}b_{10}$, find $a_4b_4$."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the general term of an A.P?",
+        "answer": "A linear function of n ($T_n = An + B$)."
+      },
+      {
+        "question": "What are the common ways to assume 3 and 4 terms in A.P?",
+        "answer": "3 terms: $(a-d, a, a+d)$; 4 terms: $(a-3d, a-d, a+d, a+3d)$."
+      }
+    ]
+  },
+  {
+    "subtopic": "Geometric Progression (G.P)",
+    "content": "n-th term: $T_n = ar^{n-1}$; Sum of n terms: $S_n = \\frac{a(r^n - 1)}{r - 1}$ for $r \\neq 1$; Sum of infinite G.P: $S_{\\infty} = \\frac{a}{1 - r}$ (defined only when $|r| < 1$).",
+    "importantQuestions": [
+      "JEE Mains 2020: Find the product $2^{1/4} \\cdot 4^{1/8} \\cdot 8^{1/16} \\cdot 16^{1/32} \\dots$ up to infinity. (Ans: 2)",
+      "JEE Mains 2016: If the 2nd, 5th, and 9th terms of a non-constant A.P are in G.P, find the common ratio of this G.P. (Ans: 4/3)"
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the property of three numbers a, b, c in G.P?",
+        "answer": "$b^2 = ac$ (or $b/a = c/b = r$)."
+      },
+      {
+        "question": "Can any term of a G.P be zero?",
+        "answer": "No, no term of a G.P can be zero."
+      }
+    ]
+  },
+  {
+    "subtopic": "Harmonic Progression (H.P)",
+    "content": "Sequence $a_1, a_2, \\dots, a_n$ is in H.P if $1/a_1, 1/a_2, \\dots, 1/a_n$ are in A.P; If a, b, c are in H.P: $b = \\frac{2ac}{a+c}$; Result: $a_1a_2 + a_2a_3 + \\dots + a_{n-1}a_n = (n-1)a_1a_n$.",
+    "importantQuestions": [
+      "If $T_3 = 1/3$ and $T_5 = 1/8$ in an H.P, find $T_{10}$.",
+      "Four integers in H.P are $3, 4, 6, 12$."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "Is there a general formula to find the sum of n terms ($S_n$) in H.P?",
+        "answer": "No, there is no general formula for the sum of H.P."
+      },
+      {
+        "question": "What is the condition for a term in H.P to be zero?",
+        "answer": "No term of an H.P can be zero."
+      }
+    ]
+  },
+  {
+    "subtopic": "Means (A.M, G.M, H.M)",
+    "content": "A.M of a, b: $\\frac{a+b}{2}$; G.M of a, b: $\\sqrt{ab}$; H.M of a, b: $\\frac{2ab}{a+b}$; Relation: $G^2 = AH$; For positive numbers: $A.M \\geq G.M \\geq H.M$; n-A.M sum: $\\frac{n(a+b)}{2}$.",
+    "importantQuestions": [
+      "Find the numbers if the A.M between two positive numbers exceeds the G.M by 5 and G.M exceeds H.M by 4.",
+      "Determine the value of n for which $\\frac{a^{n+1}+b^{n+1}}{a^n+b^n}$ is the G.M of a and b. (Ans: $n = -1/2$)"
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the product of n Geometric Means (G.M's) inserted between a and b?",
+        "answer": "$(ab)^{n/2}$ or $(\\sqrt{ab})^n$."
+      },
+      {
+        "question": "What is the sum of reciprocals of n H.M's inserted between a and b?",
+        "answer": "$n / (H.M \\text{ of } a \\text{ and } b)$."
+      }
+    ]
+  },
+  {
+    "subtopic": "Special Series & Sigma Properties",
+    "content": "$\\sum r = \\frac{n(n+1)}{2}$; $\\sum r^2 = \\frac{n(n+1)(2n+1)}{6}$; $\\sum r^3 = [\\frac{n(n+1)}{2}]^2$; Exponential series: $e^x = 1 + \\frac{x}{1!} + \\frac{x^2}{2!} + \\dots$; Logarithmic series: $\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\dots$.",
+    "importantQuestions": [
+      "JEE Mains 2019: Find the sum of $1^3/1 + (1^3+2^3)/(1+3) + (1^3+2^3+3^3)/(1+3+5) + \\dots$ up to 15 terms. (Ans: 7820)",
+      "Find the sum of the repeating series $0.7 + 0.77 + 0.777 + \\dots$ to 20 terms."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the sum of the first n odd natural numbers?",
+        "answer": "$n^2$."
+      },
+      {
+        "question": "What is the sum of the first n even natural numbers?",
+        "answer": "$n(n+1)$."
+      }
+    ]
+  },
+  {
+    "subtopic": "Arithmetico-Geometric Progression (A.G.P)",
+    "content": "General form: $a, (a+d)r, (a+2d)r^2, \\dots$; Sum of $n$ terms: $S_n = \\frac{a}{1-r} + \\frac{dr(1-r^{n-1})}{(1-r)^2} - \\frac{(a+(n-1)d)r^n}{1-r}$; Sum to infinity ($|r|<1$): $S_{\\infty} = \\frac{a}{1-r} + \\frac{dr}{(1-r)^2}$.",
+    "importantQuestions": [
+      "JEE Mains 2014: If $10(10)^9 + 2(11)^1(10)^8 + 3(11)^2(10)^7 + dots + 10(11)^9 = k(10)^9$, then find $k$.",
+      "In an A.G.P. with common ratio 2 and sum of 5 terms equal to $49/2$, find the 4th term."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What defines an Arithmetico-Geometric Progression?",
+        "answer": "A sequence where each term is the product of corresponding terms of an A.P. and a G.P.."
+      },
+      {
+        "question": "When is the sum to infinity of an A.G.P. defined?",
+        "answer": "It is defined only when the absolute value of the common ratio $|r|$ is less than 1."
+      }
+    ]
+  },
+  {
+    "subtopic": "Sigma Properties & Power Sums",
+    "content": "Properties: $\\sum (a_r \\pm b_r) = \\sum a_r \\pm \\sum b_r$; $\\sum ka_r = k \\sum a_r$; Sum of first $n$ natural numbers: $\\sum n = \\frac{n(n+1)}{2}$; Sum of squares: $\\sum n^2 = \\frac{n(n+1)(2n+1)}{6}$; Sum of cubes: $\\sum n^3 = [\\frac{n(n+1)}{2}]^2$.",
+    "importantQuestions": [
+      "Compute the value of the nested summation: $\\sum_{i=1}^{n} \\sum_{j=1}^{i} \\sum_{k=1}^{j} 1$.",
+      "Find the sum of the first $n$ odd natural numbers (Ans: $n^2$) and first $n$ even natural numbers (Ans: $n(n+1)$)."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the result of $\\sum_{r=1}^{n} k$ where $k$ is a constant?",
+        "answer": "The result is $nk$."
+      },
+      {
+        "question": "How is the $n^{th}$ term $T_n$ related to the sum $S_n$?",
+        "answer": "$T_n = S_n - S_{n-1}$."
+      }
+    ]
+  },
+  {
+    "subtopic": "Miscellaneous Series & Telescopic Method",
+    "content": "Method of Difference: If $T_n$ can be expressed as $V_n - V_{n-1}$, then $\\sum T_n = V_n - V_0$; General term for $1/(1\\cdot2\\cdot3) + 1/(2\\cdot3\\cdot4) + \\dots$ involves splitting into partial fractions to create a telescoping effect.",
+    "importantQuestions": [
+      "Evaluate the sum: $\\sum_{r=1}^{n} \\frac{1}{(2r-1)(2r+1)(2r+3)}$ using the telescopic method.",
+      "JEE Mains 2019: Find the sum of the series $\\frac{1^3}{1} + \\frac{1^3+2^3}{1+3} + \\frac{1^3+2^3+3^3}{1+3+5} + \\dots$ up to 15 terms."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the core idea of the Telescopic Method?",
+        "answer": "To express the general term as a difference of two consecutive terms of another sequence so that intermediate terms cancel out."
+      },
+      {
+        "question": "What is the first step to find the sum of a miscellaneous series?",
+        "answer": "Identify the general term $T_n$ and then represent it in a form suitable for summation."
+      }
+    ]
+  },
+  {
+    "subtopic": "Inequalities in Progressions",
+    "content": "For positive numbers: $R.M.S \\geq A.M \\geq G.M \\geq H.M$; Root Mean Square ($R.M.S$): $\\sqrt{\\frac{a^2+b^2}{2}}$; Relationship: $G^2 = A \\cdot H$.",
+    "importantQuestions": [
+      "JEE Mains 2020: If $f(x)$ is such that $2^{1-x} + 2^{1+x}$, $f(x)$, and $3^x + 3^{-x}$ are in A.P., find the minimum value of $f(x)$.",
+      "Prove that for two distinct positive numbers, $A.M > G.M > H.M$."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "Under what condition does $A.M = G.M = H.M$?",
+        "answer": "The equality holds only when all the numbers in the set are equal."
+      },
+      {
+        "question": "What is the $R.M.S$ of $n$ numbers $a_1, a_2, \\dots, a_n$?",
+        "answer": "$\\sqrt{\\frac{a_1^2 + a_2^2 + \\dots + a_n^2}{n}}$."
+      }
+    ]
+  },
+  {
+    "subtopic": "Exponential & Logarithmic Series",
+    "content": "Exponential Series: $e^x = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$; $e = 1 + \\frac{1}{1!} + \\frac{1}{2!} + \\dots$; Logarithmic Series: $\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\dots$ for $-1 < x \\leq 1$; $\\ln(2) = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\dots$.",
+    "importantQuestions": [
+      "Find the sum of the series: $1 + \\frac{1}{2!}(\\frac{a-b}{a}) + \\frac{1}{3!}(\\frac{a-b}{a})^2 + \\dots$.",
+      "JEE Mains 2023: Find the sum $\\sum_{n=1}^{\\infty} \\frac{n^2+6n+10}{(2n+1)!}$."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the value of the series $\\sum_{n=0}^{\\infty} \\frac{1}{n!}$?",
+        "answer": "The value is $e$."
+      },
+      {
+        "question": "For what range of $x$ is the series for $\\ln(1-x)$ valid?",
+        "answer": "It is valid for $-1 \\leq x < 1$."
+      }
+    ]
+  }
+]

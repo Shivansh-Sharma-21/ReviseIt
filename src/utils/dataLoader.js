@@ -3,69 +3,68 @@
 
 export const getAvailableChapters = async (subject) => {
     const sub = subject.toLowerCase();
-    const allMindmapFiles = import.meta.glob('../data/*/mindmaps/*.js');
-    const allFlashcardFiles = import.meta.glob('../data/*/flashcards/*.js');
-    const allQuestionFiles = import.meta.glob('../data/*/questions/*.js');
 
-    const mindmapFiles = Object.keys(allMindmapFiles).reduce((acc, path) => {
-        if (path.includes(`/data/${sub}/mindmaps/`)) {
-            acc[path] = allMindmapFiles[path];
+    try {
+        const response = await fetch('/data/manifest.json');
+        if (!response.ok) {
+            throw new Error('Failed to fetch manifest');
         }
-        return acc;
-    }, {});
+        const manifest = await response.json();
+        const subjectChapters = manifest[sub] || [];
 
-    if (Object.keys(mindmapFiles).length === 0) {
+        const chapters = [];
+
+        for (const chap of subjectChapters) {
+            const fileName = chap.id;
+
+            try {
+                // Fetch mindmap
+                let mindmap = {};
+                const mmRes = await fetch(`/data/${sub}/mindmaps/${fileName}.json`);
+                if (mmRes.ok) {
+                    mindmap = await mmRes.json();
+                }
+
+                // Fetch flashcards
+                let structuredFlashcards = [];
+                const fcRes = await fetch(`/data/${sub}/flashcards/${fileName}.json`);
+                if (fcRes.ok) {
+                    structuredFlashcards = await fcRes.json();
+                }
+
+                // Create flattened flashcards for the traditional FlashcardsView
+                const flattenedFlashcards = structuredFlashcards.reduce((acc, current) => {
+                    if (current.cards && Array.isArray(current.cards)) {
+                        return [...acc, ...current.cards];
+                    }
+                    return acc;
+                }, []);
+
+                // Fetch questions
+                let questions = [];
+                const qRes = await fetch(`/data/${sub}/questions/${fileName}.json`);
+                if (qRes.ok) {
+                    questions = await qRes.json();
+                }
+
+                chapters.push({
+                    id: fileName,
+                    subject: sub,
+                    title: mindmap.title || fileName.toUpperCase(),
+                    flow: mindmap.flow || [],
+                    flashcards: flattenedFlashcards,
+                    structuredFlashcards: structuredFlashcards,
+                    questions,
+                    path: `/data/${sub}/mindmaps/${fileName}.json`
+                });
+            } catch (error) {
+                console.error(`Error loading chapter ${fileName} for ${subject}:`, error);
+            }
+        }
+
+        return chapters;
+    } catch (error) {
+        console.error(`Error loading chapters for ${subject}:`, error);
         return [];
     }
-
-    const chapters = [];
-
-    for (const path in mindmapFiles) {
-        const fileName = path.split('/').pop().replace('.js', '');
-
-        try {
-            const module = await mindmapFiles[path]();
-            const mindmap = module.mindmap;
-
-            // Find matching flashcards and questions
-            const flashcardPath = `../data/${sub}/flashcards/${fileName}.js`;
-            const questionPath = `../data/${sub}/questions/${fileName}.js`;
-
-            let structuredFlashcards = [];
-            let questions = [];
-
-            if (allFlashcardFiles[flashcardPath]) {
-                const fcModule = await allFlashcardFiles[flashcardPath]();
-                structuredFlashcards = fcModule.flashcards || [];
-            }
-
-            // Create flattened flashcards for the traditional FlashcardsView
-            const flattenedFlashcards = structuredFlashcards.reduce((acc, current) => {
-                if (current.cards && Array.isArray(current.cards)) {
-                    return [...acc, ...current.cards];
-                }
-                return acc;
-            }, []);
-
-            if (allQuestionFiles[questionPath]) {
-                const qModule = await allQuestionFiles[questionPath]();
-                questions = qModule.questions || [];
-            }
-
-            chapters.push({
-                id: fileName,
-                subject: sub,
-                title: mindmap.title || fileName.toUpperCase(),
-                flow: mindmap.flow || [],
-                flashcards: flattenedFlashcards,
-                structuredFlashcards: structuredFlashcards,
-                questions,
-                path: path
-            });
-        } catch (error) {
-            console.error(`Error loading chapter ${fileName} for ${subject}:`, error);
-        }
-    }
-
-    return chapters;
 };

@@ -1,0 +1,209 @@
+[
+  {
+    "subtopic": "Identities and Polynomial Basics",
+    "content": "Identity: True for every permissible value of 'x'; Has more roots than its degree; Degree: Highest power of 'x' present; For an identity $ax^2 + bx + c = 0$: $a=b=c=0$.",
+    "importantQuestions": [
+      "Find the value of 'k' for which $(k^2-4)x^2 + (k^2-5k+6)x + k^2+5k-14 = 0$ is an identity in x.",
+      "Define the conditions for a quadratic equation to become an identity."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "How many roots does a polynomial of degree 'n' typically have?",
+        "answer": "It has exactly 'n' roots."
+      },
+      {
+        "question": "What is the condition for a quadratic $ax^2 + bx + c = 0$ to be an identity?",
+        "answer": "The coefficients of all terms must be zero ($a=0, b=0, c=0$)."
+      }
+    ]
+  },
+  {
+    "subtopic": "Roots of Quadratic Equations",
+    "content": "Quadratic Formula: $x = \\frac{-b \\pm \\sqrt{D}}{2a}$ where $D = b^2 - 4ac$; Sum of roots: $\\alpha + \\beta = -b/a$; Product of roots: $\\alpha\\beta = c/a$; Difference of roots: $|\\alpha - \\beta| = \\frac{\\sqrt{D}}{|a|}$.",
+    "importantQuestions": [
+      "If the equation $(k-2)x^2 - (k-4)x - 2 = 0$ has a difference of roots equal to 3, find k.",
+      "If $\\alpha$ and $\\beta$ are roots of $2x^2 - 3x - 7 = 0$, form a quadratic equation with roots $\\alpha/\\beta$ and $\\beta/\\alpha$."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the 'Discriminant' of a quadratic equation?",
+        "answer": "It is $D = b^2 - 4ac$, which determines the nature of the roots."
+      },
+      {
+        "question": "How do you form a quadratic equation if roots $\\alpha$ and $\\beta$ are known?",
+        "answer": "$x^2 - (\\text{sum of roots})x + (\\text{product of roots}) = 0$."
+      }
+    ]
+  },
+  {
+    "subtopic": "Nature of Roots",
+    "content": "If $D > 0$: Real & distinct roots; If $D = 0$: Real & equal roots; If $D < 0$: Imaginary roots ($p \\pm iq$); For rational roots: $a,b,c \\in Q$ and $D$ is a perfect square; Irrational roots occur in pairs ($p \\pm \\sqrt{q}$) if $a,b,c \\in Q$.",
+    "importantQuestions": [
+      "Find all values of 'a' for which $(a+1)x^2 + 2(a+1)x + a-2 = 0$ has two distinct real roots.",
+      "If $a+b+c=0$ for $ax^2+bx+c=0$, what are the roots? (Ans: $1$ and $c/a$)"
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What happens to the roots if $D$ is not a perfect square and coefficients are rational?",
+        "answer": "The roots will be irrational and occur in conjugate pairs ($p + \\sqrt{q}$ and $p - \\sqrt{q}$)."
+      },
+      {
+        "question": "If $a-b+c=0$, what is one definite root of the quadratic equation?",
+        "answer": "One root is $-1$ (the other is $-c/a$)."
+      }
+    ]
+  },
+  {
+    "subtopic": "Newton's Formula",
+    "content": "If $S_n = \\alpha^n \\pm \\beta^n$, then for $ax^2 + bx + c = 0$: $a S_n + b S_{n-1} + c S_{n-2} = 0$.",
+    "importantQuestions": [
+      "IIT-JEE 2011: If $\\alpha, \\beta$ are roots of $x^2-6x-2=0$ and $a_n = \\alpha^n - \\beta^n$, find the value of $\\frac{a_{10} - 2a_8}{2a_9}$."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the main utility of Newton's Formula in quadratics?",
+        "answer": "It relates the sums of powers of roots ($S_n$) to the coefficients of the quadratic equation."
+      },
+      {
+        "question": "State the recurrence relation for roots $\\alpha, \\beta$ of $ax^2+bx+c=0$.",
+        "answer": "$a S_n + b S_{n-1} + c S_{n-2} = 0$."
+      }
+    ]
+  },
+  {
+    "subtopic": "Graph and Range of Quadratic",
+    "content": "Vertex: $(\\frac{-b}{2a}, \\frac{-D}{4a})$; Y-intercept: $(0, c)$; If $a > 0$: Range is $[\\frac{-D}{4a}, \\infty)$; If $a < 0$: Range is $(-\\infty, \\frac{-D}{4a}]$; $ax^2+bx+c > 0 \\forall x \\in R$ if $a > 0$ and $D < 0$.",
+    "importantQuestions": [
+      "Find the set of values of 'a' for which $(a+4)x^2 - 2ax + 2a - 6 < 0 \\forall x \\in R$.",
+      "Draw the graph of $f(x) = x^2 + x - 12$ and find its vertex and range."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What does the sign of 'a' determine in the graph of a quadratic?",
+        "answer": "It determines if the parabola opens upwards ($a > 0$) or downwards ($a < 0$)."
+      },
+      {
+        "question": "What are the conditions for a quadratic to be always positive for all real x?",
+        "answer": "The coefficient $a > 0$ and the discriminant $D < 0$."
+      }
+    ]
+  },
+  {
+    "subtopic": "Common Roots",
+    "content": "Both roots common: $\\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2}$; One root common: Make $x^2$ coefficients same and subtract equations to find the common root 'x'.",
+    "importantQuestions": [
+      "JEE Mains 2023: Find $a > 0$ such that $x^2 - 5ax + 1 = 0$ and $x^2 - ax - 5 = 0$ have a common real root."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the condition for two quadratic equations to have both roots in common?",
+        "answer": "Their corresponding coefficients must be in the same ratio."
+      },
+      {
+        "question": "How do you find the common root if only one root is common?",
+        "answer": "Eliminate the $x^2$ term by subtraction or use the cross-multiplication method."
+      }
+    ]
+  },
+  {
+    "subtopic": "Location of Roots",
+    "content": "Both roots $> k$: $D \\ge 0$, $\\frac{-b}{2a} > k$, and $a \\cdot f(k) > 0$; Both roots $< k$: $D \\ge 0$, $\\frac{-b}{2a} < k$, and $a \\cdot f(k) > 0$; Number 'k' lies between roots: $a \\cdot f(k) < 0$; Exactly one root between $k_1$ and $k_2$: $f(k_1)f(k_2) < 0$.",
+    "importantQuestions": [
+      "Find 'd' such that both roots of $x^2 - 6dx + (2 - 2d + 9d^2) = 0$ exceed 3.",
+      "What are the conditions for roots to lie between $k_1$ and $k_2$?"
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the simplest condition to check if a number 'k' lies between the roots?",
+        "answer": "Check if $a \\cdot f(k) < 0$."
+      },
+      {
+        "question": "What three conditions must be met for both roots to be greater than a value 'k'?",
+        "answer": "$D \\ge 0$, the vertex x-coordinate $\\frac{-b}{2a} > k$, and $a \\cdot f(k) > 0$."
+      }
+    ]
+  },
+  {
+    "subtopic": "Transformation of Quadratic Equations",
+    "content": "To form an equation whose roots are related to roots $\\alpha, \\beta$ of $ax^2+bx+c=0$; If roots are $1/\\alpha, 1/\\beta$: Replace $x$ with $1/x$; If roots are $-\\alpha, -\\beta$: Replace $x$ with $-x$; If roots are $k\\alpha, k\\beta$: Replace $x$ with $x/k$; If roots are $\\alpha+k, \\beta+k$: Replace $x$ with $x-k$.",
+    "importantQuestions": [
+      "If $\\alpha, \\beta$ are roots of $x^2-px+q=0$, find the equation whose roots are $\\alpha^2, \\beta^2$.",
+      "Form a quadratic equation whose roots are the squares of the roots of $ax^2+bx+c=0$."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the shortcut to find an equation with reciprocal roots?",
+        "answer": "Swap the coefficients of $x^2$ and the constant term ($cx^2+bx+a=0$)."
+      },
+      {
+        "question": "If roots are $\\alpha-h$ and $\\beta-h$, what substitution is used?",
+        "answer": "Replace $x$ with $x+h$ in the original equation."
+      }
+    ]
+  },
+  {
+    "subtopic": "Quadratic Expressions in Two Variables",
+    "content": "Pair of straight lines condition: $ax^2 + 2hxy + by^2 + 2gx + 2fy + c = 0$; Discriminant $\\Delta = abc + 2fgh - af^2 - bg^2 - ch^2 = 0$.",
+    "importantQuestions": [
+      "Find the condition for $x^2 + kxy + y^2 - 5x - 7y + 6 = 0$ to represent a pair of straight lines.",
+      "State the determinant form of the condition for a general second-degree equation to represent lines."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What does the general second-degree equation represent if $\\Delta \\neq 0$?",
+        "answer": "It represents a conic section (circle, parabola, ellipse, or hyperbola)."
+      },
+      {
+        "question": "Write the determinant form of $\\Delta$.",
+        "answer": "A $3 \\times 3$ determinant with rows $[a, h, g], [h, b, f], [g, f, c]$."
+      }
+    ]
+  },
+  {
+    "subtopic": "Maximum and Minimum Values of Rational Functions",
+    "content": "To find range of $y = \\frac{a_1x^2 + b_1x + c_1}{a_2x^2 + b_2x + c_2}$; Cross multiply to form a quadratic in $x$: $f(x, y) = 0$; Set $D \\geq 0$ since $x$ is real; Solve for range of $y$.",
+    "importantQuestions": [
+      "Find the range of $y = \\frac{x^2 - x + 1}{x^2 + x + 1}$ for real $x$.",
+      "Find the maximum value of $y = \\frac{x+2}{2x^2 + 3x + 6}$."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "What is the first step in finding the range of a rational quadratic function?",
+        "answer": "Set the expression equal to $y$ and form a quadratic equation in $x$."
+      },
+      {
+        "question": "Why do we set $D \\geq 0$ when finding the range?",
+        "answer": "Because the problem specifies that $x$ is a real number, so the quadratic in $x$ must have real roots."
+      }
+    ]
+  },
+  {
+    "subtopic": "Algebraic Interpretations of Roots",
+    "content": "Key values: $f(0) = c$; $f(1) = a+b+c$; $f(-1) = a-b+c$.",
+    "importantQuestions": [
+      "If $a+b+c < 0$ and $a > 0$, what can be said about the roots of $ax^2+bx+c=0$?",
+      "Given $f(1) \\cdot f(2) < 0$, prove exactly one root lies between 1 and 2."
+    ],
+    "diagram": "",
+    "cards": [
+      {
+        "question": "If $f(k) = 0$, what does this mean for the quadratic?",
+        "answer": "It means $k$ is a root of the equation $ax^2+bx+c=0$."
+      },
+      {
+        "question": "If $a+b+c = 0$, find the roots of $ax^2+bx+c=0$.",
+        "answer": "The roots are $1$ and $c/a$."
+      }
+    ]
+  }
+]

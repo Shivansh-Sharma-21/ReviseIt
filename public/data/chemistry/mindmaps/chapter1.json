@@ -1,0 +1,39 @@
+{
+  "id": "periodic_classification",
+  "title": "Periodic Classification of Elements",
+  "flow": [
+    {
+      "topic": "Historical Development",
+      "subtopics": [
+        "Mendeleev's Periodic Law"
+      ]
+    },
+    {
+      "topic": "Modern Periodic Table Foundations",
+      "subtopics": [
+        "Moseley's Experiment & Modern Periodic Law",
+        "Long Form of Modern Periodic Table"
+      ]
+    },
+    {
+      "topic": "Structural Classification",
+      "subtopics": [
+        "Blockwise Classification (s, p, d, f)"
+      ]
+    },
+    {
+      "topic": "Nuclear & Shielding Effects",
+      "subtopics": [
+        "Effective Nuclear Charge & Screening Effect"
+      ]
+    },
+    {
+      "topic": "Periodic Trends",
+      "subtopics": [
+        "Atomic and Ionic Radius",
+        "Ionisation Energy (IE)",
+        "Electron Affinity (EA) & Electronegativity"
+      ]
+    }
+  ]
+}

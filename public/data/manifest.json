@@ -1,0 +1,32 @@
+{
+  "physics": [
+    {
+      "id": "chapter1",
+      "title": "Motion in a Straight Line"
+    }
+  ],
+  "chemistry": [
+    {
+      "id": "chapter1",
+      "title": "Periodic Classification of Elements"
+    },
+    {
+      "id": "chapter2",
+      "title": "Some Basic Concepts of Chemistry"
+    }
+  ],
+  "maths": [
+    {
+      "id": "chapter1",
+      "title": "Sequence & Series"
+    },
+    {
+      "id": "chapter2",
+      "title": "Quadratic Equations"
+    },
+    {
+      "id": "chapter3",
+      "title": "Permutation and Combination"
+    }
+  ]
+}

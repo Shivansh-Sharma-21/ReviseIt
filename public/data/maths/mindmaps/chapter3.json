@@ -1,0 +1,35 @@
+{
+  "id": "permutation_and_combination",
+  "title": "Permutation and Combination",
+  "flow": [
+    {
+      "topic": "Foundations of Counting",
+      "subtopics": [
+        "Fundamental Principles of Counting",
+        "Factorial Notation"
+      ]
+    },
+    {
+      "topic": "Arrangements and Selections",
+      "subtopics": [
+        "Permutations (Arrangements)",
+        "Combinations (Selections)",
+        "Circular Permutations"
+      ]
+    },
+    {
+      "topic": "Advanced Constraints",
+      "subtopics": [
+        "Restricted Arrangements",
+        "Selection with Repetition (Identical Objects)"
+      ]
+    },
+    {
+      "topic": "Number Theory and Distributions",
+      "subtopics": [
+        "Divisors of a Composite Number",
+        "Distribution into Groups"
+      ]
+    }
+  ]
+}
