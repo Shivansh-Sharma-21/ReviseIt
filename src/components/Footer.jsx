@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Github, Twitter, Youtube, GraduationCap } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
-const Footer = ({ setView }) => {
+const Footer = () => {
+    const navigate = useNavigate();
+
     return (
         <footer className="relative mt-20 pb-12 overflow-hidden">
             {/* Subtle Gradient Line */}
@@ -14,7 +17,7 @@ const Footer = ({ setView }) => {
                     <div className="space-y-6">
                         <div 
                             className="flex items-center gap-2 cursor-pointer group" 
-                            onClick={() => setView('landing')}
+                            onClick={() => navigate('/')}
                         >
                             <img 
                                 src="/logo.png" 
@@ -45,13 +48,16 @@ const Footer = ({ setView }) => {
                     <div>
                         <h4 className="text-slate-900 dark:text-white font-black uppercase text-xs tracking-widest mb-8">Navigation</h4>
                         <ul className="space-y-4">
-                            {['Landing', 'Home'].map((item) => (
-                                <li key={item}>
+                            {[
+                                { name: 'Landing', path: '/' },
+                                { name: 'Home', path: '/home' }
+                            ].map((item) => (
+                                <li key={item.name}>
                                     <button 
-                                        onClick={() => setView(item.toLowerCase())}
+                                        onClick={() => navigate(item.path)}
                                         className="text-slate-500 dark:text-slate-400 font-bold hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors text-sm"
                                     >
-                                        {item}
+                                        {item.name}
                                     </button>
                                 </li>
                             ))}
@@ -63,13 +69,13 @@ const Footer = ({ setView }) => {
                         <h4 className="text-slate-900 dark:text-white font-black uppercase text-xs tracking-widest mb-8">Support</h4>
                         <ul className="space-y-4">
                             {[
-                                { name: 'About Us', view: 'about' },
-                                { name: 'Contact Us', view: 'contact' },
-                                { name: 'Privacy Policy', view: 'privacy' }
+                                { name: 'About Us', path: '/about' },
+                                { name: 'Contact Us', path: '/contact' },
+                                { name: 'Privacy Policy', path: '/privacy' }
                             ].map((item) => (
                                 <li key={item.name}>
                                     <button 
-                                        onClick={() => setView(item.view)}
+                                        onClick={() => navigate(item.path)}
                                         className="text-slate-500 dark:text-slate-400 font-bold hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors text-sm"
                                     >
                                         {item.name}

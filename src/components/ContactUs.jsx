@@ -51,7 +51,7 @@ const ContactUs = () => {
 
                         <div className="space-y-6">
                             {[
-                                { icon: <Mail className="w-5 h-5" />, label: "Email", value: "hello@reviseit.com" },
+                                { icon: <Mail className="w-5 h-5" />, label: "Email", value: "reviseit2026@gmail.com" },
                                 { icon: <MessageSquare className="w-5 h-5" />, label: "Twitter", value: "@ReviseItApp" },
                                 { icon: <Github className="w-5 h-5" />, label: "GitHub", value: "ReviseIt-Source" }
                             ].map((item, index) => (

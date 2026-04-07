@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
+import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './components/Home'
 import TopicSelection from './components/TopicSelection'
@@ -21,9 +22,10 @@ import './App.css'
 
 function App() {
   const { currentUser } = useAuth()
+  const navigate = useNavigate()
+  const location = useLocation()
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false)
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark')
-  const [view, setView] = useState('landing') // 'landing', 'home', 'topics', 'mindmap', 'flashcards', 'quiz', 'revision-quiz', 'analysis'
   const [selectedTopic, setSelectedTopic] = useState(null)
   const [currentSubject, setCurrentSubject] = useState(null)
   const [userConfidence, setUserConfidence] = useState(3)
@@ -40,10 +42,10 @@ function App() {
     localStorage.setItem('theme', theme)
   }, [theme])
 
-  // Scroll to top when view changes
+  // Scroll to top when route changes
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [view]);
+  }, [location.pathname]);
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
@@ -51,7 +53,7 @@ function App() {
 
   const navigateToTopics = (subject) => {
     setCurrentSubject(subject)
-    setView('topics')
+    navigate('/topics')
   }
 
   const navigateToHome = () => {
@@ -67,38 +69,43 @@ function App() {
     setTimeout(() => {
       setCurrentSubject(null)
       setSelectedTopic(null)
-      setView('home')
+      navigate('/home')
       setIsLoading(false);
     }, 2000);
   }
 
   const handleTopicSelect = (topic) => {
     setSelectedTopic(topic)
-    setView('mindmap')
+    navigate('/mindmap')
   }
 
   const navigateBackToTopics = () => {
     setSelectedTopic(null)
-    setView('topics')
+    navigate('/topics')
   }
 
   const startInitialQuiz = () => {
-    setView('quiz')
+    navigate('/quiz')
   }
 
   const startRevisionQuiz = (confidence) => {
     setUserConfidence(confidence)
-    setView('revision-quiz')
+    navigate('/revision-quiz')
   }
 
   const handleCompleteRevision = (score, total) => {
     setSessionScore({ score, total })
-    setView('analysis')
+    navigate('/analysis')
   }
 
   const restartFromQuiz = () => {
-    setView('quiz')
+    navigate('/quiz')
   }
+
+  // Paths that should not have the container padding
+  const fullWidthPaths = ['/', '/mindmap', '/quiz', '/revision-quiz', '/analysis', '/privacy', '/about', '/contact'];
+  const isFullWidth = fullWidthPaths.includes(location.pathname);
+  const isLanding = location.pathname === '/';
 
   return (
     <div className="app-bg text-main">
@@ -112,15 +119,9 @@ function App() {
       <AuthModal 
         isOpen={isAuthModalOpen} 
         onClose={() => setIsAuthModalOpen(false)} 
-        onSuccess={() => {
-          if (view === 'landing') {
-            // Because state updates might be batched, handle carefully or just let them stay on landing with an updated header, 
-            // but navigating to home gives a better UX.
-            // Note: navigateToHome will run in the next render when currentUser is set
-          }
-        }} 
+        onSuccess={() => {}} 
       />
-      {view === 'landing' && <ScrollProgress />}
+      {isLanding && <ScrollProgress />}
       <AnimatePresence mode="wait">
         {isLoading && (
           <Loader 
@@ -131,60 +132,26 @@ function App() {
         )}
       </AnimatePresence>
 
-      <Header theme={theme} toggleTheme={toggleTheme} onLoginClick={() => setIsAuthModalOpen(true)} onLogoClick={() => setView('landing')} />
-      <main className={['landing', 'mindmap', 'quiz', 'revision-quiz', 'analysis', 'privacy', 'about', 'contact'].includes(view) ? "" : "container mx-auto px-4 py-8"}>
-        {view === 'landing' && <Landing onGetStarted={navigateToHome} />}
-        {view === 'home' && (
-          <Home
-            onSelectPhysics={() => navigateToTopics('Physics')}
-            onSelectChemistry={() => navigateToTopics('Chemistry')}
-            onSelectMaths={() => navigateToTopics('Maths')}
-          />
-        )}
-        {view === 'topics' && (
-          <TopicSelection
-            subject={currentSubject}
-            onBack={navigateToHome}
-            onSelectTopic={handleTopicSelect}
-          />
-        )}
-        {view === 'privacy' && <PrivacyPolicy />}
-        {view === 'about' && <AboutUs />}
-        {view === 'contact' && <ContactUs />}
+      <Header theme={theme} toggleTheme={toggleTheme} onLoginClick={() => setIsAuthModalOpen(true)} onLogoClick={() => navigate('/')} />
+      <main className={isFullWidth ? "" : "container mx-auto px-4 py-8"}>
+        <Routes>
+          <Route path="/" element={<Landing onGetStarted={navigateToHome} />} />
+          <Route path="/home" element={<Home onSelectPhysics={() => navigateToTopics('Physics')} onSelectChemistry={() => navigateToTopics('Chemistry')} onSelectMaths={() => navigateToTopics('Maths')} />} />
+          <Route path="/topics" element={currentSubject ? <TopicSelection subject={currentSubject} onBack={() => navigate('/home')} onSelectTopic={handleTopicSelect} /> : <Navigate to="/home" replace />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+          
+          <Route path="/mindmap" element={selectedTopic ? <Mindmap chapter={selectedTopic} onBack={navigateBackToTopics} onInitiate={startInitialQuiz} /> : <Navigate to="/home" replace />} />
+          <Route path="/quiz" element={selectedTopic ? <QuizView chapter={selectedTopic} onBack={() => navigate('/mindmap')} onComplete={startRevisionQuiz} /> : <Navigate to="/home" replace />} />
+          <Route path="/revision-quiz" element={selectedTopic ? <RevisionQuizView chapter={selectedTopic} confidence={userConfidence} onBack={() => navigate('/quiz')} onComplete={handleCompleteRevision} /> : <Navigate to="/home" replace />} />
+          <Route path="/analysis" element={selectedTopic ? <SessionAnalysisView score={sessionScore.score} total={sessionScore.total} chosenConfidence={userConfidence} onHome={() => navigate('/home')} onRetry={restartFromQuiz} /> : <Navigate to="/home" replace />} />
+          
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
-      {view === 'mindmap' && selectedTopic && (
-        <Mindmap
-          chapter={selectedTopic}
-          onBack={navigateBackToTopics}
-          onInitiate={startInitialQuiz}
-        />
-      )}
-      {view === 'quiz' && selectedTopic && (
-        <QuizView
-          chapter={selectedTopic}
-          onBack={() => setView('mindmap')}
-          onComplete={startRevisionQuiz}
-        />
-      )}
-      {view === 'revision-quiz' && selectedTopic && (
-        <RevisionQuizView
-          chapter={selectedTopic}
-          confidence={userConfidence}
-          onBack={() => setView('quiz')}
-          onComplete={handleCompleteRevision}
-        />
-      )}
-      {view === 'analysis' && selectedTopic && (
-        <SessionAnalysisView
-          score={sessionScore.score}
-          total={sessionScore.total}
-          chosenConfidence={userConfidence}
-          onHome={navigateToHome}
-          onRetry={restartFromQuiz}
-        />
-      )}
-      {['landing', 'home', 'privacy', 'about', 'contact'].includes(view) && (
-        <Footer setView={setView} />
+      {['/', '/home', '/privacy', '/about', '/contact'].includes(location.pathname) && (
+        <Footer />
       )}
     </div>
   )
