@@ -42,6 +42,7 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
     );
     const [showResult, setShowResult] = useState(false);
     const [showExplanation, setShowExplanation] = useState(false);
+    const [submittedQuestions, setSubmittedQuestions] = useState(new Set());
 
     useEffect(() => {
         if (questionStates[currentIndex] === 'not-visited') {
@@ -52,8 +53,17 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
     }, [currentIndex]);
 
     const handleOptionSelect = (option) => {
-        if (responses[currentIndex]) return;
+        if (submittedQuestions.has(currentIndex)) return;
         setResponses(prev => ({ ...prev, [currentIndex]: option }));
+    };
+
+    const handleSubmitQuestion = () => {
+        if (!responses[currentIndex]) return;
+        setSubmittedQuestions(prev => {
+            const next = new Set(prev);
+            next.add(currentIndex);
+            return next;
+        });
     };
 
     const handleSaveAndNext = () => {
@@ -233,12 +243,12 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
                                     {currentQuestion.options.map((option, idx) => {
                                         const isSelected = responses[currentIndex] === option;
                                         const isCorrect = option === currentQuestion.correctAnswer;
-                                        const hasAnswered = !!responses[currentIndex];
+                                        const hasSubmitted = submittedQuestions.has(currentIndex);
 
                                         let styleClasses = "bg-slate-50 dark:bg-slate-800/80 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:border-indigo-400";
                                         let icon = null;
 
-                                        if (hasAnswered) {
+                                        if (hasSubmitted) {
                                             if (isCorrect) {
                                                 styleClasses = "bg-emerald-600 border-emerald-600 text-white shadow-lg shadow-emerald-500/20";
                                                 icon = <Check size={18} className="shrink-0" />;
@@ -254,10 +264,10 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
                                             <button
                                                 key={idx}
                                                 onClick={() => handleOptionSelect(option)}
-                                                className={`p-4 md:p-6 rounded-2xl md:rounded-[2rem] border-2 text-left transition-all duration-300 group relative flex items-center gap-4 md:gap-5 ${styleClasses} ${hasAnswered && !isSelected && !isCorrect ? 'opacity-50' : ''}`}
+                                                className={`p-4 md:p-6 rounded-2xl md:rounded-[2rem] border-2 text-left transition-all duration-300 group relative flex items-center gap-4 md:gap-5 ${styleClasses} ${hasSubmitted && !isSelected && !isCorrect ? 'opacity-50' : ''}`}
                                             >
                                                 <div className={`w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-2xl border-2 flex items-center justify-center shrink-0 font-black text-xs md:text-sm transition-all ${
-                                                    hasAnswered 
+                                                    hasSubmitted 
                                                     ? (isCorrect ? 'bg-white/20 border-white/40 text-white' : (isSelected ? 'bg-white/20 border-white/40 text-white' : 'bg-white dark:bg-slate-700 border-slate-200 dark:border-slate-600 text-slate-400'))
                                                     : (isSelected ? 'bg-white/20 border-white/40 text-white' : 'bg-white dark:bg-slate-700 border-slate-200 dark:border-slate-600 text-slate-400 group-hover:border-indigo-300 group-hover:text-indigo-600')
                                                 }`}>
@@ -317,10 +327,21 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
                                 <button 
                                     onClick={() => currentIndex > 0 && (setCurrentIndex(prev => prev - 1), setShowExplanation(false))}
                                     disabled={currentIndex === 0}
-                                    className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl border-2 border-slate-200 dark:border-slate-800 text-slate-300 disabled:opacity-30 hover:border-indigo-500 transition-all flex items-center justify-center"
+                                    className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl border-2 border-slate-200 dark:border-slate-800 text-slate-300 disabled:opacity-30 hover:border-indigo-500 transition-all flex items-center justify-center shrink-0"
                                 >
                                     <ChevronLeft size={24} />
                                 </button>
+
+                                {!submittedQuestions.has(currentIndex) && responses[currentIndex] && (
+                                    <button 
+                                        onClick={handleSubmitQuestion}
+                                        className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-black text-[9px] md:text-[10px] uppercase tracking-[0.2em] transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2"
+                                    >
+                                        Submit
+                                        <Check size={16} />
+                                    </button>
+                                )}
+
                                 <button 
                                     onClick={handleSaveAndNext}
                                     className="flex-grow sm:flex-none bg-indigo-600 hover:bg-slate-900 dark:hover:bg-white dark:hover:text-slate-900 text-white px-8 md:px-12 py-3 md:py-4 rounded-xl md:rounded-3xl font-black text-[9px] md:text-[10px] uppercase tracking-[0.2em] transition-all shadow-xl active:scale-95 flex items-center justify-center gap-2"
