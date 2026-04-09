@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const SubjectCard = ({ title, status, color, icon, disabled, onClick }) => {
     return (
@@ -52,6 +53,9 @@ const SubjectCard = ({ title, status, color, icon, disabled, onClick }) => {
 const Home = ({ onSelectPhysics, onSelectChemistry, onSelectMaths }) => {
     return (
         <div className="max-w-6xl mx-auto py-12 px-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <Helmet>
+                <meta name="robots" content="noindex" />
+            </Helmet>
             {/* Hero Section */}
             <section className="text-center mb-20 space-y-6">
                 <div className="inline-block px-4 py-1.5 rounded-full bg-slate-200 dark:bg-indigo-900/20 border border-slate-300 dark:border-indigo-900/30 text-slate-600 dark:text-indigo-400 text-xs font-black tracking-[0.2em] uppercase mb-4">
