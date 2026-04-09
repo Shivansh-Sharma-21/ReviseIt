@@ -684,7 +684,7 @@
       "5",
       "11"
     ],
-    "correctAnswer": "3",
+    "correctAnswer": "5",
     "shortExplanation": "Total ways to select (n+1) or more is 2^(2n). Given 2^(2n) - 1 = 63 (excluding 'all' selection), 2^(2n) = 64, so 2n = 6 and n = 3.",
     "tag": "C"
   },
@@ -749,7 +749,7 @@
       "10",
       "3"
     ],
-    "correctAnswer": "4",
+    "correctAnswer": "3",
     "shortExplanation": "240 = 2^4 * 3^1 * 5^1. Divisors of form 4n+2 are 2 * (odd number). Odd divisors of 240 are 1, 3, 5, 15. Total = 4.",
     "tag": "C"
   },
@@ -879,7 +879,7 @@
       "5",
       "8"
     ],
-    "correctAnswer": "4",
+    "correctAnswer": "8",
     "shortExplanation": "Properties of combinations: nCx = nCy implies x = y or x + y = n. Here r + r + 2 = 10, so 2r = 8, r = 4.",
     "tag": "C"
   },
@@ -1048,7 +1048,7 @@
       "8",
       "16"
     ],
-    "correctAnswer": "4",
+    "correctAnswer": "16",
     "shortExplanation": "1000 = 2^3 * 5^3. Odd divisors are the divisors of 5^3. These are 5^0, 5^1, 5^2, 5^3. Total = 4.",
     "tag": "C"
   },
@@ -1100,7 +1100,7 @@
       "6",
       "12"
     ],
-    "correctAnswer": "4",
+    "correctAnswer": "12",
     "shortExplanation": "$Since 2 people are fixed, we only need to choose 1 more from the remaining 4. ^{4}1 = 4.$",
     "tag": "C"
   },
@@ -1303,12 +1303,12 @@
     "id": 1,
     "text": "60 words can be made using all the letters of the word BHBJO, with or without meaning. If these words are written as in a dictionary. then the 50th word is: [05 April, 2024 (Shift-II)]",
     "options": [
-      "(a) OBBHJ",
-      "(b) HBBJO",
-      "(c) OBBJH",
-      "(d) JBBOH"
+      "OBBHJ",
+      "HBBJO",
+      "OBBJH",
+      "JBBOH"
     ],
-    "correctAnswer": "(c)",
+    "correctAnswer": "OBBJH",
     "shortExplanation": "Arrange letters alphabetically: B, B, H, J, O. Calculate permutations starting with each letter until reaching the 50th rank.",
     "tag": "S"
   },
@@ -1316,12 +1316,12 @@
     "id": 2,
     "text": "If all the words with or without meaning made using all the letters of the word 'NAGPUR' are arranged as in a dictionary, then the word at 315th position in this arrangement is: [06 April, 2024 (Shift-II)]",
     "options": [
-      "(a) NRAGUP",
-      "(b) NRAGPU",
-      "(c) NRAPGU",
-      "(d) NRAPUG"
+      "NRAGUP",
+      "NRAGPU",
+      "NRAPGU",
+      "NRAPUG"
     ],
-    "correctAnswer": "(b)",
+    "correctAnswer": "NRAGPU",
     "shortExplanation": "Alphabetical order of NAGPUR is A, G, N, P, R, U. Fix letters one by one and count arrangements until rank 315.",
     "tag": "S"
   },
@@ -1329,12 +1329,12 @@
     "id": 3,
     "text": "The number of five digit numbers, greater than 40000 and divisible by 5, which can be formed using the digits 0, 1, 3, 5, 7 and 9 without repetition, is equal to: [12 April, 2023 (Shift-1)]",
     "options": [
-      "(a) 120",
-      "(b) 132",
-      "(c) 72",
-      "(d) 96"
+      "120",
+      "132",
+      "72",
+      "96"
     ],
-    "correctAnswer": "(a)",
+    "correctAnswer": "120",
     "shortExplanation": "The first digit must be 5, 7, or 9. The last digit must be 0 or 5. Case-wise analysis for leading and terminal digits is required.",
     "tag": "S"
   },
@@ -1342,12 +1342,12 @@
     "id": 4,
     "text": "The total number of three-digit numbers, divisible by 3, which can be formed using the digits 1, 3, 5, 8, if repetition of digits is allowed, is: [15 April, 2023 (Shift-1)]",
     "options": [
-      "(a) 22",
-      "(b) 18",
-      "(c) 21",
-      "(d) 20"
+      "22",
+      "18",
+      "21",
+      "20"
     ],
-    "correctAnswer": "(a)",
+    "correctAnswer": "22",
     "shortExplanation": "A number is divisible by 3 if the sum of its digits is divisible by 3. List possible combinations from {1, 3, 5, 8} and count their permutations.",
     "tag": "S"
   },
@@ -1355,12 +1355,12 @@
     "id": 5,
     "text": "Eight persons are to be transported from city A to city B in three cars of different makes. If each car can accommodate at most three persons, then the number of ways, in which they can be transported, is: [10 April, 2023 (Shift-II)]",
     "options": [
-      "(a) 1120",
-      "(b) 1680",
-      "(c) 560",
-      "(d) 3360"
+      "1120",
+      "1680",
+      "560",
+      "3360"
     ],
-    "correctAnswer": "(b)",
+    "correctAnswer": "1680",
     "shortExplanation": "The possible distribution of 8 people in 3 cars (max capacity 3) is (3, 3, 2). Use multinomial coefficient for grouping and then arrange.",
     "tag": "S"
   },
@@ -1368,10 +1368,10 @@
     "id": 6,
     "text": "Number of 4-digit numbers (the repetition of digits is allowed) which are made using the digits 1, 2, 3 and 5, and are divisible by 15, is equal to: [29 Jan, 2023 (Shift-II)]",
     "options": [
-      "(a) 18",
-      "(b) 21",
-      "(c) 24",
-      "(d) 32"
+      "18",
+      "21",
+      "24",
+      "32"
     ],
     "correctAnswer": "21",
     "shortExplanation": "Divisible by 15 means divisible by 3 and 5. The last digit must be 5. The sum of the first three digits plus 5 must be a multiple of 3.",
@@ -1381,12 +1381,12 @@
     "id": 7,
     "text": "The number of arrangements of the letters of the word 'INDEPENDENCE' in which all the vowels always occur together is: [8 April, 2023 (Shift-1)]",
     "options": [
-      "(a) 16800",
-      "(b) 33600",
-      "(c) 18000",
-      "(d) 14800"
+      "16800",
+      "33600",
+      "18000",
+      "14800"
     ],
-    "correctAnswer": "(a)",
+    "correctAnswer": "16800",
     "shortExplanation": "Treat all vowels (I, E, E, E, E) as one block. Permute this block with the remaining 7 consonants while accounting for duplicates.",
     "tag": "S"
   },
@@ -1394,12 +1394,12 @@
     "id": 8,
     "text": "The number of integers, greater than 7000 that can be formed, using the digits 3, 5, 6, 7, 8 without repetition, is: [24 Jan, 2023 (Shift-II)]",
     "options": [
-      "(a) 120",
-      "(b) 168",
-      "(c) 220",
-      "(d) 48"
+      "120",
+      "168",
+      "220",
+      "48"
     ],
-    "correctAnswer": "(b)",
+    "correctAnswer": "168",
     "shortExplanation": "Count all 5-digit numbers possible (5!) and 4-digit numbers starting with 7 or 8 (2 * ^{4}3). Sum both cases.",
     "tag": "S"
   },
@@ -1407,12 +1407,12 @@
     "id": 9,
     "text": "The number of numbers, strictly between 5000 and 10000 can be formed using the digits 1, 3, 5, 7, 9 without repetition, is: [25 Jan, 2023 (Shift-II)]",
     "options": [
-      "(a) 6",
-      "(b) 12",
-      "(c) 120",
-      "(d) 72"
+      "6",
+      "12",
+      "120",
+      "72"
     ],
-    "correctAnswer": "(d)",
+    "correctAnswer": "72",
     "shortExplanation": "Numbers must be 4-digit. The first digit can be 5, 7, or 9 (3 options). Remaining 3 spots are 4 * 3 * 2. Total = 3 * 24 = 72.",
     "tag": "S"
   },
@@ -1420,12 +1420,12 @@
     "id": 10,
     "text": "The letters of the word OUGHT are written in all possible ways and these words are arranged as in a dictionary, in a series. Then the serial number of the word TOUGH is: [29 Jan, 2023 (Shift-II)]",
     "options": [
-      "(a) 89",
-      "(b) 84",
-      "(c) 86",
-      "(d) 79"
+      "89",
+      "84",
+      "86",
+      "79"
     ],
-    "correctAnswer": "(a)",
+    "correctAnswer": "89",
     "shortExplanation": "Alphabetical order: G, H, O, T, U. Count words starting with G, H, O, then TH, TOH, TOG, until reaching TOUGH.",
     "tag": "S"
   },
@@ -1433,12 +1433,12 @@
     "id": 11,
     "text": "All words, with or without meaning, are made using all the letters of the word MONDAY. These words are written as in a dictionary with serial numbers. The serial number of the word MONDAY is: [13 April, 2023 (Shift-II)]",
     "options": [
-      "(a) 327",
-      "(b) 326",
-      "(c) 328",
-      "(d) 324"
+      "327",
+      "326",
+      "328",
+      "324"
     ],
-    "correctAnswer": "(a)",
+    "correctAnswer": "327",
     "shortExplanation": "Alphabetical order: A, D, M, N, O, Y. Use the rank formula or count starting letters to find the position of MONDAY.",
     "tag": "S"
   },
@@ -1446,12 +1446,12 @@
     "id": 12,
     "text": "If the letters of the word MATHS are permuted and all possible words so formed are arranged as in a dictionary with serial numbers, then the serial number of the word THAMS is: [11 April, 2023 (Shift-II)]",
     "options": [
-      "(a) 103",
-      "(b) 104",
-      "(c) 101",
-      "(d) 102"
+      "103",
+      "104",
+      "101",
+      "102"
     ],
-    "correctAnswer": "(a)",
+    "correctAnswer": "103",
     "shortExplanation": "Alphabetical order: A, H, M, S, T. Count all words starting with A, H, M, S (4 * 4!) and then T-words until THAMS.",
     "tag": "S"
   },
@@ -1459,12 +1459,12 @@
     "id": 13,
     "text": "The number of square matrices of order 5 with entries from the set {0, 1}, such that the sum of all the elements in each row is 1 and the sum of all the elements in each column is also 1, is: [24 Jan, 2023 (Shift-II)]",
     "options": [
-      "(a) 225",
-      "(b) 120",
-      "(c) 25",
-      "(d) 150"
+      "225",
+      "120",
+      "25",
+      "150"
     ],
-    "correctAnswer": "(b)",
+    "correctAnswer": "120",
     "shortExplanation": "$This problem is equivalent to finding the number of permutations of 5 elements (5!), which is 120.$",
     "tag": "S"
   },
@@ -1472,10 +1472,10 @@
     "id": 14,
     "text": "The total number of six digit numbers, formed using the digits 4, 5, 9 only and divisible by 6, is: [1 Feb, 2023 (Shift-II)]",
     "options": [
-      "(a) 120",
-      "(b) 144",
-      "(c) 81",
-      "(d) 96"
+      "120",
+      "144",
+      "81",
+      "96"
     ],
     "correctAnswer": "81",
     "shortExplanation": "Divisible by 6 means even and divisible by 3. Last digit must be 4. Sum of remaining 5 digits + 4 must be a multiple of 3.",
@@ -1485,10 +1485,10 @@
     "id": 15,
     "text": "Let S = {1, 2, 3, 5, 7, 10, 11}. The number of non-empty subsets of S that have the sum of all elements a multiple of 3, is: [25 Jan, 2023 (Shift-I)]",
     "options": [
-      "(a) 43",
-      "(b) 42",
-      "(c) 41",
-      "(d) 44"
+      "43",
+      "42",
+      "41",
+      "44"
     ],
     "correctAnswer": "43",
     "shortExplanation": "Analyze remainders of elements mod 3. Use generating functions or case analysis to find combinations that sum to 0 mod 3.",
@@ -1498,10 +1498,10 @@
     "id": 16,
     "text": "The total number of 4-digit numbers whose greatest common divisor with 54 is 2, is: [29 Jan, 2023 (Shift-II)]",
     "options": [
-      "(a) 3000",
-      "(b) 2999",
-      "(c) 3001",
-      "(d) 2444"
+      "3000",
+      "2999",
+      "3001",
+      "2444"
     ],
     "correctAnswer": "3000",
     "shortExplanation": "GCD(n, 54) = 2 implies n is even, not divisible by 3, and not divisible by 27. Apply inclusion-exclusion on 4-digit range.",
@@ -1511,10 +1511,10 @@
     "id": 17,
     "text": "Let the digits a, b, c be in A.P. Nine-digit numbers are to be formed using each of these three digits thrice such that three consecutive digits are in A.P. at least once. How many such numbers can be formed? [12 April, 2023 (Shift-1)]",
     "options": [
-      "(a) 1260",
-      "(b) 1540",
-      "(c) 1680",
-      "(d) 1200"
+      "1260",
+      "1540",
+      "1680",
+      "1200"
     ],
     "correctAnswer": "1260",
     "shortExplanation": "$Use the multinomial formula to find total arrangements (9! / (3!3!3!)) and subtract cases where no A.P. sequence appears.$",
@@ -1524,10 +1524,10 @@
     "id": 18,
     "text": "A person forgets his 4-digit ATM pin code. But he remembers that in the code all the digits are different, the greatest digit is 7 and the sum of the first two digits is equal to the sum of the last two digits. Then the maximum number of trials necessary to obtain the correct code is: [15 April, 2023 (Shift-1)]",
     "options": [
-      "(a) 10",
-      "(b) 8",
-      "(c) 12",
-      "(d) 6"
+      "10",
+      "8",
+      "12",
+      "6"
     ],
     "correctAnswer": "10",
     "shortExplanation": "Identify sets of 4 distinct digits {a, b, c, d} from {0...7} where max is 7 and a+b = c+d. Count permutations for each set.",
@@ -1537,10 +1537,10 @@
     "id": 19,
     "text": "The number of 3-digit numbers, that are divisible by either 2 or 3 but not divisible by 7 is: [31 Jan, 2023 (Shift-II)]",
     "options": [
-      "(a) 514",
-      "(b) 600",
-      "(c) 486",
-      "(d) 500"
+      "514",
+      "600",
+      "486",
+      "500"
     ],
     "correctAnswer": "514",
     "shortExplanation": "Calculate numbers divisible by 2, by 3, and their intersection. Then subtract those divisible by 14, 21, and 42.",
@@ -1550,10 +1550,10 @@
     "id": 20,
     "text": "If 2n+1 P n-1 : 2n-1 P n = 11 : 21 then n^2 + n + 15 is equal to: [1 Feb, 2023 (Shift-I)]",
     "options": [
-      "(a) 71",
-      "(b) 100",
-      "(c) 110",
-      "(d) 125"
+      "71",
+      "100",
+      "110",
+      "125"
     ],
     "correctAnswer": "110",
     "shortExplanation": "Expand the permutation formula, simplify the ratio to find n, and then compute the required quadratic expression.",
@@ -1563,10 +1563,10 @@
     "id": 21,
     "text": "Total numbers of 3-digit numbers that are divisible by 6 and can be formed by using the digits 1, 2, 3, 4, 5 with repetition, is: [13 April, 2023 (Shift-II)]",
     "options": [
-      "(a) 21",
-      "(b) 25",
-      "(c) 20",
-      "(d) 18"
+      "21",
+      "25",
+      "20",
+      "18"
     ],
     "correctAnswer": "21",
     "shortExplanation": "Last digit must be even (2 or 4). Sum of three digits must be divisible by 3. Count pairs for first two digits.",
@@ -1576,10 +1576,10 @@
     "id": 22,
     "text": "The number of 4-letter words, with or without meaning, each consisting of 2 vowels and 2 consonants, which can be formed from the letters of the word UNIVERSE without repetition is: [6 April, 2023 (Shift-II)]",
     "options": [
-      "(a) 432",
-      "(b) 360",
-      "(c) 420",
-      "(d) 384"
+      "432",
+      "360",
+      "420",
+      "384"
     ],
     "correctAnswer": "432",
     "shortExplanation": "Word UNIVERSE has vowels {U, I, E} and consonants {N, V, R, S}. Select (^{3}2 * ^{4}2) and arrange them in 4! ways.",
@@ -1589,10 +1589,10 @@
     "id": 23,
     "text": "A boy needs to select five courses from 12 available courses, out of which 5 courses are language courses. If he can choose at most two language courses, then the number of ways he can choose five courses is: [24 Jan, 2023 (Shift-1)]",
     "options": [
-      "(a) 546",
-      "(b) 441",
-      "(c) 512",
-      "(d) 496"
+      "546",
+      "441",
+      "512",
+      "496"
     ],
     "correctAnswer": "546",
     "shortExplanation": "Sum of cases: (0 language, 5 others) + (1 language, 4 others) + (2 language, 3 others). Use ^{5}r * 7C(5-r).",
@@ -1602,10 +1602,10 @@
     "id": 24,
     "text": "If all the six digit numbers x1x2x3x4x5x6 with 0 < x1 < x2 < x3 < x4 < x5 < x6 are arranged in the increasing order, then the sum of the digits in the 72th number is: [29 Jan, 2023 (Shift-1)]",
     "options": [
-      "(a) 32",
-      "(b) 24",
-      "(c) 30",
-      "(d) 28"
+      "32",
+      "24",
+      "30",
+      "28"
     ],
     "correctAnswer": "32",
     "shortExplanation": "Each number is a combination of 6 digits from {1-9}. Find the 72nd combination in lexicographical order.",
@@ -1615,10 +1615,10 @@
     "id": 25,
     "text": "The number of seven digit positive integers formed using the digits 1, 2, 3 and 4 only and sum of the digits equal to 12 is: [13 April, 2023 (Shift-1)]",
     "options": [
-      "(a) 413",
-      "(b) 420",
-      "(c) 406",
-      "(d) 432"
+      "413",
+      "420",
+      "406",
+      "432"
     ],
     "correctAnswer": "413",
     "shortExplanation": "Use multinomial theorem (coefficient of x^12 in (x+x^2+x^3+x^4)^7) or partitions of 12 into 7 parts using {1, 2, 3, 4}.",
@@ -1628,10 +1628,10 @@
     "id": 26,
     "text": "Let x and y be distinct integers where 1 \\le x \\le 25 and 1 \\le y \\le 25. Then, the number of ways of choosing x and y, such that x + y is divisible by 5, is: [25 Jan, 2023 (Shift-1)]",
     "options": [
-      "(a) 120",
-      "(b) 60",
-      "(c) 125",
-      "(d) 65"
+      "120",
+      "60",
+      "125",
+      "65"
     ],
     "correctAnswer": "120",
     "shortExplanation": "Group numbers by remainder mod 5. Pair (r1, r2) such that r1 + r2 = 0 or 5. Calculate combinations from each group.",
@@ -1641,10 +1641,10 @@
     "id": 27,
     "text": "Number of 4-digit numbers that are less than or equal to 2800 and either divisible by 3 or by 11, is equal to: [31 Jan, 2023 (Shift-1)]",
     "options": [
-      "(a) 710",
-      "(b) 711",
-      "(c) 712",
-      "(d) 713"
+      "710",
+      "711",
+      "712",
+      "713"
     ],
     "correctAnswer": "710",
     "shortExplanation": "Count multiples of 3 in [1000, 2800], multiples of 11, and subtract multiples of 33.",
@@ -1654,12 +1654,12 @@
     "id": 28,
     "text": "The number of ways to distribute 30 identical candies among four children C1, C2, C3 and C4 so that C2 receives atleast 4 and atmost 7 candies, C3 receives atleast 2 and atmost 6 candies, is equal to: [28 June, 2022 (Shift-II)]",
     "options": [
-      "(a) 205",
-      "(b) 615",
-      "(c) 510",
-      "(d) 430"
+      "205",
+      "615",
+      "510",
+      "430"
     ],
-    "correctAnswer": "(d)",
+    "correctAnswer": "430",
     "shortExplanation": "$Use multinomial expansion (coefficient of x^30) with constraints on C2 and C3, then apply the formula (n+r-1)C(r-1).$",
     "tag": "S"
   },
@@ -1667,12 +1667,12 @@
     "id": 29,
     "text": "The total number of 5-digit numbers, formed by using the digits 1, 2, 3, 5, 6, 7 without repetition, which are multiple of 6, is: [28 June, 2022 (Shift-1)]",
     "options": [
-      "(a) 36",
-      "(b) 48",
-      "(c) 60",
-      "(d) 72"
+      "36",
+      "48",
+      "60",
+      "72"
     ],
-    "correctAnswer": "(d)",
+    "correctAnswer": "72",
     "shortExplanation": "Sum of all digits is 24 (divisible by 3). Remove one digit such that sum remains divisible by 3. Then ensure evenness.",
     "tag": "S"
   },
@@ -1680,10 +1680,10 @@
     "id": 30,
     "text": "Let S be the set of all passwords which are six to eight characters long, where each character is either an alphabet from {A, B, C, D, E} or a number from {1, 2, 3, 4, 5} with the repetition of characters allowed. If the number of passwords in S whose at least one character is a number is \\alpha \\times 5^6 then \\alpha is equal to: [28 July, 2022 (Shift-1)]",
     "options": [
-      "(a) 7073",
-      "(b) 7074",
-      "(c) 7075",
-      "(d) 7072"
+      "7073",
+      "7074",
+      "7075",
+      "7072"
     ],
     "correctAnswer": "7073",
     "shortExplanation": "$Total passwords minus passwords with only alphabets. Calculate for lengths 6, 7, and 8, then divide by 5^6.$",
@@ -1693,10 +1693,10 @@
     "id": 31,
     "text": "In an examination, there are 5 multiple choice questions with 3 choices. Marks are: 3 for correct, -2 for wrong, 0 for unattempted. The number of ways a student gets 5 marks is: [24 July, 2022 (Shift-1)]",
     "options": [
-      "(a) 40",
-      "(b) 35",
-      "(c) 30",
-      "(d) 25"
+      "40",
+      "35",
+      "30",
+      "25"
     ],
     "correctAnswer": "40",
     "shortExplanation": "Let x, y, z be correct, wrong, unattempted. 3x - 2y = 5. Find integer solutions (x, y) where x+y \\le 5, then use combinations.",
@@ -1706,10 +1706,10 @@
     "id": 32,
     "text": "The number of 3-digit odd number, whose sum of digits is a multiple of 7, is: [25 June, 2022 (Shift-1)]",
     "options": [
-      "(a) 63",
-      "(b) 65",
-      "(c) 64",
-      "(d) 62"
+      "63",
+      "65",
+      "64",
+      "62"
     ],
     "correctAnswer": "63",
     "shortExplanation": "Fix last digit as {1, 3, 5, 7, 9}. For each, find pairs (d1, d2) such that sum + last digit is 7, 14, or 21.",
@@ -1719,10 +1719,10 @@
     "id": 33,
     "text": "Ten boys and five girls are in a class. Then the number of ways of forming a group consisting of three boys and three girls, if both B1 and B2 together should not be the members of a group, is: [26 June, 2022 (Shift-1)]",
     "options": [
-      "(a) 1120",
-      "(b) 1000",
-      "(c) 1050",
-      "(d) 1080"
+      "1120",
+      "1000",
+      "1050",
+      "1080"
     ],
     "correctAnswer": "1120",
     "shortExplanation": "$Total groups (^{10}3 * ^{5}3) minus groups containing both B1 and B2 (^{8}1 * ^{5}3).$",
@@ -1732,10 +1732,10 @@
     "id": 34,
     "text": "The letters of the word 'MANKIND' are written in all possible orders and arranged in serial order as in an English dictionary. Then the serial number of the word 'MANKIND' is: [25 July, 2022 (Shift-I)]",
     "options": [
-      "(a) 1492",
-      "(b) 1490",
-      "(c) 1491",
-      "(d) 1493"
+      "1492",
+      "1490",
+      "1491",
+      "1493"
     ],
     "correctAnswer": "1492",
     "shortExplanation": "Alphabetical: A, D, I, K, M, N, N. Count words starting with A, D, I, K, then MA, MAD, MAI, MAK until MANKIND.",
@@ -1745,10 +1745,10 @@
     "id": 35,
     "text": "The number of 5-digit natural numbers, such that the product of their digits is 36, is: [26 July, 2022 (Shift-I)]",
     "options": [
-      "(a) 180",
-      "(b) 210",
-      "(c) 150",
-      "(d) 200"
+      "180",
+      "210",
+      "150",
+      "200"
     ],
     "correctAnswer": "180",
     "shortExplanation": "Factorize 36 into 5 single digits (including 1s). Permute each valid set (e.g., {9, 4, 1, 1, 1}, {6, 6, 1, 1, 1}) and sum them.",
@@ -1758,10 +1758,10 @@
     "id": 36,
     "text": "The number of 7-digit numbers which are multiples of 11 and are formed using all the digits 1, 2, 3, 4, 5, 7 and 9 is: [24 June, 2022 (Shift-II)]",
     "options": [
-      "(a) 576",
-      "(b) 600",
-      "(c) 504",
-      "(d) 432"
+      "576",
+      "600",
+      "504",
+      "432"
     ],
     "correctAnswer": "576",
     "shortExplanation": "Difference between sum of digits at odd and even places must be 0 or 11. Sum of all digits is 31. Set up equations.",
@@ -1771,10 +1771,10 @@
     "id": 37,
     "text": "The number of ways, 16 identical cubes, of which 11 are blue and rest are red, can placed in a row so that between any two red cubes there should be at least 2 blue cubes, is: [27 June, 2022 (Shift-I)]",
     "options": [
-      "(a) 56",
-      "(b) 60",
-      "(c) 55",
-      "(d) 65"
+      "56",
+      "60",
+      "55",
+      "65"
     ],
     "correctAnswer": "56",
     "shortExplanation": "Use gap method. Place 11 blue cubes. There are 12 gaps. Let red cubes be x1, x2, x3, x4, x5 with gap constraints.",
@@ -1784,10 +1784,10 @@
     "id": 38,
     "text": "The total number of 3-digit numbers, whose greatest common divisor with 36 is 2, is: [26 June, 2022 (Shift-II)]",
     "options": [
-      "(a) 150",
-      "(b) 144",
-      "(c) 136",
-      "(d) 120"
+      "150",
+      "144",
+      "136",
+      "120"
     ],
     "correctAnswer": "150",
     "shortExplanation": "Number must be even, not divisible by 3, and not divisible by 4. Use range [100, 999].",
@@ -1797,10 +1797,10 @@
     "id": 39,
     "text": "The number of matrices of order 3 \\times 3, whose entries are either 0 or 1 and the sum of all the entries is a prime number, is: [29 July, 2022 (Shift-1)]",
     "options": [
-      "(a) 282",
-      "(b) 250",
-      "(c) 300",
-      "(d) 210"
+      "282",
+      "250",
+      "300",
+      "210"
     ],
     "correctAnswer": "282",
     "shortExplanation": "Sum of entries can be 2, 3, 5, or 7. Calculate ^{9}r for r ∈ {2, 3, 5, 7} and sum them.",
@@ -1810,10 +1810,10 @@
     "id": 40,
     "text": "The total number of four digit numbers such that each of the first three digits is divisible by the last digit, is equal to: [29 June, 2022 (Shift-II)]",
     "options": [
-      "(a) 1086",
-      "(b) 1050",
-      "(c) 1092",
-      "(d) 1100"
+      "1086",
+      "1050",
+      "1092",
+      "1100"
     ],
     "correctAnswer": "1086",
     "shortExplanation": "Iterate last digit d from 1 to 9. For each d, the count is (floor(9/d) * (floor(9/d)+1)^2). Sum for all d.",
@@ -1823,10 +1823,10 @@
     "id": 41,
     "text": "Let b1b2b3b4 be a 4-element permutation from {1...100} such that either (b1,b2,b3) or (b2,b3,b4) are consecutive integers. The number of such permutations is: [29 June, 2022 (Shift-I)]",
     "options": [
-      "(a) 18816",
-      "(b) 19000",
-      "(c) 18500",
-      "(d) 19212"
+      "18816",
+      "19000",
+      "18500",
+      "19212"
     ],
     "correctAnswer": "18816",
     "shortExplanation": "Count sets where first 3 are consecutive, add sets where last 3 are consecutive, and subtract the intersection where all 4 are consecutive.",
@@ -1836,10 +1836,10 @@
     "id": 42,
     "text": "The total number of three-digit numbers, with one digit repeated exactly two times, is: [25 June, 2022 (Shift-II)]",
     "options": [
-      "(a) 243",
-      "(b) 252",
-      "(c) 240",
-      "(d) 261"
+      "243",
+      "252",
+      "240",
+      "261"
     ],
     "correctAnswer": "243",
     "shortExplanation": "Cases: Digit repeated is 0, or non-zero. Accounts for leading zero constraints and permutations.",
@@ -1849,12 +1849,12 @@
     "id": 43,
     "text": "A scientific committee is to be formed from 6 Indians and 8 foreigners, which includes at least 2 Indians and double the number of foreigners as Indians. Then the number of ways is: [24 Feb, 2021 (Shift-1)]",
     "options": [
-      "(a) 560",
-      "(b) 1625",
-      "(c) 1050",
-      "(d) 575"
+      "560",
+      "1625",
+      "1050",
+      "575"
     ],
-    "correctAnswer": "(b)",
+    "correctAnswer": "1625",
     "shortExplanation": "$Cases: (2 Indians, 4 foreigners), (3 Indians, 6 foreigners), (4 Indians, 8 foreigners). Use ^{6}r * ^{8}2r.$",
     "tag": "S"
   },
@@ -1862,12 +1862,12 @@
     "id": 44,
     "text": "Team A consists of 7 boys and n girls and Team B has 4 boys and 6 girls. Total 52 single matches between teams where boy plays boy and girl plays girl. Then n is: [Retrieved Context]",
     "options": [
-      "(a) 6",
-      "(b) 5",
-      "(c) 4",
-      "(d) 3"
+      "6",
+      "5",
+      "4",
+      "3"
     ],
-    "correctAnswer": "4",
+    "correctAnswer": "3",
     "shortExplanation": "$Matches = (BoysA * BoysB) + (GirlsA * GirlsB). 52 = (7*4) + (n*6). Solve for n.$",
     "tag": "S"
   },
@@ -1880,7 +1880,7 @@
       "$(c) 2^12 - 1$",
       "$(d) 12^2$"
     ],
-    "correctAnswer": "(c)",
+    "correctAnswer": "$(c) 2^12 - 1$",
     "shortExplanation": "$Each bulb can be ON or OFF (2 options). Total 2^12 ways, minus the case where all are OFF.$",
     "tag": "S"
   },
@@ -1893,7 +1893,7 @@
       "$(c) ^{52}13 * 13$",
       "$(d) 52!/(13!13!)$"
     ],
-    "correctAnswer": "(a)",
+    "correctAnswer": "$(a) 52!/13!$",
     "shortExplanation": "Fixing the order of 13 specific cards means we divide the total permutations (52!) by the number of ways to arrange those 13 cards (13!).",
     "tag": "S"
   },
@@ -1906,7 +1906,7 @@
       "$(c) 2^10$",
       "$(d) 2^11$"
     ],
-    "correctAnswer": "(b)",
+    "correctAnswer": "$(b) 2^20$",
     "shortExplanation": "Sum of selecting r from distinct and (10-r) from identical. Results in sum of ^{21}r from r=0 to 10, which is half of 2^21.",
     "tag": "S"
   },
@@ -1919,7 +1919,7 @@
       "$(c) ^{15}6$",
       "$(d) ^{10}5$"
     ],
-    "correctAnswer": "(a)",
+    "correctAnswer": "$(a) ^{14}5$",
     "shortExplanation": "$Using stars and bars formula (n-1)C(r-1) for at least one distribution: (15-1)C(6-1) = ^{14}5.$",
     "tag": "S"
   },
@@ -1930,9 +1930,9 @@
       "$(a) 12!/(5!5!2!2!)$",
       "$(b) 12!/(5!2!)$",
       "$(c) 12!/(5!5!2!)$",
-      "(d) None of these"
+      "None of these"
     ],
-    "correctAnswer": "(a)",
+    "correctAnswer": "$(a) 12!/(5!5!2!2!)$",
     "shortExplanation": "Group 12 into sizes 2, 5, 5. Formula: 12! / (2! 5! 5!). Since two groups are same size, divide by 2!.",
     "tag": "S"
   },
@@ -1940,12 +1940,12 @@
     "id": 50,
     "text": "$The exponent of 3 in 100! is: [Retrieved Context]$",
     "options": [
-      "(a) 33",
-      "(b) 44",
-      "(c) 48",
-      "(d) 52"
+      "33",
+      "44",
+      "48",
+      "52"
     ],
-    "correctAnswer": "(c)",
+    "correctAnswer": "48",
     "shortExplanation": "Use Legendre's Formula: [100/3] + [100/9] + [100/27] + [100/81] = 33 + 11 + 3 + 1 = 48.",
     "tag": "S"
   }
