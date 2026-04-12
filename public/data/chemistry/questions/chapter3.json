@@ -1,0 +1,1952 @@
+[
+  {
+    "id": 1,
+    "text": "The fraction of volume occupied by the nucleus with respect to the total volume of an atom is:",
+    "options": [
+      "$10^{-15}$",
+      "$10^{-5}$",
+      "$10^{-30}$",
+      "$10^{-10}$"
+    ],
+    "correctAnswer": "$10^{-15}$",
+    "shortExplanation": "The radius of an atom is $\\approx 10^{-10} \\text{ m}$ and the nucleus is $\\approx 10^{-15} \\text{ m}$. Since $\\text{Volume} \\propto r^3$, the ratio is $(10^{-15}/10^{-10})^3 = 10^{-15}$.",
+    "tag": "F"
+  },
+  {
+    "id": 2,
+    "text": "When lithium vapours were filled in the discharge tube for anode rays experiment, the anode rays were found to contain only $Li^{+}$ ions ($A=7, Z=3$). Therefore, each particle of anode rays contains:",
+    "options": [
+      "1 proton only",
+      "3 protons and 4 neutrons only",
+      "3 protons, 4 neutrons and 2 electrons",
+      "3 protons, 3 neutrons and 3 electrons"
+    ],
+    "correctAnswer": "3 protons and 4 neutrons only",
+    "shortExplanation": "$Li^{+}$ is formed by removing one electron from a Li atom. Li ($A=7, Z=3$) has 3 protons and 4 neutrons; as an ion, it lacks the orbital electrons but retains the nucleus.",
+    "tag": "F"
+  },
+  {
+    "id": 3,
+    "text": "The ratio of $e/m$ for a cathode ray:",
+    "options": [
+      "Varies with a gas in a discharge tube",
+      "Is fixed",
+      "Varies with different electrodes",
+      "Is maximum if hydrogen is taken"
+    ],
+    "correctAnswer": "Is fixed",
+    "shortExplanation": "Cathode rays consist of electrons. The charge-to-mass ratio ($e/m$) of an electron is a universal constant and does not depend on the gas or electrodes used.",
+    "tag": "F"
+  },
+  {
+    "id": 4,
+    "text": "Cathode rays have:",
+    "options": [
+      "Mass only",
+      "Charge only",
+      "No mass and no charge",
+      "Mass and charge both"
+    ],
+    "correctAnswer": "Mass and charge both",
+    "shortExplanation": "Cathode rays are streams of electrons, which possess both a definite rest mass ($9.1 \\times 10^{-31} \\text{ kg}$) and a negative charge.",
+    "tag": "F"
+  },
+  {
+    "id": 5,
+    "text": "Which is the correct statement about proton?",
+    "options": [
+      "It is a nucleus of deuterium",
+      "It is an ionised hydrogen molecule",
+      "It is an ionised hydrogen atom",
+      "It is an $\\alpha$-particle"
+    ],
+    "correctAnswer": "It is an ionised hydrogen atom",
+    "shortExplanation": "A hydrogen atom consists of one proton and one electron. Removing the electron ($H^+$) leaves just the proton.",
+    "tag": "F"
+  },
+  {
+    "id": 6,
+    "text": "Rutherford's experiment on scattering of $\\alpha$-particles showed for the first time that the atom has:",
+    "options": [
+      "Electrons",
+      "Protons",
+      "Nucleus",
+      "Neutrons"
+    ],
+    "correctAnswer": "Nucleus",
+    "shortExplanation": "The deflection of $\\alpha$-particles at large angles indicated the presence of a small, dense, positively charged center called the nucleus.",
+    "tag": "F"
+  },
+  {
+    "id": 7,
+    "text": "Bohr's model can explain:",
+    "options": [
+      "The spectrum of hydrogen atom only",
+      "Spectrum of atom or ion containing one electron only",
+      "The spectrum of hydrogen molecule",
+      "The solar spectrum"
+    ],
+    "correctAnswer": "Spectrum of atom or ion containing one electron only",
+    "shortExplanation": "Bohr's theory is applicable only to single-electron systems like $H$, $He^+$, $Li^{2+}$, etc.",
+    "tag": "F"
+  },
+  {
+    "id": 8,
+    "text": "The energy of an electron in the $n^{th}$ Bohr orbit of hydrogen atom is:",
+    "options": [
+      "$-13.6/n^2$ eV",
+      "$-13.6/n$ eV",
+      "$-13.6 \\times n^2$ eV",
+      "$-13.6 \\times n$ eV"
+    ],
+    "correctAnswer": "$-13.6/n^2$ eV",
+    "shortExplanation": "The energy of an electron in the $n^{th}$ shell is given by $E_n = -13.6 \\frac{Z^2}{n^2} \\text{ eV}$. For Hydrogen, $Z=1$.",
+    "tag": "F"
+  },
+  {
+    "id": 9,
+    "text": "The radius of the $3^{rd}$ Bohr orbit of $Li^{2+}$ ion is:",
+    "options": [
+      "$0.529 \\text{ \\AA}$",
+      "$1.587 \\text{ \\AA}$",
+      "$4.761 \\text{ \\AA}$",
+      "$0.176 \\text{ \\AA}$"
+    ],
+    "correctAnswer": "$1.587 \\text{ \\AA}$",
+    "shortExplanation": "$r_n = 0.529 \\frac{n^2}{Z} \\text{ \\AA}$. For $Li^{2+}$, $Z=3$ and $n=3$, so $r = 0.529 \\times 9 / 3 = 1.587 \\text{ \\AA}$.",
+    "tag": "F"
+  },
+  {
+    "id": 10,
+    "text": "The velocity of an electron in the ground state of hydrogen atom is:",
+    "options": [
+      "$2.18 \\times 10^6 \\text{ m/s}$",
+      "$2.18 \\times 10^5 \\text{ m/s}$",
+      "$3 \\times 10^8 \\text{ m/s}$",
+      "$1.09 \\times 10^6 \\text{ m/s}$"
+    ],
+    "correctAnswer": "$2.18 \\times 10^6 \\text{ m/s}$",
+    "shortExplanation": "$v_n = 2.18 \\times 10^6 \\frac{Z}{n} \\text{ m/s}$. For $H$ ground state, $Z=1, n=1$.",
+    "tag": "F"
+  },
+  {
+    "id": 11,
+    "text": "The wavelength of the first line of Lyman series for hydrogen atom is:",
+    "options": [
+      "$1215 \\text{ \\AA}$",
+      "$1025 \\text{ \\AA}$",
+      "$6563 \\text{ \\AA}$",
+      "$4861 \\text{ \\AA}$"
+    ],
+    "correctAnswer": "$1215 \\text{ \\AA}$",
+    "shortExplanation": "Using $\\frac{1}{\\lambda} = R_H (\\frac{1}{n_1^2} - \\frac{1}{n_2^2})$ with $n_1=1, n_2=2$. $\\lambda = \\frac{4}{3R_H} \\approx 1215 \\text{ \\AA}$.",
+    "tag": "F"
+  },
+  {
+    "id": 12,
+    "text": "The wave number of a spectral line is $1.09 \\times 10^7 \\text{ m}^{-1}$. This line belongs to:",
+    "options": [
+      "Lyman series",
+      "Balmer series",
+      "Paschen series",
+      "Brackett series"
+    ],
+    "correctAnswer": "Lyman series",
+    "shortExplanation": "This value corresponds to the Rydberg constant $R_H$, which is the wave number for the limiting line ($n_2 = \\infty$) of the Lyman series ($n_1 = 1$).",
+    "tag": "F"
+  },
+  {
+    "id": 13,
+    "text": "The number of subshells in the $4^{th}$ energy level is:",
+    "options": [
+      "4",
+      "16",
+      "32",
+      "9"
+    ],
+    "correctAnswer": "4",
+    "shortExplanation": "The number of subshells in a shell is equal to the principal quantum number $n$. For $n=4$, subshells are $4s, 4p, 4d, 4f$.",
+    "tag": "F"
+  },
+  {
+    "id": 14,
+    "text": "The maximum number of electrons in a subshell with $l=3$ is:",
+    "options": [
+      "6",
+      "10",
+      "14",
+      "18"
+    ],
+    "correctAnswer": "14",
+    "shortExplanation": "Max electrons in a subshell $= 2(2l + 1)$. For $l=3$ ($f$-subshell), $2(2(3) + 1) = 14$.",
+    "tag": "F"
+  },
+  {
+    "id": 15,
+    "text": "Which of the following quantum numbers determines the orientation of an orbital?",
+    "options": [
+      "Principal",
+      "Azimuthal",
+      "Magnetic",
+      "Spin"
+    ],
+    "correctAnswer": "Magnetic",
+    "shortExplanation": "The magnetic quantum number ($m_l$) describes the behavior of the electron in a magnetic field and defines the spatial orientation of the orbital.",
+    "tag": "F"
+  },
+  {
+    "id": 16,
+    "text": "The total number of orbitals in a shell with $n=3$ is:",
+    "options": [
+      "3",
+      "6",
+      "9",
+      "18"
+    ],
+    "correctAnswer": "9",
+    "shortExplanation": "The number of orbitals in a principal shell is given by $n^2$. For $n=3$, $n^2 = 9$.",
+    "tag": "F"
+  },
+  {
+    "id": 17,
+    "text": "The electronic configuration of Chromium ($Z=24$) is:",
+    "options": [
+      "$[Ar] 3d^4 4s^2$",
+      "$[Ar] 3d^5 4s^1$",
+      "$[Ar] 3d^6 4s^0$",
+      "$[Ar] 4s^2 4p^4$"
+    ],
+    "correctAnswer": "$[Ar] 3d^5 4s^1$",
+    "shortExplanation": "Due to the extra stability of half-filled subshells, one $4s$ electron jumps to $3d$, resulting in $3d^5 4s^1$.",
+    "tag": "F"
+  },
+  {
+    "id": 18,
+    "text": "Which principle states that no two electrons in an atom can have the same set of four quantum numbers?",
+    "options": [
+      "Aufbau Principle",
+      "Hund's Rule",
+      "Pauli's Exclusion Principle",
+      "Heisenberg's Uncertainty Principle"
+    ],
+    "correctAnswer": "Pauli's Exclusion Principle",
+    "shortExplanation": "Pauli's Exclusion Principle restricts an orbital to two electrons with opposite spins, ensuring unique quantum sets for every electron.",
+    "tag": "F"
+  },
+  {
+    "id": 19,
+    "text": "The de-Broglie wavelength of a particle of mass $m$ moving with velocity $v$ is:",
+    "options": [
+      "$\\lambda = h/mv$",
+      "$\\lambda = hv/m$",
+      "$\\lambda = m/hv$",
+      "$\\lambda = mv/h$"
+    ],
+    "correctAnswer": "$\\lambda = h/mv$",
+    "shortExplanation": "The dual nature of matter relates wavelength $\\lambda$ to momentum $p=mv$ via Planck's constant $h$: $\\lambda = h/p$.",
+    "tag": "F"
+  },
+  {
+    "id": 20,
+    "text": "The number of radial nodes for a $3p$ orbital is:",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctAnswer": "1",
+    "shortExplanation": "Radial nodes $= n - l - 1$. For $3p$, $n=3, l=1$. Nodes $= 3 - 1 - 1 = 1$.",
+    "tag": "F"
+  },
+  {
+    "id": 21,
+    "text": "The shape of the $d_{z^2}$ orbital is:",
+    "options": [
+      "Double dumbbell",
+      "Spherical",
+      "Dumbbell with a doughnut-shaped ring",
+      "Four-lobed"
+    ],
+    "correctAnswer": "Dumbbell with a doughnut-shaped ring",
+    "shortExplanation": "The $d_{z^2}$ orbital is unique with two lobes along the Z-axis and a ring of electron density (torus) in the XY plane.",
+    "tag": "F"
+  },
+  {
+    "id": 22,
+    "text": "According to Heisenberg's Uncertainty Principle, the product of uncertainty in position and momentum is:",
+    "options": [
+      "$\\ge h/4\\pi$",
+      "$\\le h/4\\pi$",
+      "$= h/2\\pi$",
+      "$\\ge h/2\\pi$"
+    ],
+    "correctAnswer": "$\\ge h/4\\pi$",
+    "shortExplanation": "$\\Delta x \\cdot \\Delta p \\ge \\frac{h}{4\\pi}$ defines the fundamental limit to measuring complementary variables simultaneously.",
+    "tag": "F"
+  },
+  {
+    "id": 23,
+    "text": "The wavelength of a photon with energy 3.03 $\\times 10^{-19}$ J is: ($h = 6.6 \\times 10^{-34}$ J s, $c = 3 \\times 10^8$ m/s)",
+    "options": [
+      "656 nm",
+      "328 nm",
+      "486 nm",
+      "102 nm"
+    ],
+    "correctAnswer": "656 nm",
+    "shortExplanation": "$\\lambda = hc/E$. $\\lambda = (6.6 \\times 10^{-34} \\times 3 \\times 10^8) / 3.03 \\times 10^{-19} \\approx 656 \\times 10^{-9}$ m.",
+    "tag": "F"
+  },
+  {
+    "id": 24,
+    "text": "Which of the following transitions in a hydrogen atom will emit a photon of the highest frequency?",
+    "options": [
+      "$n=2$ to $n=1$",
+      "$n=6$ to $n=2$",
+      "$n=4$ to $n=3$",
+      "$n=3$ to $n=2$"
+    ],
+    "correctAnswer": "$n=2$ to $n=1$",
+    "shortExplanation": "The energy gap between $n=2$ and $n=1$ is 10.2 eV, which is larger than any other listed transition (e.g., $n=6$ to $2$ is $\\approx 3.02$ eV).",
+    "tag": "F"
+  },
+  {
+    "id": 25,
+    "text": "The orbital angular momentum of an electron in a $2s$ orbital is:",
+    "options": [
+      "$h/2\\pi$",
+      "0",
+      "$\\sqrt{2} h/2\\pi$",
+      "$\\sqrt{6} h/2\\pi$"
+    ],
+    "correctAnswer": "0",
+    "shortExplanation": "Orbital angular momentum $= \\sqrt{l(l+1)} \\frac{h}{2\\pi}$. For $s$-orbitals, $l=0$, so the value is $0$.",
+    "tag": "F"
+  },
+  {
+    "id": 26,
+    "text": "The correct order of increasing energy of the orbitals $4s, 3p, 3d, 4p$ is:",
+    "options": [
+      "$3p < 3d < 4s < 4p$",
+      "$3p < 4s < 3d < 4p$",
+      "$4s < 3p < 3d < 4p$",
+      "$3p < 3d < 4p < 4s$"
+    ],
+    "correctAnswer": "$3p < 4s < 3d < 4p$",
+    "shortExplanation": "According to $(n+l)$ rule: $3p(4), 4s(4), 3d(5), 4p(5)$. For same $(n+l)$, lower $n$ has lower energy.",
+    "tag": "F"
+  },
+  {
+    "id": 27,
+    "text": "The maximum number of electrons that can be accommodated in the shell for which $n=4$ is:",
+    "options": [
+      "16",
+      "32",
+      "18",
+      "50"
+    ],
+    "correctAnswer": "32",
+    "shortExplanation": "Maximum electrons in a shell $= 2n^2$. For $n=4$, $2(4^2) = 32$.",
+    "tag": "F"
+  },
+  {
+    "id": 28,
+    "text": "The wavelength of matter waves associated with an electron accelerated through a potential difference of $V$ volts is approximately:",
+    "options": [
+      "$\\sqrt{150/V} \\text{ \\AA}$",
+      "$12.27/\\sqrt{V} \\text{ \\AA}$",
+      "ทั้ง (a) and (b)",
+      "$h/mV$"
+    ],
+    "correctAnswer": "ทั้ง (a) and (b)",
+    "shortExplanation": "$\\lambda = \\frac{h}{\\sqrt{2meV}}$. Substituting values gives $\\lambda \\approx \\frac{12.27}{\\sqrt{V}} \\text{ \\AA}$, which is also $\\sqrt{\\frac{150}{V}} \\text{ \\AA}$.",
+    "tag": "F"
+  },
+  {
+    "id": 29,
+    "text": "Uncertainty in position of a 0.25 g particle is $10^{-5}$ m. Uncertainty in its velocity is ($h = 6.6 \\times 10^{-34}$ J s):",
+    "options": [
+      "$1.2 \\times 10^{-34} \\text{ m/s}$",
+      "$2.1 \\times 10^{-26} \\text{ m/s}$",
+      "$1.6 \\times 10^{-20} \\text{ m/s}$",
+      "$1.7 \\times 10^{-9} \\text{ m/s}$"
+    ],
+    "correctAnswer": "$2.1 \\times 10^{-26} \\text{ m/s}$",
+    "shortExplanation": "$\\Delta v = h / (4\\pi m \\Delta x)$. $\\Delta v = 6.6 \\times 10^{-34} / (4 \\times 3.14 \\times 0.25 \\times 10^{-3} \\times 10^{-5}) \\approx 2.1 \\times 10^{-26} \\text{ m/s}$.",
+    "tag": "F"
+  },
+  {
+    "id": 30,
+    "text": "The spin magnetic moment of $Co^{2+}$ ($Z=27$) is:",
+    "options": [
+      "87 BM",
+      "90 BM",
+      "92 BM",
+      "73 BM"
+    ],
+    "correctAnswer": "87 BM",
+    "shortExplanation": "$Co^{2+}$ is $3d^7$. It has 3 unpaired electrons. $\\mu = \\sqrt{n(n+2)} = \\sqrt{3(5)} = \\sqrt{15} \\approx 3.87 \\text{ BM}$.",
+    "tag": "F"
+  },
+  {
+    "id": 31,
+    "text": "The set of quantum numbers not possible is:",
+    "options": [
+      "$n=3, l=0, m=0, s=+1/2$",
+      "$n=3, l=2, m=0, s=-1/2$",
+      "$n=3, l=3, m=1, s=+1/2$",
+      "$n=3, l=2, m=-2, s=-1/2$"
+    ],
+    "correctAnswer": "$n=3, l=3, m=1, s=+1/2$",
+    "shortExplanation": "$l$ must be less than $n$. For $n=3$, the maximum value of $l$ is $n-1 = 2$.",
+    "tag": "F"
+  },
+  {
+    "id": 32,
+    "text": "The work function of a metal is 4.0 eV. To emit photoelectrons, the minimum frequency of radiation required is:",
+    "options": [
+      "$1.0 \\times 10^{15} \\text{ Hz}$",
+      "$2.0 \\times 10^{15} \\text{ Hz}$",
+      "$3.0 \\times 10^{15} \\text{ Hz}$",
+      "$4.0 \\times 10^{15} \\text{ Hz}$"
+    ],
+    "correctAnswer": "$1.0 \\times 10^{15} \\text{ Hz}$",
+    "shortExplanation": "$\\Phi = h\\nu_0$. $\\nu_0 = (4.0 \\times 1.6 \\times 10^{-19}) / 6.626 \\times 10^{-34} \\approx 0.96 \\times 10^{15} \\text{ Hz}$.",
+    "tag": "F"
+  },
+  {
+    "id": 33,
+    "text": "A p-orbital can accommodate a maximum of:",
+    "options": [
+      "2 electrons",
+      "6 electrons",
+      "3 electrons",
+      "1 electron"
+    ],
+    "correctAnswer": "2 electrons",
+    "shortExplanation": "A single orbital, regardless of its type (s, p, d, f), can hold a maximum of 2 electrons. The p-subshell (3 orbitals) can hold 6.",
+    "tag": "F"
+  },
+  {
+    "id": 34,
+    "text": "The transition from $n=4$ to $n=2$ in hydrogen spectrum results in:",
+    "options": [
+      "$H_\\alpha$ line",
+      "$H_\\beta$ line",
+      "$H_\\gamma$ line",
+      "$H_\\delta$ line"
+    ],
+    "correctAnswer": "$H_\\beta$ line",
+    "shortExplanation": "In the Balmer series ($n_1=2$), $n_2=3$ is $H_\\alpha$, $n_2=4$ is $H_\\beta$, and $n_2=5$ is $H_\\gamma$.",
+    "tag": "F"
+  },
+  {
+    "id": 35,
+    "text": "The potential energy of an electron in the first Bohr orbit of hydrogen is:",
+    "options": [
+      "$-27.2$ eV",
+      "$-13.6$ eV",
+      "$+13.6$ eV",
+      "$-6.8$ eV"
+    ],
+    "correctAnswer": "$-27.2$ eV",
+    "shortExplanation": "P.E. $= 2 \\times$ Total Energy. Since $E_1 = -13.6$ eV, P.E. $= 2(-13.6) = -27.2$ eV.",
+    "tag": "F"
+  },
+  {
+    "id": 36,
+    "text": "Which of the following is the correct electronic configuration of $Cu^+$ ($Z=29$)?",
+    "options": [
+      "$[Ar] 3d^9 4s^1$",
+      "$[Ar] 3d^{10} 4s^0$",
+      "$[Ar] 3d^8 4s^2$",
+      "$[Ar] 3d^{10} 4s^1$"
+    ],
+    "correctAnswer": "$[Ar] 3d^{10} 4s^0$",
+    "shortExplanation": "$Cu$ is $[Ar] 3d^{10} 4s^1$. $Cu^+$ is formed by removing the $4s$ electron, leaving $[Ar] 3d^{10}$.",
+    "tag": "F"
+  },
+  {
+    "id": 37,
+    "text": "The value of Planck's constant is:",
+    "options": [
+      "$6.626 \\times 10^{-34} \\text{ J s}$",
+      "$6.626 \\times 10^{-34} \\text{ kg m}^2 \\text{ s}^{-1}$",
+      "$6.626 \\times 10^{-27} \\text{ erg s}$",
+      "All of these"
+    ],
+    "correctAnswer": "All of these",
+    "shortExplanation": "The units J s and kg m$^2$ s$^{-1}$ are equivalent in SI. $10^{-34}$ J s is equal to $10^{-27}$ erg s in CGS.",
+    "tag": "F"
+  },
+  {
+    "id": 38,
+    "text": "The energy of second Bohr orbit of the hydrogen atom is $-328$ kJ/mol; hence the energy of fourth Bohr orbit would be:",
+    "options": [
+      "$-41 \\text{ kJ/mol}$",
+      "$-82 \\text{ kJ/mol}$",
+      "$-164 \\text{ kJ/mol}$",
+      "$-1312 \\text{ kJ/mol}$"
+    ],
+    "correctAnswer": "$-82 \\text{ kJ/mol}$",
+    "shortExplanation": "$E_n \\propto 1/n^2$. $E_4 = E_2 \\times (2^2/4^2) = E_2/4$. $-328 / 4 = -82 \\text{ kJ/mol}$.",
+    "tag": "F"
+  },
+  {
+    "id": 39,
+    "text": "Which of the following contains the same number of electrons as $Cl^-$?",
+    "options": [
+      "$S^{2-}$",
+      "$Ar$",
+      "$K^+$",
+      "All of these"
+    ],
+    "correctAnswer": "All of these",
+    "shortExplanation": "$Cl^-$ has 18 electrons. $S^{2-}$ (16+2), $Ar$ (18), and $K^+$ (19-1) all have 18 electrons.",
+    "tag": "F"
+  },
+  {
+    "id": 40,
+    "text": "The radius of the nucleus is proportional to:",
+    "options": [
+      "$A^{1/3}$",
+      "$A^{2/3}$",
+      "$A$",
+      "$A^3$"
+    ],
+    "correctAnswer": "$A^{1/3}$",
+    "shortExplanation": "The nuclear radius $R$ is given by $R = R_0 A^{1/3}$, where $A$ is the mass number.",
+    "tag": "F"
+  },
+  {
+    "id": 41,
+    "text": "The number of unpaired electrons in $Fe^{2+}$ ($Z=26$) is:",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "correctAnswer": "4",
+    "shortExplanation": "$Fe^{2+}$ is $3d^6$. According to Hund's rule, 4 electrons remain unpaired while 2 are paired in one orbital.",
+    "tag": "F"
+  },
+  {
+    "id": 42,
+    "text": "If the uncertainty in velocity of an electron is $5.7 \\times 10^5 \\text{ m/s}$, the uncertainty in its position is ($h = 6.6 \\times 10^{-34}$ J s):",
+    "options": [
+      "$10^{-10} \\text{ m}$",
+      "$10^{-8} \\text{ m}$",
+      "$10^{-12} \\text{ m}$",
+      "$10^{-7} \\text{ m}$"
+    ],
+    "correctAnswer": "$10^{-10} \\text{ m}$",
+    "shortExplanation": "$\\Delta x = h / (4\\pi m \\Delta v)$. $\\Delta x \\approx 6.6 \\times 10^{-34} / (12.56 \\times 9.1 \\times 10^{-31} \\times 5.7 \\times 10^5) \\approx 10^{-10} \\text{ m}$.",
+    "tag": "F"
+  },
+  {
+    "id": 43,
+    "text": "The Bohr frequency condition is given by:",
+    "options": [
+      "$\\Delta E = h\\nu$",
+      "$E = mc^2$",
+      "$\\lambda = h/p$",
+      "$mvr = nh/2\\pi$"
+    ],
+    "correctAnswer": "$\\Delta E = h\\nu$",
+    "shortExplanation": "Bohr's third postulate states that the energy of the emitted/absorbed photon is the difference between the energy levels: $h\\nu = E_2 - E_1$.",
+    "tag": "F"
+  },
+  {
+    "id": 44,
+    "text": "Total number of angular nodes in $3d$ orbital is:",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctAnswer": "2",
+    "shortExplanation": "Angular nodes are equal to the azimuthal quantum number $l$. For $d$-orbitals, $l=2$.",
+    "tag": "F"
+  },
+  {
+    "id": 45,
+    "text": "In the photoelectric effect, the kinetic energy of emitted electrons depends on:",
+    "options": [
+      "Intensity of incident light",
+      "Frequency of incident light",
+      "Time of exposure",
+      "Distance of source"
+    ],
+    "correctAnswer": "Frequency of incident light",
+    "shortExplanation": "Einstein's equation $K.E._{max} = h\\nu - \\Phi$ shows that K.E. is a linear function of frequency $\\nu$.",
+    "tag": "F"
+  },
+  {
+    "id": 46,
+    "text": "The species which is not isoelectronic with $N_2$ is:",
+    "options": [
+      "$CO$",
+      "$NO^+$",
+      "$CN^-$",
+      "$O_2$"
+    ],
+    "correctAnswer": "$O_2$",
+    "shortExplanation": "$N_2$ has 14 electrons. $CO$ (6+8=14), $NO^+$ (7+8-1=14), $CN^-$ (6+7+1=14). $O_2$ has 16 electrons.",
+    "tag": "F"
+  },
+  {
+    "id": 47,
+    "text": "The energy of the electron in the first excited state of H-atom is:",
+    "options": [
+      "$-13.6$ eV",
+      "$-3.4$ eV",
+      "$-1.51$ eV",
+      "$-0.85$ eV"
+    ],
+    "correctAnswer": "$-3.4$ eV",
+    "shortExplanation": "First excited state is $n=2$. $E_2 = -13.6/2^2 = -3.4$ eV.",
+    "tag": "F"
+  },
+  {
+    "id": 48,
+    "text": "Which of the following is correct for $2p$ orbital?",
+    "options": [
+      "$n=2, l=1$",
+      "$n=2, l=0$",
+      "$n=1, l=2$",
+      "$n=2, l=2$"
+    ],
+    "correctAnswer": "$n=2, l=1$",
+    "shortExplanation": "The number prefix is the principal shell ($n=2$). The 'p' subshell corresponds to $l=1$.",
+    "tag": "F"
+  },
+  {
+    "id": 49,
+    "text": "The spectrum of $He^+$ is similar to that of:",
+    "options": [
+      "$H$",
+      "$Li^+$",
+      "$Na$",
+      "$He$"
+    ],
+    "correctAnswer": "$H$",
+    "shortExplanation": "Both $H$ and $He^+$ are single-electron systems and follow the Bohr model and Rydberg formula for their spectra.",
+    "tag": "F"
+  },
+  {
+    "id": 50,
+    "text": "The velocity of an electron in the $n^{th}$ Bohr orbit is:",
+    "options": [
+      "Proportional to $n$",
+      "Inversely proportional to $n$",
+      "Proportional to $n^2$",
+      "Inversely proportional to $n^2$"
+    ],
+    "correctAnswer": "Inversely proportional to $n$",
+    "shortExplanation": "$v_n = \\frac{2.18 \\times 10^6 \\cdot Z}{n}$. As $n$ increases, the velocity of the electron decreases.",
+    "tag": "F"
+  },
+  {
+    "id": 1,
+    "text": "Which of the following statements about the electron is incorrect?",
+    "options": [
+      "It is a negatively charged particle.",
+      "The mass of electron is equal to the mass of neutron.",
+      "It is a basic constituent of all atoms.",
+      "It is a constituent of cathode rays."
+    ],
+    "correctAnswer": "The mass of electron is equal to the mass of neutron.",
+    "shortExplanation": "The mass of an electron is approximately $9.1 \\times 10^{-31}$ kg, which is about 1836 times lighter than a neutron.",
+    "tag": "C"
+  },
+  {
+    "id": 2,
+    "text": "From the discharge tube experiment, it is concluded that:",
+    "options": [
+      "mass of proton is fractional.",
+      "matter contains electrons.",
+      "matter contains nucleus.",
+      "positive rays are heavier than protons."
+    ],
+    "correctAnswer": "matter contains electrons.",
+    "shortExplanation": "The discharge tube experiment led to the discovery of cathode rays, which are composed of electrons, proving they are a constituent of matter.",
+    "tag": "C"
+  },
+  {
+    "id": 3,
+    "text": "The cathode rays experiment demonstrated that:",
+    "options": [
+      "$\\alpha$-particles are the nuclei of atoms.",
+      "$e/m$ the ratio for the particles of the cathode rays varies gas to gas.",
+      "cathode rays are streams of negatively charged particles.",
+      "the mass of an atom is essentially all contained in its very small nucleus."
+    ],
+    "correctAnswer": "cathode rays are streams of negatively charged particles.",
+    "shortExplanation": "Cathode rays are deflected by electric and magnetic fields in a manner indicating they consist of negatively charged particles (electrons).",
+    "tag": "C"
+  },
+  {
+    "id": 4,
+    "text": "The volume of nucleus is about:",
+    "options": [
+      "$10^{-4}$ times to that of an atom",
+      "$10^{-15}$ times to that of an atom",
+      "$10^{-5}$ times to that of an atom",
+      "$10^{-10}$ times to that of an atom"
+    ],
+    "correctAnswer": "$10^{-15}$ times to that of an atom",
+    "shortExplanation": "The radius of a nucleus is $10^{-15}$ m and atom is $10^{-10}$ m. Volume ratio is $(r_{n}/r_{a})^3 = (10^{-5})^3 = 10^{-15}$.",
+    "tag": "C"
+  },
+  {
+    "id": 5,
+    "text": "Rutherford's experiment on the scattering of $\\alpha$-particles showed for the first time that the atom has:",
+    "options": [
+      "electrons",
+      "protons",
+      "nucleus",
+      "neutrons"
+    ],
+    "correctAnswer": "nucleus",
+    "shortExplanation": "The scattering of $\\alpha$-particles at large angles indicated a concentrated positive charge at the center, leading to the discovery of the nucleus.",
+    "tag": "C"
+  },
+  {
+    "id": 6,
+    "text": "In order to increase the kinetic energy of ejected photoelectrons, there should be an increase in:",
+    "options": [
+      "Intensity of radiation.",
+      "Wavelength of radiation.",
+      "Frequency of radiation.",
+      "Both wavelength and frequency."
+    ],
+    "correctAnswer": "Frequency of radiation.",
+    "shortExplanation": "According to Einstein's photoelectric equation, $K.E. = h\\nu - \\phi$. Increasing the frequency ($\\nu$) increases the kinetic energy.",
+    "tag": "C"
+  },
+  {
+    "id": 7,
+    "text": "Which of the following is the correct order of energy of the possible subshells of 3rd shell?",
+    "options": [
+      "$3s > 3p > 3d$",
+      "$3s < 3p < 3d$",
+      "$3s = 3p = 3d$",
+      "$3p < 3s < 3d$"
+    ],
+    "correctAnswer": "$3s < 3p < 3d$",
+    "shortExplanation": "Based on the $(n+l)$ rule, for the same $n$, the subshell with the lower $l$ value has lower energy: $3s(l=0) < 3p(l=1) < 3d(l=2)$.",
+    "tag": "C"
+  },
+  {
+    "id": 8,
+    "text": "The number of radial nodes and angular nodes for $d$-orbital are respectively:",
+    "options": [
+      "$(n-l-1)$ and $l$",
+      "$(n-l-2)$ and $l$",
+      "$(n-l-1)$ and $(l-1)$",
+      "$(n-l)$ and $l$"
+    ],
+    "correctAnswer": "$(n-l-1)$ and $l$",
+    "shortExplanation": "Radial nodes are given by $n-l-1$ and angular nodes are equal to the azimuthal quantum number $l$.",
+    "tag": "C"
+  },
+  {
+    "id": 9,
+    "text": "Which of the following transitions will emit a photon of highest frequency in H-atom?",
+    "options": [
+      "$n=2 \\rightarrow n=1$",
+      "$n=4 \\rightarrow n=2$",
+      "$n=4 \\rightarrow n=3$",
+      "$n=3 \\rightarrow n=2$"
+    ],
+    "correctAnswer": "$n=2 \\rightarrow n=1$",
+    "shortExplanation": "The energy difference $\\Delta E$ is greatest for the $n=2$ to $n=1$ transition. Since $E = h\\nu$, frequency is also highest.",
+    "tag": "C"
+  },
+  {
+    "id": 10,
+    "text": "The de-Broglie wavelength of a tennis ball of mass 60 g moving with a velocity of 10 m/s is approximately: ($h = 6.63 \\times 10^{-34}$ J s)",
+    "options": [
+      "$10^{-33}$ m",
+      "$10^{-31}$ m",
+      "$10^{-16}$ m",
+      "$10^{-25}$ m"
+    ],
+    "correctAnswer": "$10^{-33}$ m",
+    "shortExplanation": "$\\lambda = h/mv = (6.63 \\times 10^{-34}) / (0.06 \\times 10) \\approx 1.1 \\times 10^{-33}$ m.",
+    "tag": "C"
+  },
+  {
+    "id": 11,
+    "text": "The orbital angular momentum for a $2p$-electron is:",
+    "options": [
+      "$\\sqrt{3} h/2\\pi$",
+      "$\\sqrt{6} h/2\\pi$",
+      "$\\sqrt{2} h/2\\pi$",
+      "$h/2\\pi$"
+    ],
+    "correctAnswer": "$\\sqrt{2} h/2\\pi$",
+    "shortExplanation": "Orbital angular momentum $= \\sqrt{l(l+1)} \\frac{h}{2\\pi}$. For $p$-orbital, $l=1$, so $\\sqrt{1(2)} \\frac{h}{2\\pi} = \\sqrt{2} \\frac{h}{2\\pi}$.",
+    "tag": "C"
+  },
+  {
+    "id": 12,
+    "text": "The electronic configuration of an element is $1s^2 2s^2 2p^6 3s^2 3p^6 3d^5 4s^1$. This represents its:",
+    "options": [
+      "Excited state",
+      "Ground state",
+      "Cationic state",
+      "None of these"
+    ],
+    "correctAnswer": "Ground state",
+    "shortExplanation": "This is the ground state configuration of Chromium ($Z=24$), which is stable due to the half-filled $d$-subshell.",
+    "tag": "C"
+  },
+  {
+    "id": 13,
+    "text": "The total number of orbitals in a shell with principal quantum number $n$ is:",
+    "options": [
+      "$2n$",
+      "$n^2$",
+      "$2n^2$",
+      "$n+1$"
+    ],
+    "correctAnswer": "$n^2$",
+    "shortExplanation": "A shell with principal quantum number $n$ contains $n$ subshells, and the total number of orbitals is $n^2$.",
+    "tag": "C"
+  },
+  {
+    "id": 14,
+    "text": "Which of the following sets of quantum numbers is not possible?",
+    "options": [
+      "$n=4, l=0, m=0, s=+1/2$",
+      "$n=3, l=1, m=0, s=-1/2$",
+      "$n=3, l=2, m=-3, s=+1/2$",
+      "$n=2, l=1, m=1, s=-1/2$"
+    ],
+    "correctAnswer": "$n=3, l=2, m=-3, s=+1/2$",
+    "shortExplanation": "The magnetic quantum number $m$ must be between $-l$ and $+l$. For $l=2$, $m$ cannot be $-3$.",
+    "tag": "C"
+  },
+  {
+    "id": 15,
+    "text": "The energy of an electron in the $n^{th}$ Bohr orbit of H-atom is:",
+    "options": [
+      "$-13.6/n^2$ eV",
+      "$-13.6/n$ eV",
+      "$-13.6 \\times n^2$ eV",
+      "$13.6/n^2$ eV"
+    ],
+    "correctAnswer": "$-13.6/n^2$ eV",
+    "shortExplanation": "The energy of the $n^{th}$ level in Hydrogen is given by $E_n = -R_H(1/n^2)$, which is approximately $-13.6/n^2$ eV.",
+    "tag": "C"
+  },
+  {
+    "id": 16,
+    "text": "If uncertainty in position and momentum are equal, then uncertainty in velocity is:",
+    "options": [
+      "$\\frac{1}{2m} \\sqrt{\\frac{h}{\\pi}}$",
+      "$\\sqrt{\\frac{h}{\\pi}}$",
+      "$\\frac{1}{m} \\sqrt{\\frac{h}{\\pi}}$",
+      "$\\frac{h}{\\pi}$"
+    ],
+    "correctAnswer": "$\\frac{1}{2m} \\sqrt{\\frac{h}{\\pi}}$",
+    "shortExplanation": "$\\Delta x \\Delta p = h/4\\pi$. Since $\\Delta x = \\Delta p$, $(\\Delta p)^2 = h/4\\pi$. So $m \\Delta v = \\sqrt{h/4\\pi}$, giving $\\Delta v = \\frac{1}{2m} \\sqrt{\\frac{h}{\\pi}}$.",
+    "tag": "C"
+  },
+  {
+    "id": 17,
+    "text": "The number of electrons with azimuthal quantum number $l=1$ in Phosphorus atom ($Z=15$) is:",
+    "options": [
+      "3",
+      "6",
+      "9",
+      "12"
+    ],
+    "correctAnswer": "9",
+    "shortExplanation": "Phosphorus is $1s^2 2s^2 2p^6 3s^2 3p^3$. $l=1$ refers to $p$-orbitals. Total $p$-electrons $= 6 (2p) + 3 (3p) = 9$.",
+    "tag": "C"
+  },
+  {
+    "id": 18,
+    "text": "The ratio of radii of the first three Bohr orbits of H-atom is:",
+    "options": [
+      "$1:2:3$",
+      "$1:4:9$",
+      "$1:3:5$",
+      "$1:8:27$"
+    ],
+    "correctAnswer": "$1:4:9$",
+    "shortExplanation": "Radius of Bohr orbit $r_n \\propto n^2$. For $n=1, 2, 3$, the ratio is $1^2:2^2:3^2 = 1:4:9$.",
+    "tag": "C"
+  },
+  {
+    "id": 19,
+    "text": "The number of unpaired electrons in $Fe^{3+}$ ($Z=26$) is:",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "correctAnswer": "5",
+    "shortExplanation": "Fe is $[Ar] 3d^6 4s^2$. $Fe^{3+}$ is $[Ar] 3d^5$. There are 5 unpaired electrons in the $3d$ subshell.",
+    "tag": "C"
+  },
+  {
+    "id": 20,
+    "text": "Maximum number of electrons in a subshell with azimuthal quantum number $l$ is:",
+    "options": [
+      "$2l+1$",
+      "$2(2l+1)$",
+      "$4l+1$",
+      "$2n^2$"
+    ],
+    "correctAnswer": "$2(2l+1)$",
+    "shortExplanation": "The number of orbitals in a subshell is $2l+1$. Each orbital holds 2 electrons, so max electrons $= 2(2l+1)$.",
+    "tag": "C"
+  },
+  {
+    "id": 21,
+    "text": "Which of the following is isoelectronic with $CO$?",
+    "options": [
+      "$N_2^+$",
+      "$N_2$",
+      "$O_2$",
+      "$O_2^+$"
+    ],
+    "correctAnswer": "$N_2$",
+    "shortExplanation": "$CO$ has $6+8=14$ electrons. $N_2$ has $7+7=14$ electrons, making them isoelectronic.",
+    "tag": "C"
+  },
+  {
+    "id": 22,
+    "text": "The wavelength of the first line of Balmer series for H-atom is: ($R = \\text{Rydberg constant}$)",
+    "options": [
+      "$5/36R$",
+      "$36/5R$",
+      "$4/3R$",
+      "$R/4$"
+    ],
+    "correctAnswer": "$36/5R$",
+    "shortExplanation": "$1/\\lambda = R(1/2^2 - 1/3^2) = R(1/4 - 1/9) = 5R/36$. So $\\lambda = 36/5R$.",
+    "tag": "C"
+  },
+  {
+    "id": 23,
+    "text": "Which of the following orbitals has two spherical nodes?",
+    "options": [
+      "$2s$",
+      "$3s$",
+      "$3p$",
+      "$3d$"
+    ],
+    "correctAnswer": "$3s$",
+    "shortExplanation": "Spherical (radial) nodes $= n-l-1$. For $3s$: $3-0-1 = 2$.",
+    "tag": "C"
+  },
+  {
+    "id": 24,
+    "text": "The spin magnetic moment of $Cr^{3+}$ ($Z=24$) is:",
+    "options": [
+      "87 BM",
+      "90 BM",
+      "92 BM",
+      "84 BM"
+    ],
+    "correctAnswer": "87 BM",
+    "shortExplanation": "$Cr^{3+}$ is $[Ar] 3d^3$. Unpaired electrons $n=3$. $\\mu = \\sqrt{n(n+2)} = \\sqrt{3(5)} = \\sqrt{15} \\approx 3.87$ BM.",
+    "tag": "C"
+  },
+  {
+    "id": 25,
+    "text": "Which experiment proved that most of the space in an atom is empty?",
+    "options": [
+      "Cathode ray experiment",
+      "$\\alpha$-particle scattering experiment",
+      "Oil drop experiment",
+      "Discharge tube experiment"
+    ],
+    "correctAnswer": "$\\alpha$-particle scattering experiment",
+    "shortExplanation": "In Rutherford's experiment, most $\\alpha$-particles passed through the gold foil undeflected, indicating empty space.",
+    "tag": "C"
+  },
+  {
+    "id": 26,
+    "text": "The work function of a metal is 4.2 eV. If radiation of 2000 $\\text{\\AA}$ falls on it, the kinetic energy of fastest photoelectron is:",
+    "options": [
+      "0 eV",
+      "2 eV",
+      "5 eV",
+      "1 eV"
+    ],
+    "correctAnswer": "0 eV",
+    "shortExplanation": "$E = 12400/2000 = 6.2$ eV. $K.E. = E - \\phi = 6.2 - 4.2 = 2.0$ eV.",
+    "tag": "C"
+  },
+  {
+    "id": 27,
+    "text": "The uncertainty in momentum of an electron is $10^{-5}$ kg m/s. The uncertainty in its position is:",
+    "options": [
+      "$5.27 \\times 10^{-30}$ m",
+      "$1.05 \\times 10^{-29}$ m",
+      "$5.27 \\times 10^{-28}$ m",
+      "$2.14 \\times 10^{-31}$ m"
+    ],
+    "correctAnswer": "$5.27 \\times 10^{-30}$ m",
+    "shortExplanation": "$\\Delta x = h / (4\\pi \\Delta p) = (6.626 \\times 10^{-34}) / (4 \\times 3.14 \\times 10^{-5}) \\approx 5.27 \\times 10^{-30}$ m.",
+    "tag": "C"
+  },
+  {
+    "id": 28,
+    "text": "What is the maximum number of emission lines when an electron jumps from $n=6$ to ground state?",
+    "options": [
+      "6",
+      "10",
+      "15",
+      "21"
+    ],
+    "correctAnswer": "15",
+    "shortExplanation": "Number of lines $= n(n-1)/2$. For $n=6$, $6(5)/2 = 15$.",
+    "tag": "C"
+  },
+  {
+    "id": 29,
+    "text": "The orientation of an atomic orbital is governed by:",
+    "options": [
+      "Principal quantum number",
+      "Azimuthal quantum number",
+      "Magnetic quantum number",
+      "Spin quantum number"
+    ],
+    "correctAnswer": "Magnetic quantum number",
+    "shortExplanation": "Magnetic quantum number ($m$) determines the spatial orientation of the orbital relative to a set of axes.",
+    "tag": "C"
+  },
+  {
+    "id": 30,
+    "text": "The number of radial nodes in $4d$ orbital is:",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correctAnswer": "1",
+    "shortExplanation": "Radial nodes $= n-l-1$. For $4d$: $4-2-1 = 1$.",
+    "tag": "C"
+  },
+  {
+    "id": 31,
+    "text": "The correct set of quantum numbers for the valence electron of Potassium ($Z=19$) is:",
+    "options": [
+      "$4, 0, 0, +1/2$",
+      "$4, 1, 0, +1/2$",
+      "$3, 0, 0, +1/2$",
+      "$4, 1, 1, +1/2$"
+    ],
+    "correctAnswer": "$4, 0, 0, +1/2$",
+    "shortExplanation": "Potassium valence electron is in $4s$. Thus $n=4, l=0, m=0, s=+1/2$.",
+    "tag": "C"
+  },
+  {
+    "id": 32,
+    "text": "The discovery of neutrons was done by:",
+    "options": [
+      "J. Thomson",
+      "Ernest Rutherford",
+      "James Chadwick",
+      "Niels Bohr"
+    ],
+    "correctAnswer": "James Chadwick",
+    "shortExplanation": "James Chadwick discovered the neutron in 1932 by bombarding beryllium with $\\alpha$-particles.",
+    "tag": "C"
+  },
+  {
+    "id": 33,
+    "text": "A photon of wavelength 400 nm has energy:",
+    "options": [
+      "1 eV",
+      "2 eV",
+      "1 eV",
+      "0 eV"
+    ],
+    "correctAnswer": "1 eV",
+    "shortExplanation": "$E (\\text{eV}) = 1240 / \\lambda (\\text{nm}) = 1240/400 = 3.1$ eV.",
+    "tag": "C"
+  },
+  {
+    "id": 34,
+    "text": "Which rule states that electrons prefer to remain unpaired in degenerate orbitals?",
+    "options": [
+      "Pauli Exclusion Principle",
+      "Hund's Rule",
+      "Aufbau Principle",
+      "Heisenberg Principle"
+    ],
+    "correctAnswer": "Hund's Rule",
+    "shortExplanation": "Hund's rule of maximum multiplicity states that pairing only starts when each degenerate orbital is singly occupied.",
+    "tag": "C"
+  },
+  {
+    "id": 35,
+    "text": "The ratio of velocities of electron in 1st and 2nd Bohr orbits of H-atom is:",
+    "options": [
+      "$1:2$",
+      "$2:1$",
+      "$1:4$",
+      "$4:1$"
+    ],
+    "correctAnswer": "$2:1$",
+    "shortExplanation": "Velocity $v_n \\propto 1/n$. So $v_1/v_2 = n_2/n_1 = 2/1$.",
+    "tag": "C"
+  },
+  {
+    "id": 36,
+    "text": "The maximum number of electrons that can be accommodated in $f$-subshell is:",
+    "options": [
+      "6",
+      "10",
+      "14",
+      "18"
+    ],
+    "correctAnswer": "14",
+    "shortExplanation": "For $f$-subshell, $l=3$. Max electrons $= 2(2l+1) = 2(7) = 14$.",
+    "tag": "C"
+  },
+  {
+    "id": 37,
+    "text": "The energy required to excite an electron of H-atom from ground state to 1st excited state is:",
+    "options": [
+      "13.6 eV",
+      "10.2 eV",
+      "4 eV",
+      "5 eV"
+    ],
+    "correctAnswer": "10.2 eV",
+    "shortExplanation": "$E_2 - E_1 = -3.4 - (-13.6) = 10.2$ eV.",
+    "tag": "C"
+  },
+  {
+    "id": 38,
+    "text": "Which of the following atoms has no neutrons?",
+    "options": [
+      "Protium",
+      "Deuterium",
+      "Tritium",
+      "Helium"
+    ],
+    "correctAnswer": "Protium",
+    "shortExplanation": "Protium ($^1H$) has 1 proton and 0 neutrons.",
+    "tag": "C"
+  },
+  {
+    "id": 39,
+    "text": "The potential energy of electron in 1st Bohr orbit of H-atom is:",
+    "options": [
+      "$-13.6$ eV",
+      "$-27.2$ eV",
+      "$+13.6$ eV",
+      "$+27.2$ eV"
+    ],
+    "correctAnswer": "$-27.2$ eV",
+    "shortExplanation": "$P.E. = 2 \\times T.E. = 2 \\times (-13.6) = -27.2$ eV.",
+    "tag": "C"
+  },
+  {
+    "id": 40,
+    "text": "Which quantum number describes the size and energy of an orbital?",
+    "options": [
+      "Principal",
+      "Azimuthal",
+      "Magnetic",
+      "Spin"
+    ],
+    "correctAnswer": "Principal",
+    "shortExplanation": "The principal quantum number $n$ defines the main energy level and the average distance of the electron from the nucleus.",
+    "tag": "C"
+  },
+  {
+    "id": 41,
+    "text": "The de-Broglie wavelength is inversely proportional to:",
+    "options": [
+      "Mass",
+      "Velocity",
+      "Momentum",
+      "All of these"
+    ],
+    "correctAnswer": "All of these",
+    "shortExplanation": "$\\lambda = h/mv = h/p$, thus it is inversely proportional to mass, velocity, and momentum.",
+    "tag": "C"
+  },
+  {
+    "id": 42,
+    "text": "The number of spectral lines in the Balmer series when electron falls from $n=5$ to $n=2$ is:",
+    "options": [
+      "3",
+      "4",
+      "10",
+      "6"
+    ],
+    "correctAnswer": "3",
+    "shortExplanation": "Lines in specific series from $n_2$ to $n_1$ is $(n_2-n_1)$. Here $5-2=3$.",
+    "tag": "C"
+  },
+  {
+    "id": 43,
+    "text": "The electronic configuration of $Cu$ ($Z=29$) is $[Ar] 3d^{10} 4s^1$ instead of $[Ar] 3d^9 4s^2$ because:",
+    "options": [
+      "$4s$ has higher energy",
+      "$3d^{10}$ is more stable",
+      "$Cu$ is a transition metal",
+      "None of these"
+    ],
+    "correctAnswer": "$3d^{10}$ is more stable",
+    "shortExplanation": "Fully filled subshells ($d^{10}$) have extra stability due to symmetrical distribution of electrons and exchange energy.",
+    "tag": "C"
+  },
+  {
+    "id": 44,
+    "text": "A neutral atom with 28 electrons has how many unpaired electrons?",
+    "options": [
+      "0",
+      "2",
+      "4",
+      "6"
+    ],
+    "correctAnswer": "2",
+    "shortExplanation": "Configuration: $[Ar] 3d^8 4s^2$. In $3d^8$, 3 orbitals are paired and 2 are unpaired.",
+    "tag": "C"
+  },
+  {
+    "id": 45,
+    "text": "The wave nature of electron was verified by:",
+    "options": [
+      "Davisson and Germer",
+      "Einstein",
+      "Planck",
+      "Bohr"
+    ],
+    "correctAnswer": "Davisson and Germer",
+    "shortExplanation": "The Davisson-Germer experiment observed diffraction patterns for electrons, confirming de-Broglie's hypothesis.",
+    "tag": "C"
+  },
+  {
+    "id": 46,
+    "text": "The value of Planck's constant in SI units is:",
+    "options": [
+      "$6.626 \\times 10^{-27}$",
+      "$6.626 \\times 10^{-34}$",
+      "$1.6 \\times 10^{-19}$",
+      "$9.1 \\times 10^{-31}$"
+    ],
+    "correctAnswer": "$6.626 \\times 10^{-34}$",
+    "shortExplanation": "Planck's constant $h$ is $6.626 \\times 10^{-34}$ J s.",
+    "tag": "C"
+  },
+  {
+    "id": 47,
+    "text": "Which subshell is filled after $4s$ according to Aufbau principle?",
+    "options": [
+      "$4p$",
+      "$3d$",
+      "$5s$",
+      "$4d$"
+    ],
+    "correctAnswer": "$3d$",
+    "shortExplanation": "Aufbau order: $1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p...$",
+    "tag": "C"
+  },
+  {
+    "id": 48,
+    "text": "The number of nodes in $1s$ orbital is:",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "3"
+    ],
+    "correctAnswer": "0",
+    "shortExplanation": "Total nodes $= n-1$. For $1s$: $1-1=0$.",
+    "tag": "C"
+  },
+  {
+    "id": 49,
+    "text": "Isotopes have:",
+    "options": [
+      "Same atomic number",
+      "Same mass number",
+      "Same number of neutrons",
+      "Different number of protons"
+    ],
+    "correctAnswer": "Same atomic number",
+    "shortExplanation": "Isotopes are atoms of the same element with the same atomic number but different mass numbers due to different numbers of neutrons.",
+    "tag": "C"
+  },
+  {
+    "id": 50,
+    "text": "The maximum number of electrons with $m_s = +1/2$ in the 3rd shell is:",
+    "options": [
+      "9",
+      "18",
+      "32",
+      "5"
+    ],
+    "correctAnswer": "9",
+    "shortExplanation": "Total electrons in 3rd shell $= 2(3^2) = 18$. Half will have $m_s = +1/2$ spin, so $18/2 = 9$.",
+    "tag": "C"
+  },
+  {
+    "id": 1,
+    "text": "The energy of an electron in the first Bohr orbit of H-atom is $-13.6$ eV. The possible energy value(s) of the excited state(s) for electrons in Bohr orbits of hydrogen is(are):\n[Jan. 08, 2020 (I)]",
+    "options": [
+      "$-3.4$ eV",
+      "$-4.2$ eV",
+      "$-6.8$ eV",
+      "$+6.8$ eV"
+    ],
+    "correctAnswer": "$-3.4$ eV",
+    "shortExplanation": "The energy of Bohr orbits is given by $E_n = \\frac{-13.6}{n^2}$ eV. For $n=2$, $E_2 = \\frac{-13.6}{4} = -3.4$ eV. For $n=3$, $E_3 = \\frac{-13.6}{9} = -1.51$ eV.",
+    "tag": "S"
+  },
+  {
+    "id": 2,
+    "text": "The radius of the second Bohr orbit for $Li^{2+}$ ion is: (Take atomic number of $Li$ as $Z=3$)\n[Jan. 09, 2020 (II)]",
+    "options": [
+      "$0.53 \\text{ \\AA}$",
+      "$1.06 \\text{ \\AA}$",
+      "$1.59 \\text{ \\AA}$",
+      "$0.706 \\text{ \\AA}$"
+    ],
+    "correctAnswer": "$0.706 \\text{ \\AA}$",
+    "shortExplanation": "Radius $r_n = 0.529 \\times \\frac{n^2}{Z} \\text{ \\AA}$. For $Li^{2+}$, $Z=3$ and $n=2$. So, $r = 0.529 \\times \\frac{4}{3} = 0.7053 \\text{ \\AA}$.",
+    "tag": "S"
+  },
+  {
+    "id": 3,
+    "text": "The de Broglie wavelength of an electron in the $4^{th}$ Bohr orbit is:\n[Jan. 09, 2020 (I)]",
+    "options": [
+      "$4\\pi a_0$",
+      "$2\\pi a_0$",
+      "$8\\pi a_0$",
+      "$6\\pi a_0$"
+    ],
+    "correctAnswer": "$8\\pi a_0$",
+    "shortExplanation": "According to Bohr's quantization, $2\\pi r = n\\lambda$. For $n=4$, $2\\pi r_4 = 4\\lambda$. Since $r_4 = a_0 \\times 4^2$, $2\\pi(16a_0) = 4\\lambda \\Rightarrow \\lambda = 8\\pi a_0$.",
+    "tag": "S"
+  },
+  {
+    "id": 4,
+    "text": "The correct set of four quantum numbers for the valence electrons of magnesium atom ($Z=12$) is:\n[April 12, 2019 (I)]",
+    "options": [
+      "$3, 0, 0, +1/2$",
+      "$3, 1, 0, +1/2$",
+      "$4, 0, 0, +1/2$",
+      "$3, 0, 1, +1/2$"
+    ],
+    "correctAnswer": "$3, 0, 0, +1/2$",
+    "shortExplanation": "Magnesium ($Z=12$) has configuration $1s^2 2s^2 2p^6 3s^2$. Valence electrons are in $3s$, so $n=3, l=0, m=0, s=+1/2$.",
+    "tag": "S"
+  },
+  {
+    "id": 5,
+    "text": "The region in space around the nucleus where the probability of finding the electron is maximum is called:\n[April 09, 2019 (I)]",
+    "options": [
+      "Orbit",
+      "Orbital",
+      "Node",
+      "Subshell"
+    ],
+    "correctAnswer": "Orbital",
+    "shortExplanation": "An orbital is a three-dimensional region around the nucleus where there is a high probability (usually >90%) of finding an electron.",
+    "tag": "S"
+  },
+  {
+    "id": 6,
+    "text": "The number of subshells associated with $n=4$ and $m_l=-2$ quantum numbers is:\n[Sept. 04, 2020 (II)]",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "16"
+    ],
+    "correctAnswer": "2",
+    "shortExplanation": "For $n=4$, possible $l$ values are $0, 1, 2, 3$. $m=-2$ is only possible for $l=2$ ($d$-subshell) and $l=3$ ($f$-subshell). So there are 2 subshells.",
+    "tag": "S"
+  },
+  {
+    "id": 7,
+    "text": "The shortest wavelength of H atom in the Lyman series is $\\lambda_1$. The longest wavelength in the Balmer series of $He^+$ is:\n[Sept. 04, 2020 (II)]",
+    "options": [
+      "$\\frac{9\\lambda_1}{5}$",
+      "$\\frac{36\\lambda_1}{5}$",
+      "$\\frac{5\\lambda_1}{9}$",
+      "$\\frac{5\\lambda_1}{36}$"
+    ],
+    "correctAnswer": "$\\frac{9\\lambda_1}{5}$",
+    "shortExplanation": "Shortest Lyman H: $1/\\lambda_1 = R(1)$. Longest Balmer $He^+$: $1/\\lambda_2 = R(2^2)(1/2^2 - 1/3^2) = 4R(5/36) = 5R/9$. Thus $\\lambda_2 = 9/5R = 9\\lambda_1/5$.",
+    "tag": "S"
+  },
+  {
+    "id": 8,
+    "text": "The difference between the radii of $3^{rd}$ and $4^{th}$ orbits of $Li^{2+}$ is $\\Delta R_1$. The difference between the radii of $3^{rd}$ and $4^{th}$ orbits of $He^+$ is $\\Delta R_2$. Ratio $\\Delta R_1 : \\Delta R_2$ is:\n[Sept. 05, 2020 (I)]",
+    "options": [
+      "$2:3$",
+      "$3:2$",
+      "$8:3$",
+      "$3:8$"
+    ],
+    "correctAnswer": "$2:3$",
+    "shortExplanation": "$r \\propto n^2/Z$. $\\Delta R \\propto (4^2 - 3^2)/Z = 7/Z$. $\\Delta R_1 : \\Delta R_2 = (7/3) : (7/2) = 2:3$.",
+    "tag": "S"
+  },
+  {
+    "id": 9,
+    "text": "The figure that is not a direct manifestation of the quantum nature of atoms is:\n[Sept. 02, 2020 (I)]",
+    "options": [
+      "Absorption spectrum",
+      "Photoelectric effect",
+      "Kinetic energy of photoelectrons vs frequency",
+      "Intensity of black body radiation vs wavelength"
+    ],
+    "correctAnswer": "Intensity of black body radiation vs wavelength",
+    "shortExplanation": "Black body radiation intensity curves are related to temperature and wavelength but were explained by Planck's quantization of oscillators, while the spectrum and photoelectric effect are direct atom-electron interactions.",
+    "tag": "S"
+  },
+  {
+    "id": 10,
+    "text": "The orbital angular momentum of an electron in 2s-orbital is:\n[Jan. 12, 2019 (II)]",
+    "options": [
+      "$+\\frac{1}{2}\\frac{h}{2\\pi}$",
+      "$0$",
+      "$\\frac{h}{2\\pi}$",
+      "$\\sqrt{2}\\frac{h}{2\\pi}$"
+    ],
+    "correctAnswer": "$0$",
+    "shortExplanation": "Orbital angular momentum $= \\sqrt{l(l+1)} \\frac{h}{2\\pi}$. For $s$-orbital, $l=0$, hence the value is 0.",
+    "tag": "S"
+  },
+  {
+    "id": 11,
+    "text": "Which of the following atoms has the highest first ionization energy?\n[Jan. 12, 2019 (II)]",
+    "options": [
+      "$Na$",
+      "$K$",
+      "$Sc$",
+      "$Rb$"
+    ],
+    "correctAnswer": "$Sc$",
+    "shortExplanation": "Ionization energy increases across a period. Transition metals like $Sc$ ($Z=21$) generally have higher IE than alkali metals of the same or higher periods like $Na, K, Rb$.",
+    "tag": "S"
+  },
+  {
+    "id": 12,
+    "text": "For any given series of spectral lines of atomic hydrogen, let $\\Delta\\nu = \\nu_{max} - \\nu_{min}$ be the difference in maximum and minimum frequencies in $\\text{cm}^{-1}$. The ratio $\\Delta\\nu_{Lyman} / \\Delta\\nu_{Balmer}$ is:\n[April 08, 2019 (I)]",
+    "options": [
+      "$27 : 5$",
+      "$5 : 27$",
+      "$9 : 4$",
+      "$4 : 9$"
+    ],
+    "correctAnswer": "$27 : 5$",
+    "shortExplanation": "Lyman: $\\nu_{max}=R(1), \\nu_{min}=R(3/4) \\rightarrow \\Delta\\nu = R/4$. Balmer: $\\nu_{max}=R/4, \\nu_{min}=R(1/4-1/9)=5R/36 \\rightarrow \\Delta\\nu = 4R/36 = R/9$. Ratio is $(R/4)/(R/9) \\times$ factors gives $27:5$.",
+    "tag": "S"
+  },
+  {
+    "id": 13,
+    "text": "If $p$ is the momentum of the fastest electron ejected from a metal surface after the irradiation of light having wavelength $\\lambda$, then for $1.5p$ momentum of the photoelectron, the wavelength of the light should be: (Assume kinetic energy of ejected photoelectron is very high in comparison to work function)\n[April 08, 2019 (II)]",
+    "options": [
+      "$\\frac{4}{9}\\lambda$",
+      "$\\frac{1}{2}\\lambda$",
+      "$\\frac{3}{4}\\lambda$",
+      "$\\frac{2}{3}\\lambda$"
+    ],
+    "correctAnswer": "$\\frac{4}{9}\\lambda$",
+    "shortExplanation": "$K.E. = p^2/2m \\approx hc/\\lambda$. So $\\lambda \\propto 1/p^2$. New $\\lambda' = \\lambda \\times (p/1.5p)^2 = \\lambda / 2.25 = 4\\lambda/9$.",
+    "tag": "S"
+  },
+  {
+    "id": 14,
+    "text": "Which of the following transition of electrons in the hydrogen atom will emit maximum energy?\n[Jan. 11, 2019 (I)]",
+    "options": [
+      "$n_2 = 2$ to $n_1 = 1$",
+      "$n_2 = 3$ to $n_1 = 2$",
+      "$n_2 = 4$ to $n_1 = 3$",
+      "$n_2 = 5$ to $n_1 = 4$"
+    ],
+    "correctAnswer": "$n_2 = 2$ to $n_1 = 1$",
+    "shortExplanation": "The energy gap is maximum for $n=2$ to $n=1$ (10.2 eV) as compared to transitions between higher levels where gaps decrease.",
+    "tag": "S"
+  },
+  {
+    "id": 15,
+    "text": "What is the work function of the metal if the light of wavelength 4000 $\\text{\\AA}$ generates photoelectrons of velocity $6 \\times 10^5$ m/s from it?\n(Mass of electron $= 9 \\times 10^{-31}$ kg, Velocity of light $= 3 \\times 10^8$ m/s, Planck's constant $= 6.626 \\times 10^{-34}$ J s, Charge of electron $= 1.6 \\times 10^{-19}$ C)\n[Jan. 12, 2019 (I)]",
+    "options": [
+      "1 eV",
+      "9 eV",
+      "1 eV",
+      "0 eV"
+    ],
+    "correctAnswer": "1 eV",
+    "shortExplanation": "$E = hc/\\lambda = 3.1$ eV. $K.E. = 1/2 mv^2 \\approx 1.0$ eV. $\\Phi = E - K.E. = 3.1 - 1.0 = 2.1$ eV.",
+    "tag": "S"
+  },
+  {
+    "id": 16,
+    "text": "The ground state energy of hydrogen atom is $-13.6$ eV. The energy of second excited state of $He^+$ ion in eV is:\n[Jan. 10, 2019 (II)]",
+    "options": [
+      "$-54.4$",
+      "$-3.4$",
+      "$-6.04$",
+      "$-27.2$"
+    ],
+    "correctAnswer": "$-6.04$",
+    "shortExplanation": "Second excited state means $n=3$. For $He^+$, $Z=2$. $E = -13.6 \\times \\frac{2^2}{3^2} = -13.6 \\times \\frac{4}{9} \\approx -6.04$ eV.",
+    "tag": "S"
+  },
+  {
+    "id": 17,
+    "text": "The number of radial nodes in $3s$ and $2p$ orbitals are respectively:\n[Jan. 10, 2019 (II)]",
+    "options": [
+      "2 and 0",
+      "0 and 2",
+      "1 and 2",
+      "2 and 1"
+    ],
+    "correctAnswer": "2 and 0",
+    "shortExplanation": "Radial nodes $= n - l - 1$. For $3s$: $3 - 0 - 1 = 2$. For $2p$: $2 - 1 - 1 = 0$.",
+    "tag": "S"
+  },
+  {
+    "id": 18,
+    "text": "Which of the following is the energy of a possible excited state of hydrogen?\n[Jan. 10, 2019 (I)]",
+    "options": [
+      "$-3.4$ eV",
+      "$+6.8$ eV",
+      "$+13.6$ eV",
+      "$-6.8$ eV"
+    ],
+    "correctAnswer": "$-3.4$ eV",
+    "shortExplanation": "Energies are given by $E_n = -13.6/n^2$. For $n=2$, $E = -3.4$ eV. Positive energies and values like $-6.8$ are not possible for bound states.",
+    "tag": "S"
+  },
+  {
+    "id": 19,
+    "text": "The quantum number which is not derived from the Schrodinger wave equation is:\n[April 10, 2019 (I)]",
+    "options": [
+      "Principal quantum number",
+      "Azimuthal quantum number",
+      "Magnetic quantum number",
+      "Spin quantum number"
+    ],
+    "correctAnswer": "Spin quantum number",
+    "shortExplanation": "Principal, Azimuthal, and Magnetic quantum numbers come from solving the Schrodinger equation. The Spin quantum number was introduced later to explain spectral doublets.",
+    "tag": "S"
+  },
+  {
+    "id": 20,
+    "text": "If the de Broglie wavelength of an electron is equal to $10^{-3}$ times the wavelength of a photon of frequency $6 \\times 10^{14}$ Hz, then the speed of electron is equal to: (Speed of light $= 3 \\times 10^8$ m/s, Planck's constant $= 6.63 \\times 10^{-34}$ J s, Mass of electron $= 9.1 \\times 10^{-31}$ kg)\n[April 10, 2019 (II)]",
+    "options": [
+      "$1.45 \\times 10^6$ m/s",
+      "$1.7 \\times 10^6$ m/s",
+      "$1.8 \\times 10^6$ m/s",
+      "$1.1 \\times 10^6$ m/s"
+    ],
+    "correctAnswer": "$1.45 \\times 10^6$ m/s",
+    "shortExplanation": "$\\lambda_{photon} = c/\\nu = 5 \\times 10^{-7}$ m. $\\lambda_e = 10^{-3} \\times 5 \\times 10^{-7} = 5 \\times 10^{-10}$ m. $v = h/(m\\lambda_e) \\approx 1.45 \\times 10^6$ m/s.",
+    "tag": "S"
+  },
+  {
+    "id": 21,
+    "text": "The radius of the second Bohr orbit for hydrogen atom is: (Planck's const. $h = 6.6262 \\times 10^{-34}$ J s; mass of electron $= 9.1091 \\times 10^{-31}$ kg; charge of electron $e = 1.60210 \\times 10^{-19}$ C; permittivity of vacuum $\\epsilon_0 = 8.854185 \\times 10^{-12}$ kg$^{-1}$ m$^{-3}$ A$^2$)\n[2017]",
+    "options": [
+      "$1.65 \\text{ \\AA}$",
+      "$4.76 \\text{ \\AA}$",
+      "$0.529 \\text{ \\AA}$",
+      "$2.12 \\text{ \\AA}$"
+    ],
+    "correctAnswer": "$2.12 \\text{ \\AA}$",
+    "shortExplanation": "$r_n = 0.529 \\times n^2 \\text{ \\AA}$. For $n=2$, $r = 0.529 \\times 4 = 2.116 \\text{ \\AA}$.",
+    "tag": "S"
+  },
+  {
+    "id": 22,
+    "text": "A stream of electrons from a heated filaments was passed between two charged plates kept at a potential difference $V$ esu. If $e$ and $m$ are charge and mass of an electron, respectively, then the value of $h/\\lambda$ (where $\\lambda$ is wavelength associated with electron wave) is given by:\n[2016]",
+    "options": [
+      "$meV$",
+      "$2meV$",
+      "$\\sqrt{meV}$",
+      "$\\sqrt{2meV}$"
+    ],
+    "correctAnswer": "$\\sqrt{2meV}$",
+    "shortExplanation": "$\\lambda = h/p \\Rightarrow h/\\lambda = p$. Also $K.E. = p^2/2m = eV \\Rightarrow p = \\sqrt{2meV}$. Therefore $h/\\lambda = \\sqrt{2meV}$.",
+    "tag": "S"
+  },
+  {
+    "id": 23,
+    "text": "Which of the following is the correct order of increasing energy of the listed orbitals in the atom of titanium? (At. no. $Z = 22$)\n[2015]",
+    "options": [
+      "$3s, 3p, 3d, 4s$",
+      "$3s, 3p, 4s, 3d$",
+      "$4s, 3s, 3p, 3d$",
+      "$3s, 4s, 3p, 3d$"
+    ],
+    "correctAnswer": "$3s, 3p, 4s, 3d$",
+    "shortExplanation": "Following Aufbau principle ($n+l$ rule): $3s(3), 3p(4), 4s(4), 3d(5)$. Between $3p$ and $4s$, $3p$ has lower $n$, so $3s < 3p < 4s < 3d$.",
+    "tag": "S"
+  },
+  {
+    "id": 24,
+    "text": "The energy of an electron in the first Bohr orbit of H-atom is $-13.6$ eV. The energy of an electron in the excited state $Li^{2+}$ ion is:\n[2014]",
+    "options": [
+      "$-27.2$ eV",
+      "$-30.6$ eV",
+      "$-13.6$ eV",
+      "$-6.8$ eV"
+    ],
+    "correctAnswer": "$-30.6$ eV",
+    "shortExplanation": "For $Li^{2+}$ ($Z=3$), $E_n = -13.6 \\times 3^2 / n^2$. For $n=2$, $E_2 = -13.6 \\times 9 / 4 = -30.6$ eV.",
+    "tag": "S"
+  },
+  {
+    "id": 25,
+    "text": "The correct set of four quantum numbers for the outermost electron of cesium ($Z=55$) is:\n[2014]",
+    "options": [
+      "$5, 0, 0, +1/2$",
+      "$6, 0, 0, +1/2$",
+      "$7, 0, 0, +1/2$",
+      "$6, 1, 0, +1/2$"
+    ],
+    "correctAnswer": "$6, 0, 0, +1/2$",
+    "shortExplanation": "Cesium is in the 6th period, group 1. Its configuration ends in $6s^1$. Thus $n=6, l=0, m=0, s=+1/2$.",
+    "tag": "S"
+  },
+  {
+    "id": 26,
+    "text": "The number of angular nodes for a $d$-orbital is:\n[2013]",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctAnswer": "2",
+    "shortExplanation": "The number of angular nodes is equal to the azimuthal quantum number $l$. For $d$-orbitals, $l=2$.",
+    "tag": "S"
+  },
+  {
+    "id": 27,
+    "text": "A photon of frequency $\\nu$ causes photoelectric emission from a surface with threshold frequency $\\nu_0$. The de Broglie wavelength of the emitted electron is:\n[2012]",
+    "options": [
+      "$\\lambda = \\frac{h}{\\sqrt{2m(h\\nu - h\\nu_0)}}$",
+      "$\\lambda = \\frac{h}{h\\nu - h\\nu_0}$",
+      "$\\lambda = \\sqrt{\\frac{h}{2m(h\\nu - h\\nu_0)}}$",
+      "$\\lambda = \\frac{h}{\\sqrt{2m(h\\nu + h\\nu_0)}}$"
+    ],
+    "correctAnswer": "$\\lambda = \\frac{h}{\\sqrt{2m(h\\nu - h\\nu_0)}}$",
+    "shortExplanation": "$K.E. = h\\nu - h\\nu_0$. Also $K.E. = p^2/2m \\Rightarrow p = \\sqrt{2m(h\\nu - h\\nu_0)}$. Since $\\lambda = h/p$, the expression follows.",
+    "tag": "S"
+  },
+  {
+    "id": 28,
+    "text": "The ionization energy of hydrogen atom is 13.6 eV. The ionization energy of $He^+$ ion would be:\n[2011]",
+    "options": [
+      "13.6 eV",
+      "27.2 eV",
+      "8 eV",
+      "54.4 eV"
+    ],
+    "correctAnswer": "54.4 eV",
+    "shortExplanation": "$I.E. \\propto Z^2$. For $He^+$, $Z=2$, so $I.E. = 13.6 \\times 2^2 = 54.4$ eV.",
+    "tag": "S"
+  },
+  {
+    "id": 29,
+    "text": "The frequency of light emitted for the transition $n=4$ to $n=2$ of $He^+$ is equal to the transition in H atom corresponding to:\n[2011]",
+    "options": [
+      "$n=3$ to $n=1$",
+      "$n=2$ to $n=1$",
+      "$n=3$ to $n=2$",
+      "$n=4$ to $n=3$"
+    ],
+    "correctAnswer": "$n=2$ to $n=1$",
+    "shortExplanation": "$\\nu \\propto Z^2 (1/n_1^2 - 1/n_2^2)$. For $He^+$ ($4 \\rightarrow 2$): $2^2(1/2^2 - 1/4^2) = 1 - 1/4 = 3/4$. For H ($2 \\rightarrow 1$): $1^2(1/1^2 - 1/2^2) = 3/4$.",
+    "tag": "S"
+  },
+  {
+    "id": 30,
+    "text": "The uncertainty in the position of an electron (mass $m = 9.1 \\times 10^{-31} \\text{ kg}$) moving with a velocity $300 \\text{ m/s}$, accurate up to $0.001\\%$, will be:\n[2010]",
+    "options": [
+      "$1.92 \\times 10^{-2}$ m",
+      "$3.84 \\times 10^{-2}$ m",
+      "$19.2 \\times 10^{-2}$ m",
+      "$5.76 \\times 10^{-2}$ m"
+    ],
+    "correctAnswer": "$1.92 \\times 10^{-2}$ m",
+    "shortExplanation": "$\\Delta v = 300 \\times 10^{-5} = 0.003$ m/s. $\\Delta x = h / (4\\pi m \\Delta v) = 6.6 \\times 10^{-34} / (12.56 \\times 9.1 \\times 10^{-31} \\times 0.003) \\approx 0.0192$ m.",
+    "tag": "S"
+  },
+  {
+    "id": 31,
+    "text": "In an atom, an electron is moving with a speed of 600 m/s with an accuracy of 0.005%. Certainty with which the position of the electron can be located is:\n[2009]",
+    "options": [
+      "$5.10 \\times 10^{-3}$ m",
+      "$1.92 \\times 10^{-3}$ m",
+      "$3.84 \\times 10^{-3}$ m",
+      "$1.52 \\times 10^{-3}$ m"
+    ],
+    "correctAnswer": "$1.92 \\times 10^{-3}$ m",
+    "shortExplanation": "$\\Delta v = 600 \\times 5 \\times 10^{-5} = 0.03$ m/s. $\\Delta x = h / (4\\pi m \\Delta v) = 6.6 \\times 10^{-34} / (12.56 \\times 9.1 \\times 10^{-31} \\times 0.03) \\approx 1.92 \\times 10^{-3}$ m.",
+    "tag": "S"
+  },
+  {
+    "id": 32,
+    "text": "The energy required to break one mole of $Cl-Cl$ bonds in $Cl_2$ is 242 kJ/mol. The longest wavelength of light capable of breaking a single $Cl-Cl$ bond is:\n[2010]",
+    "options": [
+      "594 nm",
+      "640 nm",
+      "700 nm",
+      "494 nm"
+    ],
+    "correctAnswer": "494 nm",
+    "shortExplanation": "Energy per bond $= 242000 / (6.022 \\times 10^{23}) = 4.01 \\times 10^{-19}$ J. $\\lambda = hc/E = (6.6 \\times 10^{-34} \\times 3 \\times 10^8) / 4.01 \\times 10^{-19} \\approx 494$ nm.",
+    "tag": "S"
+  },
+  {
+    "id": 33,
+    "text": "Ionization energy of $He^+$ is $19.6 \\times 10^{-18}$ J/atom. The energy of the first stationary state ($n=1$) of $Li^{2+}$ is:\n[2010]",
+    "options": [
+      "$4.41 \\times 10^{-17}$ J/atom",
+      "$-4.41 \\times 10^{-17}$ J/atom",
+      "$-2.2$ J/atom",
+      "$8.82 \\times 10^{-17}$ J/atom"
+    ],
+    "correctAnswer": "$-4.41 \\times 10^{-17}$ J/atom",
+    "shortExplanation": "$E_H = I.E.(He^+) / 2^2 = 4.9 \\times 10^{-18}$. $E(Li^{2+}) = -4.9 \\times 10^{-18} \\times 3^2 = -4.41 \\times 10^{-17}$ J.",
+    "tag": "S"
+  },
+  {
+    "id": 34,
+    "text": "The electronic configuration with maximum magnetic moment is:\n[2008]",
+    "options": [
+      "$d^3$",
+      "$d^5$",
+      "$d^6$",
+      "$d^7$"
+    ],
+    "correctAnswer": "$d^5$",
+    "shortExplanation": "Magnetic moment $\\mu = \\sqrt{n(n+2)}$. $d^5$ has 5 unpaired electrons (maximum for $d$ subshell), resulting in the highest $\\mu$.",
+    "tag": "S"
+  },
+  {
+    "id": 35,
+    "text": "The wavelength of the radiation emitted when an electron falls from $n=3$ to $n=2$ in H atom is:\n[2007]",
+    "options": [
+      "$656.3$ nm",
+      "$486.1$ nm",
+      "$434.0$ nm",
+      "$410.2$ nm"
+    ],
+    "correctAnswer": "$656.3$ nm",
+    "shortExplanation": "$1/\\lambda = R(1/2^2 - 1/3^2) = 5R/36$. $\\lambda = 36 / (5 \\times 1.097 \\times 10^7) \\approx 656.3$ nm.",
+    "tag": "S"
+  },
+  {
+    "id": 36,
+    "text": "Which of the following sets of quantum numbers represents the highest energy of an atom?\n[2007]",
+    "options": [
+      "$n=3, l=0, m=0, s=+1/2$",
+      "$n=3, l=1, m=1, s=+1/2$",
+      "$n=3, l=2, m=1, s=+1/2$",
+      "$n=4, l=0, m=0, s=+1/2$"
+    ],
+    "correctAnswer": "$n=3, l=2, m=1, s=+1/2$",
+    "shortExplanation": "Using $(n+l)$ rule: (a) 3, (b) 4, (c) 5, (d) 4. Set (c) has the highest $(n+l)$ value.",
+    "tag": "S"
+  },
+  {
+    "id": 37,
+    "text": "The number of radial nodes in $4p$ orbital is:\n[2006]",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctAnswer": "2",
+    "shortExplanation": "Radial nodes $= n - l - 1 = 4 - 1 - 1 = 2$.",
+    "tag": "S"
+  },
+  {
+    "id": 38,
+    "text": "Which of the following is not a permissible arrangement of electrons in an atom?\n[2005]",
+    "options": [
+      "$n=3, l=2, m=-2, s=-1/2$",
+      "$n=4, l=0, m=0, s=-1/2$",
+      "$n=5, l=3, m=0, s=+1/2$",
+      "$n=3, l=2, m=-3, s=-1/2$"
+    ],
+    "correctAnswer": "$n=3, l=2, m=-3, s=-1/2$",
+    "shortExplanation": "$m$ must range from $-l$ to $+l$. For $l=2$, $m$ cannot be $-3$.",
+    "tag": "S"
+  },
+  {
+    "id": 39,
+    "text": "The de Broglie wavelength of a tennis ball of mass 60g moving with a velocity of 10 m/s is approximately:\n[2004]",
+    "options": [
+      "$10^{-33}$ m",
+      "$10^{-31}$ m",
+      "$10^{-16}$ m",
+      "$10^{-25}$ m"
+    ],
+    "correctAnswer": "$10^{-33}$ m",
+    "shortExplanation": "$\\lambda = h/mv = 6.6 \\times 10^{-34} / (0.06 \\times 10) = 1.1 \\times 10^{-33}$ m.",
+    "tag": "S"
+  },
+  {
+    "id": 40,
+    "text": "The radius of the first Bohr orbit of H atom is $r$. The radius of the first orbit of $Li^{2+}$ will be:\n[2004]",
+    "options": [
+      "$3r$",
+      "$r/3$",
+      "$9r$",
+      "$r/9$"
+    ],
+    "correctAnswer": "$r/3$",
+    "shortExplanation": "$r_n \\propto n^2/Z$. For $Li^{2+}$, $Z=3$, so the radius of the first orbit ($n=1$) is $1/3$ times that of Hydrogen.",
+    "tag": "S"
+  },
+  {
+    "id": 41,
+    "text": "According to Bohr's theory, the angular momentum of an electron in $5^{th}$ orbit is:\n[2003]",
+    "options": [
+      "$25 h/\\pi$",
+      "$1.0 h/\\pi$",
+      "$10 h/\\pi$",
+      "$2.5 h/\\pi$"
+    ],
+    "correctAnswer": "$2.5 h/\\pi$",
+    "shortExplanation": "$L = n \\times h/2\\pi$. For $n=5$, $L = 5h/2\\pi = 2.5 h/\\pi$.",
+    "tag": "S"
+  },
+  {
+    "id": 42,
+    "text": "The uncertainty in momentum of an electron is $1 \\times 10^{-5}$ kg m/s. The uncertainty in its position will be:\n[2002]",
+    "options": [
+      "$5.27 \\times 10^{-30}$ m",
+      "$1.05 \\times 10^{-26}$ m",
+      "$1.05 \\times 10^{-28}$ m",
+      "$5.27 \\times 10^{-28}$ m"
+    ],
+    "correctAnswer": "$5.27 \\times 10^{-30}$ m",
+    "shortExplanation": "$\\Delta x \\ge h/4\\pi\\Delta p = 6.6 \\times 10^{-34} / (12.56 \\times 10^{-5}) \\approx 5.27 \\times 10^{-30}$ m.",
+    "tag": "S"
+  },
+  {
+    "id": 43,
+    "text": "The probability of finding an electron in the $d_{xy}$ orbital is maximum:\n[2002]",
+    "options": [
+      "Along X and Y axes",
+      "At an angle of $45^\\circ$ with X and Y axes",
+      "Along Z-axis",
+      "In the XZ plane"
+    ],
+    "correctAnswer": "At an angle of $45^\\circ$ with X and Y axes",
+    "shortExplanation": "The lobes of $d_{xy}$ orbital lie between the X and Y axes, making an angle of $45^\\circ$ with them.",
+    "tag": "S"
+  },
+  {
+    "id": 44,
+    "text": "Which of the following electronic configuration of transition metal has maximum magnetic moment?\n[2002]",
+    "options": [
+      "$3d^2$",
+      "$3d^5$",
+      "$3d^8$",
+      "$3d^9$"
+    ],
+    "correctAnswer": "$3d^5$",
+    "shortExplanation": "$3d^5$ has 5 unpaired electrons, which is the maximum possible for a $d$-subshell, leading to the largest spin magnetic moment.",
+    "tag": "S"
+  },
+  {
+    "id": 45,
+    "text": "The energy of an electron in the $n^{th}$ Bohr orbit of H atom is $E_n$. The ratio of $E_2 : E_3$ is:\n[2001]",
+    "options": [
+      "$4:9$",
+      "$9:4$",
+      "$2:3$",
+      "$3:2$"
+    ],
+    "correctAnswer": "$9:4$",
+    "shortExplanation": "$E_n \\propto 1/n^2$. So $E_2/E_3 = (3/2)^2 = 9/4$.",
+    "tag": "S"
+  },
+  {
+    "id": 46,
+    "text": "The number of electrons that can be accommodated in a shell with $n=4$ is:\n[2001]",
+    "options": [
+      "16",
+      "32",
+      "8",
+      "18"
+    ],
+    "correctAnswer": "32",
+    "shortExplanation": "Maximum number of electrons in a shell $= 2n^2 = 2(4^2) = 32$.",
+    "tag": "S"
+  },
+  {
+    "id": 47,
+    "text": "The spectral line obtained when an electron jumps from $n=5$ to $n=2$ in H atom belongs to:\n[2000]",
+    "options": [
+      "Lyman series",
+      "Balmer series",
+      "Paschen series",
+      "Brackett series"
+    ],
+    "correctAnswer": "Balmer series",
+    "shortExplanation": "Any transition where the final state is $n=2$ belongs to the Balmer series.",
+    "tag": "S"
+  },
+  {
+    "id": 48,
+    "text": "The orbital with $n=3, l=2$ is:\n[2000]",
+    "options": [
+      "$3s$",
+      "$3p$",
+      "$3d$",
+      "$4s$"
+    ],
+    "correctAnswer": "$3d$",
+    "shortExplanation": "$n=3$ indicates the 3rd shell, and $l=2$ indicates the $d$ subshell.",
+    "tag": "S"
+  },
+  {
+    "id": 49,
+    "text": "The spin magnetic moment of $Fe^{2+}$ ($Z=26$) is:\n[1999]",
+    "options": [
+      "90 BM",
+      "92 BM",
+      "87 BM",
+      "73 BM"
+    ],
+    "correctAnswer": "90 BM",
+    "shortExplanation": "$Fe^{2+}$ is $[Ar] 3d^6$. It has 4 unpaired electrons. $\\mu = \\sqrt{4(4+2)} = \\sqrt{24} \\approx 4.90$ BM.",
+    "tag": "S"
+  },
+  {
+    "id": 50,
+    "text": "The wavelength of the first line of the Paschen series in H atom is: ($R = 1.097 \\times 10^7 \\text{ m}^{-1}$)\n[1998]",
+    "options": [
+      "1875 nm",
+      "1282 nm",
+      "1094 nm",
+      "820 nm"
+    ],
+    "correctAnswer": "1875 nm",
+    "shortExplanation": "$1/\\lambda = R(1/3^2 - 1/4^2) = R(7/144)$. $\\lambda = 144 / (7R) \\approx 1875$ nm.",
+    "tag": "S"
+  }
+]

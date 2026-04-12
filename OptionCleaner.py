@@ -7,10 +7,10 @@ class OptionCleaner:
     def __init__(self):
         # Regex patterns to catch annotations like (a), a), A., 1), etc.
         self.annotation_patterns = [
-            r'^\([a-zA-Z0-9]\)\s*',  # (a), (1)
-            r'^[a-zA-Z0-9]\)\s*',     # a), 1)
-            r'^[a-zA-Z0-9]\.\s*',     # a., A., 1.
-            r'^Option\s*[a-zA-Z0-9]:?\s*', # Option A: 
+            r'^\([a-dA-D1-4]\)\s*',    # (a), (1) - strictly a-d or 1-4
+            r'^[a-dA-D1-4]\)\s*',       # a), 1)
+            r'^[a-dA-D1-4]\.\s+',      # a. , 1. (requires space after period to avoid stripping 3.87)
+            r'^Option\s*[a-dA-D1-4]:?\s*', # Option A: 
         ]
         
         # Map for direct index matching

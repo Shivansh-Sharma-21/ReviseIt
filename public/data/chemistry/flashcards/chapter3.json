@@ -1,0 +1,192 @@
+[
+    {
+        "subtopic": "Discovery of Sub-atomic Particles",
+        "content": "Electron: $e = -1.6 \\times 10^{-19} \\text{ C}$, $m_e = 9.1 \\times 10^{-31} \\text{ kg}$; \nProton: $p = +1.6 \\times 10^{-19} \\text{ C}$, $m_p = 1.672 \\times 10^{-27} \\text{ kg}$; \nNeutron: charge = 0, $m_n = 1.674 \\times 10^{-27} \\text{ kg}$; \nSpecific charge ($e/m$) = $1.75 \\times 10^{11} \\text{ C/kg}$",
+        "importantQuestions": [
+            "Who discovered the neutron and which experiment was used?",
+            "Compare the $e/m$ ratio of cathode rays and anode rays."
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the charge and mass of an electron?",
+                "answer": "Charge is $-1.6 \\times 10^{-19} \\text{ C}$ and mass is $9.1 \\times 10^{-31} \\text{ kg}$."
+            },
+            {
+                "question": "Which sub-atomic particle was discovered by James Chadwick?",
+                "answer": "The Neutron."
+            }
+        ]
+    },
+    {
+        "subtopic": "Atomic Terms and Dalton's Theory",
+        "content": "Dalton's Theory: Atom is the smallest indivisible unit; \nIsotopes: Same $Z$, Different $A$; \nIsobars: Same $A$, Different $Z$; \nIsotones: Same number of neutrons ($A-Z$); \nIsodiaphers: Same $(n-p)$ or $(A-2Z)$; \nIsosters: Same atoms and same electrons.",
+        "importantQuestions": [
+            "What are the limitations of Dalton's atomic theory?",
+            "Define Isodiaphers with an example."
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What are Isoelectronic species?",
+                "answer": "Species (atoms or ions) having the same number of electrons."
+            },
+            {
+                "question": "Define Isotones.",
+                "answer": "Atoms of different elements having the same number of neutrons."
+            }
+        ]
+    },
+    {
+        "subtopic": "Nature of Electromagnetic Radiation",
+        "content": "$c = \\nu \\lambda$; \nWave number ($\\bar{\\nu}$) = $1/\\lambda$; \nEnergy ($E$) = $h\\nu = \\frac{hc}{\\lambda}$; \nPlanck's constant ($h$) = $6.626 \\times 10^{-34} \\text{ J} \\cdot \\text{s}$",
+        "importantQuestions": [
+            "Explain the dual nature of electromagnetic radiation.",
+            "What is Black Body Radiation?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the unit of wave number?",
+                "answer": "$\\text{m}^{-1}$ or $\\text{cm}^{-1}$."
+            },
+            {
+                "question": "What is a 'Photon'?",
+                "answer": "A discrete packet or 'quantum' of light energy."
+            }
+        ]
+    },
+    {
+        "subtopic": "Photoelectric Effect",
+        "content": "$E = W_0 + K.E._{max}$; \n$h\\nu = h\\nu_0 + \\frac{1}{2}mv^2$; \nWork function ($W_0$) = $h\\nu_0$ (threshold energy)",
+        "importantQuestions": [
+            "Define threshold frequency ($\\nu_0$).",
+            "How does kinetic energy change with the frequency of incident light?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the Work Function?",
+                "answer": "The minimum energy required to eject an electron from a metal surface."
+            },
+            {
+                "question": "Does increasing light intensity increase the kinetic energy of photoelectrons?",
+                "answer": "No, it only increases the number of photoelectrons (photocurrent)."
+            }
+        ]
+    },
+    {
+        "subtopic": "Bohr's Atomic Model",
+        "content": "Angular Momentum: $mvr = \\frac{nh}{2\\pi}$; \nRadius: $r_n = 0.529 \\times \\frac{n^2}{Z} \\text{ \\AA}$; \nEnergy: $E_n = -13.6 \\times \\frac{Z^2}{n^2} \\text{ eV/atom}$; \nVelocity: $v_n = 2.18 \\times 10^6 \\times \\frac{Z}{n} \\text{ m/s}$",
+        "importantQuestions": [
+            "State the postulates of Bohr's model.",
+            "What are the limitations of Bohr's atomic model?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the formula for the energy of an electron in a Hydrogen-like species?",
+                "answer": "$E_n = -2.18 \\times 10^{-18} \\frac{Z^2}{n^2} \\text{ J/atom}$ or $-13.6 \\frac{Z^2}{n^2} \\text{ eV}$."
+            },
+            {
+                "question": "What happens to the radius of an orbit as 'n' increases?",
+                "answer": "It increases ($r \\propto n^2$)."
+            }
+        ]
+    },
+    {
+        "subtopic": "Hydrogen Spectrum",
+        "content": "Rydberg Equation: $\\bar{\\nu} = R_H Z^2 \\left[ \\frac{1}{n_1^2} - \\frac{1}{n_2^2} \\right]$; \n$R_H = 109,677 \\text{ cm}^{-1}$; \nLyman ($n_1=1$, UV), Balmer ($n_1=2$, Visible), Paschen ($n_1=3$, IR)",
+        "importantQuestions": [
+            "Calculate the maximum number of spectral lines for a jump from $n=5$ to ground state.",
+            "Which series of Hydrogen spectrum lies in the visible region?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the $n_1$ value for the Pfund series?",
+                "answer": "$n_1 = 5$."
+            },
+            {
+                "question": "What is the maximum number of spectral lines formula?",
+                "answer": "$\\frac{(n_2 - n_1)(n_2 - n_1 + 1)}{2}$."
+            }
+        ]
+    },
+    {
+        "subtopic": "de Broglie and Heisenberg Principles",
+        "content": "de Broglie Wavelength: $\\lambda = \\frac{h}{mv} = \\frac{h}{p}$; \nHeisenberg Uncertainty Principle: $\\Delta x \\cdot \\Delta p \\ge \\frac{h}{4\\pi}$",
+        "importantQuestions": [
+            "State Heisenberg's Uncertainty Principle.",
+            "How does de Broglie's theory relate to Bohr's quantization of angular momentum?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the relation between $\\lambda$ and Kinetic Energy (K)?",
+                "answer": "$\\lambda = \\frac{h}{\\sqrt{2mK}}$."
+            },
+            {
+                "question": "Why is uncertainty principle not applicable to macro-objects?",
+                "answer": "Because the value of $h$ is very small, making the uncertainty negligible for large masses."
+            }
+        ]
+    },
+    {
+        "subtopic": "Quantum Numbers",
+        "content": "Principal ($n$): Size, shell; \nAzimuthal ($l$): Shape, subshell ($0$ to $n-1$); \nMagnetic ($m_l$): Orientation ($-l$ to $+l$); \nSpin ($m_s$): Electron spin ($+1/2, -1/2$)",
+        "importantQuestions": [
+            "What do the four quantum numbers signify?",
+            "How many orbitals are possible for $n=4$?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What are the $l$ values for $s, p, d,$ and $f$ orbitals?",
+                "answer": "$s=0, p=1, d=2, f=3$."
+            },
+            {
+                "question": "What is the maximum number of electrons in a subshell?",
+                "answer": "$2(2l + 1)$."
+            }
+        ]
+    },
+    {
+        "subtopic": "Orbitals and Nodes",
+        "content": "Radial Nodes = $n - l - 1$; \nAngular Nodes = $l$; \nTotal Nodes = $n - 1$; \nShapes: $s$ (spherical), $p$ (dumb-bell), $d$ (double dumb-bell)",
+        "importantQuestions": [
+            "Define a nodal surface (node).",
+            "Calculate radial and angular nodes for $3p$ orbital."
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "How many radial nodes are in a $4s$ orbital?",
+                "answer": "$4 - 0 - 1 = 3$."
+            },
+            {
+                "question": "What is an orbital?",
+                "answer": "A region in space where the probability of finding an electron is maximum."
+            }
+        ]
+    },
+    {
+        "subtopic": "Electronic Configuration Rules",
+        "content": "Aufbau Principle: Fill lower $(n+l)$ first; \nPauli Exclusion Principle: No two electrons have same 4 quantum numbers; \nHund's Rule: Maximize spin multiplicity (singly occupy before pairing)",
+        "importantQuestions": [
+            "Why do $Cr$ and $Cu$ show exceptional electronic configurations?",
+            "State the $(n+l)$ rule."
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the electronic configuration of $Cu (Z=29)$?",
+                "answer": "$[Ar] 3d^{10} 4s^1$."
+            },
+            {
+                "question": "What is the extra stability of half-filled and fully-filled orbitals due to?",
+                "answer": "Symmetry and high exchange energy."
+            }
+        ]
+    }
+]

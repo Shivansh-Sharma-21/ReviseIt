@@ -1,0 +1,41 @@
+{
+    "id": "structure_of_atom",
+    "title": "Structure of Atom",
+    "flow": [
+        {
+            "topic": "Foundations & Sub-atomic Particles",
+            "subtopics": [
+                "Discovery of Sub-atomic Particles",
+                "Atomic Terms and Dalton's Theory"
+            ]
+        },
+        {
+            "topic": "Radiation & Early Quantum Theory",
+            "subtopics": [
+                "Nature of Electromagnetic Radiation",
+                "Photoelectric Effect"
+            ]
+        },
+        {
+            "topic": "Atomic Models & Spectroscopy",
+            "subtopics": [
+                "Bohr's Atomic Model",
+                "Hydrogen Spectrum"
+            ]
+        },
+        {
+            "topic": "Modern Quantum Mechanics",
+            "subtopics": [
+                "de Broglie and Heisenberg Principles",
+                "Quantum Numbers",
+                "Orbitals and Nodes"
+            ]
+        },
+        {
+            "topic": "Electronic Structure",
+            "subtopics": [
+                "Electronic Configuration Rules"
+            ]
+        }
+    ]
+}
