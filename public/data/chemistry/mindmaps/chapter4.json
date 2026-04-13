@@ -1,0 +1,35 @@
+{
+  "id": "states_of_matter",
+  "title": "States of Matter (Gaseous State)",
+  "flow": [
+    {
+      "topic": "Basics & Ideal Behavior",
+      "subtopics": [
+        "Intermolecular Forces vs Thermal Energy",
+        "Gas Laws (Boyle's, Charles', Gay-Lussac's)",
+        "Ideal Gas Equation"
+      ]
+    },
+    {
+      "topic": "Gas Mixtures & Motion",
+      "subtopics": [
+        "Dalton's Law of Partial Pressure",
+        "Graham's Law of Diffusion",
+        "Kinetic Molecular Theory of Gases (KMT)"
+      ]
+    },
+    {
+      "topic": "Real Gas Behavior",
+      "subtopics": [
+        "Real Gases and Compressibility Factor (Z)",
+        "Van der Waals Equation"
+      ]
+    },
+    {
+      "topic": "Liquefaction",
+      "subtopics": [
+        "Liquefaction of Gases & Critical Constants"
+      ]
+    }
+  ]
+}

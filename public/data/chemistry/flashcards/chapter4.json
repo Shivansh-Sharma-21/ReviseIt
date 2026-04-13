@@ -1,0 +1,173 @@
+[
+    {
+        "subtopic": "Intermolecular Forces vs Thermal Energy",
+        "content": "Intermolecular Forces: Keep molecules together (Solid > Liquid > Gas); \nThermal Energy: Kinetic energy that keeps molecules apart (Gas > Liquid > Solid); \nState of matter is decided by the competition between these two.",
+        "importantQuestions": [
+            "What determines the physical state of a substance?",
+            "Compare the thermal energy of solids, liquids, and gases."
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the primary role of intermolecular forces?",
+                "answer": "To tend to keep the chemical species together."
+            },
+            {
+                "question": "How does temperature affect thermal energy?",
+                "answer": "Thermal energy is directly proportional to temperature."
+            }
+        ]
+    },
+    {
+        "subtopic": "Gas Laws (Boyle's, Charles', Gay-Lussac's)",
+        "content": "Boyle's Law: $P \\propto 1/V$ (at constant $n, T$); \nCharles' Law: $V \\propto T$ (at constant $n, P$); \nGay-Lussac's Law: $P \\propto T$ (at constant $n, V$); \nAvogadro's Law: $V \\propto n$ (at constant $P, T$).",
+        "importantQuestions": [
+            "State Boyle's Law and provide its mathematical expression.",
+            "What is absolute zero according to Charles' Law?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What remains constant in Boyle's Law?",
+                "answer": "Temperature ($T$) and amount of gas ($n$)."
+            },
+            {
+                "question": "What does the graph of $V$ vs $T$ (in Kelvin) look like?",
+                "answer": "A straight line passing through the origin."
+            }
+        ]
+    },
+    {
+        "subtopic": "Ideal Gas Equation",
+        "content": "Ideal Gas Equation: $PV = nRT$; \n$R$ (Universal Gas Constant): $0.0821 \\text{ L atm K}^{-1} \\text{ mol}^{-1}$, $8.314 \\text{ J K}^{-1} \\text{ mol}^{-1}$, $2 \\text{ cal K}^{-1} \\text{ mol}^{-1}$; \nCombined Gas Law: $\\frac{P_1V_1}{T_1} = \\frac{P_2V_2}{T_2}$.",
+        "importantQuestions": [
+            "Derive the Ideal Gas Equation from individual gas laws.",
+            "Calculate the density of a gas using the ideal gas equation ($d = PM/RT$)."
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the value of 'R' in SI units?",
+                "answer": "$8.314 \text{ J K}^{-1} \text{ mol}^{-1}$."
+            },
+            {
+                "question": "Under what conditions do real gases behave most ideally?",
+                "answer": "High temperature and low pressure."
+            }
+        ]
+    },
+    {
+        "subtopic": "Dalton's Law of Partial Pressure",
+        "content": "Dalton's Law: $P_{\\text{total}} = P_1 + P_2 + P_3 + \\dots$ (for non-reacting gases); \nPartial Pressure ($P_i$) = $X_i \\times P_{\\text{total}}$ (where $X_i$ is mole fraction); \n$P_{\\text{dry gas}} = P_{\\text{total}} - \\text{Aqueous Tension}$.",
+        "importantQuestions": [
+            "State Dalton's Law of Partial Pressure.",
+            "How is the partial pressure of a gas related to its mole fraction?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "Can Dalton's law be applied to a mixture of $NH_3$ and $HCl$?",
+                "answer": "No, because they react with each other."
+            },
+            {
+                "question": "What is Aqueous Tension?",
+                "answer": "The pressure exerted by saturated water vapor at a given temperature."
+            }
+        ]
+    },
+    {
+        "subtopic": "Kinetic Molecular Theory of Gases (KMT)",
+        "content": "Gases consist of tiny particles in random motion; \nVolume of molecules is negligible compared to container; \nNo intermolecular forces (for ideal gas); \nAverage K.E. $\\propto$ Absolute Temperature ($T$).",
+        "importantQuestions": [
+            "List the postulates of Kinetic Molecular Theory of Gases.",
+            "Why is the potential energy of an ideal gas considered zero?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "According to KMT, what happens to molecular motion at absolute zero?",
+                "answer": "Molecular motion stops completely."
+            },
+            {
+                "question": "What is the formula for Average Kinetic Energy of one mole of gas?",
+                "answer": "$E_k = \frac{3}{2}RT$."
+            }
+        ]
+    },
+    {
+        "subtopic": "Graham's Law of Diffusion",
+        "content": "Graham's Law: $r \\propto \\frac{1}{\\sqrt{M}}$ or $r \\propto \\frac{1}{\\sqrt{d}}$ (constant $P, T$); \n$\\frac{r_1}{r_2} = \\sqrt{\\frac{M_2}{M_1}} = \\sqrt{\\frac{d_2}{d_1}}$; \nRate of diffusion ($r$) = $\\frac{\\text{Volume}}{\\text{Time}}$ or $\\frac{\\text{Distance}}{\\text{Time}}$.",
+        "importantQuestions": [
+            "Define Diffusion and Effusion.",
+            "Compare the rates of diffusion of Helium and Methane."
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "Which gas diffuses faster: $O_2$ or $H_2$?",
+                "answer": "$H_2$ (due to lower molar mass)."
+            },
+            {
+                "question": "How does pressure affect the rate of diffusion?",
+                "answer": "Rate is directly proportional to pressure ($r \\propto P/\\sqrt{M}$)."
+            }
+        ]
+    },
+    {
+        "subtopic": "Real Gases and Compressibility Factor (Z)",
+        "content": "Compressibility Factor $Z = \\frac{PV}{nRT}$; \nFor ideal gas: $Z = 1$ at all $P, T$; \n$Z > 1$: Repulsive forces dominate (hard to compress); \n$Z < 1$: Attractive forces dominate (easy to compress).",
+        "importantQuestions": [
+            "What is the significance of the Compressibility Factor (Z)?",
+            "Explain the deviation of real gases from ideal behavior."
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the value of Z for an ideal gas at all pressures and temperatures?",
+                "answer": "1"
+            },
+            {
+                "question": "At very high pressure, what is the typical value of Z for most gases?",
+                "answer": "$Z > 1$."
+            }
+        ]
+    },
+    {
+        "subtopic": "Van der Waals Equation",
+        "content": "Pressure Correction: $(P + \\frac{an^2}{V^2})$; \nVolume Correction: $(V - nb)$; \nVan der Waals Equation: $(P + \\frac{an^2}{V^2})(V - nb) = nRT$; \n$a$ measures attraction; $b$ measures excluded volume.",
+        "importantQuestions": [
+            "Write the Van der Waals equation for 'n' moles of a real gas.",
+            "What do the constants 'a' and 'b' represent in the Van der Waals equation?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What are the units of Van der Waals constant 'a'?",
+                "answer": "$\text{atm L}^2 \text{ mol}^{-2}$."
+            },
+            {
+                "question": "How is 'b' (excluded volume) related to the actual volume of molecules?",
+                "answer": "$b = 4 \times V_{molecules}$."
+            }
+        ]
+    },
+    {
+        "subtopic": "Liquefaction of Gases & Critical Constants",
+        "content": "Critical Temp ($T_c$): Max temp for liquefaction; \nCritical Pressure ($P_c$): Pressure at $T_c$; \n$T_c = \\frac{8a}{27Rb}$, $P_c = \\frac{a}{27b^2}$, $V_c = 3b$.",
+        "importantQuestions": [
+            "Define Critical Temperature and Critical Pressure.",
+            "What is the condition for a gas to be liquified?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "Can a gas be liquified at $T > T_c$ by applying high pressure?",
+                "answer": "No."
+            },
+            {
+                "question": "What is the relationship between 'a' and ease of liquefaction?",
+                "answer": "Higher 'a' means stronger attraction, so the gas is easier to liquify."
+            }
+        ]
+    }
+]
