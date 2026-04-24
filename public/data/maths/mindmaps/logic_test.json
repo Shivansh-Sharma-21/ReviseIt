@@ -1,6 +1,0 @@
-{
-  "nodes": [
-    { "id": "1", "data": { "label": "Logic Test Root" }, "position": { "x": 0, "y": 0 } }
-  ],
-  "edges": []
-}
