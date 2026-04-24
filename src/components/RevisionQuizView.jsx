@@ -32,7 +32,7 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
             selection = [...foundational.slice(0, 2), ...core.slice(0, 6), ...stretch.slice(0, 7)];
         }
 
-        return selection.sort(() => Math.random() - 0.5).slice(0, 15);
+        return selection.sort(() => Math.random() - 0.5).slice(0, 10);
     }, [chapter.questions, initialConfidence]);
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -183,7 +183,7 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
                         <div className="flex items-center gap-2">
                             <span className="text-lg md:text-xl font-black text-indigo-600 dark:text-indigo-400">{currentIndex + 1}</span>
                             <span className="text-slate-300 dark:text-slate-700 font-bold">/</span>
-                            <span className="text-slate-400 font-black">15</span>
+                            <span className="text-slate-400 font-black">10</span>
                         </div>
                     </div>
                 </div>
@@ -208,7 +208,7 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
                                             currentQuestion.tag === 'C' ? 'bg-amber-500 text-white' :
                                                 'bg-rose-500 text-white'
                                             }`}>
-                                            {currentQuestion.tag === 'F' ? 'Foundational' : currentQuestion.tag === 'C' ? 'Core Questions' : 'Stretch Challenge'}
+                                            {currentQuestion.tag === 'F' ? 'Foundational' : currentQuestion.tag === 'C' ? 'Core Questions' : 'PYQs Challenge'}
                                         </div>
                                     </div>
                                     <div className="flex items-center justify-between sm:justify-end gap-3">

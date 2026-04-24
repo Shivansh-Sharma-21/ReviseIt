@@ -54,6 +54,7 @@ const Home = ({ onSelectPhysics, onSelectChemistry, onSelectMaths }) => {
     return (
         <div className="max-w-6xl mx-auto py-12 px-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <Helmet>
+                <title>Home | ReviseIt - Start Your Revision & Diagnosis</title>
                 <meta name="robots" content="noindex" />
             </Helmet>
             {/* Hero Section */}

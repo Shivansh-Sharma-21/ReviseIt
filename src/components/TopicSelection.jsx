@@ -19,6 +19,7 @@ const TopicSelection = ({ subject, onBack, onSelectTopic }) => {
     return (
         <div className="max-w-4xl mx-auto py-12 px-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <Helmet>
+                <title>{subject} Topics | ReviseIt - Select to Diagnose</title>
                 <meta name="robots" content="noindex" />
             </Helmet>
             {/* Back Button */}
@@ -37,7 +38,7 @@ const TopicSelection = ({ subject, onBack, onSelectTopic }) => {
                     {subject} <span className="text-indigo-600 dark:text-indigo-400">Chapters</span>
                 </h2>
                 <p className="text-muted font-medium text-lg italic">
-                    Choose a chapter from {subject} to begin your focused revision session.
+                    Choose a chapter from {subject} to diagnose your gaps and begin focused revision.
                 </p>
             </div>
 

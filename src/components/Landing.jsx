@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import GlobalScrollEffects from './landing/GlobalScrollEffects';
 import Hero from './landing/Hero';
 import RevisionGap from './landing/RevisionGap';
@@ -9,6 +10,9 @@ import FinalCTA from './landing/FinalCTA';
 const Landing = ({ onGetStarted }) => {
     return (
         <div className="relative isolate dark:bg-slate-950 min-h-screen">
+            <Helmet>
+                <title>ReviseIt | Precision JEE Revision & Diagnosis</title>
+            </Helmet>
             <GlobalScrollEffects />
 
             {/* Top Decorative Graphic (Behind Header and Hero) */}

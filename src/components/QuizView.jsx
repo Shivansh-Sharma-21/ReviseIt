@@ -213,7 +213,7 @@ const QuizView = ({ chapter, onBack, onComplete }) => {
                         <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
                     </button>
                     <div>
-                        <h4 className="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-0.5 md:mb-1">Foundational Unit Integration</h4>
+                        <h4 className="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mb-0.5 md:mb-1">Warm up Questions</h4>
                         <h2 className="text-lg md:text-2xl font-black text-slate-900 dark:text-white tracking-tight line-clamp-1">{chapter.title}</h2>
                     </div>
                 </div>
