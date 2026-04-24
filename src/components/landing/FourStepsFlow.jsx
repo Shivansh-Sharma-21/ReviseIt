@@ -8,15 +8,15 @@ const FourStepsFlow = () => {
     const steps = [
         {
             num: "01",
-            title: "Visualize & Recall",
-            subtitle: "Mindmaps + Instant Flashcards",
-            desc: "Navigate the entire chapter through our high-fidelity visual roadmap. Click any subtopic to instantly reveal Fast Recall Flashcards—designed to bridge the gap between theory and execution.",
+            title: "Visualize & Scan",
+            subtitle: "Map the Concept Landscape",
+            desc: "See the entire chapter through our high-fidelity visual roadmap. Map out connected concepts before testing your ability to recall them under pressure—protecting you from negative marking traps.",
             color: "indigo",
             icon: Brain,
             iconColor: "indigo",
             features: [
                 { icon: Brain, text: "Hierarchical Concept Mapping" },
-                { icon: BookOpen, text: "Instant Semantic Recall" }
+                { icon: BookOpen, text: "Expose Hidden Connections" }
             ],
             mockup: (
                  <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(79,70,229,0.2)] bg-indigo-100/80 dark:bg-[#020617] border border-slate-200 dark:border-white/10 w-full aspect-square sm:h-[400px]">
@@ -44,14 +44,14 @@ const FourStepsFlow = () => {
         },
         {
             num: "02",
-            title: "Expose",
-            subtitle: "Conceptual Traps",
-            desc: "Every session begins with a mandatory foundation check. We don't care if you can solve JEE Advanced problems; we want to know if you understand why a normal force actually exists.",
+            title: "Diagnose",
+            subtitle: "The Reality Check",
+            desc: "Take the mandatory baseline diagnostic to test core logic. We don't just check if you solved the question; we expose if you actually understand the fundamentals or are operating on false confidence.",
             color: "cyan",
             icon: Target,
             iconColor: "cyan",
             features: [
-                { icon: Target, text: "Anti-Rote Filter Engaged" }
+                { icon: Target, text: "Expose Foundational Gaps" }
             ],
             mockup: (
                  <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(6,182,212,0.15)] bg-white dark:bg-slate-950 border border-slate-200 dark:border-white/10 p-4 sm:p-8 w-full aspect-square sm:h-[400px] flex flex-col justify-between">
@@ -91,13 +91,13 @@ const FourStepsFlow = () => {
         {
             num: "03",
             title: "Calibrate",
-            subtitle: "The Adapation Engine",
-            desc: "Your confidence level isn't just a number. We combine it with your diagnostic score to build a specialized pool of F / C / S questions exactly tailored for that single session.",
+            subtitle: "The Adaptation Engine",
+            desc: "Your confidence level isn't just a number. We calculate the 'Delusion Gap' by comparing your self-assessment with your diagnostic score, tailoring a specialized pool of F/C/S questions for your rank improvement.",
             color: "emerald",
             icon: Zap,
             iconColor: "emerald",
             features: [
-                { icon: Zap, text: "Real-time Difficulty Calibration" }
+                { icon: Zap, text: "Confidence-Score Calibration" }
             ],
             mockup: (
                <div className="rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(16,185,129,0.15)] bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 p-6 sm:p-10 w-full aspect-square sm:h-[400px] flex flex-col justify-center">
@@ -134,13 +134,13 @@ const FourStepsFlow = () => {
         {
             num: "04",
             title: "Master",
-            subtitle: "The Revision Cycle",
-            desc: "Complete your 15-question sprint. No distractions, no exits. Close the cycle with a depth-first diagnostic that points exactly to what you missed and why.",
+            subtitle: "Protect Your Rank",
+            desc: "Complete your 10-question sprint where foundation questions never truly disappear, ensuring your fundamentals lock in. Close the session with a diagnostic report mapping exactly where you stand.",
             color: "slate",
             icon: ArrowRight,
             iconColor: "indigo",
             features: [
-                { icon: ArrowRight, text: "Session Diagnostic Complete" }
+                { icon: ArrowRight, text: "Diagnostic Report Complete" }
             ],
              mockup: (
                  <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-10 w-full aspect-square sm:h-[400px]">

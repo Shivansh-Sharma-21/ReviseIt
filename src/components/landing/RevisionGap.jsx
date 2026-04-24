@@ -32,19 +32,18 @@ const RevisionGap = () => {
                             <span className="w-8 h-px bg-indigo-500"></span> Chapter I — The Problem
                         </h2>
                         <h3 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight mb-8">
-                            Why "Normal" Practice Fails
+                            The "False Confidence" Trap
                         </h3>
                         <p className="text-slate-600 dark:text-slate-400 text-lg md:text-xl leading-relaxed mb-10 text-balance">
-                            Standard DPPs and modules often mix easy and hard questions randomly.
-                            Master a complex problem using a formula you don't fully understand,
-                            and you've created <span className="text-slate-900 dark:text-white font-bold bg-indigo-500/10 px-2 py-1 rounded-md">false confidence</span>.
+                            Many aspirants lose out on thousands of ranks due to negative marking and false confidence. 
+                            ReviseIt exposes the gaps you didn't know you had by <span className="text-slate-900 dark:text-white font-bold bg-indigo-500/10 px-2 py-1 rounded-md">diagnosing your baseline</span> before you dive into advanced problems.
                         </p>
                         
                         <div className="space-y-4">
                             {[
-                                "Hidden gaps in fundamental concepts",
-                                "Over-reliance on rote formula memory",
-                                "Decision fatigue: What should I solve next?",
+                                "Expose hidden gaps in fundamental concepts",
+                                "Protect your rank from negative marking traps",
+                                "Bridge the 'Delusion Gap': Confidence vs Reality",
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}

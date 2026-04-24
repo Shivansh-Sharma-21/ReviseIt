@@ -56,7 +56,7 @@ const FinalCTA = ({ onGetStarted }) => {
                                             key={index} 
                                             style={{ y: yTransform }}
                                             className={`inline-block ${
-                                                index >= 6 // "The Gap." part
+                                                index >= 6 // "Your Rank" part
                                                 ? "bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-400" 
                                                 : "text-slate-900 dark:text-white"
                                             }`}
@@ -81,7 +81,7 @@ const FinalCTA = ({ onGetStarted }) => {
                         transition={{ duration: isMobile ? 0.05 : 0.8, delay: isMobile ? 0 : 0.5 }}
                         className="text-slate-600 dark:text-slate-400 text-lg md:text-2xl mb-14 max-w-3xl mx-auto font-medium leading-relaxed"
                     >
-                        Stop guessing. Start mastering. Join the elite aspirants using high-fidelity revision to conquer JEE once and for all.
+                        Stop guessing. Start diagnosing. Join the elite aspirants identifying their gaps and fixing them before they cost marks on exam day.
                     </motion.p>
 
                     <div className="relative z-50">

@@ -11,7 +11,7 @@ const Hero = ({ onGetStarted }) => {
     const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8]);
     const heroY = useTransform(scrollYProgress, [0, 0.2], [0, 100]);
 
-    const words = "Precision Revision for".split(" ");
+    const words = "Diagnose Weaknesses.".split(" ");
 
     const parentVariants = {
         hidden: { opacity: 0 },
@@ -64,7 +64,7 @@ const Hero = ({ onGetStarted }) => {
                     className="mb-8"
                 >
                     <div className="inline-block relative rounded-full px-4 py-1.5 text-[10px] sm:text-sm leading-6 text-slate-600 dark:text-slate-400 ring-1 ring-slate-900/10 dark:ring-white/10 hover:ring-slate-900/20 dark:hover:ring-white/20 transition-all cursor-default font-bold uppercase tracking-widest bg-white/5 backdrop-blur-sm">
-                        Announcing Revise-it v1.0.{' '}
+                        Announcing Revise-it v2.0.{' '}
                         <span className="font-semibold text-indigo-600 dark:text-indigo-400">
                             Built for JEE Aspirants
                         </span>
@@ -75,7 +75,7 @@ const Hero = ({ onGetStarted }) => {
                     initial={isMobile ? { opacity: 1, y: 0 } : "hidden"}
                     animate={isMobile ? { opacity: 1, y: 0 } : "show"}
                     variants={!isMobile ? parentVariants : {}}
-                    className="text-4xl sm:text-7xl lg:text-8xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1] flex flex-wrap justify-center gap-x-[0.25em]"
+                    className="text-4xl sm:text-7xl lg:text-7xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1] flex flex-wrap justify-center gap-x-[0.25em]"
                 >
                     {words.map((word, wIdx) => (
                         isMobile ? (
@@ -99,7 +99,7 @@ const Hero = ({ onGetStarted }) => {
                         transition={isMobile ? { duration: 0 } : { delay: 1.5, duration: 0.5, type: "spring" }}
                         className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300"
                     >
-                        IIT-JEE
+                        Protect Rank.
                     </motion.span>
                 </motion.h1>
 
@@ -109,7 +109,7 @@ const Hero = ({ onGetStarted }) => {
                     transition={{ delay: isMobile ? 0.1 : 2.2, duration: isMobile ? 0.05 : 0.4 }}
                     className="text-lg md:text-xl leading-relaxed md:leading-8 text-slate-600 dark:text-slate-400 font-medium max-w-2xl mx-auto mb-12 text-balance"
                 >
-                    Eliminate decision fatigue and expose false confidence across <span className="text-indigo-600 dark:text-indigo-400 font-bold">Physics, Chemistry, and Maths</span>. Our adaptive system ensures you master the basics before tackling the complex.
+                    ReviseIt is a targeted revision and diagnosis tool for JEE aspirants. Identify the concepts costing you marks due to false confidence, and fix them through adaptive practice.
                 </motion.p>
 
                 <motion.div

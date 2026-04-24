@@ -8,19 +8,19 @@ const KeyPillars = () => {
     const pillars = [
         {
             title: "Zero Decision Fatigue",
-            desc: "No more wasting time deciding what to revise next. Our system pre-plans your flow based on your session goals.",
+            desc: "No more wasting time deciding what to revise next. Our system pre-plans your diagnostic flow based on your session goals.",
             icon: MousePointer2,
             color: "indigo"
         },
         {
-            title: "Anti-Distraction UI",
-            desc: "No leaderboards, no streaks, no fluff. Just JEE concepts visualized clearly to help you focus on what matters.",
+            title: "Precision Diagnosis",
+            desc: "Find the 'Delusion Gap' between what you think you know and what you actually know. Protect your rank by eliminating hidden misconceptions.",
             icon: MonitorOff,
             color: "cyan"
         },
         {
             title: "Adaptive Intelligence",
-            desc: "Questions tagged by Foundation, Core, and Stretch tags. The mix changes instantly based on your checkpoint performance.",
+            desc: "Questions tagged by Foundation, Core, and PYQ tags. The mix changes instantly to focus on your specific rank-improvement needs.",
             icon: Activity,
             color: "emerald"
         }
