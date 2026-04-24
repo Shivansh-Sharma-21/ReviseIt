@@ -35,6 +35,10 @@
     {
       "id": "chapter3",
       "title": "Permutations and Combinations"
+    },
+    {
+      "id": "logic_test",
+      "title": "Logic Diagnosis Test"
     }
   ]
 }

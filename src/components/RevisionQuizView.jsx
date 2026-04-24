@@ -130,13 +130,13 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
                             <div className="text-[9px] md:text-[10px] font-black text-emerald-600 uppercase tracking-widest opacity-60">Nodes Mastered</div>
                         </div>
                         <div className="p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] bg-slate-50 dark:bg-slate-800/30 border-2 border-slate-200 dark:border-slate-800 group hover:scale-[1.02] transition-all">
-                            <div className="text-4xl md:text-5xl font-black text-slate-400 mb-2">{15 - score}</div>
+                            <div className="text-4xl md:text-5xl font-black text-slate-400 mb-2">{10 - score}</div>
                             <div className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest opacity-60">Deep Calibration</div>
                         </div>
                     </div>
 
                     <button
-                        onClick={() => onComplete(score, 15)}
+                        onClick={() => onComplete(score, 10)}
                         className="w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-5 md:py-6 rounded-2xl md:rounded-3xl font-black text-xs md:text-sm uppercase tracking-[0.3em] shadow-2xl hover:scale-[1.02] transition-all active:scale-95 flex items-center justify-center gap-4"
                     >
                         Detailed Analysis <ChevronRight size={18} />
@@ -365,7 +365,7 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
                                 </div>
                                 <div>
                                     <h3 className="font-black text-xs md:text-xs uppercase tracking-widest text-slate-900 dark:text-white">Navigator</h3>
-                                    <p className="text-[9px] md:text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tighter mt-0.5">15 Questions</p>
+                                    <p className="text-[9px] md:text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tighter mt-0.5">10 Questions</p>
                                 </div>
                             </div>
                             <span className="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest lg:hidden">
@@ -401,7 +401,7 @@ const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) =>
                                     <div className="w-2 md:w-3 h-2 md:h-3 rounded-full bg-rose-500" />
                                     <span className="text-[10px] md:text-[10px] font-black uppercase text-slate-400 tracking-wider">Pending</span>
                                 </div>
-                                <span className="text-[9px] md:text-[9px] font-black text-rose-500/50">{15 - Object.keys(responses).length}</span>
+                                <span className="text-[9px] md:text-[9px] font-black text-rose-500/50">{10 - Object.keys(responses).length}</span>
                             </div>
                             <div className="flex items-center justify-between group flex-grow lg:flex-none">
                                 <div className="flex items-center gap-2 md:gap-3">
