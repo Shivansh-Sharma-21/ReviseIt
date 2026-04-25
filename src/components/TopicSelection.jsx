@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { getAvailableChapters } from '../utils/dataLoader';
 import Latex from './Latex';
+import { AnimatePresence, motion } from 'framer-motion';
+import { BookOpen, Zap, X } from 'lucide-react';
 
 const TopicSelection = ({ subject, onBack, onSelectTopic }) => {
     const [chapters, setChapters] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [selectedChapterForModal, setSelectedChapterForModal] = useState(null);
 
     useEffect(() => {
         const loadChapters = async () => {
@@ -16,8 +19,19 @@ const TopicSelection = ({ subject, onBack, onSelectTopic }) => {
         loadChapters();
     }, [subject]);
 
+    const handleChapterClick = (chapter) => {
+        setSelectedChapterForModal(chapter);
+    };
+
+    const handlePathSelection = (destination) => {
+        if (selectedChapterForModal) {
+            onSelectTopic(selectedChapterForModal, destination);
+            setSelectedChapterForModal(null);
+        }
+    };
+
     return (
-        <div className="max-w-4xl mx-auto py-12 px-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <div className="max-w-4xl mx-auto py-12 px-4 animate-in fade-in slide-in-from-bottom-4 duration-700 relative">
             <Helmet>
                 <title>{subject} Topics | ReviseIt - Select to Diagnose</title>
                 <meta name="robots" content="noindex" />
@@ -54,7 +68,7 @@ const TopicSelection = ({ subject, onBack, onSelectTopic }) => {
                         chapters.map((chapter) => (
                             <button
                                 key={chapter.id}
-                                onClick={() => onSelectTopic(chapter)}
+                                onClick={() => handleChapterClick(chapter)}
                                 className="group relative w-full p-6 text-left rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl hover:border-indigo-500/50 hover:-translate-y-1 transition-all duration-300"
                             >
                                 <div className="flex items-center justify-between">
@@ -92,6 +106,73 @@ const TopicSelection = ({ subject, onBack, onSelectTopic }) => {
                 <span>{subject} Repository</span>
                 <span>{chapters.length} Modules Detected</span>
             </div>
+
+            {/* Path Selection Modal */}
+            <AnimatePresence>
+                {selectedChapterForModal && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.95, y: 20, opacity: 0 }}
+                            animate={{ scale: 1, y: 0, opacity: 1 }}
+                            exit={{ scale: 0.95, y: 20, opacity: 0 }}
+                            className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-[2.5rem] p-6 sm:p-10 shadow-2xl border-2 border-slate-200 dark:border-slate-800 relative overflow-hidden"
+                        >
+                            <div className="absolute top-0 right-0 w-40 h-40 bg-indigo-500/10 blur-[50px] -z-10 rounded-full" />
+                            
+                            <button 
+                                onClick={() => setSelectedChapterForModal(null)}
+                                className="absolute top-6 right-6 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                            >
+                                <X size={24} />
+                            </button>
+
+                            <h3 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight mb-2 pr-8">
+                                Path Selection
+                            </h3>
+                            <p className="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-widest mb-8">
+                                How would you like to begin?
+                            </p>
+
+                            <div className="flex flex-col gap-4">
+                                <button
+                                    onClick={() => handlePathSelection('mindmap')}
+                                    className="group flex items-start gap-4 p-5 rounded-[1.5rem] border-2 border-slate-200 dark:border-slate-800 hover:border-indigo-500 dark:hover:border-indigo-500 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-all duration-300 text-left"
+                                >
+                                    <div className="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shrink-0 group-hover:scale-110 transition-transform">
+                                        <BookOpen size={24} />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-black text-slate-900 dark:text-white mb-1">Revise Theory</h4>
+                                        <p className="text-slate-500 dark:text-slate-400 text-sm font-medium leading-snug">
+                                            Start with Mindmaps and Flashcards to brush up on the concepts first.
+                                        </p>
+                                    </div>
+                                </button>
+
+                                <button
+                                    onClick={() => handlePathSelection('quiz')}
+                                    className="group flex items-start gap-4 p-5 rounded-[1.5rem] border-2 border-slate-200 dark:border-slate-800 hover:border-cyan-500 dark:hover:border-cyan-500 hover:bg-cyan-50 dark:hover:bg-cyan-900/20 transition-all duration-300 text-left"
+                                >
+                                    <div className="w-12 h-12 rounded-xl bg-cyan-100 dark:bg-cyan-900/50 flex items-center justify-center text-cyan-600 dark:text-cyan-400 shrink-0 group-hover:scale-110 transition-transform">
+                                        <Zap size={24} />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-black text-slate-900 dark:text-white mb-1">Warm-Up Quiz</h4>
+                                        <p className="text-slate-500 dark:text-slate-400 text-sm font-medium leading-snug">
+                                            Directly jump into the foundational warm-up questions to test your baseline.
+                                        </p>
+                                    </div>
+                                </button>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };

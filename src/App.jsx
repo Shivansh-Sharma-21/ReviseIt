@@ -74,9 +74,9 @@ function App() {
     }, 2000);
   }
 
-  const handleTopicSelect = (topic) => {
+  const handleTopicSelect = (topic, destination = 'mindmap') => {
     setSelectedTopic(topic)
-    navigate('/mindmap')
+    navigate(`/${destination}`)
   }
 
   const navigateBackToTopics = () => {

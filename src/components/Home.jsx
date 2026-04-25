@@ -60,7 +60,7 @@ const Home = ({ onSelectPhysics, onSelectChemistry, onSelectMaths }) => {
             {/* Hero Section */}
             <section className="text-center mb-20 space-y-6">
                 <div className="inline-block px-4 py-1.5 rounded-full bg-slate-200 dark:bg-indigo-900/20 border border-slate-300 dark:border-indigo-900/30 text-slate-600 dark:text-indigo-400 text-xs font-black tracking-[0.2em] uppercase mb-4">
-                    JEE REVISION SYSTEM V1.0
+                    JEE REVISION SYSTEM V2.0
                 </div>
                 <h2 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white tracking-tighter leading-tight">
                     Kill false confidence.<br />

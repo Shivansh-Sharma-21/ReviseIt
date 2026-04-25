@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Brain, BookOpen, Zap, ArrowRight, Activity } from 'lucide-react';
+import { Target, Brain, BookOpen, Zap, ArrowRight, Activity, ArrowDown, BrainCircuit, ArrowUpRight, Sparkles } from 'lucide-react';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
 const FourStepsFlow = () => {
@@ -143,26 +143,72 @@ const FourStepsFlow = () => {
                 { icon: ArrowRight, text: "Diagnostic Report Complete" }
             ],
              mockup: (
-                 <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 shadow-2xl p-6 sm:p-10 w-full aspect-square sm:h-[400px]">
-                    <div className={isMobile ? 'scale-[0.8] origin-top' : ''}>
-                        <div className="text-center mb-8 relative z-10">
-                            <div className="w-16 h-16 rounded-3xl bg-indigo-500/10 flex items-center justify-center mx-auto mb-4">
-                                <Activity className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+                 <div className="relative rounded-[2rem] sm:rounded-[3rem] overflow-hidden bg-white/70 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/50 dark:border-slate-800/50 shadow-2xl p-6 sm:p-8 w-full aspect-square sm:h-[400px] flex flex-col justify-center">
+                    {/* Background Orbs */}
+                    <div className="absolute top-0 right-0 w-40 h-40 bg-indigo-500/10 blur-[60px] rounded-full" />
+                    <div className="absolute bottom-0 left-0 w-40 h-40 bg-cyan-500/10 blur-[60px] rounded-full" />
+
+                    <div className={`relative z-10 w-full flex flex-col gap-4 ${isMobile ? 'scale-[0.85] origin-center' : 'scale-[0.95]'}`}>
+                        <div className="flex items-center justify-between border-b border-slate-200/50 dark:border-slate-800/50 pb-4">
+                            <div>
+                                <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 text-[8px] font-black tracking-widest uppercase mb-2">
+                                    <Activity size={10} />
+                                    Diagnostic Complete
+                                </div>
+                                <h2 className="text-xl sm:text-2xl font-black text-slate-950 dark:text-white tracking-tight leading-none">Session <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500">Analysis</span></h2>
                             </div>
-                            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-1">Session Analysis</h2>
+                            <div className="flex items-center gap-2 bg-slate-50 dark:bg-slate-800/50 p-2 rounded-2xl border border-slate-100 dark:border-slate-800">
+                                <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-500 to-orange-400 flex items-center justify-center text-white shadow-lg">
+                                    <BrainCircuit size={16} />
+                                </div>
+                                <div className="pr-2">
+                                    <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Index</p>
+                                    <p className="text-sm font-black text-slate-900 dark:text-white leading-none">40%</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="grid grid-cols-3 gap-3">
-                            <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center">
-                                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Scored</p>
-                                 <p className="text-2xl font-black text-slate-900 dark:text-white">7 <span className="text-sm text-slate-400">/ 15</span></p>
+
+                        <div className="grid grid-cols-2 gap-4">
+                            {/* Calibration Box */}
+                            <div className="bg-white dark:bg-slate-950/50 rounded-3xl p-4 border border-slate-100 dark:border-slate-800/50 flex items-center justify-around shadow-sm">
+                                <div className="text-center">
+                                    <div className="text-3xl font-black mb-1 text-slate-300 dark:text-slate-700 leading-none">4</div>
+                                    <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Self Map</p>
+                                </div>
+                                <ArrowRight size={20} className="text-slate-300 dark:text-slate-700" />
+                                <div className="text-center">
+                                    <div className="text-3xl font-black mb-1 text-amber-500 leading-none">3</div>
+                                    <p className="text-[8px] font-black text-amber-500 uppercase tracking-widest">Reality</p>
+                                </div>
                             </div>
-                            <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center">
-                                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Gaps</p>
-                                 <p className="text-2xl font-black text-slate-900 dark:text-white">8</p>
+
+                            {/* Stats */}
+                            <div className="grid grid-cols-2 gap-2">
+                                <div className="bg-emerald-50/50 dark:bg-emerald-900/10 p-3 rounded-2xl border border-emerald-100/50 dark:border-emerald-800/50 flex flex-col justify-center">
+                                    <p className="text-lg font-black text-slate-900 dark:text-white leading-none mb-1">4</p>
+                                    <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Hits</p>
+                                </div>
+                                <div className="bg-rose-50/50 dark:bg-rose-900/10 p-3 rounded-2xl border border-rose-100/50 dark:border-rose-800/50 flex flex-col justify-center">
+                                    <p className="text-lg font-black text-slate-900 dark:text-white leading-none mb-1">6</p>
+                                    <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest">Misses</p>
+                                </div>
                             </div>
-                             <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border-2 border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center">
-                                 <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Verdict</p>
-                                 <p className="text-sm font-black uppercase tracking-tight text-rose-500">RE-CALIBRATE</p>
+                        </div>
+
+                        {/* Rank Status Analysis */}
+                        <div className="p-4 rounded-3xl bg-gradient-to-br from-amber-500 to-orange-400 text-white shadow-xl relative overflow-hidden group mt-2">
+                            <Sparkles className="absolute -top-2 -right-2 w-12 h-12 opacity-10 group-hover:rotate-12 transition-transform duration-700" />
+                            <h3 className="text-[8px] font-black uppercase tracking-[0.2em] mb-2 opacity-80">Rank Status Analysis</h3>
+                            <div className="flex items-start gap-2 mb-3">
+                                <ArrowUpRight size={18} className="shrink-0 mt-0.5" />
+                                <p className="text-sm font-bold leading-snug">
+                                    Continuing this path will <span className="underline decoration-2 underline-offset-2 font-black">decrease your rank by ~1000</span>.
+                                </p>
+                            </div>
+                            <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20">
+                                <p className="text-[10px] font-bold opacity-90 italic">
+                                    "High risk of negative marking."
+                                </p>
                             </div>
                         </div>
                     </div>

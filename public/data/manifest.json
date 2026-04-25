@@ -35,6 +35,10 @@
     {
       "id": "chapter3",
       "title": "Permutations and Combinations"
+    },
+    {
+      "id": "test",
+      "title": "Test"
     }
   ]
 }
