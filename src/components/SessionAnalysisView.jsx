@@ -28,47 +28,116 @@ const SessionAnalysisView = ({ score, total, chosenConfidence, onHome, onRetry }
         let colorClass;
         let gradientClass;
 
-        if (percentage >= 90) {
+        if (percentage === 100) {
             actualLevel = chosenConfidence;
             if (chosenConfidence === 5) {
-                realityCheck = "Zero negative marking risk. You've secured maximum potential here.";
-                rankImpact = "increase your rank by ~1000";
-                prescription = "Absolute mastery achieved! No immediate revision needed. Review this chapter briefly after 14 days to maintain peak retention.";
+                realityCheck = "Absolute perfection. Zero negative marking risk. You've secured maximum potential here.";
+                rankImpact = "increase your rank by ~1500";
+                prescription = "Maintain this level. Review briefly after 14 days to keep it fresh. You are ready for advanced mocks.";
                 nextStep = "MASTERY";
-                colorClass = "text-emerald-500";
-                gradientClass = "from-emerald-500 to-teal-400";
             } else {
-                realityCheck = `Great performance at Level ${chosenConfidence}, but JEE demands more depth to secure a top rank.`;
-                rankImpact = "increase your rank by another ~500";
-                prescription = `Come back tomorrow and challenge yourself strictly at Level ${chosenConfidence + 1}.`;
+                realityCheck = `Perfect execution at Level ${chosenConfidence}. However, JEE demands you master higher difficulties.`;
+                rankImpact = "increase your rank by ~800";
+                prescription = `You are ready. Tomorrow, challenge yourself strictly at Level ${chosenConfidence + 1} to build deeper resilience.`;
                 nextStep = "LEVEL UP";
-                colorClass = "text-emerald-500";
-                gradientClass = "from-emerald-500 to-teal-400";
             }
-        } else if (percentage >= 70) {
+            colorClass = "text-emerald-500";
+            gradientClass = "from-emerald-500 to-teal-400";
+        } else if (percentage >= 90) {
             actualLevel = chosenConfidence;
-            realityCheck = "You lost marks to minor conceptual gaps or careless errors.";
-            rankImpact = "decrease your rank by ~500";
-            prescription = `Revise the specific missed concepts for 1 day. Come back tomorrow and re-attempt at Level ${chosenConfidence} to secure those lost marks.`;
+            if (chosenConfidence === 5) {
+                realityCheck = "Mastery approaching at the highest level, but JEE demands flawless execution. One silly mistake costs hundreds of ranks.";
+                rankImpact = "increase your rank by ~1000";
+                prescription = "Focus strictly on the missed questions. Re-attempt to secure a perfect 100% at this max difficulty.";
+                nextStep = "PRECISION TUNING";
+            } else {
+                realityCheck = `Excellent performance at Level ${chosenConfidence}, but minor gaps exist before you can safely level up.`;
+                rankImpact = "increase your rank by ~600";
+                prescription = `Identify the silly mistakes. Iron them out today and aim for Level ${chosenConfidence + 1} tomorrow.`;
+                nextStep = "REFINEMENT";
+            }
+            colorClass = "text-emerald-500";
+            gradientClass = "from-emerald-500 to-teal-400";
+        } else if (percentage >= 80) {
+            actualLevel = chosenConfidence;
+            realityCheck = `Strong performance at Level ${chosenConfidence}, but you are leaving marks on the table. Minor gaps are the difference between IITs and NITs.`;
+            rankImpact = "increase your rank by ~500";
+            prescription = `Revise specific weak points for 1 day. Re-attempt at Level ${chosenConfidence} to iron out the remaining errors before moving up.`;
             nextStep = "1-DAY REVISION";
-            colorClass = "text-indigo-500";
-            gradientClass = "from-indigo-600 to-blue-400";
-        } else if (percentage >= 40) {
+            colorClass = "text-cyan-500";
+            gradientClass = "from-cyan-500 to-blue-400";
+        } else if (percentage >= 70) {
             actualLevel = Math.max(1, chosenConfidence - 1);
-            realityCheck = `High risk of negative marking. Your perceived confidence was Level ${chosenConfidence}, but the reality is lower.`;
-            rankImpact = "decrease your rank by ~1000";
-            prescription = `Stop solving advanced problems. Dedicate 2 full days to re-reading the theory. Return in 48 hours to attempt a Level ${actualLevel} test.`;
+            realityCheck = `Solid understanding for Level ${chosenConfidence}, but highly prone to tricky questions. You are in the danger zone for negative marks.`;
+            rankImpact = "decrease your rank by ~500";
+            prescription = `Do not move to a higher level yet. Spend 1 day refining core concepts before re-attempting Level ${chosenConfidence}.`;
+            nextStep = "1-DAY REFINEMENT";
+            colorClass = "text-indigo-500";
+            gradientClass = "from-indigo-500 to-blue-500";
+        } else if (percentage >= 60) {
+            actualLevel = Math.max(1, chosenConfidence - 1);
+            realityCheck = `Average grasp. You confidently chose Level ${chosenConfidence}, but lack the analytical depth required to score securely.`;
+            rankImpact = "decrease your rank by ~1500";
+            prescription = "Drop down one level. Review your notes for 2 days. Focus on application rather than memorization.";
+            nextStep = "2-DAY REVIEW";
+            colorClass = "text-violet-500";
+            gradientClass = "from-violet-500 to-purple-500";
+        } else if (percentage >= 50) {
+            actualLevel = Math.max(1, chosenConfidence - 2);
+            realityCheck = `Surface-level knowledge. You aimed for Level ${chosenConfidence}, but the delusion gap is widening. Your confidence outpaces your competence.`;
+            rankImpact = "decrease your rank by ~2500";
+            prescription = `Stop advanced problem-solving. Re-read the theory thoroughly for 2 days. Re-calibrate at Level ${actualLevel}.`;
             nextStep = "2-DAY RE-READ";
             colorClass = "text-amber-500";
             gradientClass = "from-amber-500 to-orange-400";
+        } else if (percentage >= 40) {
+            actualLevel = Math.max(1, chosenConfidence - 2);
+            realityCheck = chosenConfidence >= 4 
+                ? `Massive delusion gap. You attempted Level ${chosenConfidence} but fell into a negative marking trap. You are applying concepts fundamentally incorrectly.`
+                : `High risk of negative marking trap. You are guessing or applying foundational concepts incorrectly.`;
+            rankImpact = "decrease your rank by ~4000";
+            prescription = "Halt practice. You need a 3-day conceptual rebuild. Start over with the absolute basics.";
+            nextStep = "3-DAY REBUILD";
+            colorClass = "text-orange-500";
+            gradientClass = "from-orange-500 to-red-400";
+        } else if (percentage >= 30) {
+            actualLevel = 1;
+            realityCheck = chosenConfidence >= 4 
+                ? `Severe delusion. Continuing to attempt Level ${chosenConfidence} with this understanding will actively destroy your overall JEE score.`
+                : `Severe conceptual weakness. Continuing this path will actively destroy your overall JEE score.`;
+            rankImpact = "decrease your rank by ~6000";
+            prescription = "Immediate intervention required. Spend 3 days with detailed lectures. Re-attempt only at Level 1.";
+            nextStep = "INTERVENTION";
+            colorClass = "text-rose-500";
+            gradientClass = "from-rose-500 to-pink-500";
+        } else if (percentage >= 20) {
+            actualLevel = 1;
+            realityCheck = "Fundamental misunderstanding. You are operating on pure guesswork and false assumptions.";
+            rankImpact = "decrease your rank by ~8000";
+            prescription = "Scrap everything you think you know about this chapter. Dedicate 4 full days to foundational theory.";
+            nextStep = "FOUNDATION RESET";
+            colorClass = "text-red-600";
+            gradientClass = "from-red-600 to-rose-600";
+        } else if (percentage >= 10) {
+            actualLevel = 1;
+            realityCheck = chosenConfidence === 1
+                ? "Critical failure point even at Level 1. It is mathematically better to skip this topic entirely than to attempt it and get negative marks."
+                : `Critical failure point. You chose Level ${chosenConfidence} but lack Level 1 understanding. It is mathematically better to skip this topic entirely.`;
+            rankImpact = "decrease your rank by ~10000+";
+            prescription = "Re-evaluate if you should tackle this chapter right now. If yes, start from 0 for the next 5 days.";
+            nextStep = "CRITICAL RESET";
+            colorClass = "text-red-700";
+            gradientClass = "from-red-700 to-red-900";
         } else {
             actualLevel = 1;
-            realityCheck = "Major negative marking trap detected. Foundation is critically weak.";
-            rankImpact = "decrease your rank by ~2000";
-            prescription = "Halt all practice for this topic immediately. Spend 3 days rebuilding from scratch. Return and start strictly at a Level 1 diagnostic.";
-            nextStep = "3-DAY REBUILD";
-            colorClass = "text-rose-600";
-            gradientClass = "from-rose-600 to-pink-500";
+            realityCheck = chosenConfidence === 5 
+                ? "Total disconnect. The delusion gap is at its peak. You are actively harming your JEE preparation by attempting Level 5."
+                : "Total disconnect. The delusion gap is at its peak. You are actively harming your JEE preparation by guessing.";
+            rankImpact = "jeopardize your selection";
+            prescription = "Drop this chapter entirely for now. Focus on your strong subjects. Only return when you have 1 week to spare.";
+            nextStep = "ABORT & PIVOT";
+            colorClass = "text-slate-800 dark:text-slate-400";
+            gradientClass = "from-slate-800 to-slate-950 dark:from-slate-700 dark:to-slate-900";
         }
 
         return { actualLevel, realityCheck, rankImpact, prescription, nextStep, colorClass, gradientClass };
