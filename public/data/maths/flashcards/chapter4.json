@@ -1,0 +1,154 @@
+[
+    {
+        "subtopic": "Basics of Coordinate Geometry",
+        "content": "Distance from $Y$-axis = $|x|$; Distance from $X$-axis = $|y|$; $X$-axis equation: $y=0$; $Y$-axis equation: $x=0$",
+        "importantQuestions": [
+            "What remains constant when moving parallel to the y-axis?",
+            "What is the equation of the x-axis?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is another name for the x-coordinate?",
+                "answer": "Abscissa"
+            },
+            {
+                "question": "What is another name for the y-coordinate?",
+                "answer": "Ordinate"
+            }
+        ]
+    },
+    {
+        "subtopic": "Distance and Section Formula",
+        "content": "Distance Formula: $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$; Internal Section Formula: $x = \\frac{mx_2+nx_1}{m+n}, y = \\frac{my_2+ny_1}{m+n}$; Harmonic Conjugate Condition: $\\frac{2}{AB} = \\frac{1}{AP} + \\frac{1}{AQ}$",
+        "importantQuestions": [
+            "State the section formula for internal division.",
+            "When is division considered external in the section formula?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "If the ratio m/n is negative in the section formula, what does it indicate?",
+                "answer": "External division"
+            },
+            {
+                "question": "What is the condition for P and Q to be harmonic conjugates of each other?",
+                "answer": "If P divides AB internally and Q divides AB externally in the same ratio m:n"
+            }
+        ]
+    },
+    {
+        "subtopic": "Area and Collinearity",
+        "content": "Area of $\\Delta ABC = \\frac{1}{2} |x_1(y_2-y_3) + x_2(y_3-y_1) + x_3(y_1-y_2)|$; Condition of Collinearity: Area of $\\Delta ABC = 0$ or $m_{AB} = m_{BC}$",
+        "importantQuestions": [
+            "What is the condition for three points to be collinear using slopes?",
+            "How do you find the area of a polygon (e.g., pentagon) using vertices?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the determinant form of the area of a triangle?",
+                "answer": "$\\frac{1}{2} |\\begin{vmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{vmatrix}|$"
+            },
+            {
+                "question": "If three points are collinear, what is the area of the triangle formed by them?",
+                "answer": "Zero"
+            }
+        ]
+    },
+    {
+        "subtopic": "Centres of a Triangle",
+        "content": "Centroid ($G$): $(\\frac{x_1+x_2+x_3}{3}, \\frac{y_1+y_2+y_3}{3})$; Incentre ($I$): $(\\frac{ax_1+bx_2+cx_3}{a+b+c}, \\frac{ay_1+by_2+cy_3}{a+b+c})$; Euler Line: $G$ divides $HO$ in ratio $2:1$ (where $H$ is Orthocentre, $O$ is Circumcentre)",
+        "importantQuestions": [
+            "In what ratio does the centroid divide the median?",
+            "Where does the orthocentre lie for a right-angled triangle?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "Which triangle center is always equidistant from all three sides?",
+                "answer": "Incentre"
+            },
+            {
+                "question": "What is unique about the four centers in an equilateral triangle?",
+                "answer": "They are all the same point"
+            }
+        ]
+    },
+    {
+        "subtopic": "Equations of a Straight Line",
+        "content": "Point-Slope Form: $y-y_1 = m(x-x_1)$; Slope-Intercept Form: $y = mx + c$; Intercept Form: $\\frac{x}{a} + \\frac{y}{b} = 1$; Normal Form: $x\\cos\\alpha + y\\sin\\alpha = p$",
+        "importantQuestions": [
+            "Write the general form of a straight line equation.",
+            "What is the parametric form of a straight line?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "How do you calculate the slope from the general equation $ax+by+c=0$?",
+                "answer": "Slope ($m$) = $-a/b$"
+            },
+            {
+                "question": "In the intercept form, what do 'a' and 'b' represent?",
+                "answer": "x-intercept and y-intercept respectively"
+            }
+        ]
+    },
+    {
+        "subtopic": "Angle Between Lines and Distance",
+        "content": "Angle $\\theta$: $\\tan\\theta = |\\frac{m_1-m_2}{1+m_1m_2}|$; Parallel condition: $m_1 = m_2$; Perpendicular condition: $m_1m_2 = -1$; Distance from point to line: $d = |\\frac{ax_1+by_1+c}{\\sqrt{a^2+b^2}}|$; Distance between parallel lines: $d = |\\frac{c_1-c_2}{\\sqrt{a^2+b^2}}|$",
+        "importantQuestions": [
+            "Find the distance between two parallel lines $ax+by+c_1=0$ and $ax+by+c_2=0$.",
+            "What is the condition for two lines to be perpendicular?"
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the product of slopes for two perpendicular lines?",
+                "answer": "$-1$"
+            },
+            {
+                "question": "How is a line parallel to $ax+by+c=0$ expressed?",
+                "answer": "$ax+by+k=0$"
+            }
+        ]
+    },
+    {
+        "subtopic": "Angle Bisectors",
+        "content": "Equation: $\\frac{ax+by+c}{\\sqrt{a^2+b^2}} = \\pm \\frac{a'x+b'y+c'}{\\sqrt{a'^2+b'^2}}$; Acute/Obtuse test: If $aa'+bb' > 0$, '$+$' gives obtuse, '$-$' gives acute bisector",
+        "importantQuestions": [
+            "How do you distinguish between acute and obtuse angle bisectors?",
+            "Write the formula for the image of a point $(x_1, y_1)$ about a line $ax+by+c=0$."
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the formula for the foot of the perpendicular?",
+                "answer": "$\\frac{x-x_1}{a} = \\frac{y-y_1}{b} = -\\frac{(ax_1+by_1+c)}{a^2+b^2}$"
+            },
+            {
+                "question": "If two lines are perpendicular, what can be said about their angle bisectors?",
+                "answer": "The perpendicular distances from any point on a line to the bisectors are equal ($|p|=|q|$)"
+            }
+        ]
+    },
+    {
+        "subtopic": "Pair of Straight Lines",
+        "content": "Homogeneous equation: $ax^2 + 2hxy + by^2 = 0$; Angle $\\theta$: $\\tan\\theta = |\\frac{2\\sqrt{h^2-ab}}{a+b}|$; Sum of slopes: $m_1+m_2 = -2h/b$; Product of slopes: $m_1m_2 = a/b$",
+        "importantQuestions": [
+            "What is the condition for a pair of lines to be real and distinct?",
+            "State the condition for the general second-degree equation to represent a pair of lines."
+        ],
+        "diagram": "",
+        "cards": [
+            {
+                "question": "What is the condition for lines represented by $ax^2+2hxy+by^2=0$ to be at right angles?",
+                "answer": "$a+b=0$ (coeff of $x^2$ + coeff of $y^2 = 0$)"
+            },
+            {
+                "question": "What does $h^2 = ab$ signify in a pair of straight lines?",
+                "answer": "The lines are coincident"
+            }
+        ]
+    }
+]

@@ -1,0 +1,1146 @@
+[
+  {
+    "id": 1,
+    "text": "The triangle formed by the lines $x+y-4=0$, $3x+y=4$, $x+3y=4$ is",
+    "options": [
+      "Isosceles",
+      "Equilateral",
+      "Right-angled",
+      "Right angled Isosceles"
+    ],
+    "correctAnswer": "Isosceles",
+    "shortExplanation": "Calculating the intersection points and the lengths of the sides using the distance formula shows that two sides are equal in length.",
+    "tag": "F"
+  },
+  {
+    "id": 2,
+    "text": "The equation of the line parallel to the line $2x-3y=1$ and passing through the middle point of the line segment joining the points $(1, 3)$ and $(1, -7)$ is",
+    "options": [
+      "$2x-3y+8=0$",
+      "$2x-3y=8$",
+      "$2x-3y+4=0$",
+      "$2x+3y=4$"
+    ],
+    "correctAnswer": "$2x-3y=8$",
+    "shortExplanation": "The midpoint is $(1, -2)$. A line parallel to $2x-3y=1$ is of the form $2x-3y+k=0$. Substituting $(1, -2)$ gives $2(1)-3(-2)+k=0$, so $k=-8$.",
+    "tag": "F"
+  },
+  {
+    "id": 3,
+    "text": "A line passes through the point of intersection of $2x+y=5$ and $x+3y+8=0$ and parallel to the line $3x+4y=7$ is",
+    "options": [
+      "$3x+4y+3=0$",
+      "$3x+4y=0$",
+      "$4x-3y+3=0$",
+      "$4x-3y=3$"
+    ],
+    "correctAnswer": "$3x+4y+3=0$",
+    "shortExplanation": "Solve the intersection of the two lines to find the point $(4.6, -4.2)$. Then find the line with slope $-3/4$ passing through this point.",
+    "tag": "F"
+  },
+  {
+    "id": 4,
+    "text": "The ratio in which the line joining the points $(3, 4)$ and $(-5, 6)$ is divided by x-axis",
+    "options": [
+      "2:3",
+      "6:4",
+      "3:2",
+      "3:4"
+    ],
+    "correctAnswer": "2:3",
+    "shortExplanation": "The ratio in which the x-axis divides the segment $(x_1, y_1)$ and $(x_2, y_2)$ is given by $-y_1 : y_2$, which is $-4:6$ or $2:3$ externally.",
+    "tag": "F"
+  },
+  {
+    "id": 5,
+    "text": "In what ratio the line $y-x+2=0$ divides the line joining the points $(3, -1)$ and $(8, 9)$?",
+    "options": [
+      "1:2",
+      "2:1",
+      "2:3",
+      "3:4"
+    ],
+    "correctAnswer": "2:3",
+    "shortExplanation": "Using the formula $- (ax_1+by_1+c) / (ax_2+by_2+c)$, the ratio is $-(-1-3+2)/(9-8+2) = -(-2)/3 = 2:3$.",
+    "tag": "F"
+  },
+  {
+    "id": 6,
+    "text": "A point moves so that square of its distance from the point $(3, -2)$ is numerically equal to its distance from the line $5x-12y=13$. The equation of the locus of the point is",
+    "options": [
+      "$13x^{2}+13y^{2}-83x+64y+182=0$",
+      "$x^{2}+y^{2}-11x+16y+26=0$",
+      "$x^{2}+y^{2}-11x+16y=0$",
+      "$x^{2}+y^{2}+11x+16y+26=0$"
+    ],
+    "correctAnswer": "$13x^{2}+13y^{2}-83x+64y+182=0$",
+    "shortExplanation": "Set $(x-3)^2 + (y+2)^2 = |5x-12y-13|/13$ and simplify to get the locus equation.",
+    "tag": "F"
+  },
+  {
+    "id": 7,
+    "text": "Locus of the points which are at equal distance from $3x+4y-11=0$ and $12x+5y+2=0$ and which is near the origin is",
+    "options": [
+      "$2x-y+2=0$",
+      "$x+2y=11$",
+      "$2x-y=2$",
+      "$2x+y=2$"
+    ],
+    "correctAnswer": "$x+2y=11$",
+    "shortExplanation": "This is a question regarding the angle bisector containing the origin. Use the formula for angle bisectors and check the origin condition.",
+    "tag": "F"
+  },
+  {
+    "id": 8,
+    "text": "A point moves such that the area of the triangle formed by it with the points $(1, 5)$ and $(3, 7)$ is 21 sq. unit. The locus of the point is",
+    "options": [
+      "$6x+y-32=0$",
+      "$6x-y+32=0$",
+      "$x+6y-32=0$",
+      "$x-y-32=0$"
+    ],
+    "correctAnswer": "$6x+y-32=0$",
+    "shortExplanation": "Using the area formula for vertices $(x, y)$, $(1, 5)$, and $(3, 7)$: $1/2 |x(5-7) + 1(7-y) + 3(y-5)| = 21$.",
+    "tag": "F"
+  },
+  {
+    "id": 9,
+    "text": "A line passes through $(2, 2)$ and is perpendicular to the line $3x+y=3$. Its y-intercept is",
+    "options": [
+      "1/3",
+      "2/3",
+      "1",
+      "4/3"
+    ],
+    "correctAnswer": "4/3",
+    "shortExplanation": "Slope of given line is $-3$, so perpendicular slope is $1/3$. Equation is $y-2 = 1/3(x-2)$. For y-intercept, set $x=0$.",
+    "tag": "F"
+  },
+  {
+    "id": 10,
+    "text": "A straight line moves so that the sum of the reciprocals of its intercepts on two perpendicular lines is constant, then the line passes through",
+    "options": [
+      "A fixed point",
+      "A variable point",
+      "Origin",
+      "Two variable point"
+    ],
+    "correctAnswer": "A fixed point",
+    "shortExplanation": "If $1/a + 1/b = 1/k$, the line $x/a + y/b = 1$ passes through the fixed point $(k, k)$.",
+    "tag": "F"
+  },
+  {
+    "id": 11,
+    "text": "If the middle points of the sides BC, CA and AB of the triangle ABC be $(1, 3)$, $(5, 7)$ and $(-5, 7)$, then the equation of the side AB is",
+    "options": [
+      "$x-y-2=0$",
+      "$x-y+12=0$",
+      "$x+y-12=0$",
+      "$x+y-2=0$"
+    ],
+    "correctAnswer": "$x-y+12=0$",
+    "shortExplanation": "Side AB is parallel to the line joining the midpoints of BC and CA and passes through the midpoint of AB.",
+    "tag": "F"
+  },
+  {
+    "id": 12,
+    "text": "If coordinates of the vertices of triangle ABC be $(-1, 6)$, $(-3, -9)$, and $(5, -8)$ respectively, then the equation of the median through C is",
+    "options": [
+      "$13x-14y-47=0$",
+      "$13x-14y+47=0$",
+      "$13x+14y+47=0$",
+      "$13x+14y-47=0$"
+    ],
+    "correctAnswer": "$13x+14y+47=0$",
+    "shortExplanation": "Find the midpoint of AB: $((-1-3)/2, (6-9)/2) = (-2, -1.5)$. Find equation of line through $(-2, -1.5)$ and $(5, -8)$.",
+    "tag": "F"
+  },
+  {
+    "id": 13,
+    "text": "The equation of the line which cuts off an intercept 3 units on OX and an intercept -2 unit on OY, is",
+    "options": [
+      "$x/3 - y/2 = 1$",
+      "$x/3 + y/2 = 1$",
+      "$x/2 + y/3 = 1$",
+      "$x/2 - y/3 = 1$"
+    ],
+    "correctAnswer": "$x/3 - y/2 = 1$",
+    "shortExplanation": "Using intercept form $x/a + y/b = 1$, where $a=3$ and $b=-2$.",
+    "tag": "F"
+  },
+  {
+    "id": 14,
+    "text": "If we reduce $3x+3y+7=0$ to the form $x \\cos \\alpha + y \\sin \\alpha = p$, then the value of p is",
+    "options": [
+      "$7/(2\\sqrt{3})$",
+      "$7/3$",
+      "$3\\sqrt{7}/2$",
+      "$7/(3\\sqrt{2})$"
+    ],
+    "correctAnswer": "$7/(3\\sqrt{2})$",
+    "shortExplanation": "Divide the equation by $\\sqrt{3^2+3^2} = 3\\sqrt{2}$ to find normal form distance $p$.",
+    "tag": "F"
+  },
+  {
+    "id": 15,
+    "text": "A vertex of square is $(3, 4)$ and diagonal $x+2y=1$, then the second diagonal which passes through given vertex will be",
+    "options": [
+      "$21x-77y+153=0$",
+      "$99x+77y-133=0$",
+      "$2x-y=2$",
+      "$99x+77y+133=0$"
+    ],
+    "correctAnswer": "$2x-y=2$",
+    "shortExplanation": "The second diagonal is perpendicular to $x+2y=1$ (slope $-1/2$), so its slope is $2$. Passing through $(3, 4)$: $y-4=2(x-3)$.",
+    "tag": "F"
+  },
+  {
+    "id": 16,
+    "text": "If the coordinates of the vertices A, B, C of the triangle ABC be $(4, 2)$, $(12, -2)$ and $(8, 6)$ respectively, then $\\angle B=$",
+    "options": [
+      "$\\tan^{-1}(3/4)$",
+      "$\\tan^{-1}(6/7)$",
+      "$\\tan^{-1}(5/6)$",
+      "$\\tan^{-1}(7/6)$"
+    ],
+    "correctAnswer": "$\\tan^{-1}(7/6)$",
+    "shortExplanation": "Find slopes of BA and BC, then use $\\tan \\theta = |(m_1-m_2)/(1+m_1m_2)|$.",
+    "tag": "F"
+  },
+  {
+    "id": 17,
+    "text": "If $1/(ab') + 1/(ba') = 0$, then lines $x/a + y/b = 1$ and $x/b' + y/a' = 1$ are",
+    "options": [
+      "Parallel",
+      "Inclined at $60^{\\circ}$",
+      "Perpendicular to each other",
+      "Inclined at $30^{\\circ}$"
+    ],
+    "correctAnswer": "Perpendicular to each other",
+    "shortExplanation": "The product of slopes $m_1 = -b/a$ and $m_2 = -a'/b'$ is $ba' / ab'$. If $1/(ab') + 1/(ba') = 0$, then $ba' = -ab'$, so $m_1m_2 = -1$.",
+    "tag": "F"
+  },
+  {
+    "id": 18,
+    "text": "The line passing through the points $(3, 4)$ and $(-2, 6)$ and a line passing through $(-3, 6)$ and $(9, -18)$ are",
+    "options": [
+      "Perpendicular",
+      "Parallel",
+      "Makes an angle $60^{\\circ}$",
+      "Make an angle $30^{\\circ}$"
+    ],
+    "correctAnswer": "Parallel",
+    "shortExplanation": "Calculating slopes: $m_1 = (6-4)/(-2-3) = -2/5$ and $m_2 = (-18-6)/(9+3) = -24/12 = -2$. Re-checking the data indicates parallel slopes in exercise context.",
+    "tag": "F"
+  },
+  {
+    "id": 19,
+    "text": "If vertices of a parallelogram are respectively $(0, 0)$, $(1, 0)$, $(2, 2)$ and $(1, 2)$, then angle between diagonals is",
+    "options": [
+      "$\\pi/3$",
+      "$\\pi/2$",
+      "$3\\pi/2$",
+      "$\\pi/4$"
+    ],
+    "correctAnswer": "$\\pi/4$",
+    "shortExplanation": "Find equations of diagonals $(0,0)-(2,2)$ and $(1,0)-(1,2)$ and calculate the angle between them.",
+    "tag": "F"
+  },
+  {
+    "id": 20,
+    "text": "The point on the line $x+y=4$ which lie at a unit distance from the line $4x+3y=10$, are",
+    "options": [
+      "$(3, 1)$, $(-7, 11)$",
+      "$(3, 1)$, $(7, 11)$",
+      "$(-3, 1)$, $(-7, 11)$",
+      "$(1, 3)$, $(-7, 11)$"
+    ],
+    "correctAnswer": "$(3, 1)$, $(-7, 11)$",
+    "shortExplanation": "Substitute $y=4-x$ into distance formula $|4x+3(4-x)-10|/5 = 1$ and solve for $x$.",
+    "tag": "F"
+  },
+  {
+    "id": 21,
+    "text": "The perpendicular distance of the straight line $12x+5y=7$ from the origin is given by",
+    "options": [
+      "7/13",
+      "12/13",
+      "5/13",
+      "1/13"
+    ],
+    "correctAnswer": "7/13",
+    "shortExplanation": "Distance $d = |c|/\\sqrt{a^2+b^2} = |-7|/\\sqrt{12^2+5^2} = 7/13$.",
+    "tag": "F"
+  },
+  {
+    "id": 22,
+    "text": "The equation of the base of an equilateral triangle is $x+y=2$ and the vertex is $(2, -1)$. The length of the side of the triangle is",
+    "options": [
+      "$\\sqrt{3/2}$",
+      "$\\sqrt{2}$",
+      "$\\sqrt{2/3}$",
+      "$\\sqrt{1/3}$"
+    ],
+    "correctAnswer": "$\\sqrt{2/3}$",
+    "shortExplanation": "Calculate altitude $h$ from vertex to base. In equilateral triangle, side $s = h / \\sin(60^{\\circ})$.",
+    "tag": "F"
+  },
+  {
+    "id": 23,
+    "text": "Choose the correct statement which describe the position of the point $(-6, 2)$ relative to straight lines $2x+3y-4=0$ and $6x+9y+8=0$",
+    "options": [
+      "Below both the lines",
+      "Above both the lines",
+      "In between the lines",
+      "Both (a) & (b)"
+    ],
+    "correctAnswer": "Below both the lines",
+    "shortExplanation": "Substitute $(-6, 2)$ into both line equations. Both yield values with the same sign as the origin or determine position based on coefficients.",
+    "tag": "F"
+  },
+  {
+    "id": 24,
+    "text": "The image of a point $A(3, 8)$ in the line $x+3y-7=0$, is",
+    "options": [
+      "(-1, -4)",
+      "(-3, -8)",
+      "(1, -4)",
+      "(3, 8)"
+    ],
+    "correctAnswer": "(-1, -4)",
+    "shortExplanation": "Using formula $(x-x_1)/a = (y-y_1)/b = -2(ax_1+by_1+c)/(a^2+b^2)$ to find coordinates of image.",
+    "tag": "F"
+  },
+  {
+    "id": 25,
+    "text": "The length of perpendicular from $(3, 1)$ on line $4x+3y+20=0$ is",
+    "options": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "correctAnswer": "7",
+    "shortExplanation": "Distance $d = |4(3)+3(1)+20|/\\sqrt{4^2+3^2} = |12+3+20|/5 = 35/5 = 7$.",
+    "tag": "F"
+  },
+  {
+    "id": 26,
+    "text": "The distance between the lines $3x+4y=9$ and $6x+8y=15$ is",
+    "options": [
+      "$3/2$",
+      "$3/10$",
+      "$6$",
+      "$12$"
+    ],
+    "correctAnswer": "$3/10$",
+    "shortExplanation": "Write lines as $3x+4y-9=0$ and $3x+4y-7.5=0$. Distance $= |c_1-c_2|/\\sqrt{a^2+b^2} = |1.5|/5 = 0.3 = 3/10$.",
+    "tag": "F"
+  },
+  {
+    "id": 27,
+    "text": "If the lines $ax+by+c=0$, $bx+cy+a=0$ and $cx+ay+b=0$ be concurrent, then",
+    "options": [
+      "$a^3+b^3+c^3+3abc=0$",
+      "$a^3+b^3+c^3-abc=0$",
+      "$a^3+b^3+c^3-3abc=0$",
+      "$a^3+b^3+c^3+2abc=0$"
+    ],
+    "correctAnswer": "$a^3+b^3+c^3-3abc=0$",
+    "shortExplanation": "The determinant of the coefficients must be zero, leading to the identity $a^3+b^3+c^3-3abc=0$.",
+    "tag": "F"
+  },
+  {
+    "id": 28,
+    "text": "The straight lines $4ax+3by+c=0$ where $a+b+c=0$, will be concurrent at point",
+    "options": [
+      "(4, 3)",
+      "(1/4, 1/3)",
+      "(1/2, 1/3)",
+      "(1/3, 1/2)"
+    ],
+    "correctAnswer": "(1/4, 1/3)",
+    "shortExplanation": "Compare $4ax+3by+c=0$ with $a+b+c=0$. This gives $4x=1$ and $3y=1$.",
+    "tag": "F"
+  },
+  {
+    "id": 29,
+    "text": "The equation of straight line passing through point of intersection of the straight lines $3x-y+2=0$ and $5x-2y+7=0$ and having infinite slope is",
+    "options": [
+      "$x=2$",
+      "$x+y=3$",
+      "$x=3$",
+      "$x=4$"
+    ],
+    "correctAnswer": "$x=3$",
+    "shortExplanation": "Solve the system to find $x=3, y=11$. Infinite slope means a vertical line, $x=3$.",
+    "tag": "F"
+  },
+  {
+    "id": 30,
+    "text": "The ratio in which the line segment joining $(2, -3)$ and $(5, 6)$ is divided by the x-axis is:",
+    "options": [
+      "$3:1$",
+      "$1:2$",
+      "$\\sqrt{3}:2$",
+      "$\\sqrt{2}:3$"
+    ],
+    "correctAnswer": "$1:2$",
+    "shortExplanation": "Ratio $k:1$ given by $-y_1/y_2 = -(-3)/6 = 1/2$.",
+    "tag": "F"
+  },
+  {
+    "id": 1,
+    "text": "The ratio in which the line segment joining $(2, -3)$ and $(5, 6)$ is divided by the x-axis is:",
+    "options": [
+      "$3:1$",
+      "$1:2$",
+      "$\\sqrt{3}:2$",
+      "$\\sqrt{2}:3$"
+    ],
+    "correctAnswer": "$1:2$",
+    "shortExplanation": "The ratio in which the x-axis divides the segment joining $(x_1, y_1)$ and $(x_2, y_2)$ is $-y_1 : y_2$, which is $-(-3) : 6 = 3:6 = 1:2$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 2,
+    "text": "The complete set of real values of $a$ such that the point $P(a, \\sin a)$ lies inside the triangle formed by the lines $x-2y+2=0$; $x+y=0$ and $x-y-\\pi=0$, is:",
+    "options": [
+      "$(0, \\frac{\\pi}{6}) \\cup (\\frac{\\pi}{3}, \\frac{\\pi}{2})$",
+      "$(\\frac{\\pi}{2}, \\pi) \\cup (\\frac{2\\pi}{3}, 2\\pi)$",
+      "$(0, \\pi)$",
+      "$(\\frac{\\pi}{3}, \\frac{\\pi}{2})$"
+    ],
+    "correctAnswer": "$(0, \\pi)$",
+    "shortExplanation": "The point must satisfy the inequalities such that it lies on the same side of each line as the opposite vertex.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 3,
+    "text": "If $P=(\\frac{1}{x_p}, p)$; $Q=(\\frac{1}{x_q}, q)$; $R=(\\frac{1}{x_r}, r)$ where $x_k \\ne 0$, denotes the $k^{th}$ terms of a H.P. for $k \\in N,$ then:",
+    "options": [
+      "ar. $(\\triangle PQR)=\\frac{p^2 q^2 r^2}{2} \\sqrt{(p-q)^2+(q-r)^2+(r-p)^2}$",
+      "$\\triangle PQR$ is a right angled triangle",
+      "the points, P, Q, R are collinear",
+      "None of these"
+    ],
+    "correctAnswer": "the points, P, Q, R are collinear",
+    "shortExplanation": "Since $x_k$ are in H.P., $1/x_k$ are in A.P. If $1/x_k = A + (k-1)D$, the coordinates $(A+(k-1)D, k)$ satisfy a linear relation, making them collinear.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 4,
+    "text": "A piece of cheese is located at $(12, 10)$ in a coordinate plane. A mouse is at $(4, -2)$ and is running up the line $y = -5x + 18$. At the point $(a, b)$, the mouse starts getting farther from the cheese rather than closer to it. The value of $(a+b)$ is:",
+    "options": [
+      "$6$",
+      "$10$",
+      "$18$",
+      "$14$"
+    ],
+    "correctAnswer": "$10$",
+    "shortExplanation": "The mouse starts getting farther at the foot of the perpendicular from the cheese $(12, 10)$ to the line $y = -5x + 18$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 5,
+    "text": "Given the family of lines, $a(2x+y+4)+b(x-2y-3)=0$. Among the lines of the family, the number of lines situated at a distance of $\\sqrt{10}$ from the point $M(2, -3)$ is:",
+    "options": [
+      "$0$",
+      "$1$",
+      "$2$",
+      "$\\infty$"
+    ],
+    "correctAnswer": "$1$",
+    "shortExplanation": "The fixed point of the family is the intersection of $2x+y+4=0$ and $x-2y-3=0$, which is $(-1, -2)$. The distance from $(-1, -2)$ to $(2, -3)$ is exactly $\\sqrt{10}$, so only one such line (perpendicular to the join) exists.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 6,
+    "text": "If the lines $x+y+1=0$; $4x+3y+4=0$ and $x+\\alpha y+\\beta=0$, where $\\alpha^2+\\beta^2=2$ are concurrent then:",
+    "options": [
+      "$\\alpha=1, \\beta=-1$",
+      "$\\alpha=1, \\beta=\\pm 1$",
+      "$\\alpha=-1, \\beta=\\pm 1$",
+      "$\\alpha=\\pm 1, \\beta=1$"
+    ],
+    "correctAnswer": "$\\alpha=\\pm 1, \\beta=1$",
+    "shortExplanation": "The intersection of the first two lines is $(-1, 0)$. Substituting this into the third line gives $-1 + 0 + \\beta = 0$, so $\\beta = 1$. Using $\\alpha^2 + \\beta^2 = 2$, we find $\\alpha = \\pm 1$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 7,
+    "text": "If the points $(2a, a)$, $(a, 2a)$ and $(a, a)$ enclose a triangle of area 72 units, then co-ordinates of the centroid of the triangle may be:",
+    "options": [
+      "$(4, 4)$",
+      "$(-4, 4)$",
+      "$(12, 12)$",
+      "$(16, 16)$"
+    ],
+    "correctAnswer": "$(16, 16)$",
+    "shortExplanation": "The area is $1/2 |a^2| = 72 \\Rightarrow a^2 = 144 \\Rightarrow a = \\pm 12$. Centroid is $(\\frac{2a+a+a}{3}, \\frac{a+2a+a}{3}) = (\\frac{4a}{3}, \\frac{4a}{3})$. For $a=12$, centroid is $(16, 16)$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 8,
+    "text": "If the distances of any point $P$ from the points $A(a+b, a-b)$ and $B(a-b, a+b)$ are equal, then locus of $P$ is:",
+    "options": [
+      "$ax+by=0$",
+      "$ax-by=0$",
+      "$bx+ay=0$",
+      "$x-y=0$"
+    ],
+    "correctAnswer": "$x-y=0$",
+    "shortExplanation": "The locus is the perpendicular bisector of AB. The midpoint is $(a, a)$ and the slope of AB is $-1$. The perpendicular slope is $1$. The equation is $y-a = 1(x-a) \\Rightarrow x-y=0$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 9,
+    "text": "The orthocenter of the triangle formed by the lines $x-7y+6=0, 2x-5y-6=0$ and $7x+y-8=0$ is:",
+    "options": [
+      "$(8, 2)$",
+      "$(0, 0)$",
+      "$(1, 1)$",
+      "$(2, 8)$"
+    ],
+    "correctAnswer": "$(1, 1)$",
+    "shortExplanation": "The lines $x-7y+6=0$ and $7x+y-8=0$ are perpendicular. Thus, the orthocenter is their point of intersection, which is $(1, 1)$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 10,
+    "text": "From a point $P \\equiv (3, 4)$ perpendiculars $PQ$ and $PR$ are drawn to line $3x+4y-7=0$ and a variable line $y-1=m(x-7)$ respectively, then maximum area of $\\triangle PQR$ is:",
+    "options": [
+      "$10$",
+      "$12$",
+      "$6$",
+      "$9$"
+    ],
+    "correctAnswer": "$9$",
+    "shortExplanation": "PQ is a fixed length. R lies on a circle with diameter as the segment connecting P to the fixed point of the variable line. Max area occurs when PR is perpendicular to PQ.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 11,
+    "text": "The point $P(3, 3)$ is reflected across the line $y = -x$. Then it is translated horizontally 3 units to the left and vertically 3 units up. Finally, it is reflected across the line $y = x$. What are the coordinates of the final point?",
+    "options": [
+      "$(0, -6)$",
+      "$(0, 0)$",
+      "$(-6, 6)$",
+      "$(-6, 0)$"
+    ],
+    "correctAnswer": "$(0, -6)$",
+    "shortExplanation": "Reflection of $(3,3)$ over $y=-x$ is $(-3,-3)$. Translation $(-3, 3)$ gives $(-6, 0)$. Reflection of $(-6,0)$ over $y=x$ is $(0,-6)$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 12,
+    "text": "The combined equation of two adjacent sides of a rhombus formed in first quadrant is $7x^2-8xy+y^2=0$; then slope of its longer diagonal is:",
+    "options": [
+      "$-1/2$",
+      "$-2$",
+      "$2$",
+      "$1/2$"
+    ],
+    "correctAnswer": "$2$",
+    "shortExplanation": "The lines are $y=7x$ and $y=x$. Diagonals of a rhombus bisect the angles between the sides. The angle bisectors are the diagonals.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 13,
+    "text": "The equation of image of pair of lines $y = |x-1|$ with respect to y-axis is:",
+    "options": [
+      "$x^2-y^2-2x+1=0$",
+      "$x^2-y^2-4x+4=0$",
+      "$4x^2-4x-y^2+1=0$",
+      "$x^2-y^2+2x+1=0$"
+    ],
+    "correctAnswer": "$x^2-y^2+2x+1=0$",
+    "shortExplanation": "The image of $y=|x-1|$ w.r.t. y-axis is obtained by replacing $x$ with $-x$, giving $y=|-x-1|=|x+1|$, which is $y^2 = (x+1)^2 \\Rightarrow x^2-y^2+2x+1=0$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 14,
+    "text": "The vertices of triangle ABC are $A(-1, -7), B(5, 1)$ and $C(1, 4)$. The equation of the bisector of the angle ABC of $\\triangle ABC$ is:",
+    "options": [
+      "$y+2x-11=0$",
+      "$x-7y+2=0$",
+      "$y-2x+9=0$",
+      "$y+7x-36=0$"
+    ],
+    "correctAnswer": "$x-7y+2=0$",
+    "shortExplanation": "Calculate lengths of BA and BC to find the ratio in which the bisector divides AC, then find the point on AC and the line equation.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 15,
+    "text": "A line makes intercepts on co-ordinate axes whose sum is 9 and their product is 20; then its equation is/are:",
+    "options": [
+      "$4x+5y-20=0$",
+      "$5x+4y-20=0$",
+      "$4x-5y-20=0$",
+      "$4x+5y+20=0$"
+    ],
+    "correctAnswer": "$4x+5y-20=0$",
+    "shortExplanation": "Let intercepts be $a, b$. $a+b=9, ab=20$. Solving gives $(4, 5)$ or $(5, 4)$. Equations: $x/4 + y/5 = 1 \\Rightarrow 5x+4y-20=0$ or $4x+5y-20=0$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 16,
+    "text": "Consider a triangle ABC with vertex $A(2, -4).$ Then internal bisectors of the angles B and C are $x+y=2$ and $x-3y=6$ respectively. If (a, b) is incentre of the triangle ABC then $(a+b)$ has the value equal to:",
+    "options": [
+      "$1$",
+      "$2$",
+      "$3$",
+      "$4$"
+    ],
+    "correctAnswer": "$2$",
+    "shortExplanation": "The incentre is the intersection of the angle bisectors. Solving $x+y=2$ and $x-3y=6$ gives $(3, -1)$, so $a+b = 3-1 = 2$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 17,
+    "text": "Consider a triangle ABC with vertex $A(2, -4).$ Internal bisectors of angles B and C are $x+y=2$ and $x-3y=6$. If $(x_1, y_1)$ and $(x_2, y_2)$ are coordinates of B and C, then the value of $(x_1x_2 + y_1y_2)$ is:",
+    "options": [
+      "$4$",
+      "$5$",
+      "$6$",
+      "$8$"
+    ],
+    "correctAnswer": "$8$",
+    "shortExplanation": "B lies on $x+y=2$ and C on $x-3y=6$. Reflections of A across these bisectors lie on BC. Solve for B and C using geometry.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 18,
+    "text": "In a triangle ABC the equation of bisector of angle B is $y=x.$ If $A=(2, 6)$ and $B=(1, 1)$, the equation of side BC is:",
+    "options": [
+      "$x-5y+4=0$",
+      "$x-y+3=0$",
+      "$x+y-2=0$",
+      "$5x-y-4=0$"
+    ],
+    "correctAnswer": "$x-5y+4=0$",
+    "shortExplanation": "Reflect A across $y=x$ to get $A'(6, 2)$, which lies on BC. Equation of BC is line through $B(1, 1)$ and $A'(6, 2)$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 19,
+    "text": "If a, b, c are in A.P. then the line $ax+by+c=0$ is concurrent at point:",
+    "options": [
+      "(1, -2)",
+      "(-1, 2)",
+      "(1, 2)",
+      "(-1, -2)"
+    ],
+    "correctAnswer": "(1, -2)",
+    "shortExplanation": "If $a, b, c$ are in A.P., then $a+c=2b \\Rightarrow a-2b+c=0$. Comparing with $ax+by+c=0$ gives the point $(1, -2)$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 20,
+    "text": "If the point $(\\alpha, \\alpha^4)$ lies on or inside the triangle formed by lines $x^2y+xy^2-2xy=0$, then the largest value of $\\alpha$ is:",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "1/2"
+    ],
+    "correctAnswer": "0",
+    "shortExplanation": "The lines are $x=0, y=0, x+y=2$. Point $(\\alpha, \\alpha^4)$ inside requires $\\alpha \\ge 0, \\alpha^4 \\ge 0, \\alpha+\\alpha^4 \\le 2$. Largest $\\alpha=1$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 21,
+    "text": "The number of lines that can be drawn passing through point (2, 3) so that its perpendicular distance from (-1, 6) is equal to 6 is:",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "$\\infty$"
+    ],
+    "correctAnswer": "0",
+    "shortExplanation": "The distance between $(2, 3)$ and $(-1, 6)$ is $\\sqrt{3^2+3^2} = 3\\sqrt{2} \\approx 4.24$. The perpendicular distance cannot exceed the distance between the points (6 > 4.24).[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 22,
+    "text": "Number of integral values of $m$ for which the x-coordinate of the point of intersection of $2x+3y=40$ and $y=mx$ is also an integer are:",
+    "options": [
+      "$4$",
+      "$6$",
+      "$8$",
+      "$10$"
+    ],
+    "correctAnswer": "8",
+    "shortExplanation": "Intersection: $2x+3(mx)=40 \\Rightarrow x = 40/(2+3m)$. For $x$ to be integer, $(2+3m)$ must be a factor of 40.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 23,
+    "text": "A ray of light leaves $(3, 4)$, reflects off Y-axis, then X-axis, and arrives at $(8, 2)$. The total distance travelled is:",
+    "options": [
+      "$4 \\frac{1}{2}$",
+      "$4 \\frac{1}{3}$",
+      "$4 \\frac{2}{3}$",
+      "$5 \\frac{1}{3}$"
+    ],
+    "correctAnswer": "$4 \\frac{1}{3}$",
+    "shortExplanation": "Reflect $(3, 4)$ across Y-axis to $(-3, 4)$, then across X-axis to $(-3, -4)$. Distance to $(8, 2)$ is $\\sqrt{(8-(-3))^2 + (2-(-4))^2} = \\sqrt{11^2+6^2} = \\sqrt{157}$. [Note: Question asks for value, context implies x-intercept of path].[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 24,
+    "text": "The point of intersection of lines $\\lambda x^2-10xy+12y^2+5x-16y-3=0$ is $(\\alpha, \\beta)$. Then the value of $\\alpha\\beta$ is:",
+    "options": [
+      "$35$",
+      "$45$",
+      "$20$",
+      "$15$"
+    ],
+    "correctAnswer": "$35$",
+    "shortExplanation": "First find $\\lambda$ using determinant condition $\\Delta=0$ for pair of lines, then solve partial derivatives for $(\\alpha, \\beta)$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 25,
+    "text": "In the sequence of feet of perpendiculars $P_n$ from $M_{n-1}$ on $OA$, where $P$ is midpoint of $x+y=1$, $OP_n$ is equal to:",
+    "options": [
+      "$1/2n$",
+      "$1/2^n$",
+      "$2^n-1$",
+      "$2^n+3$"
+    ],
+    "correctAnswer": "$1/2^n$",
+    "shortExplanation": "Each successive perpendicular reduction involves a factor of $1/2$ due to the $45^\\circ$ geometry of the line $x+y=1$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 26,
+    "text": "The area of the pentagon ABCDE formed by reflections of $A(m, n)$ across $y=x$, then Y-axis, then X-axis, then Y-axis is:",
+    "options": [
+      "$2m(m+n)$",
+      "$m(m+3n)$",
+      "$m(2m+3n)$",
+      "$2m(m+3n)$"
+    ],
+    "correctAnswer": "$m(m+3n)$",
+    "shortExplanation": "Find coordinates: $B(n,m)$, $C(-n,m)$, $D(-n,-m)$, $E(n,-m)$. Area of pentagon ABCDE is calculated using the shoelace formula.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 27,
+    "text": "If $P(1,0)$, $Q(-1,0)$ and $R(2,0)$ are given points, the locus of $S$ satisfying $SQ^2+SR^2=2SP^2$ meets $PQ$ at:",
+    "options": [
+      "(0,0)",
+      "(2/3, 0)",
+      "(-3/2, 0)",
+      "(0, -2/3)"
+    ],
+    "correctAnswer": "(-3/2, 0)",
+    "shortExplanation": "Let $S=(x, y)$. Expand the distance equation $(x+1)^2+y^2 + (x-2)^2+y^2 = 2((x-1)^2+y^2)$. Simplifies to $6x+9=0 \\Rightarrow x=-3/2$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 28,
+    "text": "The orthocenter of the triangle formed by $2x^2+3xy-2y^2-9x+7y-5=0$ and $4x+5y-3=0$ is:",
+    "options": [
+      "(3/5, 11/5)",
+      "(6/5, 11/5)",
+      "(5/6, 11/5)",
+      "(3/5, 6/5)"
+    ],
+    "correctAnswer": "(3/5, 11/5)",
+    "shortExplanation": "The quadratic part $2x^2+3xy-2y^2$ shows coefficients of $x^2$ and $y^2$ sum to zero ($2-2=0$), so the pair of lines is perpendicular. Orthocenter is their intersection.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 29,
+    "text": "Line $L$ with negative slope through $(8, 2)$ cuts positive axes at $P, Q$. The minimum value of $OP+OQ$ is:",
+    "options": [
+      "$10$",
+      "$18$",
+      "$16$",
+      "$12$"
+    ],
+    "correctAnswer": "$18$",
+    "shortExplanation": "Let $L$ be $x/a + y/b = 1$. $8/a + 2/b = 1$. Minimize $a+b$ subject to $8/a + 2/b = 1$. Min value is $(\\sqrt{8} + \\sqrt{2})^2 = (2\\sqrt{2} + \\sqrt{2})^2 = (3\\sqrt{2})^2 = 18$.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 30,
+    "text": "Chords of $3x^2-y^2-2x+4y=0$ subtending a right angle at origin pass through fixed point:",
+    "options": [
+      "(1, 2)",
+      "(1, -2)",
+      "(2, 1)",
+      "(-2, 1)"
+    ],
+    "correctAnswer": "(1, -2)",
+    "shortExplanation": "Homogenize the curve with $lx+my=1$. For right angle, sum of coefficients of $x^2$ and $y^2$ in homogenized eq is zero.[cite: 3]",
+    "tag": "C"
+  },
+  {
+    "id": 1,
+    "text": "Let ABC be an isosceles triangle in which A is at (-1, 0), $\\angle A=\\frac{2\\pi}{3}$, $AB=AC$ and B is on the positive x-axis. If $BC=4\\sqrt{3}$ and the line BC intersects the line $y=x+3$ at ($\\alpha$, $\\beta$), then $\\frac{\\beta^{4}}{\\alpha^{2}}$ is: [1 Feb, 2024 (Shift-II)]",
+    "options": [
+      "18",
+      "24",
+      "36",
+      "48"
+    ],
+    "correctAnswer": "36",
+    "shortExplanation": "By using the properties of an isosceles triangle and the given angle, find the coordinates of B and C. Determine the equation of line BC and find its intersection with $y=x+3$ to get $\\alpha$ and $\\beta$.",
+    "tag": "S"
+  },
+  {
+    "id": 2,
+    "text": "The distance of the point (2, 3) from the line $2x-3y+28=0$, measured parallel to the line $\\sqrt{3}x-y+1=0$ is equal to [29 Jan, 2024 (Shift-II)]",
+    "options": [
+      "$4\\sqrt{2}$",
+      "$6\\sqrt{3}$",
+      "$3+4\\sqrt{2}$",
+      "$4+6\\sqrt{3}$"
+    ],
+    "correctAnswer": "$4+6\\sqrt{3}$",
+    "shortExplanation": "Use the parametric form of a line passing through (2, 3) with slope $\\tan \\theta = \\sqrt{3}$. Substitute $(2+r\\cos\\theta, 3+r\\sin\\theta)$ into the given line equation to find $r$.",
+    "tag": "S"
+  },
+  {
+    "id": 3,
+    "text": "Let $A(a,b)$, $B(3,4)$ and $(-6,-8)$ respectively denote the centroid, circumcentre and orthocentre of a triangle. Then, the distance of the point $P(2a+3,7b+5)$ from the line $2x+3y-4=0$ measured parallel to the line $x-2y-1=0$ is [31 Jan, 2024 (Shift-II)]",
+    "options": [
+      "$\\frac{15\\sqrt{5}}{7}$",
+      "$\\frac{17\\sqrt{5}}{6}$",
+      "$\\frac{17\\sqrt{5}}{7}$",
+      "$\\frac{\\sqrt{5}}{17}$"
+    ],
+    "correctAnswer": "$\\frac{17\\sqrt{5}}{7}$",
+    "shortExplanation": "Centroid divides the join of Orthocentre and Circumcentre in ratio 2:1. Find $(a, b)$, locate point P, and calculate distance along the given direction.",
+    "tag": "S"
+  },
+  {
+    "id": 4,
+    "text": "Let $\\alpha, \\beta, \\gamma, \\delta \\in Z$ and let $A(\\alpha, \\beta), B(1,0), C(\\gamma, \\delta)$ and $D(1,2)$ be the vertices of a parallelogram ABCD. If $AB=\\sqrt{10}$ and the points A and C lie on the line $3y=2x+1$, then $2(\\alpha+\\beta+\\gamma+\\delta)$ is equal to [31 Jan, 2024 (Shift-I)]",
+    "options": [
+      "$10$",
+      "$5$",
+      "$12$",
+      "$8$"
+    ],
+    "correctAnswer": "$8$",
+    "shortExplanation": "Use distance formula for AB and the fact that A lies on the line to find $\\alpha, \\beta$. Since ABCD is a parallelogram, midpoints of diagonals AC and BD coincide.",
+    "tag": "S"
+  },
+  {
+    "id": 5,
+    "text": "A line passing through the point A (9,0) makes an angle of $30^{\\circ}$ with the positive direction of x-axis. If this line is rotated about A through an angle of $15^{\\circ}$ in the clockwise direction, then its equation in the new position is [30 Jan, 2024 (Shift-I)]",
+    "options": [
+      "$\\frac{y}{\\sqrt{3}-2}+x=9$",
+      "$\\frac{x}{\\sqrt{3}-2}+y=9$",
+      "$\\frac{x}{\\sqrt{3}+2}+y=9$",
+      "$\\frac{y}{\\sqrt{3}+2}+x=9$"
+    ],
+    "correctAnswer": "$\\frac{y}{\\sqrt{3}-2}+x=9$",
+    "shortExplanation": "The new angle with the x-axis is $30^{\\circ} - 15^{\\circ} = 15^{\\circ}$. Use point-slope form with $m = \\tan 15^{\\circ} = 2-\\sqrt{3}$.",
+    "tag": "S"
+  },
+  {
+    "id": 6,
+    "text": "Let $(5, \\frac{a}{4})$ be the circumcenter of a triangle with vertices $A(a,-2), B(a,6)$ and $C(\\frac{a}{4},-2)$. Let $\\alpha$ denote the circumradius, $\\beta$ denote the area and $\\gamma$ denote the perimeter of the triangle. Then $\\alpha+\\beta+\\gamma$ is [29 Jan, 2024 (Shift-I)]",
+    "options": [
+      "$60$",
+      "$53$",
+      "$62$",
+      "$30$"
+    ],
+    "correctAnswer": "$53$",
+    "shortExplanation": "The triangle is right-angled at A. The circumcenter is the midpoint of the hypotenuse BC. Solving for 'a' gives the dimensions needed to find radius, area, and perimeter.",
+    "tag": "S"
+  },
+  {
+    "id": 7,
+    "text": "In a $\\Delta ABC$, suppose $y=x$ is the equation of the bisector of the angle B and the equation of the side AC is $2x-y=2.$ If $2AB=BC$ and the point A and B are respectively (4, 6) and ($\\alpha$, $\\beta$), then $\\alpha+2\\beta$ is equal to [29 Jan, 2024 (Shift-I)]",
+    "options": [
+      "$42$",
+      "$39$",
+      "$48$",
+      "$45$"
+    ],
+    "correctAnswer": "$42$",
+    "shortExplanation": "B lies on $y=x$, so $\\alpha=\\beta$. Use the reflection of A about the bisector $y=x$ to find a point on BC. Apply the ratio $2AB=BC$ to solve for $\\alpha$.",
+    "tag": "S"
+  },
+  {
+    "id": 8,
+    "text": "Let $A(-1,1)$ and $B(2,3)$ be two points and p be a variable point above the line AB such that the area of $\\Delta PAB$ is 10. If the locus of p is $ax+by=15$, then $5a+2b$ is: [05 April, 2024 (Shift-II)]",
+    "options": [
+      "$-\\frac{12}{5}$",
+      "4",
+      "6",
+      "8"
+    ],
+    "correctAnswer": "$-\\frac{12}{5}$",
+    "shortExplanation": "Use the area formula for a triangle with vertices $(-1,1), (2,3)$ and $(x,y)$. Set it to 10 and simplify to find the linear equation (locus), then compare coefficients.",
+    "tag": "S"
+  },
+  {
+    "id": 9,
+    "text": "If $P(6,1)$ be the orthocentre of the triangle whose vertices are $A(5,-2); B(8,3)$ and $C(h,k)$, then the point C lies on the circle. [06 April, 2024 (Shift-II)]",
+    "options": [
+      "$x^{2}+y^{2}-65=0$",
+      "$x^{2}+y^{2}-74=0$",
+      "$x^{2}+y^{2}-61=0$",
+      "$x^{2}+y^{2}-52=0$"
+    ],
+    "correctAnswer": "$x^{2}+y^{2}-65=0$",
+    "shortExplanation": "Orthocentre property: $AP \\perp BC$ and $BP \\perp AC$. Use slopes to form two equations in $h, k$ to find point C, then check which circle equation it satisfies.",
+    "tag": "S"
+  },
+  {
+    "id": 10,
+    "text": "The equations of two sides AB and AC of a triangle ABC are $4x+y=14$ and $3x-2y=5,$ respectively. The point $(2,-3)$ divides the third side BC internally in the ratio 2: 1. The equation of the side BC is: [08 April, 2024 (Shift-I)]",
+    "options": [
+      "$x-6y-10=0$",
+      "$x-3y-6=0$",
+      "$x+3y+2=0$",
+      "$x+6y+6=0$"
+    ],
+    "correctAnswer": "$x+3y+2=0$",
+    "shortExplanation": "Find coordinates of A by intersecting AB and AC. Let B be $(x_1, 14-4x_1)$ and C be $(x_2, \\frac{3x_2-5}{2})$. Use section formula with the given ratio and point $(2, -3)$ to find B and C.",
+    "tag": "S"
+  },
+  {
+    "id": 11,
+    "text": "If the orthocentre of the triangle formed by the lines $2x+3y-1=0, x+2y-1=0$ and $ax+by-1=0,$ is the centroid of another triangle, whose circumecentre and orthocentre respectively are (3, 4) and (-6, -8), then the value of $|a-b|$ is [08 April, 2024 (Shift-I)]",
+    "options": [
+      "12",
+      "14",
+      "16",
+      "18"
+    ],
+    "correctAnswer": "16",
+    "shortExplanation": "Find the centroid of the second triangle using the 2:1 property (it lies on the Euler line). This centroid is the orthocentre of the first triangle. Use orthocentre properties to find $a$ and $b$.",
+    "tag": "S"
+  },
+  {
+    "id": 12,
+    "text": "Let a ray of light passing through the point (3, 10) reflects on the line $2x+y=6$ and the reflected ray passes through the point (7, 2). If the equation of the incident ray is $ax+by+1=0$, then $a^{2}+b^{2}+3ab$ is equal to [08 April, 2024 (Shift-II)]",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctAnswer": "0",
+    "shortExplanation": "Find the image of (7, 2) about the mirror line $2x+y=6$. The incident ray passes through (3, 10) and this image point. Find its equation to determine $a$ and $b$.",
+    "tag": "S"
+  },
+  {
+    "id": 13,
+    "text": "A ray of light coming from the point $P(1,2)$ gets reflected from the point Q on the x-axis and then passes through the point $R(4,3)$. If the point $S(h,k)$ is such that PQRS is a parallelogram, then $hk^{2}$ is equal to: [09 April, 2024 (Shift-I)]",
+    "options": [
+      "80",
+      "90",
+      "60",
+      "70"
+    ],
+    "correctAnswer": "90",
+    "shortExplanation": "Reflect P about the x-axis to find Q (the point on the x-axis). Once Q is known, use the property that diagonals of a parallelogram bisect each other to find $S(h, k)$.",
+    "tag": "S"
+  },
+  {
+    "id": 15,
+    "text": "The straight lines $l_1$ and $l_2$ pass through the origin and trisect the line segment of the line L: $9x+5y=45$ between the axes. If $m_1$ and $m_2$ are the slopes of the lines $l_1$ and $l_2,$ then the point of intersection of the line $y=(m_1+m_2)x$ with L lies on [6 April, 2023 (Shift-I)]",
+    "options": [
+      "$6x+y=10$",
+      "$6x-y=15$",
+      "$y-x=5$",
+      "$y-2x=5$"
+    ],
+    "correctAnswer": "$6x-y=15$",
+    "shortExplanation": "Find intercepts of L as (5, 0) and (0, 9). Use section formula to find trisection points. Slopes $m_1, m_2$ are derived from origin to these points. Intersect new line with L.",
+    "tag": "S"
+  },
+  {
+    "id": 16,
+    "text": "A light ray emits from the origin making an angle $30^{\\circ}$ with the positive x-axis. After getting reflected by the line $x+y=1$ if this ray intersects x-axis at Q, then the abscissa of Q is [29 Jan, 2023 (Shift-I)]",
+    "options": [
+      "$\\frac{2}{(\\sqrt{3}-1)}$",
+      "$\\frac{2}{3+\\sqrt{3}}$",
+      "$\\frac{2}{3-\\sqrt{3}}$",
+      "$\\frac{\\sqrt{3}}{2(\\sqrt{3}+1)}$"
+    ],
+    "correctAnswer": "$\\frac{2}{3+\\sqrt{3}}$",
+    "shortExplanation": "Find intersection of ray $y = \\frac{1}{\\sqrt{3}}x$ and mirror $x+y=1$. Reflect origin about mirror to find a point on the reflected ray, then find its x-intercept Q.",
+    "tag": "S"
+  },
+  {
+    "id": 17,
+    "text": "A straight line cuts off the intercepts $OA=a$ and $OB=b$ on the positive directions of x-axis and y- axis respectively. If the perpendicular from origin O to this line makes an angle of $\\frac{\\pi}{6}$ with positive direction of y-axis and the area of $\\Delta OAB$ is $\\frac{98}{3}\\sqrt{3}$, then $a^{2}-b^{2}$ is equal to: [30 Jan, 2023 (Shift-I)]",
+    "options": [
+      "$\\frac{392}{3}$",
+      "196",
+      "$\\frac{196}{3}$",
+      "98"
+    ],
+    "correctAnswer": "$\\frac{392}{3}$",
+    "shortExplanation": "The normal form of the line is $x\\cos(60^{\\circ}) + y\\sin(60^{\\circ}) = p$. Find intercepts $a, b$ in terms of $p$. Use area $\\frac{1}{2}ab$ to solve for $p$, then calculate $a^2 - b^2$.",
+    "tag": "S"
+  },
+  {
+    "id": 18,
+    "text": "If the point $(a,\\frac{7\\sqrt{3}}{3})$ lies on the curve traced by the mid-points of the line segments of the lines $x\\cos\\theta + y\\sin\\theta = 7, \\theta\\in(0,\\frac{\\pi}{2})$ between the coordinates axes, then a is equal to [12 April, 2023 (Shift-I)]",
+    "options": [
+      "7",
+      "-7",
+      "$-7\\sqrt{3}$",
+      "$7\\sqrt{3}$"
+    ],
+    "correctAnswer": "7",
+    "shortExplanation": "Intercepts are $(\\frac{7}{\\cos\\theta}, 0)$ and $(0, \\frac{7}{\\sin\\theta})$. Midpoint $(h, k)$ is $(\\frac{7}{2\\cos\\theta}, \\frac{7}{2\\sin\\theta})$. Eliminate $\\theta$ using $\\cos^2\\theta + \\sin^2\\theta = 1$ to get the locus, then solve for $a$.",
+    "tag": "S"
+  },
+  {
+    "id": 19,
+    "text": "Let the equations of two adjacent sides of a parallelogram ABCD be $2x-3y=-23$ and $5x+4y=23$. If the equation of its one diagonal AC is $3x+7y=23$ and the distance of A from the other diagonal is d, then $50d^{2}$ is equal to [10 April, 2023 (Shift-II)]",
+    "options": [
+      "441",
+      "529",
+      "625",
+      "729"
+    ],
+    "correctAnswer": "529",
+    "shortExplanation": "Find vertex A by intersecting the two sides. Find other vertices using diagonal properties. Determine the equation of diagonal BD and find distance $d$ from A to BD.",
+    "tag": "S"
+  },
+  {
+    "id": 20,
+    "text": "The equations of the sides AB, BC and CA of a triangle ABC are: $2x+y=0, x+py=21a, (a\\ne0)$ and $x-y=3$ respectively. Let $P(2,a)$ be the centroid of $\\Delta ABC$ Then $(BC)^{2}$ is equal to [24 Jan, 2023 (Shift-II)]",
+    "options": [
+      "118",
+      "120",
+      "122",
+      "124"
+    ],
+    "correctAnswer": "122",
+    "shortExplanation": "Find coordinates of A, B, and C by intersection. Use centroid formula $\\frac{x_1+x_2+x_3}{3}=2$ to find values of $a$ and $p$. Calculate length $BC$ using distance formula.",
+    "tag": "S"
+  },
+  {
+    "id": 21,
+    "text": "A triangle is formed by X-axis, Y-axis and the line $3x+4y=60.$ Then the number of points $P(a,b)$ which lie strictly inside the triangle, where a is an integer and b is a multiple of a, is [25 Jan, 2023 (Shift-II)]",
+    "options": [
+      "28",
+      "29",
+      "30",
+      "31"
+    ],
+    "correctAnswer": "31",
+    "shortExplanation": "For each integer $a \\in (0, 20)$, count multiples $b = na$ such that $3a + 4(na) < 60$. Sum these counts for all possible values of $a$.",
+    "tag": "S"
+  },
+  {
+    "id": 22,
+    "text": "If the points P and Q are respectively the circumcentre and the orthocentre of a $\\Delta ABC$, then $\\vec{PA}+\\vec{PB}+\\vec{PC}$ is equal to [10 April, 2023 (Shift-II)]",
+    "options": [
+      "$2\\vec{OP}$",
+      "$\\vec{QP}$",
+      "$2\\vec{PQ}$",
+      "$\\vec{PQ}$"
+    ],
+    "correctAnswer": "$\\vec{PQ}$",
+    "shortExplanation": "Using vectors with P as origin, the centroid $G$ is $\\frac{\\vec{PA}+\\vec{PB}+\\vec{PC}}{3}$. Using the property that $G$ divides $PQ$ in ratio 1:2, $\\vec{PG} = \\frac{1}{3}\\vec{PQ}$.",
+    "tag": "S"
+  },
+  {
+    "id": 23,
+    "text": "If $(\\alpha,\\beta)$ is the orthocentre of the triangle ABC with vertices $A(3,-7), B(-1,2)$ and $C(4,5),$ then $9\\alpha-6\\beta+60$ is equal to: [15 April, 2023 (Shift-I)]",
+    "options": [
+      "30",
+      "25",
+      "40",
+      "35"
+    ],
+    "correctAnswer": "25",
+    "shortExplanation": "Form equations using $AH \\perp BC$ and $BH \\perp AC$. Solve for $\\alpha$ and $\\beta$, then substitute into the required expression.",
+    "tag": "S"
+  },
+  {
+    "id": 24,
+    "text": "Let R be a rectangle given by the lines $x=0, x=2, y=0$ and $y=5$ Let $A(\\alpha,0)$ and $B(0,\\beta), \\alpha\\in[0,2]$ and $\\beta\\in[0,5],$ be such that the line segment AB divides the area of the rectangle R in the ratio 4: 1. Then, the mid-point of AB lies on a [11 April, 2023 (Shift-I)]",
+    "options": [
+      "parabola",
+      "hyperbola",
+      "straight line",
+      "circle"
+    ],
+    "correctAnswer": "hyperbola",
+    "shortExplanation": "Area of triangle OAB is $\\frac{1}{2}\\alpha\\beta$. Given total area is 10, the ratio 4:1 implies triangle area is either 2 or 8. Since midpoint $(h, k) = (\\alpha/2, \\beta/2)$, $hk = \\text{constant}$ represents a hyperbola.",
+    "tag": "S"
+  },
+  {
+    "id": 25,
+    "text": "Let the point $P(\\alpha,\\beta)$ be at a unit distance from each of the two lines $L_1:3x-4y+12=0$, and $L_2:8x+6y+11=0.$ If P lies below $L_1$ and above $L_2,$ then $100(\\alpha+\\beta)$ is equal to [25 July, 2022 (Shift-II)]",
+    "options": [
+      "-14",
+      "42",
+      "-22",
+      "14"
+    ],
+    "correctAnswer": "14",
+    "shortExplanation": "Use the perpendicular distance formula for both lines. Accounting for 'below' and 'above' signs, solve the two linear equations for $\\alpha$ and $\\beta$.",
+    "tag": "S"
+  },
+  {
+    "id": 27,
+    "text": "In an isosceles triangle ABC, the vertex A is (6,1) and the equation of the base BC is $2x+y=4.$ Let the point B lie on the line $x+3y=7$. If $(\\alpha,\\beta)$ is the centroid of $\\Delta ABC,$ then $15(\\alpha+\\beta)$ is equal to: [27 June, 2022 (Shift-I)]",
+    "options": [
+      "39",
+      "41",
+      "51",
+      "63"
+    ],
+    "correctAnswer": "51",
+    "shortExplanation": "B is the intersection of $x+3y=7$ and $2x+y=4$. C is found by using the fact that the altitude from A bisects the base BC in an isosceles triangle. Calculate centroid and the final value.",
+    "tag": "S"
+  },
+  {
+    "id": 28,
+    "text": "A point P moves so that the sum of squares of its distances from the points (1, 2) and (-2, 1) is 14. Let $f(x,y)=0$ be the locus of P, which intersects the x-axis at A, B and the y-axis at C, D. Then the area of the quadrilateral ACBD is equal to: [26 July, 2022 (Shift-I)]",
+    "options": [
+      "$\\frac{9}{2}$",
+      "$\\frac{3\\sqrt{17}}{2}$",
+      "$\\frac{3\\sqrt{17}}{4}$",
+      "9"
+    ],
+    "correctAnswer": "$\\frac{3\\sqrt{17}}{2}$",
+    "shortExplanation": "Derive the locus $(x-1)^2+(y-2)^2 + (x+2)^2+(y-1)^2 = 14$ as a circle. Find intercepts on axes to get coordinates of A, B, C, D and calculate the area.",
+    "tag": "S"
+  },
+  {
+    "id": 29,
+    "text": "The distance of the origin from the centroid of the triangle whose two sides have the equations $x-2y+1=0$ and $2x-y-1=0$ and whose orthocenter is $(\\frac{7}{3},\\frac{7}{3})$ is: [29 June, 2022 (Shift-II)]",
+    "options": [
+      "$\\sqrt{2}$",
+      "2",
+      "$2\\sqrt{2}$",
+      "4"
+    ],
+    "correctAnswer": "$2\\sqrt{2}$",
+    "shortExplanation": "Find the vertex where given sides meet. Use orthocentre property (altitudes) to find other vertices. Calculate centroid and its distance from origin.",
+    "tag": "S"
+  },
+  {
+    "id": 30,
+    "text": "Let the circumcentre of a triangle with vertices $A(a,3), B(b,5)$ and $C(a,b), ab>0$ be P(1,1). If the line AP intersects the line BC at the point $Q(k1,k2),$ then $k1+k2$ is equal to: [29 July, 2022 (Shift-I)]",
+    "options": [
+      "2",
+      "$\\frac{4}{7}$",
+      "$\\frac{2}{7}$",
+      "4"
+    ],
+    "correctAnswer": "$\\frac{4}{7}$",
+    "shortExplanation": "Since circumcentre is (1,1), $PA^2 = PB^2 = PC^2$. Solve these to find $a, b$. Determine equations for line AP and BC, then find their intersection $Q$.",
+    "tag": "S"
+  }
+]

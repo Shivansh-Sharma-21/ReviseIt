@@ -1,0 +1,34 @@
+{
+    "id": "straight_line",
+    "title": "Straight Lines",
+    "flow": [
+        {
+            "topic": "Fundamentals",
+            "subtopics": [
+                "Basics of Coordinate Geometry",
+                "Distance and Section Formula",
+                "Area and Collinearity"
+            ]
+        },
+        {
+            "topic": "Triangle Geometry",
+            "subtopics": [
+                "Centres of a Triangle"
+            ]
+        },
+        {
+            "topic": "Line Equations",
+            "subtopics": [
+                "Equations of a Straight Line",
+                "Angle Between Lines and Distance"
+            ]
+        },
+        {
+            "topic": "Advanced Concepts",
+            "subtopics": [
+                "Angle Bisectors",
+                "Pair of Straight Lines"
+            ]
+        }
+    ]
+}
