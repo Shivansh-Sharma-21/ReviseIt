@@ -18,14 +18,14 @@ const Hero = ({ onGetStarted }) => {
         show: {
             opacity: 1,
             transition: {
-                staggerChildren: isMobile ? 0.001 : 0.05,
+                staggerChildren: isMobile ? 0.001 : 0.15,
             },
         },
     };
 
     const childVariants = {
         hidden: { opacity: 0, y: 15 },
-        show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 120, damping: 12 } },
+        show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 14 } },
     };
 
     return (
@@ -44,7 +44,7 @@ const Hero = ({ onGetStarted }) => {
                             repeat: Infinity,
                             ease: "linear"
                         }}
-                        className="absolute w-96 h-96 rounded-full bg-indigo-500/10 dark:bg-indigo-600/20 blur-[100px] transform-gpu"
+                        className="absolute w-96 h-96 rounded-full bg-indigo-500/10 dark:bg-indigo-600/20 blur-[60px] transform-gpu will-change-transform"
                         style={{
                             top: `${10 + (i * 30)}%`,
                             left: `${5 + (i * 30)}%`,
@@ -75,29 +75,29 @@ const Hero = ({ onGetStarted }) => {
                     initial={isMobile ? { opacity: 1, y: 0 } : "hidden"}
                     animate={isMobile ? { opacity: 1, y: 0 } : "show"}
                     variants={!isMobile ? parentVariants : {}}
-                    className="text-4xl sm:text-7xl lg:text-7xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1] flex flex-wrap justify-center gap-x-[0.25em]"
+                    className="text-4xl sm:text-7xl lg:text-7xl font-black tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1] flex flex-wrap justify-center gap-x-[0.3em]"
                 >
                     {words.map((word, wIdx) => (
                         isMobile ? (
-                            <span key={wIdx} className="inline-block whitespace-nowrap">
+                            <span key={wIdx} className="inline-block">
                                 {word}
                             </span>
                         ) : (
-                            <span key={wIdx} className="inline-block whitespace-nowrap">
-                                {word.split("").map((char, cIdx) => (
-                                    <motion.span key={cIdx} variants={childVariants} className="inline-block">
-                                        {char}
-                                    </motion.span>
-                                ))}
-                            </span>
+                            <motion.span 
+                                key={wIdx} 
+                                variants={childVariants} 
+                                className="inline-block will-change-transform"
+                            >
+                                {word}
+                            </motion.span>
                         )
                     ))}
                     {' '}
                     <motion.span
                         initial={isMobile ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                         animate={isMobile ? { opacity: 1, scale: 1 } : { opacity: 1, scale: 1 }}
-                        transition={isMobile ? { duration: 0 } : { delay: 1.5, duration: 0.5, type: "spring" }}
-                        className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300"
+                        transition={isMobile ? { duration: 0 } : { delay: 0.8, duration: 0.5, type: "spring" }}
+                        className="inline-block bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300 will-change-transform"
                     >
                         Protect Rank.
                     </motion.span>

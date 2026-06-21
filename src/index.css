@@ -85,4 +85,53 @@
     background-image: radial-gradient(circle, #94a3b8 1px, transparent 1px);
     background-size: 20px 20px;
   }
+
+  .grid-floor-desktop {
+    background-image: 
+      linear-gradient(to right, rgba(99, 102, 241, 0.4) 1px, transparent 1px),
+      linear-gradient(to top, rgba(99, 102, 241, 0.4) 1px, transparent 1px);
+    background-size: 100px 100px;
+    mask-image: radial-gradient(circle at top center, transparent 10%, black 80%);
+    -webkit-mask-image: radial-gradient(circle at top center, transparent 10%, black 80%);
+  }
+
+  .grid-floor-mobile {
+    background-image: 
+      linear-gradient(to right, rgba(99, 102, 241, 0.3) 1px, transparent 1px),
+      linear-gradient(to top, rgba(99, 102, 241, 0.3) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(circle at top center, transparent 15%, black 85%);
+    -webkit-mask-image: radial-gradient(circle at top center, transparent 15%, black 85%);
+  }
+
+  @keyframes moveGrid {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(40px, 40px, 0);
+    }
+  }
+
+  .moving-grid-bg {
+    background-image: 
+      linear-gradient(to right, rgba(99, 102, 241, 0.25) 1px, transparent 1px), 
+      linear-gradient(to bottom, rgba(99, 102, 241, 0.25) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle at center, black, transparent 70%);
+    -webkit-mask-image: radial-gradient(circle at center, black, transparent 70%);
+    animation: moveGrid 4s linear infinite;
+    will-change: transform;
+  }
+
+  .moving-grid-bg-mobile {
+    background-image: 
+      linear-gradient(to right, rgba(99, 102, 241, 0.15) 1px, transparent 1px), 
+      linear-gradient(to bottom, rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle at center, black, transparent 70%);
+    -webkit-mask-image: radial-gradient(circle at center, black, transparent 70%);
+    animation: moveGrid 8s linear infinite;
+    will-change: transform;
+  }
 }

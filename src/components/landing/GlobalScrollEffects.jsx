@@ -2,15 +2,20 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
-const DustParticle = ({ scrollYProgress }) => {
-    // Hooks must be at top-level, so we call it here for each individual particle
-    const yTransform = useTransform(scrollYProgress, [0, 1], [0, -(Math.random() * 1000 + 500)]);
-    const top = `${Math.random() * 100}%`;
-    const left = `${Math.random() * 100}%`;
+// Statically pre-generate particle parameters so Math.random() is never called inside components during render.
+const PARTICLES_CONFIG = Array.from({ length: 15 }, (_, i) => ({
+    id: i,
+    top: `${(15 + i * 5.7) % 100}%`,
+    left: `${(7 + i * 23.3) % 100}%`,
+    multiplier: 400 + ((i * 73) % 600)
+}));
+
+const DustParticle = ({ scrollYProgress, top, left, multiplier }) => {
+    const yTransform = useTransform(scrollYProgress, [0, 1], [0, -multiplier]);
     
     return (
         <motion.div
-            className="absolute w-1 h-1 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)] opacity-20 transform-gpu"
+            className="absolute w-1 h-1 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)] opacity-20 transform-gpu will-change-transform"
             style={{
                 top,
                 left,
@@ -37,7 +42,7 @@ const GlobalScrollEffects = () => {
         <div className="fixed inset-0 pointer-events-none -z-50 overflow-hidden perspective-[2000px] transform-gpu">
             {/* The Shiftin Glow */}
             <motion.div
-                className="absolute left-1/2 w-[1000px] h-[500px] rounded-full blur-[150px] opacity-20 dark:opacity-30 transform-gpu"
+                className="absolute left-1/2 w-[1000px] h-[500px] rounded-full blur-[150px] opacity-20 dark:opacity-30 transform-gpu will-change-transform"
                 style={{
                     x: '-50%',
                     y: glowY,
@@ -47,33 +52,23 @@ const GlobalScrollEffects = () => {
 
             {/* The 3D Grid Floor */}
             <motion.div
-                className={`absolute inset-x-[-50%] bottom-[-50%] h-[150vh] origin-bottom opacity-10 dark:opacity-20 transform-gpu ${isMobile ? 'scale-75 translate-y-[20%]' : ''}`}
+                className={`absolute inset-x-[-50%] bottom-[-50%] h-[150vh] origin-bottom opacity-10 dark:opacity-20 transform-gpu will-change-transform ${isMobile ? 'scale-75 translate-y-[20%] grid-floor-mobile' : 'grid-floor-desktop'}`}
                 style={isMobile ? {} : {
                     scale,
                     rotateX,
                     y,
-                    backgroundImage: `
-                        linear-gradient(to right, #6366f1 2px, transparent 2px),
-                        linear-gradient(to top, #6366f1 2px, transparent 2px)
-                    `,
-                    backgroundSize: '100px 100px',
-                    maskImage: 'radial-gradient(circle at top center, transparent 10%, black 80%)',
                 }}
-                {...(isMobile ? {
-                    style: {
-                        backgroundImage: `
-                            linear-gradient(to right, #6366f1 2px, transparent 2px),
-                            linear-gradient(to top, #6366f1 2px, transparent 2px)
-                        `,
-                        backgroundSize: '50px 50px',
-                        maskImage: 'radial-gradient(circle at top center, transparent 10%, black 80%)',
-                    }
-                } : {})}
             />
             
             {/* Floating Dust Particles */}
-            {!isMobile && [...Array(15)].map((_, i) => (
-                <DustParticle key={i} scrollYProgress={scrollYProgress} />
+            {!isMobile && PARTICLES_CONFIG.map((p) => (
+                <DustParticle 
+                    key={p.id} 
+                    scrollYProgress={scrollYProgress} 
+                    top={p.top}
+                    left={p.left}
+                    multiplier={p.multiplier}
+                />
             ))}
         </div>
     );

@@ -17,23 +17,23 @@ import {
 } from 'lucide-react';
 import Latex from './Latex';
 
-const RevisionQuizView = ({ chapter, initialConfidence, onBack, onComplete }) => {
+const RevisionQuizView = ({ chapter, confidence, onBack, onComplete }) => {
     const quizQuestions = useMemo(() => {
         const foundational = chapter.questions.filter(q => q.tag === 'F');
         const core = chapter.questions.filter(q => q.tag === 'C');
         const stretch = chapter.questions.filter(q => q.tag === 'S');
 
         let selection = [];
-        if (initialConfidence <= 2) {
+        if (confidence <= 2) {
             selection = [...foundational.slice(0, 8), ...core.slice(0, 5), ...stretch.slice(0, 2)];
-        } else if (initialConfidence === 3) {
+        } else if (confidence === 3) {
             selection = [...foundational.slice(0, 4), ...core.slice(0, 8), ...stretch.slice(0, 3)];
         } else {
             selection = [...foundational.slice(0, 2), ...core.slice(0, 6), ...stretch.slice(0, 7)];
         }
 
         return selection.sort(() => Math.random() - 0.5).slice(0, 10);
-    }, [chapter.questions, initialConfidence]);
+    }, [chapter.questions, confidence]);
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [responses, setResponses] = useState({});
